@@ -5,14 +5,20 @@ import { RouterModule } from '@angular/router';
 import { AppRoutes } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { SessionLayoutComponent } from '../../../BobsComputer/src/app/shared';
-import { NotFoundComponent } from '../../../BobsComputer/src/app/pages/not-found/not-found.component';
+import { SessionLayoutComponent } from './shared';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SessionLayoutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent,
+    HomeComponent,
+    BaseLayoutComponent
   ],
   imports: [
     BrowserModule,
