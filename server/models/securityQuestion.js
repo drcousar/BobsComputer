@@ -12,6 +12,6 @@ const mongoose = require('mongoose');
 
 let securityQuestionSchema = mongoose.Schema({
   questionText: {type: String}
-});
+}, {collection: 'securityQuestions'});
 
 module.exports = mongoose.model('SecurityQuestion', securityQuestionSchema);

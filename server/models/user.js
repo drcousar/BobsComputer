@@ -31,7 +31,9 @@ let userSchema = mongoose.Schema({
   address: [address],
   email: {type:  String, unique: true},
   role: {type: String, default: 'standard'},
-  selectedSecurityQuestions: [selectedSecurityQuestions]
-});
+  selectedSecurityQuestions: [selectedSecurityQuestions],
+  dateCreated: {type: Date, default: new Date()},
+  dateModified: {type: Date}
+}, {collection: 'users'});
 
 module.exports = mongoose.model('User', userSchema);
