@@ -65,7 +65,7 @@ export class UserManagementComponent implements OnInit {
   }
 
 
-  openDialog() {
+  openEditDialog() {
     console.log("Open User Management Dialog");
 
     const dialogRef = this.dialog.open(UserManagementEditDialogComponent, {
@@ -79,7 +79,7 @@ export class UserManagementComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'confirm') {
-        this.router.navigate(['/users']);
+        this.router.navigate(['/']);
       }
     })
 

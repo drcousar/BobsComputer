@@ -2,6 +2,8 @@
 ; Title:  starter code
 ; Author: Professor Krasso
 ; Date:   21 October 2019
+; ModifiedBy: Don Cousar
+; ModifiedDate: 25 October 2019
 ; Description: BobComputer Starter Code
 ;===========================================
 */
@@ -73,6 +75,7 @@ import { Platform } from '@angular/cdk/platform';
   providers: [
     Platform
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [UserManagementEditDialogComponent]
 })
 export class AppModule { }

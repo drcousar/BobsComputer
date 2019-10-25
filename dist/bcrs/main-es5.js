@@ -61,7 +61,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n    /*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   23 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<p>user-management-edit-dialog works!</p>\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n    /*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   23 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<h1 mat-dialog-title>Bob's Computer Repair Shop</h1>\n<div mat-dialog-content>\n    <h3>Edit User</h3>\n  \n  <div>\n    <h2>Edit User Header</h2> \n    <div>\n\n    </div>\n  </div>\n<div mat-dialog-actions>\n  <button mat-button [mat-dialog-close]=\"\" cdkFocusInitial>Ok</button>\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/user-management/user-management.component.html": 
@@ -72,7 +72,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   23 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxLayout=\"column\">\n    <mat-card>\n        <mat-card-title>User Management</mat-card-title>\n        <mat-card-content>     \n            <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n                <!--- Note that these columns can be defined in any order.\n                        The actual rendered columns are set as a property on the row definition\" -->\n                \n                <!-- Last Name Column -->\n                <ng-container matColumnDef=\"userName\">\n                    <th mat-header-cell *matHeaderCellDef> User Name </th>\n                    <!-- Edit User Name Control-->\n                    <td mat-cell *matCellDef=\"let element\">\n                        {{element.userName}}\n                    </td>\n                </ng-container>\n                \n                <!-- First Name Column -->\n                <ng-container matColumnDef=\"firstName\">\n                    <th mat-header-cell *matHeaderCellDef> First Name </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        {{element.firstName}} \n                    </td>\n                </ng-container>\n\n                <!-- Last Name Column -->\n                <ng-container matColumnDef=\"lastName\">\n                    <th mat-header-cell *matHeaderCellDef> Last Name </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        {{element.lastName}} \n                    </td>\n                </ng-container>\n                \n                <!-- Phone Number Column -->\n                <ng-container matColumnDef=\"phoneNumber\">\n                    <th mat-header-cell *matHeaderCellDef> Phone Number </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        {{element.phoneNumber}}\n                    </td>\n                </ng-container>\n                \n                <!-- Address Column -->\n                <ng-container matColumnDef=\"address\">\n                    <th mat-header-cell *matHeaderCellDef> Address </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        {{element.address}}\n                    </td>\n                </ng-container>\n                \n                <!-- Email Column -->\n                <ng-container matColumnDef=\"email\">\n                    <th mat-header-cell *matHeaderCellDef> Email </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        {{element.email}}\n                    </td>\n                </ng-container>\n\n                <!-- Edit Column -->\n                <ng-container matColumnDef=\"edit\">\n                    <th mat-header-cell *matHeaderCellDef>  </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        <a routerLink=\"/api/users/{{element.email}}\"><img src=\"/\"></a>\n                    </td>\n                </ng-container>\n            \n                <!-- Delete Column -->\n                <ng-container matColumnDef=\"delete\">\n                    <th mat-header-cell *matHeaderCellDef>  </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        <a routerLink=\"/api/users/{{element.email}}\"><img src=\"/\"></a>\n                    </td>\n                </ng-container>\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n            </table>\n        </mat-card-content>\n    </mat-card>\n</div>\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   23 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxLayout=\"column\">\n    <mat-card>\n        <mat-card-title>User Management</mat-card-title>\n        <mat-card-content>     \n            <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n                <!--- Note that these columns can be defined in any order.\n                        The actual rendered columns are set as a property on the row definition\" -->\n                \n                <!-- Last Name Column -->\n                <ng-container matColumnDef=\"userName\">\n                    <th mat-header-cell *matHeaderCellDef> User Name </th>\n                    <!-- Edit User Name Control-->\n                    <td mat-cell *matCellDef=\"let element\">\n                        {{element.userName}}\n                    </td>\n                </ng-container>\n                \n                <!-- First Name Column -->\n                <ng-container matColumnDef=\"firstName\">\n                    <th mat-header-cell *matHeaderCellDef> First Name </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        {{element.firstName}} \n                    </td>\n                </ng-container>\n\n                <!-- Last Name Column -->\n                <ng-container matColumnDef=\"lastName\">\n                    <th mat-header-cell *matHeaderCellDef> Last Name </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        {{element.lastName}} \n                    </td>\n                </ng-container>\n                \n                <!-- Phone Number Column -->\n                <ng-container matColumnDef=\"phoneNumber\">\n                    <th mat-header-cell *matHeaderCellDef> Phone Number </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        {{element.phoneNumber}}\n                    </td>\n                </ng-container>\n                \n                <!-- Address Column -->\n                <ng-container matColumnDef=\"address\">\n                    <th mat-header-cell *matHeaderCellDef> Address </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        {{element.address}}\n                    </td>\n                </ng-container>\n                \n                <!-- Email Column -->\n                <ng-container matColumnDef=\"email\">\n                    <th mat-header-cell *matHeaderCellDef> Email </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        {{element.email}}\n                    </td>\n                </ng-container>\n\n                <!-- Edit Column -->\n                <ng-container matColumnDef=\"edit\">\n                    <th mat-header-cell *matHeaderCellDef>  </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        <button (click)=\"openEditDialog()\" >Edit</button>\n                    </td>\n                </ng-container>\n            \n                <!-- Delete Column -->\n                <ng-container matColumnDef=\"delete\">\n                    <th mat-header-cell *matHeaderCellDef>  </th>\n\n                    <td mat-cell *matCellDef=\"let element\"> \n                        <button (click)=\"openEditDialog()\" >Delete</button>\n                    </td>\n                </ng-container>\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n            </table>\n        </mat-card-content>\n    </mat-card>\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared/base-layout/base-layout.component.html": 
@@ -472,6 +472,8 @@
             ; Title:  starter code
             ; Author: Professor Krasso
             ; Date:   21 October 2019
+            ; ModifiedBy: Don Cousar
+            ; ModifiedDate: 25 October 2019
             ; Description: BobComputer Starter Code
             ;===========================================
             */
@@ -516,7 +518,8 @@
                     providers: [
                         _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_29__["Platform"]
                     ],
-                    bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+                    bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
+                    entryComponents: [_pages_user_management_edit_dialog_user_management_edit_dialog_component__WEBPACK_IMPORTED_MODULE_13__["UserManagementEditDialogComponent"]]
                 })
             ], AppModule);
             /***/ 
@@ -730,6 +733,7 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserManagementEditDialogComponent", function () { return UserManagementEditDialogComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
             /*
             ============================================
             ; Title:  Bob's Computer
@@ -739,18 +743,24 @@
             ;===========================================
             */
             var UserManagementEditDialogComponent = /** @class */ (function () {
-                function UserManagementEditDialogComponent() {
+                function UserManagementEditDialogComponent(dialogRef, data) {
+                    this.dialogRef = dialogRef;
                 }
                 UserManagementEditDialogComponent.prototype.ngOnInit = function () {
                 };
                 return UserManagementEditDialogComponent;
             }());
+            UserManagementEditDialogComponent.ctorParameters = function () { return [
+                { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
+                { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
+            ]; };
             UserManagementEditDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-user-management-edit-dialog',
                     template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./user-management-edit-dialog.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/user-management-edit-dialog/user-management-edit-dialog.component.html")).default,
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./user-management-edit-dialog.component.css */ "./src/app/pages/user-management-edit-dialog/user-management-edit-dialog.component.css")).default]
-                })
+                }),
+                tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
             ], UserManagementEditDialogComponent);
             /***/ 
         }),
@@ -814,7 +824,7 @@
                     })
                     */
                 }
-                UserManagementComponent.prototype.openDialog = function () {
+                UserManagementComponent.prototype.openEditDialog = function () {
                     var _this = this;
                     console.log("Open User Management Dialog");
                     var dialogRef = this.dialog.open(_pages_user_management_edit_dialog_user_management_edit_dialog_component__WEBPACK_IMPORTED_MODULE_3__["UserManagementEditDialogComponent"], {
@@ -827,7 +837,7 @@
                     });
                     dialogRef.afterClosed().subscribe(function (result) {
                         if (result === 'confirm') {
-                            _this.router.navigate(['/users']);
+                            _this.router.navigate(['/']);
                         }
                     });
                     dialogRef.componentInstance.userDetails = USERS; //This should be only one users array info
