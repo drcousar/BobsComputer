@@ -18,6 +18,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
+import { UserManagementComponent } from './pages/user-management/user-management.component';
+import { UserManagementEditDialogComponent } from './pages/user-management-edit-dialog/user-management-edit-dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { BaseLayoutComponent } from './shared/base-layout/base-layout.component'
     NotFoundComponent,
     LoginComponent,
     HomeComponent,
-    BaseLayoutComponent
+    BaseLayoutComponent,
+    UserManagementComponent,
+    UserManagementEditDialogComponent
   ],
   imports: [
     BrowserModule,
