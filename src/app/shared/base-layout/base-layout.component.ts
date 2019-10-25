@@ -1,8 +1,8 @@
 /*
 ============================================
-; Title:  starter code
-; Author: Professor Krasso
-; Date:   21 October 2019
+; Title:  Bob's Computer
+; Author: Don Cousar
+; Date:   23 October 2019
 ; Description: BobComputer Starter Code
 ;===========================================
 */
