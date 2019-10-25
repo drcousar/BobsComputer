@@ -1,3 +1,10 @@
+/*; Title:  starter code
+; Author: Professor Krasso
+; Date:   21 October 2019
+; Description: BobComputer Starter Code
+;===========================================
+*/
+
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 

@@ -70,12 +70,89 @@ app.get('/api/users/:id', function(req, res, next) {
 });
 
 
-// Find One User
+// Add new User
+app.post('/api/users/register', function(req, res, next) {
+  User.findOne({'username': req.body.username}, function(err, user) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      if (!user) {
+        // The selected username is unique
+        let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
+        let u = {
+          username: req.body.username,
+          password: hashedPassword,
+          firstName: req.body.firstName,
+          lastName: req.body.lastName,
+          phoneNumber: req.body.phoneNumber,
+          address: req.body.address,
+          email: req.body.email,
+          selectedSecurityQuestions: req.body.selectedSecurityQuestions,
+          dateCreated: req.body.dateCreated
+        }
+        User.create(u, function(err, newUser) {
+          if (err) {
+            console.log(err);
+            return next(err);
+          } else {
+            console.log(newUser);
+            res.json(newUser);
+          }
+        })
+      } else {
+        // The selected username is already in use
+        console.log('The selected username: ${req.body.username} is already in use!');
+        res.status(500).send({
+          text: 'The selected username: ${req.body.username} is already in use!',
+          time_stamp: new Date()
+        })
+      }
+    }
+  })
+})
 
 // Update User
+app.put('/api/users/:id', function(req, res, next) {
+
+  User.findOne({'_id': req.params.id}, function(err, user) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(user);
+
+      user.set({
+        phoneNumber: req.body.phoneNumber,
+        address: req.body.address,
+        email: req.body.email,
+        dateUpdated: new Date()
+      })
+      user.save(function(err, savedUser) {
+        if (err){
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedUser);
+          res.json(savedUser);
+        }
+      })
+    }
+  })
+})
 
 // Delete User
-
+app.delete('/api/users/:id', function(req, res, next) {
+  User.findByIdAndDelete({'_id': req.params.id}, function(err, user) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(user);
+      res.json(user);
+    }
+  })
+})
 
 
 /**
