@@ -10,7 +10,7 @@ import {BaseLayoutComponent, SessionLayoutComponent} from './shared';
 import {LoginComponent} from './pages/login/login.component';
 import {HomeComponent} from './pages/home/home.component';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
-
+import {UserManagementComponent} from './pages/user-management/user-management.component';
 
 export const AppRoutes: Routes = [
   {
@@ -20,6 +20,10 @@ export const AppRoutes: Routes = [
       {
         path: '',
         component: HomeComponent
+      },
+      {
+        path:'user',
+        component: UserManagementComponent
       }
     ]
   },

@@ -1,3 +1,11 @@
+/*
+============================================
+; Title:  Bob's Computer
+; Author: Don Cousar
+; Date:   23 October 2019
+; Description: Bob's Computer
+;===========================================
+*/
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserManagementEditDialogComponent } from './user-management-edit-dialog.component';

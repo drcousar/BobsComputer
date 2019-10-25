@@ -1,4 +1,13 @@
+/*
+============================================
+; Title:  Bob's Computer
+; Author: Don Cousar
+; Date:   23 October 2019
+; Description: Bob's Computer
+;===========================================
+*/
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-user-management-edit-dialog',
@@ -6,10 +15,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-management-edit-dialog.component.css']
 })
 export class UserManagementEditDialogComponent implements OnInit {
-
+  userDetails: any;
+  
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+
