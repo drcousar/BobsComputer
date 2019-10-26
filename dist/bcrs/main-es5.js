@@ -780,11 +780,14 @@
                     this.http = http;
                     this.fb = fb;
                     this.router = router;
-                    this.userId = this.route.snapshot.paramMap.get('userId');
+                    this.userId = this.route.snapshot.paramMap.get('id');
+                    console.log('Parameters: ');
+                    console.table(this.route.snapshot.paramMap);
+                    console.log('User ID from Params: ' + this.userId);
                     /**
                     * Call Jordan's GET API to retreive current values to populate HTML
                     */
-                    this.http.get('/api/users/:id').subscribe(function (res) {
+                    this.http.get('/api/users/' + this.userId).subscribe(function (res) {
                         _this.user = res;
                     }, function (err) {
                         console.log(err);
