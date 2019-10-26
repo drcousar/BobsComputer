@@ -8,7 +8,7 @@
 ;===========================================
 */
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
@@ -63,11 +63,11 @@ export class UserDetailsComponent implements OnInit {
    
   ngOnInit() {
     this.form = this.fb.group({
-      firstName: [null],
-      lastName: [null],
-      phoneNumber: [null],
-      address: [null],
-      email: [null]
+      firstName: [null, Validators.compose([Validators.required])],
+      lastName: [null, Validators.compose([Validators.required])],
+      phoneNumber: [null, Validators.compose([Validators.required])],
+      address: [null, Validators.compose([Validators.required])],
+      email: [null, Validators.compose([Validators.required])]
     })
   }
 
