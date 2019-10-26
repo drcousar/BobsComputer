@@ -45,10 +45,10 @@ const USERS: users[] = [
 export class UserManagementComponent implements OnInit {
 
   users: any;
-  displayedColumns = ['userName', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'edit', 'delete'];
+  displayedColumns = ['username', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'edit', 'delete'];
   router: Router;
- 
-  constructor(private http: HttpClient, private dialog: MatDialog) { 
+
+  constructor(private http: HttpClient, private dialog: MatDialog) {
     // console.table(USERS);  //Displays Static array of users defined above
 
     //Call Jordan's API to get all users
@@ -92,6 +92,6 @@ export class UserManagementComponent implements OnInit {
   }  //close delete function
 
   ngOnInit() {
-    
+
   }
 } //close export class

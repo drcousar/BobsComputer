@@ -15,12 +15,6 @@ let selectedSecurityQuestions = mongoose.Schema({
   answerText: {type: String}
 });
 
-let address = mongoose.Schema({
-  street: {type: String},
-  city: {type: String},
-  state: {type: String},
-  zip: {type: String}
-});
 
 let userSchema = mongoose.Schema({
   username: {type: String, required: true, unique: true, dropDups: true},
@@ -28,7 +22,7 @@ let userSchema = mongoose.Schema({
   firstName: {type: String},
   lastName: {type: String},
   phoneNumber: {type: String},
-  address: [address],
+  address: {type: String},
   email: {type:  String, unique: true},
   role: {type: String, default: 'standard'},
   selectedSecurityQuestions: [selectedSecurityQuestions],
