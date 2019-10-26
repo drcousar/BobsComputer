@@ -21,7 +21,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
-import { UserManagementEditDialogComponent } from './pages/user-management-edit-dialog/user-management-edit-dialog.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 //material
 import { MatButtonModule } from '@angular/material/button';
@@ -34,12 +34,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from "@angular/material/dialog";
-import {MatRadioModule} from '@angular/material/radio';
-import {MatListModule} from '@angular/material/list';
-import {MatTableModule} from '@angular/material/table';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http'; 
 import { Platform } from '@angular/cdk/platform';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,8 @@ import { Platform } from '@angular/cdk/platform';
     HomeComponent,
     BaseLayoutComponent,
     UserManagementComponent,
-    UserManagementEditDialogComponent
+    UserManagementDeleteDialogComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -70,12 +74,16 @@ import { Platform } from '@angular/cdk/platform';
     MatCardModule,
     MatListModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes, {useHash: true, enableTracing: false})
   ],
   providers: [
     Platform
   ],
   bootstrap: [AppComponent],
-  entryComponents: [UserManagementEditDialogComponent]
+  entryComponents: [
+    UserManagementDeleteDialogComponent
+  ]
 })
 export class AppModule { }

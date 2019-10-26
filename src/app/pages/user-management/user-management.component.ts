@@ -8,10 +8,11 @@
 */
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UserManagementEditDialogComponent } from '../../pages/user-management-edit-dialog/user-management-edit-dialog.component';
+import { UserManagementDeleteDialogComponent } from '../../pages/user-management-delete-dialog/user-management-delete-dialog.component';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
 import { ActivatedRoute, Route } from '@angular/router';
 import { Router } from "@angular/router";
+import { DataSource } from '@angular/cdk/table';
 
 /**
  * BEGIN STATIC TEST DATA TO BEGIN CODING WITH
@@ -23,12 +24,13 @@ export interface users {
   phoneNumber: string;
   address: string;
   email: string;
+  userId: number;
 }
 
 const USERS: users[] = [
-  {userName: "dcousar", firstName: 'Donald', lastName: 'Cousar', phoneNumber: '6015551010', address: '100 Main St', email: "dcousar@yahoo.com"},
-  {userName: "aedwards", firstName: 'Alan', lastName: 'Edwards', phoneNumber: '6015551011', address: '102 Main St', email: "aedwards@yahoo.com"},
-  {userName: "jhennessy", firstName: 'Jordan', lastName: 'Hennessy', phoneNumber: '6015551012', address: '101 Main St', email: "jhennessy@yahoo.com"}
+  {userName: "dcousar", firstName: 'Donald', lastName: 'Cousar', phoneNumber: '6015551010', address: '100 Main St', email: "dcousar@yahoo.com", userId: 1},
+  {userName: "aedwards", firstName: 'Alan', lastName: 'Edwards', phoneNumber: '6015551011', address: '102 Main St', email: "aedwards@yahoo.com", userId: 2},
+  {userName: "jhennessy", firstName: 'Jordan', lastName: 'Hennessy', phoneNumber: '6015551012', address: '101 Main St', email: "jhennessy@yahoo.com", userId: 3}
 ];
 
 /**
@@ -44,50 +46,52 @@ export class UserManagementComponent implements OnInit {
 
   users: any;
   displayedColumns = ['userName', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'edit', 'delete'];
-  dataSource = USERS;
   router: Router;
+ 
+  constructor(private http: HttpClient, private dialog: MatDialog) { 
+    // console.table(USERS);  //Displays Static array of users defined above
 
-  constructor(private http: HttpClient, private route: ActivatedRoute, public dialog: MatDialog) { 
-    console.table(USERS);
-
-
-
-
-    /*
-    this.http.get('../../assets/data/users.json').subscribe(res => {
+    //Call Jordan's API to get all users
+    this.http.get('/api/users').subscribe(res => {
       this.users = res;
-      console.log('Get Users Return');
-      console.table(res);
+
+      //Prove that this.users is populated
+      console.log('API GET USERS: ');
+      console.table(this.users);
+
     }, err => {
-      console.log('Get Users Error: ' + err);
-    })
-    */
+      console.log('API GET USERS ERROR: ' + err);
+    },
+    () => {
+      //What to do upon success
+      //nothing for now
+    });
   }
 
+  /**
+   * Delete User Function
+   */
+    delete(userId, userName) {
 
-  openEditDialog() {
-    console.log("Open User Management Dialog");
-
-    const dialogRef = this.dialog.open(UserManagementEditDialogComponent, {
+    const dialogRef = this.dialog.open(UserManagementDeleteDialogComponent, {
       data: {
-        userId: 'TEST ENTRY',
-        userName: 'TEST ENTRY'
+        userName: userName
       },
       disableClose: true,
       width: '800px'
-    });
+    })
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'confirm') {
-        this.router.navigate(['/']);
+        this.http.delete('api/users/ + userId').subscribe(res => {
+          console.log('Deleted User');
+          this.users = this.users.filter(u => u._id !== userId);
+        })
       }
     })
-
-    dialogRef.componentInstance.userDetails = USERS; //This should be only one users array info
-  }
+  }  //close delete function
 
   ngOnInit() {
     
   }
-
-}
+} //close export class

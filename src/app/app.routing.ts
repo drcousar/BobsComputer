@@ -11,6 +11,8 @@ import {LoginComponent} from './pages/login/login.component';
 import {HomeComponent} from './pages/home/home.component';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {UserManagementComponent} from './pages/user-management/user-management.component';
+import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 export const AppRoutes: Routes = [
   {
@@ -22,8 +24,16 @@ export const AppRoutes: Routes = [
         component: HomeComponent
       },
       {
-        path:'user',
+        path: 'user',
         component: UserManagementComponent
+      },
+      {
+       path: 'deleteuser/:id',
+       component: UserManagementDeleteDialogComponent
+      },
+      {
+       path: 'edituser/:id',
+       component: UserDetailsComponent
       }
     ]
   },

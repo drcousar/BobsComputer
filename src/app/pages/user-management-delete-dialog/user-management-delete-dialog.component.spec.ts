@@ -8,21 +8,21 @@
 */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserManagementEditDialogComponent } from './user-management-edit-dialog.component';
+import { UserManagementDeleteDialogComponent } from './user-management-delete-dialog.component';
 
-describe('UserManagementEditDialogComponent', () => {
-  let component: UserManagementEditDialogComponent;
-  let fixture: ComponentFixture<UserManagementEditDialogComponent>;
+describe('UserManagementDeleteDialogComponent', () => {
+  let component: UserManagementDeleteDialogComponent;
+  let fixture: ComponentFixture<UserManagementDeleteDialogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserManagementEditDialogComponent ]
+      declarations: [ UserManagementDeleteDialogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserManagementEditDialogComponent);
+    fixture = TestBed.createComponent(UserManagementDeleteDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
