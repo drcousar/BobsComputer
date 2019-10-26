@@ -781,9 +781,6 @@
                     this.fb = fb;
                     this.router = router;
                     this.userId = this.route.snapshot.paramMap.get('id');
-                    console.log('Parameters: ');
-                    console.table(this.route.snapshot.paramMap);
-                    console.log('User ID from Params: ' + this.userId);
                     /**
                     * Call Jordan's GET API to retreive current values to populate HTML
                     */
@@ -818,6 +815,13 @@
                     this.router.navigate(['/user']);
                 };
                 UserDetailsComponent.prototype.ngOnInit = function () {
+                    this.form = this.fb.group({
+                        firstName: [null],
+                        lastName: [null],
+                        phoneNumber: [null],
+                        address: [null],
+                        email: [null]
+                    });
                 };
                 return UserDetailsComponent;
             }());

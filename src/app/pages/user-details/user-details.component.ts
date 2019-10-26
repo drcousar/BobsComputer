@@ -25,6 +25,7 @@ export class UserDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private http: HttpClient, private fb: FormBuilder, private router: Router) {
     this.userId = this.route.snapshot.paramMap.get('id');
 
+
     /**
     * Call Jordan's GET API to retreive current values to populate HTML
     */
@@ -61,6 +62,13 @@ export class UserDetailsComponent implements OnInit {
    }
    
   ngOnInit() {
+    this.form = this.fb.group({
+      firstName: [null],
+      lastName: [null],
+      phoneNumber: [null],
+      address: [null],
+      email: [null]
+    })
   }
 
 }

@@ -803,9 +803,6 @@ let UserDetailsComponent = class UserDetailsComponent {
         this.fb = fb;
         this.router = router;
         this.userId = this.route.snapshot.paramMap.get('id');
-        console.log('Parameters: ');
-        console.table(this.route.snapshot.paramMap);
-        console.log('User ID from Params: ' + this.userId);
         /**
         * Call Jordan's GET API to retreive current values to populate HTML
         */
@@ -839,6 +836,13 @@ let UserDetailsComponent = class UserDetailsComponent {
         this.router.navigate(['/user']);
     }
     ngOnInit() {
+        this.form = this.fb.group({
+            firstName: [null],
+            lastName: [null],
+            phoneNumber: [null],
+            address: [null],
+            email: [null]
+        });
     }
 };
 UserDetailsComponent.ctorParameters = () => [
