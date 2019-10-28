@@ -28,11 +28,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
             /* harmony default export */ __webpack_exports__["default"] = ("<p>home works!</p>\r\n");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("<p>home works!</p>\n");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/login/login.component.html": 
@@ -43,11 +39,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
             /* harmony default export */ __webpack_exports__["default"] = ("<p>login works!</p>\r\n");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("<p>login works!</p>\n");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/not-found/not-found.component.html": 
@@ -69,11 +61,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
             /* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   25 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n\n<div fxLayout=\"column\">\n    <mat-card>\n        <mat-card-title>Edit User Details</mat-card-title>\n        <form [formGroup]=\"form\" (ngSubmit)=\"saveUser()\" #userForm>\n            <mat-card-content>\n                <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"PhoneNumber\" value=\"{{PhoneNumber}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"PhoneNumber\" />\n                    </mat-form-field>\n\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"Address\" value=\"{{Address}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Address\" />\n                    </mat-form-field>\n\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"Email\" value=\"{{Email}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Email\" />\n                    </mat-form-field>\n            </div>\n            </mat-card-content>\n            <br />\n            <mat-card-actions>\n                <button mat-raised-button (click)=\"cancel()\">Cancel</button>\n                <button mat-raised-button>Submit</button>\n            </mat-card-actions>\n        </form>            \n    </mat-card>  \n</div>   \n\n");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   25 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n\n<div fxLayout=\"column\">\n    <mat-card>\n        <mat-card-title>User Details</mat-card-title>\n        <form [formGroup]=\"form\" (ngSubmit)=\"saveUser()\" #userForm>\n            <mat-card-content>\n                <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n                    <mat-form-field>\n                        <input type=\"text\" matInput [formControl]=\"form.formControls['firstName']\" placeholder=\"First Name\" />\n                    </mat-form-field>\n\n                    <mat-form-field>\n                        <input type=\"text\" matInput [formControl]=\"form.formControls['lastName']\" placeholder=\"Last Name\" />\n                    </mat-form-field>\n\n                    <mat-form-field>\n                        <input type=\"text\" matInput [formControl]=\"form.formControls['phoneNumber']\" placeholder=\"Phone Number\" />\n                    </mat-form-field>\n\n                    <mat-form-field>\n                        <input type=\"text\" matInput [formControl]=\"form.formControls['address']\" placeholder=\"Address\" />\n                    </mat-form-field>\n\n                    <mat-form-field>\n                        <input type=\"text\" matInput [formControl]=\"form.formControls['email']\" placeholder=\"Email\" />\n                    </mat-form-field>\n            </div>\n            </mat-card-content>\n            <br />\n            <mat-card-actions>\n                <button mat-raised-button (click)=\"cancel()\">Cancel</button>\n                <button mat-raised-button>Submit</button>\n            </mat-card-actions>\n        </form>            \n    </mat-card>  \n</div>   \n\n");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/user-management-delete-dialog/user-management-delete-dialog.component.html": 
@@ -84,11 +72,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
             /* harmony default export */ __webpack_exports__["default"] = ("<!--\n    /*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   23 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<h1 mat-dialog-title>Bob's Computer Repair Shop</h1>\n<div mat-dialog-content>\n    <h3>You have elected to delete user: {{myUserName}} </h3>\n    <p>This cannot be undone!</p>\n</div>\n<div mat-dialog-actions>\n    <button mat-button [mat-dialog-close]=\"\" cdkFocusInitial>Ok</button>\n</div>\n");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n    /*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   23 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<h1 mat-dialog-title>Bob's Computer Repair Shop</h1>\n<div mat-dialog-content>\n    <h3>Delete User</h3>\n    <p>Deleting user: {{userName}}</p>\n  <div>\n    <h2>Delete User Header</h2> \n    <div>\n\n    </div>\n  </div>\n<div mat-dialog-actions>\n  <button mat-button [mat-dialog-close]=\"\" cdkFocusInitial>Ok</button>\n</div>\n");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/user-management/user-management.component.html": 
@@ -99,11 +83,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
             /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n<div fxLayout=\"column\">\r\n    <mat-card>\r\n        <mat-card-title>User Management</mat-card-title>\r\n        <mat-card-content>\r\n                <form #f=\"ngForm\">\r\n                <table mat-table [dataSource]=\"users\" class=\"mat-elevation-z8\">\r\n\r\n                    <!--- Note that these columns can be defined in any order.\r\n                            The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n                    <!-- Last Name Column -->\r\n                    <ng-container matColumnDef=\"username\">\r\n                        <th mat-header-cell *matHeaderCellDef> Username </th>\r\n                        <!-- Edit User Name Control-->\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.username}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- First Name Column -->\r\n                    <ng-container matColumnDef=\"firstName\">\r\n                        <th mat-header-cell *matHeaderCellDef> First Name </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.firstName}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Last Name Column -->\r\n                    <ng-container matColumnDef=\"lastName\">\r\n                        <th mat-header-cell *matHeaderCellDef> Last Name </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.lastName}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Phone Number Column -->\r\n                    <ng-container matColumnDef=\"phoneNumber\">\r\n                        <th mat-header-cell *matHeaderCellDef> Phone Number </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.phoneNumber}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Address Column -->\r\n                    <ng-container matColumnDef=\"address\">\r\n                        <th mat-header-cell *matHeaderCellDef> Address </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.address}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Email Column -->\r\n                    <ng-container matColumnDef=\"email\">\r\n                        <th mat-header-cell *matHeaderCellDef> Email </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.email}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Edit Column -->\r\n                    <ng-container matColumnDef=\"edit\">\r\n                        <th mat-header-cell *matHeaderCellDef>  </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            <button routerLink=\"/edituser/{{element._id}}\" >Edit</button>\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Delete Column -->\r\n                    <ng-container matColumnDef=\"delete\">\r\n                        <th mat-header-cell *matHeaderCellDef>  </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            <button (click)=\"delete(element._id, element.username)\" >Delete</button>\r\n                        </td>\r\n                    </ng-container>\r\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n                </table>\r\n            </form>\r\n        </mat-card-content>\r\n    </mat-card>\r\n</div>\r\n");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   23 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxLayout=\"column\">\n    <mat-card>\n        <mat-card-title>User Management</mat-card-title>\n        <mat-card-content>\n                <form #f=\"ngForm\">\n                <table mat-table [dataSource]=\"users\" class=\"mat-elevation-z8\">\n\n                    <!--- Note that these columns can be defined in any order.\n                            The actual rendered columns are set as a property on the row definition\" -->\n\n                    <!-- Last Name Column -->\n                    <ng-container matColumnDef=\"username\">\n                        <th mat-header-cell *matHeaderCellDef> Username </th>\n                        <!-- Edit User Name Control-->\n                        <td mat-cell *matCellDef=\"let element\">\n                            {{element.username}}\n                        </td>\n                    </ng-container>\n\n                    <!-- First Name Column -->\n                    <ng-container matColumnDef=\"firstName\">\n                        <th mat-header-cell *matHeaderCellDef> First Name </th>\n\n                        <td mat-cell *matCellDef=\"let element\">\n                            {{element.firstName}}\n                        </td>\n                    </ng-container>\n\n                    <!-- Last Name Column -->\n                    <ng-container matColumnDef=\"lastName\">\n                        <th mat-header-cell *matHeaderCellDef> Last Name </th>\n\n                        <td mat-cell *matCellDef=\"let element\">\n                            {{element.lastName}}\n                        </td>\n                    </ng-container>\n\n                    <!-- Phone Number Column -->\n                    <ng-container matColumnDef=\"phoneNumber\">\n                        <th mat-header-cell *matHeaderCellDef> Phone Number </th>\n\n                        <td mat-cell *matCellDef=\"let element\">\n                            {{element.phoneNumber}}\n                        </td>\n                    </ng-container>\n\n                    <!-- Address Column -->\n                    <ng-container matColumnDef=\"address\">\n                        <th mat-header-cell *matHeaderCellDef> Address </th>\n\n                        <td mat-cell *matCellDef=\"let element\">\n                            {{element.address}}\n                        </td>\n                    </ng-container>\n\n                    <!-- Email Column -->\n                    <ng-container matColumnDef=\"email\">\n                        <th mat-header-cell *matHeaderCellDef> Email </th>\n\n                        <td mat-cell *matCellDef=\"let element\">\n                            {{element.email}}\n                        </td>\n                    </ng-container>\n\n                    <!-- Edit Column -->\n                    <ng-container matColumnDef=\"edit\">\n                        <th mat-header-cell *matHeaderCellDef>  </th>\n\n                        <td mat-cell *matCellDef=\"let element\">\n                            <button routerLink=\"/edituser/{{element._id}}\" >Edit</button>\n                        </td>\n                    </ng-container>\n\n                    <!-- Delete Column -->\n                    <ng-container matColumnDef=\"delete\">\n                        <th mat-header-cell *matHeaderCellDef>  </th>\n\n                        <td mat-cell *matCellDef=\"let element\">\n                            <button (click)=\"delete(element._id, element.userName)\" >Delete</button>\n                        </td>\n                    </ng-container>\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n            </form>\n        </mat-card-content>\n    </mat-card>\n</div>\n");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared/base-layout/base-layout.component.html": 
@@ -114,11 +94,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: BobComputer Starter Code\r\n;===========================================\r\n*/\r\n-->\r\n<router-outlet></router-outlet>\r\n\r\n");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   23 October 2019\n; Description: BobComputer Starter Code\n;===========================================\n*/\n-->\n<div>\n  <main>\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"primary\">\n      <mat-toolbar-row>\n        <button mat-button class=\"toolbar__icon-button mat-button\">\n          <a routerLink=\"/\">\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\n          </a>\n        </button>\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"\">About Us</a>\n        </button>\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"\">Service Repairs</a>\n        </button>\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"\">Contact Us</a>\n        </button>\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/user\">User Management</a>\n        </button>\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"\">Security Questions Management</a>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-button class=\"mat-button\">\n          <a (click)=\"logout()\" class=\"nav-link\">Logout</a>\n        </button>\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </main>\n</div>\n<router-outlet></router-outlet>\n\n");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
+            /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: BobComputer Starter Code\r\n;===========================================\r\n*/\r\n-->\r\n<div>\r\n  <main>\r\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"primary\">\r\n      <mat-toolbar-row>\r\n        <button mat-button class=\"toolbar__icon-button mat-button\">\r\n          <a routerLink=\"/\">\r\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\r\n          </a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">About Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Service Repairs</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Contact Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/user\">User Management</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Security Questions Management</a>\r\n        </button>\r\n\r\n        <div fxFlex></div>\r\n\r\n        <button mat-button class=\"mat-button\">\r\n          <a (click)=\"logout()\" class=\"nav-link\">Logout</a>\r\n        </button>\r\n      </mat-toolbar-row>\r\n    </mat-toolbar>\r\n  </main>\r\n</div>\r\n<router-outlet></router-outlet>\r\n\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared/session-layout/session-layout.component.html": 
@@ -771,11 +747,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
             /* harmony default export */ __webpack_exports__["default"] = ("/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   25 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdXNlci1kZXRhaWxzL3VzZXItZGV0YWlscy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7O0NBT0MiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy91c2VyLWRldGFpbHMvdXNlci1kZXRhaWxzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxyXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxyXG47IFRpdGxlOiAgQm9iJ3MgQ29tcHV0ZXJcclxuOyBBdXRob3I6IERvbiBDb3VzYXJcclxuOyBEYXRlOiAgIDI1IE9jdG9iZXIgMjAxOVxyXG47IERlc2NyaXB0aW9uOiBCb2IncyBDb21wdXRlclxyXG47PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxyXG4qLyJdfQ== */");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   25 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdXNlci1kZXRhaWxzL3VzZXItZGV0YWlscy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7O0NBT0MiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy91c2VyLWRldGFpbHMvdXNlci1kZXRhaWxzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbjsgVGl0bGU6ICBCb2IncyBDb21wdXRlclxuOyBBdXRob3I6IERvbiBDb3VzYXJcbjsgRGF0ZTogICAyNSBPY3RvYmVyIDIwMTlcbjsgRGVzY3JpcHRpb246IEJvYidzIENvbXB1dGVyXG47PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuKi8iXX0= */");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /***/ 
         }),
         /***/ "./src/app/pages/user-details/user-details.component.ts": 
@@ -808,19 +780,15 @@
                     this.http = http;
                     this.fb = fb;
                     this.router = router;
-<<<<<<< HEAD
                     this.PhoneNumber = '';
                     this.Address = '';
                     this.Email = '';
-=======
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
                     this.userId = this.route.snapshot.paramMap.get('id');
                     /**
                     * Call Jordan's GET API to retreive current values to populate HTML
                     */
                     this.http.get('/api/users/' + this.userId).subscribe(function (res) {
                         _this.user = res;
-<<<<<<< HEAD
                         _this.PhoneNumber = res['phoneNumber'];
                         _this.Address = res['address'];
                         _this.Email = res['email'];
@@ -830,16 +798,6 @@
                         console.log(err);
                     }, function () {
                         //Do nothing after the get
-=======
-                    }, function (err) {
-                        console.log(err);
-                    }, function () {
-                        _this.form.controls['firstName'].setValue(_this.user.firstname);
-                        _this.form.controls['lastName'].setValue(_this.user.lastName);
-                        _this.form.controls['phoneNumber'].setValue(_this.user.phoneNumber);
-                        _this.form.controls['address'].setValue(_this.user.address);
-                        _this.form.controls['email'].setValue(_this.user.email);
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
                     });
                 }
                 /**
@@ -848,17 +806,9 @@
                 UserDetailsComponent.prototype.saveUser = function () {
                     var _this = this;
                     this.http.put('/api/users/' + this.userId, {
-<<<<<<< HEAD
                         phoneNumber: this.PhoneNumber,
                         address: this.Address,
                         email: this.Email,
-=======
-                        firstName: this.form.controls['firstName'].value,
-                        lastName: this.form.controls['lastName'].value,
-                        phoneNumber: this.form.controls['phoneNumber'].value,
-                        address: this.form.controls['address'].value,
-                        email: this.form.controls['email'].value,
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
                     }).subscribe(function (res) {
                         _this.router.navigate(['/user']);
                     });
@@ -868,11 +818,6 @@
                 };
                 UserDetailsComponent.prototype.ngOnInit = function () {
                     this.form = this.fb.group({
-<<<<<<< HEAD
-=======
-                        firstName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
-                        lastName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
                         phoneNumber: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
                         address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
                         email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])]
@@ -903,11 +848,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
             /* harmony default export */ __webpack_exports__["default"] = ("/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\np { color: red }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdXNlci1tYW5hZ2VtZW50LWRlbGV0ZS1kaWFsb2cvdXNlci1tYW5hZ2VtZW50LWRlbGV0ZS1kaWFsb2cuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7OztDQU9DO0FBQ0QsSUFBSSxXQUFXIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvdXNlci1tYW5hZ2VtZW50LWRlbGV0ZS1kaWFsb2cvdXNlci1tYW5hZ2VtZW50LWRlbGV0ZS1kaWFsb2cuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXHJcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbjsgVGl0bGU6ICBCb2IncyBDb21wdXRlclxyXG47IEF1dGhvcjogRG9uIENvdXNhclxyXG47IERhdGU6ICAgMjMgT2N0b2JlciAyMDE5XHJcbjsgRGVzY3JpcHRpb246IEJvYidzIENvbXB1dGVyXHJcbjs9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbiovXHJcbnAgeyBjb2xvcjogcmVkIH0iXX0= */");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   23 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdXNlci1tYW5hZ2VtZW50LWRlbGV0ZS1kaWFsb2cvdXNlci1tYW5hZ2VtZW50LWRlbGV0ZS1kaWFsb2cuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7OztDQU9DIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvdXNlci1tYW5hZ2VtZW50LWRlbGV0ZS1kaWFsb2cvdXNlci1tYW5hZ2VtZW50LWRlbGV0ZS1kaWFsb2cuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuOyBUaXRsZTogIEJvYidzIENvbXB1dGVyXG47IEF1dGhvcjogRG9uIENvdXNhclxuOyBEYXRlOiAgIDIzIE9jdG9iZXIgMjAxOVxuOyBEZXNjcmlwdGlvbjogQm9iJ3MgQ29tcHV0ZXJcbjs9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG4qLyJdfQ== */");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /***/ 
         }),
         /***/ "./src/app/pages/user-management-delete-dialog/user-management-delete-dialog.component.ts": 
@@ -922,10 +863,7 @@
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
             /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
-<<<<<<< HEAD
             /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-=======
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /*
             ============================================
             ; Title:  Bob's Computer
@@ -935,17 +873,13 @@
             ;===========================================
             */
             var UserManagementDeleteDialogComponent = /** @class */ (function () {
-<<<<<<< HEAD
                 function UserManagementDeleteDialogComponent(dialogRef, data, router) {
                     this.dialogRef = dialogRef;
                     this.router = router;
+                    //Define variables to call from HTML
                     this.myUserId = data.userId;
                     this.myUserName = data.username;
                     console.log('Dialog User: ' + this.myUserId);
-=======
-                function UserManagementDeleteDialogComponent(dialogRef, data) {
-                    this.dialogRef = dialogRef;
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
                     /**
                      * Prove that data made it over from User Management Component
                      */
@@ -958,12 +892,8 @@
             }());
             UserManagementDeleteDialogComponent.ctorParameters = function () { return [
                 { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
-<<<<<<< HEAD
                 { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
                 { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
-=======
-                { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             ]; };
             UserManagementDeleteDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -983,11 +913,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
             /* harmony default export */ __webpack_exports__["default"] = ("/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\ntable {\r\n    width: 100%;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdXNlci1tYW5hZ2VtZW50L3VzZXItbWFuYWdlbWVudC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7O0NBT0M7QUFDRDtJQUNJLFdBQVc7QUFDZiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3VzZXItbWFuYWdlbWVudC91c2VyLW1hbmFnZW1lbnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXHJcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbjsgVGl0bGU6ICBCb2IncyBDb21wdXRlclxyXG47IEF1dGhvcjogRG9uIENvdXNhclxyXG47IERhdGU6ICAgMjMgT2N0b2JlciAyMDE5XHJcbjsgRGVzY3JpcHRpb246IEJvYidzIENvbXB1dGVyXHJcbjs9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbiovXHJcbnRhYmxlIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59Il19 */");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   23 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\ntable {\n    width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdXNlci1tYW5hZ2VtZW50L3VzZXItbWFuYWdlbWVudC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7O0NBT0M7QUFDRDtJQUNJLFdBQVc7QUFDZiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3VzZXItbWFuYWdlbWVudC91c2VyLW1hbmFnZW1lbnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuOyBUaXRsZTogIEJvYidzIENvbXB1dGVyXG47IEF1dGhvcjogRG9uIENvdXNhclxuOyBEYXRlOiAgIDIzIE9jdG9iZXIgMjAxOVxuOyBEZXNjcmlwdGlvbjogQm9iJ3MgQ29tcHV0ZXJcbjs9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG4qL1xudGFibGUge1xuICAgIHdpZHRoOiAxMDAlO1xufSJdfQ== */");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /***/ 
         }),
         /***/ "./src/app/pages/user-management/user-management.component.ts": 
@@ -1004,10 +930,7 @@
             /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
             /* harmony import */ var _pages_user_management_delete_dialog_user_management_delete_dialog_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../pages/user-management-delete-dialog/user-management-delete-dialog.component */ "./src/app/pages/user-management-delete-dialog/user-management-delete-dialog.component.ts");
             /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
-<<<<<<< HEAD
             /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-=======
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /*
             ============================================
             ; Title:  Bob's Computer
@@ -1025,19 +948,12 @@
              * END STATIC TEST DATA
              */
             var UserManagementComponent = /** @class */ (function () {
-<<<<<<< HEAD
                 function UserManagementComponent(http, dialog, router) {
-=======
-                function UserManagementComponent(http, dialog) {
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
                     var _this = this;
                     // console.table(USERS);  //Displays Static array of users defined above
                     this.http = http;
                     this.dialog = dialog;
-<<<<<<< HEAD
                     this.router = router;
-=======
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
                     this.displayedColumns = ['username', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'edit', 'delete'];
                     //Call Jordan's API to get all users
                     this.http.get('/api/users').subscribe(function (res) {
@@ -1055,38 +971,27 @@
                 /**
                  * Delete User Function
                  */
-<<<<<<< HEAD
                 UserManagementComponent.prototype.delete = function (userId, username) {
                     var _this = this;
                     var dialogRef = this.dialog.open(_pages_user_management_delete_dialog_user_management_delete_dialog_component__WEBPACK_IMPORTED_MODULE_3__["UserManagementDeleteDialogComponent"], {
                         data: {
                             userId: userId,
                             username: username
-=======
-                UserManagementComponent.prototype.delete = function (userId, userName) {
-                    var _this = this;
-                    var dialogRef = this.dialog.open(_pages_user_management_delete_dialog_user_management_delete_dialog_component__WEBPACK_IMPORTED_MODULE_3__["UserManagementDeleteDialogComponent"], {
-                        data: {
-                            userName: userName
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
                         },
                         disableClose: true,
                         width: '800px'
                     });
                     dialogRef.afterClosed().subscribe(function (result) {
-<<<<<<< HEAD
                         //location.reload();
                         _this.users = _this.users.filter(function (u) { return u._id !== userId; });
                         /**
                          * BEGIN Working Delete Code
                          */
-                        /*
-                       this.http.delete('api/users/' + userId).subscribe(res => {
-                         console.log('Deleted User..Redirecting to User List');
-                         //this.users = this.users.filter(u => u._id !== userId);
-                        //this.router.navigate(['/user']);
-                       })
-                       */
+                        _this.http.delete('api/users/' + userId).subscribe(function (res) {
+                            console.log('Deleted User..Redirecting to User List');
+                            _this.users = _this.users.filter(function (u) { return u._id !== userId; });
+                            //this.router.navigate(['/user']);
+                        });
                         /**
                          * END Working Delete Code
                          */
@@ -1099,14 +1004,6 @@
                           })
                         }
                         */
-=======
-                        if (result === 'confirm') {
-                            _this.http.delete('api/users/ + userId').subscribe(function (res) {
-                                console.log('Deleted User');
-                                _this.users = _this.users.filter(function (u) { return u._id !== userId; });
-                            });
-                        }
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
                     });
                 }; //close delete function
                 UserManagementComponent.prototype.ngOnInit = function () {
@@ -1115,12 +1012,8 @@
             }()); //close export class
             UserManagementComponent.ctorParameters = function () { return [
                 { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
-<<<<<<< HEAD
                 { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"] },
                 { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
-=======
-                { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__["MatDialog"] }
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             ]; };
             UserManagementComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1139,11 +1032,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-            /* harmony default export */ __webpack_exports__["default"] = ("/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: BobComputer Starter Code\r\n;===========================================\r\n*/\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Jhc2UtbGF5b3V0L2Jhc2UtbGF5b3V0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Q0FPQyIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9iYXNlLWxheW91dC9iYXNlLWxheW91dC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcclxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuOyBUaXRsZTogIEJvYidzIENvbXB1dGVyXHJcbjsgQXV0aG9yOiBEb24gQ291c2FyXHJcbjsgRGF0ZTogICAyMyBPY3RvYmVyIDIwMTlcclxuOyBEZXNjcmlwdGlvbjogQm9iQ29tcHV0ZXIgU3RhcnRlciBDb2RlXHJcbjs9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbiovIl19 */");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("/*\n============================================\n; Title:  Bob's Computer\n; Author: Jordan Hennessy\n; Date:   23 October 2019\n; Description: BobComputer Starter Code\n;===========================================\n*/\n\n#logo {\n  height: 50px;\n  width: auto;\n  vertical-align: middle;\n}\n\na {\n  color: #fff;\n  text-transform: uppercase;\n  text-decoration: none;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Jhc2UtbGF5b3V0L2Jhc2UtbGF5b3V0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Q0FPQzs7QUFFRDtFQUNFLFlBQVk7RUFDWixXQUFXO0VBQ1gsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsV0FBVztFQUNYLHlCQUF5QjtFQUN6QixxQkFBcUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvYmFzZS1sYXlvdXQvYmFzZS1sYXlvdXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuOyBUaXRsZTogIEJvYidzIENvbXB1dGVyXG47IEF1dGhvcjogSm9yZGFuIEhlbm5lc3N5XG47IERhdGU6ICAgMjMgT2N0b2JlciAyMDE5XG47IERlc2NyaXB0aW9uOiBCb2JDb21wdXRlciBTdGFydGVyIENvZGVcbjs9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG4qL1xuXG4jbG9nbyB7XG4gIGhlaWdodDogNTBweDtcbiAgd2lkdGg6IGF1dG87XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG59XG5cbmEge1xuICBjb2xvcjogI2ZmZjtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuIl19 */");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
+            /* harmony default export */ __webpack_exports__["default"] = ("/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Jordan Hennessy\r\n; Date:   23 October 2019\r\n; Description: BobComputer Starter Code\r\n;===========================================\r\n*/\r\n\r\n#logo {\r\n  height: 50px;\r\n  width: auto;\r\n  vertical-align: middle;\r\n}\r\n\r\na {\r\n  color: #fff;\r\n  text-transform: uppercase;\r\n  text-decoration: none;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Jhc2UtbGF5b3V0L2Jhc2UtbGF5b3V0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Q0FPQzs7QUFFRDtFQUNFLFlBQVk7RUFDWixXQUFXO0VBQ1gsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsV0FBVztFQUNYLHlCQUF5QjtFQUN6QixxQkFBcUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvYmFzZS1sYXlvdXQvYmFzZS1sYXlvdXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXHJcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbjsgVGl0bGU6ICBCb2IncyBDb21wdXRlclxyXG47IEF1dGhvcjogSm9yZGFuIEhlbm5lc3N5XHJcbjsgRGF0ZTogICAyMyBPY3RvYmVyIDIwMTlcclxuOyBEZXNjcmlwdGlvbjogQm9iQ29tcHV0ZXIgU3RhcnRlciBDb2RlXHJcbjs9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbiovXHJcblxyXG4jbG9nbyB7XHJcbiAgaGVpZ2h0OiA1MHB4O1xyXG4gIHdpZHRoOiBhdXRvO1xyXG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XHJcbn1cclxuXHJcbmEge1xyXG4gIGNvbG9yOiAjZmZmO1xyXG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG59XHJcbiJdfQ== */");
             /***/ 
         }),
         /***/ "./src/app/shared/base-layout/base-layout.component.ts": 
@@ -1157,10 +1046,7 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseLayoutComponent", function () { return BaseLayoutComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-<<<<<<< HEAD
-=======
             /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /*
             ============================================
             ; Title:  Bob's Computer
@@ -1170,14 +1056,6 @@
             ;===========================================
             */
             var BaseLayoutComponent = /** @class */ (function () {
-<<<<<<< HEAD
-                function BaseLayoutComponent() {
-                }
-                BaseLayoutComponent.prototype.ngOnInit = function () {
-                };
-                return BaseLayoutComponent;
-            }());
-=======
                 function BaseLayoutComponent(router) {
                     this.router = router;
                 }
@@ -1191,7 +1069,6 @@
             BaseLayoutComponent.ctorParameters = function () { return [
                 { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
             ]; };
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             BaseLayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-base-layout',
@@ -1336,11 +1213,7 @@
           \***************************/
         /*! no static exports found */
         /***/ (function (module, exports, __webpack_require__) {
-<<<<<<< HEAD
             module.exports = __webpack_require__(/*! C:\Users\drcousar\bu-webdev\BobsComputer\src\main.ts */ "./src/main.ts");
-=======
-            module.exports = __webpack_require__(/*! /Users/jordanhennessy/bu-webdev/BobsComputer/src/main.ts */ "./src/main.ts");
->>>>>>> eaf1c46fd40c28e289f50a355775ede3df9be2f3
             /***/ 
         })
     }, [[0, "runtime", "vendor"]]]);

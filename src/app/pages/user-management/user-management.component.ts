@@ -14,6 +14,29 @@ import { ActivatedRoute, Route } from '@angular/router';
 import { Router } from "@angular/router";
 import { DataSource } from '@angular/cdk/table';
 
+/**
+ * BEGIN STATIC TEST DATA TO BEGIN CODING WITH
+ */
+export interface users {
+  userName: string;
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  address: string;
+  email: string;
+  userId: number;
+}
+
+const USERS: users[] = [
+  {userName: "dcousar", firstName: 'Donald', lastName: 'Cousar', phoneNumber: '6015551010', address: '100 Main St', email: "dcousar@yahoo.com", userId: 1},
+  {userName: "aedwards", firstName: 'Alan', lastName: 'Edwards', phoneNumber: '6015551011', address: '102 Main St', email: "aedwards@yahoo.com", userId: 2},
+  {userName: "jhennessy", firstName: 'Jordan', lastName: 'Hennessy', phoneNumber: '6015551012', address: '101 Main St', email: "jhennessy@yahoo.com", userId: 3}
+];
+
+/**
+ * END STATIC TEST DATA
+ */
+
 @Component({
   selector: 'app-user-management',
   templateUrl: './user-management.component.html',
@@ -45,9 +68,11 @@ export class UserManagementComponent implements OnInit {
   }
 
   /**
-   * Delete User Function - Removes a user from collection and table
+   * Delete User Function
    */
     delete(userId, username) {
+      
+
       const dialogRef = this.dialog.open(UserManagementDeleteDialogComponent, {
         data: {
           userId: userId,
@@ -59,17 +84,32 @@ export class UserManagementComponent implements OnInit {
 
       dialogRef.afterClosed().subscribe(result => {
         //location.reload();
-        
+        this.users = this.users.filter(u => u._id !== userId);
         /**
-         * Call Jordan's API to delete user
+         * BEGIN Working Delete Code
          */
+        
          
         this.http.delete('api/users/' + userId).subscribe(res => {
           console.log('Deleted User..Redirecting to User List');
-
-          //Update Table removing deleted user (Attribution: Professor Krasso demonstrated this idea 10/25/29)
           this.users = this.users.filter(u => u._id !== userId);
+         //this.router.navigate(['/user']);
         })
+        
+
+       /**
+        * END Working Delete Code
+        */
+
+        /*
+        if (result === 'confirm') {
+          console.log('Deleting');
+          this.http.delete('api/users/ + userId').subscribe(res => {
+            console.log('Deleted User');
+            this.users = this.users.filter(u => u._id !== userId);
+          })
+        }
+        */
       })
   }  //close delete function
 
