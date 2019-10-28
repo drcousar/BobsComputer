@@ -39,10 +39,12 @@ import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 import { Platform } from '@angular/cdk/platform';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
+
+
 
 @NgModule({
   declarations: [
