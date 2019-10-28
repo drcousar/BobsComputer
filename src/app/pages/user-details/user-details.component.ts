@@ -60,7 +60,7 @@ export class UserDetailsComponent implements OnInit {
    cancel() {
      this.router.navigate(['/user']);
    }
-   
+
   ngOnInit() {
     this.form = this.fb.group({
       firstName: [null, Validators.compose([Validators.required])],
