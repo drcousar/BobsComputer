@@ -7,6 +7,7 @@
 ;===========================================
 */
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-base-layout',
@@ -15,9 +16,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BaseLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit() {
+  }
+
+  logout() {
+    this.router.navigate(['/session/login']);
   }
 
 }

@@ -1,8 +1,20 @@
 /*
 ============================================
 ; Title:  Bob's Computer
-; Author: Don Cousar
+; Author: Jordan Hennessy
 ; Date:   23 October 2019
 ; Description: BobComputer Starter Code
 ;===========================================
 */
+
+#logo {
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
