@@ -30,11 +30,7 @@ export const AppRoutes: Routes = [
         component: UserManagementComponent
       },
       {
-       path: 'deleteuser/:id',
-       component: UserManagementDeleteDialogComponent
-      },
-      {
-       path: 'edituser/:id',
+       path: 'user/edit/:id',
        component: UserDetailsComponent
       },
       {
