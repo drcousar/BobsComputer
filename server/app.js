@@ -88,17 +88,17 @@ app.post('/api/usersignin', function(req, res, next) {
     return bcrypt.compare(req.body.password, user.password);
 
   }).then(result => {
-    console.log('BCrypt Results: ');
-    console.log(result);
-    if(!result) {
+    //console.log('BCrypt Results: '); debug sanity check
+    //console.log(result); debug sanity check
+    if(result === false) {
       return res.status(401).json({
         message: "Authentication Failure: bad password"
       });
-    } //end if
-    res.status(200).json({
-      //Return Username if successful, this could be anything -Don
-      username: user.username
-    });
+    } else {
+      return res.status(200).json({
+        //Return Username if successful, this could be anything -Don
+      });
+    }
   }).catch(err => {
     return res.status(401).json({
       message: "Authentication Failure: Unknown Error"
