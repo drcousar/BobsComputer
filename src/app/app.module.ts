@@ -47,7 +47,6 @@ import { SecurityQuestionsComponent } from './pages/security-questions/security-
 import { QuestionDetailsComponent } from './pages/question-details/question-details.component';
 import { SecurityQuestionsDeleteDialogComponent } from './pages/security-questions-delete-dialog/security-questions-delete-dialog.component';
 import { AddQuestionComponent } from './pages/add-question/add-question.component';
-import { SignupComponent } from './pages/signup/signup.component';
 
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AuthGuard } from './shared/auth.guard';
@@ -69,8 +68,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     QuestionDetailsComponent,
     SecurityQuestionsDeleteDialogComponent,
     AddQuestionComponent,
-    ForgotPasswordComponent,
-    SignupComponent
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
