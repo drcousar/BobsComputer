@@ -167,7 +167,7 @@ app.get('/api/questions', function(req,res,next) {
   })
 });
 
-// Get User by id
+// Get Question by id
 app.get('/api/questions/:id', function(req, res, next) {
   SecurityQuestion.findOne({'_id': req.params.id}, function(err, question) {
     if (err) {
@@ -207,7 +207,7 @@ app.put('/api/questions/:id', function(req, res, next) {
   })
 })
 
-// Delete User
+// Delete Question
 app.delete('/api/questions/:id', function(req, res, next) {
   SecurityQuestion.findByIdAndDelete({'_id': req.params.id}, function(err, question) {
     if (err) {
@@ -216,6 +216,39 @@ app.delete('/api/questions/:id', function(req, res, next) {
     } else {
       console.log(question);
       res.json(question);
+    }
+  })
+})
+
+// Add new Question
+app.post('/api/questions/add', function(req, res, next) {
+  User.findOne({'questionText': req.body.questionText}, function(err, question) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      if (!question) {
+        // The selected question is unique
+        let q = {
+          questionText: req.body.questionText
+        }
+        SecurityQuestion.create(q, function(err, newQuestion) {
+          if (err) {
+            console.log(err);
+            return next(err);
+          } else {
+            console.log(newQuestion);
+            res.json(newQuestion);
+          }
+        })
+      } else {
+        // The selected username is already in use
+        console.log('The attempted question: ${req.body.questionText} is already in use!');
+        res.status(500).send({
+          text: 'The attempted question: ${req.body.questionText} is already in use!',
+          time_stamp: new Date()
+        })
+      }
     }
   })
 })

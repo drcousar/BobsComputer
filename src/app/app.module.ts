@@ -46,6 +46,7 @@ import { UserManagementDeleteDialogComponent } from './pages/user-management-del
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
 import { QuestionDetailsComponent } from './pages/question-details/question-details.component';
 import { SecurityQuestionsDeleteDialogComponent } from './pages/security-questions-delete-dialog/security-questions-delete-dialog.component';
+import { AddQuestionComponent } from './pages/add-question/add-question.component';
 
 
 
@@ -62,7 +63,8 @@ import { SecurityQuestionsDeleteDialogComponent } from './pages/security-questio
     UserDetailsComponent,
     SecurityQuestionsComponent,
     QuestionDetailsComponent,
-    SecurityQuestionsDeleteDialogComponent
+    SecurityQuestionsDeleteDialogComponent,
+    AddQuestionComponent
   ],
   imports: [
     BrowserModule,

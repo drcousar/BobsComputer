@@ -23,6 +23,19 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/add-question/add-question.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/add-question/add-question.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxLayout=\"column\">\n        <mat-card>\n            <mat-card-title>Add Security Questioin</mat-card-title>\n            <form [formGroup]=\"form\" (ngSubmit)=\"saveQuestion()\" #userForm>\n                <mat-card-content>\n                    <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n                        <mat-form-field>\n                            <input type=\"text\"  matInput [(ngModel)]=\"QuestionText\" value=\"{{QuestionText}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Question Text\" />\n                        </mat-form-field>\n                </div>\n                </mat-card-content>\n                <br />\n                <mat-card-actions>\n                    <button mat-raised-button (click)=\"cancel()\">Cancel</button>\n                    <button mat-raised-button>Submit</button>\n                </mat-card-actions>\n            </form>            \n        </mat-card>  \n    </div> ");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/home/home.component.html":
 /*!**************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/home/home.component.html ***!
@@ -71,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n\n<div fxLayout=\"column\">\n        <mat-card>\n            <mat-card-title>Edit Questioin Details</mat-card-title>\n            <form [formGroup]=\"form\" (ngSubmit)=\"saveQuestion()\" #userForm>\n                <mat-card-content>\n                    <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n    \n                        <mat-form-field>\n                            <input type=\"text\"  matInput [(ngModel)]=\"QuestionText\" value=\"{{QuestionText}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Question Text\" />\n                        </mat-form-field>\n                </div>\n                </mat-card-content>\n                <br />\n                <mat-card-actions>\n                    <button mat-raised-button (click)=\"cancel()\">Cancel</button>\n                    <button mat-raised-button>Submit</button>\n                </mat-card-actions>\n            </form>            \n        </mat-card>  \n    </div>   \n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n\n<div fxLayout=\"column\">\n    <mat-card>\n        <mat-card-title>Edit Questioin Details</mat-card-title>\n        <form [formGroup]=\"form\" (ngSubmit)=\"saveQuestion()\" #userForm>\n            <mat-card-content>\n                <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"QuestionText\" value=\"{{QuestionText}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Question Text\" />\n                    </mat-form-field>\n            </div>\n            </mat-card-content>\n            <br />\n            <mat-card-actions>\n                <button mat-raised-button (click)=\"cancel()\">Cancel</button>\n                <button mat-raised-button>Submit</button>\n            </mat-card-actions>\n        </form>            \n    </mat-card>  \n</div>   \n");
 
 /***/ }),
 
@@ -97,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxLayout=\"column\">\n        <mat-card>\n            <mat-card-title>Security Questions</mat-card-title>\n            <mat-card-content>\n                    <form #f=\"ngForm\">\n                    <table mat-table [dataSource]=\"questions\" class=\"mat-elevation-z8\">\n    \n                        <!--- Note that these columns can be defined in any order.\n                                The actual rendered columns are set as a property on the row definition\" -->\n    \n                        <!-- Question Text Column -->\n                        <ng-container matColumnDef=\"questionText\">\n                            <th mat-header-cell *matHeaderCellDef> Question Text </th>\n                            <!-- Edit User Name Control-->\n                            <td mat-cell *matCellDef=\"let element\">\n                                {{element.questionText}}\n                            </td>\n                        </ng-container>\n    \n                        <!-- Edit Column -->\n                        <ng-container matColumnDef=\"edit\">\n                            <th mat-header-cell *matHeaderCellDef>  </th>\n    \n                            <td mat-cell *matCellDef=\"let element\">\n                                <button routerLink=\"/questions/edit/{{element._id}}\" >Edit</button>\n                            </td>\n                        </ng-container>\n    \n                        <!-- Delete Column -->\n                        <ng-container matColumnDef=\"delete\">\n                            <th mat-header-cell *matHeaderCellDef>  </th>\n    \n                            <td mat-cell *matCellDef=\"let element\">\n                                <button (click)=\"delete(element._id, element.questionText)\" >Delete</button>\n                            </td>\n                        </ng-container>\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                    </table>\n                </form>\n            </mat-card-content>\n        </mat-card>\n    </div>\n    \n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxLayout=\"column\">\n        <mat-card>\n            <mat-card-title>Security Questions</mat-card-title>\n            <mat-card-subtitle><button routerLink=\"/questions/add\">Add Question</button></mat-card-subtitle>\n            <mat-card-content>\n                    <form #f=\"ngForm\">\n                    <table mat-table [dataSource]=\"questions\" class=\"mat-elevation-z8\">\n    \n                        <!--- Note that these columns can be defined in any order.\n                                The actual rendered columns are set as a property on the row definition\" -->\n    \n                        <!-- Question Text Column -->\n                        <ng-container matColumnDef=\"questionText\">\n                            <th mat-header-cell *matHeaderCellDef> Question Text </th>\n                            <!-- Edit User Name Control-->\n                            <td mat-cell *matCellDef=\"let element\">\n                                {{element.questionText}}\n                            </td>\n                        </ng-container>\n    \n                        <!-- Edit Column -->\n                        <ng-container matColumnDef=\"edit\">\n                            <th mat-header-cell *matHeaderCellDef>  </th>\n    \n                            <td mat-cell *matCellDef=\"let element\">\n                                <button routerLink=\"/questions/edit/{{element._id}}\" >Edit</button>\n                            </td>\n                        </ng-container>\n    \n                        <!-- Delete Column -->\n                        <ng-container matColumnDef=\"delete\">\n                            <th mat-header-cell *matHeaderCellDef>  </th>\n    \n                            <td mat-cell *matCellDef=\"let element\">\n                                <button (click)=\"delete(element._id, element.questionText)\" >Delete</button>\n                            </td>\n                        </ng-container>\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                    </table>\n                </form>\n            </mat-card-content>\n        </mat-card>\n    </div>\n    \n");
 
 /***/ }),
 
@@ -477,6 +490,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
 /* harmony import */ var _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./pages/question-details/question-details.component */ "./src/app/pages/question-details/question-details.component.ts");
 /* harmony import */ var _pages_security_questions_delete_dialog_security_questions_delete_dialog_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./pages/security-questions-delete-dialog/security-questions-delete-dialog.component */ "./src/app/pages/security-questions-delete-dialog/security-questions-delete-dialog.component.ts");
+/* harmony import */ var _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./pages/add-question/add-question.component */ "./src/app/pages/add-question/add-question.component.ts");
 /*
 ; Title:  starter code
 ; Author: Professor Krasso
@@ -522,6 +536,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -538,7 +553,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_13__["UserDetailsComponent"],
             _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_32__["SecurityQuestionsComponent"],
             _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_33__["QuestionDetailsComponent"],
-            _pages_security_questions_delete_dialog_security_questions_delete_dialog_component__WEBPACK_IMPORTED_MODULE_34__["SecurityQuestionsDeleteDialogComponent"]
+            _pages_security_questions_delete_dialog_security_questions_delete_dialog_component__WEBPACK_IMPORTED_MODULE_34__["SecurityQuestionsDeleteDialogComponent"],
+            _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_35__["AddQuestionComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -596,6 +612,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
 /* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
 /* harmony import */ var _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/question-details/question-details.component */ "./src/app/pages/question-details/question-details.component.ts");
+/* harmony import */ var _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/add-question/add-question.component */ "./src/app/pages/add-question/add-question.component.ts");
+
 
 
 
@@ -629,6 +647,10 @@ const AppRoutes = [
             {
                 path: 'questions/edit/:id',
                 component: _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_8__["QuestionDetailsComponent"]
+            },
+            {
+                path: 'questions/add',
+                component: _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_9__["AddQuestionComponent"]
             }
         ]
     },
@@ -651,6 +673,86 @@ const AppRoutes = [
         redirectTo: 'session/404'
     }
 ];
+
+
+/***/ }),
+
+/***/ "./src/app/pages/add-question/add-question.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/pages/add-question/add-question.component.css ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2FkZC1xdWVzdGlvbi9hZGQtcXVlc3Rpb24uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/add-question/add-question.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/pages/add-question/add-question.component.ts ***!
+  \**************************************************************/
+/*! exports provided: AddQuestionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddQuestionComponent", function() { return AddQuestionComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+/*
+============================================
+; Title:  Bob's Computer
+; Author: Don Cousar
+; Date:   28 October 2019
+; Description: Bob's Computer
+;===========================================
+*/
+
+
+
+
+let AddQuestionComponent = class AddQuestionComponent {
+    constructor(route, http, fb, router) {
+        this.route = route;
+        this.http = http;
+        this.fb = fb;
+        this.router = router;
+        this.QuestionText = '';
+    }
+    saveQuestion() {
+        this.http.post('/api/questions/add', {
+            questionText: this.QuestionText
+        }).subscribe(res => {
+            this.router.navigate(['/questions']);
+        });
+    }
+    ngOnInit() {
+        this.form = this.fb.group({
+            questionText: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])]
+        });
+    }
+};
+AddQuestionComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
+AddQuestionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-add-question',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./add-question.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/add-question/add-question.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./add-question.component.css */ "./src/app/pages/add-question/add-question.component.css")).default]
+    })
+], AddQuestionComponent);
+
 
 
 /***/ }),
