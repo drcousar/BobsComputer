@@ -6,7 +6,8 @@
 ;===========================================
 */
 import {Routes} from '@angular/router';
-import {BaseLayoutComponent, SessionLayoutComponent, AuthGuard} from './shared';
+import {BaseLayoutComponent, SessionLayoutComponent } from './shared';
+import { AuthGuard } from './shared/auth.guard'
 import {LoginComponent} from './pages/login/login.component';
 import {HomeComponent} from './pages/home/home.component';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
@@ -46,12 +47,12 @@ export const AppRoutes: Routes = [
       {
         path: 'questions/edit/:id',
         component: QuestionDetailsComponent,
-        canActivate: [AuthGuard],
+        canActivate: [AuthGuard]
       },
       {
         path: 'questions/add',
         component: AddQuestionComponent,
-        canActivate:[AuthGuard]
+        canActivate: [AuthGuard]
       }
     ]
   },

@@ -42,7 +42,24 @@ export class LoginComponent implements OnInit {
   login() {
 
     const username = this.form.controls['username'].value;
+    const password = this.form.controls['password'].value; // Don
 
+    //Send POST request to authenticate - Don
+    this.http.post('/api/usersignin', {
+      'username': username,
+      'password': password
+    }).subscribe(res => {
+      if (res) {
+        this.cookieService.set('isAuthenticated', 'true', 1);
+        this.cookieService.set('username', username, 1);
+        this.router.navigate(['/']);
+        console.log(res);
+      } else {
+        this.errorMessage = "The user credentials you entered were invalid!"
+      }
+    })
+    
+    /*
     this.http.get('/api/usersignin/' + username).subscribe(res => {
       if (res) {
         this.cookieService.set('isAuthenticated', 'true', 1);
@@ -53,6 +70,7 @@ export class LoginComponent implements OnInit {
         this.errorMessage = "The user credentials you entered were invalid!"
       }
     })
+    */
   }
 
 

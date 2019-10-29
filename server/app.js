@@ -69,6 +69,43 @@ app.get('/api/users/:id', function(req, res, next) {
   })
 });
 
+//POST User validating username/pass - Don
+app.post('/api/usersignin', function(req, res, next) {
+
+  User.findOne({ username: req.body.username }).then(user => {
+    console.log('Searching user: ' + req.body.username);
+
+    if(!user) {
+      console.log('User not found in db');
+      return res.status(401).json({
+        message: "Authentication Failure: User not found"
+      }); //end return
+    }  //end if
+
+    console.log('User sent by form: ' + req.body.password); //sanity check
+    console.log('User in db: ' + user.password); //sanity check
+
+    return bcrypt.compare(req.body.password, user.password);
+
+  }).then(result => {
+    //console.log('BCrypt Results: '); debug sanity check
+    //console.log(result); debug sanity check
+    if(result === false) {
+      return res.status(401).json({
+        message: "Authentication Failure: bad password"
+      });
+    } else {
+      return res.status(200).json({
+        //Return Username if successful, this could be anything -Don
+      });
+    }
+  }).catch(err => {
+    return res.status(401).json({
+      message: "Authentication Failure: Unknown Error"
+    });
+  });
+}); //end POST
+
 // Get User by username
 app.get('/api/usersignin/:username', function(req, res, next) {
   User.findOne({'username': req.params.username}, function(err, user) {
@@ -192,9 +229,7 @@ app.get('/api/questions', function(req,res,next) {
   })
 });
 
-
 // Get Question by id
-
 app.get('/api/questions/:id', function(req, res, next) {
   SecurityQuestion.findOne({'_id': req.params.id}, function(err, question) {
     if (err) {

@@ -647,14 +647,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutes", function() { return AppRoutes; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _shared__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared */ "./src/app/shared/index.ts");
-/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
-/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
-/* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
-/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
-/* harmony import */ var _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/question-details/question-details.component */ "./src/app/pages/question-details/question-details.component.ts");
-/* harmony import */ var _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/add-question/add-question.component */ "./src/app/pages/add-question/add-question.component.ts");
+/* harmony import */ var _shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared/auth.guard */ "./src/app/shared/auth.guard.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
+/* harmony import */ var _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/not-found/not-found.component */ "./src/app/pages/not-found/not-found.component.ts");
+/* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
+/* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
+/* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
+/* harmony import */ var _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/question-details/question-details.component */ "./src/app/pages/question-details/question-details.component.ts");
+/* harmony import */ var _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/add-question/add-question.component */ "./src/app/pages/add-question/add-question.component.ts");
+
 
 
 
@@ -672,33 +674,33 @@ const AppRoutes = [
         children: [
             {
                 path: '',
-                component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
-                canActivate: [_shared__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]]
+                component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"],
+                canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
             },
             {
                 path: 'user',
-                component: _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_5__["UserManagementComponent"],
-                canActivate: [_shared__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]]
+                component: _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_6__["UserManagementComponent"],
+                canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
             },
             {
                 path: 'user/edit/:id',
-                component: _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_6__["UserDetailsComponent"],
-                canActivate: [_shared__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]]
+                component: _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__["UserDetailsComponent"],
+                canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
             },
             {
                 path: 'questions',
-                component: _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_7__["SecurityQuestionsComponent"],
-                canActivate: [_shared__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]]
+                component: _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__["SecurityQuestionsComponent"],
+                canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
             },
             {
                 path: 'questions/edit/:id',
-                component: _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_8__["QuestionDetailsComponent"],
-                canActivate: [_shared__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]],
+                component: _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_9__["QuestionDetailsComponent"],
+                canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
             },
             {
                 path: 'questions/add',
-                component: _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_9__["AddQuestionComponent"],
-                canActivate: [_shared__WEBPACK_IMPORTED_MODULE_1__["AuthGuard"]]
+                component: _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_10__["AddQuestionComponent"],
+                canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
             }
         ]
     },
@@ -708,11 +710,11 @@ const AppRoutes = [
         children: [
             {
                 path: 'login',
-                component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"]
+                component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"]
             },
             {
                 path: '404',
-                component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_4__["NotFoundComponent"]
+                component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_5__["NotFoundComponent"]
             }
         ]
     },
@@ -909,7 +911,7 @@ HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".left {\r\n  float: left;\r\n}\r\n\r\n.right {\r\n  float: right;\r\n}\r\n\r\nmat-card {\r\n  width: 30%;\r\n}\r\n\r\nmat-card-actions {\r\n  width: 80%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFJQTtFQUNFLFVBQVU7QUFDWjs7QUFJQTtFQUNFLFVBQVU7QUFDWiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGVmdCB7XHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5yaWdodCB7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG59XHJcblxyXG5cclxuXHJcbm1hdC1jYXJkIHtcclxuICB3aWR0aDogMzAlO1xyXG59XHJcblxyXG5cclxuXHJcbm1hdC1jYXJkLWFjdGlvbnMge1xyXG4gIHdpZHRoOiA4MCU7XHJcbn1cclxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".left {\r\n  float: left;\r\n}\r\n\r\n.right {\r\n  float: right;\r\n}\r\n\r\nmat-card {\r\n  width: 30%;\r\n}\r\n\r\nmat-card-actions {\r\n  width: 95%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFJQTtFQUNFLFVBQVU7QUFDWjs7QUFJQTtFQUNFLFVBQVU7QUFDWiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGVmdCB7XHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5yaWdodCB7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG59XHJcblxyXG5cclxuXHJcbm1hdC1jYXJkIHtcclxuICB3aWR0aDogMzAlO1xyXG59XHJcblxyXG5cclxuXHJcbm1hdC1jYXJkLWFjdGlvbnMge1xyXG4gIHdpZHRoOiA5NSU7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -958,7 +960,12 @@ let LoginComponent = class LoginComponent {
     }
     login() {
         const username = this.form.controls['username'].value;
-        this.http.get('/api/usersignin/' + username).subscribe(res => {
+        const password = this.form.controls['password'].value; // Don
+        //Send POST request to authenticate - Don
+        this.http.post('/api/usersignin', {
+            'username': username,
+            'password': password
+        }).subscribe(res => {
             if (res) {
                 this.cookieService.set('isAuthenticated', 'true', 1);
                 this.cookieService.set('username', username, 1);
@@ -969,6 +976,18 @@ let LoginComponent = class LoginComponent {
                 this.errorMessage = "The user credentials you entered were invalid!";
             }
         });
+        /*
+        this.http.get('/api/usersignin/' + username).subscribe(res => {
+          if (res) {
+            this.cookieService.set('isAuthenticated', 'true', 1);
+            this.cookieService.set('username', username, 1);
+            this.router.navigate(['/']);
+            console.log(res);
+          } else {
+            this.errorMessage = "The user credentials you entered were invalid!"
+          }
+        })
+        */
     }
 };
 LoginComponent.ctorParameters = () => [
