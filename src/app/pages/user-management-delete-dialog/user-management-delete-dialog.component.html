@@ -10,14 +10,9 @@
 -->
 <h1 mat-dialog-title>Bob's Computer Repair Shop</h1>
 <div mat-dialog-content>
-    <h3>Delete User</h3>
-    <p>Deleting user: {{userName}}</p>
-  <div>
-    <h2>Delete User Header</h2> 
-    <div>
-
-    </div>
-  </div>
+    <h3>You have elected to delete user: {{myUserName}} </h3>
+    <p>This cannot be undone!</p>
+</div>
 <div mat-dialog-actions>
-  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Ok</button>
+    <button mat-button [mat-dialog-close]="" cdkFocusInitial>Ok</button>
 </div>

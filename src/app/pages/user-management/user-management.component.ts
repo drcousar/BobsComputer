@@ -46,9 +46,8 @@ export class UserManagementComponent implements OnInit {
 
   users: any;
   displayedColumns = ['username', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'edit', 'delete'];
-  router: Router;
 
-  constructor(private http: HttpClient, private dialog: MatDialog) {
+  constructor(private http: HttpClient, private dialog: MatDialog, private router: Router) {
     // console.table(USERS);  //Displays Static array of users defined above
 
     //Call Jordan's API to get all users
@@ -71,24 +70,47 @@ export class UserManagementComponent implements OnInit {
   /**
    * Delete User Function
    */
-    delete(userId, userName) {
+    delete(userId, username) {
+      
 
-    const dialogRef = this.dialog.open(UserManagementDeleteDialogComponent, {
-      data: {
-        userName: userName
-      },
-      disableClose: true,
-      width: '800px'
-    })
+      const dialogRef = this.dialog.open(UserManagementDeleteDialogComponent, {
+        data: {
+          userId: userId,
+          username: username
+        },
+        disableClose: true,
+        width: '800px'
+      })
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result === 'confirm') {
-        this.http.delete('api/users/ + userId').subscribe(res => {
-          console.log('Deleted User');
+      dialogRef.afterClosed().subscribe(result => {
+        //location.reload();
+        this.users = this.users.filter(u => u._id !== userId);
+        /**
+         * BEGIN Working Delete Code
+         */
+        
+         
+        this.http.delete('api/users/' + userId).subscribe(res => {
+          console.log('Deleted User..Redirecting to User List');
           this.users = this.users.filter(u => u._id !== userId);
+         //this.router.navigate(['/user']);
         })
-      }
-    })
+        
+
+       /**
+        * END Working Delete Code
+        */
+
+        /*
+        if (result === 'confirm') {
+          console.log('Deleting');
+          this.http.delete('api/users/ + userId').subscribe(res => {
+            console.log('Deleted User');
+            this.users = this.users.filter(u => u._id !== userId);
+          })
+        }
+        */
+      })
   }  //close delete function
 
   ngOnInit() {

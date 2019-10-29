@@ -8,7 +8,7 @@
 ;===========================================
 */
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
@@ -21,24 +21,31 @@ export class UserDetailsComponent implements OnInit {
   user: any;
   userId: string;
   form: FormGroup;
+  
+  PhoneNumber: string = '';
+  Address: string = '';
+  Email: string = '';
 
   constructor(private route: ActivatedRoute, private http: HttpClient, private fb: FormBuilder, private router: Router) {
     this.userId = this.route.snapshot.paramMap.get('id');
-
 
     /**
     * Call Jordan's GET API to retreive current values to populate HTML
     */
     this.http.get('/api/users/' + this.userId).subscribe(res => {
       this.user = res;
+
+      this.PhoneNumber = res['phoneNumber'];
+      this.Address = res['address'];
+      this.Email = res['email'];
+
+      console.log('API EDIT GET USERS');
+      console.table(res);
+
     }, err => {
       console.log(err);
     }, () => {
-      this.form.controls['firstName'].setValue(this.user.firstname);
-      this.form.controls['lastName'].setValue(this.user.lastName);
-      this.form.controls['phoneNumber'].setValue(this.user.phoneNumber);
-      this.form.controls['address'].setValue(this.user.address);
-      this.form.controls['email'].setValue(this.user.email);
+        //Do nothing after the get
     })
    }
 
@@ -46,12 +53,11 @@ export class UserDetailsComponent implements OnInit {
     * Call Jordan's Update API to write new values
     */
    saveUser() {
+
      this.http.put('/api/users/' + this.userId, {
-       firstName: this.form.controls['firstName'].value,
-       lastName: this.form.controls['lastName'].value,
-       phoneNumber: this.form.controls['phoneNumber'].value,
-       address: this.form.controls['address'].value,
-       email: this.form.controls['email'].value,
+       phoneNumber: this.PhoneNumber,
+       address: this.Address,
+       email: this.Email,
      }).subscribe(res => {
        this.router.navigate(['/user']);
      })
@@ -62,13 +68,14 @@ export class UserDetailsComponent implements OnInit {
    }
 
   ngOnInit() {
+    
     this.form = this.fb.group({
-      firstName: [null, Validators.compose([Validators.required])],
-      lastName: [null, Validators.compose([Validators.required])],
       phoneNumber: [null, Validators.compose([Validators.required])],
       address: [null, Validators.compose([Validators.required])],
       email: [null, Validators.compose([Validators.required])]
     })
+   
   }
 
 }
+

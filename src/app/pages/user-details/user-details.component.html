@@ -11,28 +11,21 @@
 
 <div fxLayout="column">
     <mat-card>
-        <mat-card-title>User Details</mat-card-title>
+        <mat-card-title>Edit User Details</mat-card-title>
         <form [formGroup]="form" (ngSubmit)="saveUser()" #userForm>
             <mat-card-content>
                 <div fxLayout="column" fxLayoutGap="10px">
+
                     <mat-form-field>
-                        <input type="text" matInput [formControl]="form.formControls['firstName']" placeholder="First Name" />
+                        <input type="text"  matInput [(ngModel)]="PhoneNumber" value="{{PhoneNumber}}" [ngModelOptions]="{standalone: true}" placeholder="PhoneNumber" />
                     </mat-form-field>
 
                     <mat-form-field>
-                        <input type="text" matInput [formControl]="form.formControls['lastName']" placeholder="Last Name" />
+                        <input type="text"  matInput [(ngModel)]="Address" value="{{Address}}" [ngModelOptions]="{standalone: true}" placeholder="Address" />
                     </mat-form-field>
 
                     <mat-form-field>
-                        <input type="text" matInput [formControl]="form.formControls['phoneNumber']" placeholder="Phone Number" />
-                    </mat-form-field>
-
-                    <mat-form-field>
-                        <input type="text" matInput [formControl]="form.formControls['address']" placeholder="Address" />
-                    </mat-form-field>
-
-                    <mat-form-field>
-                        <input type="text" matInput [formControl]="form.formControls['email']" placeholder="Email" />
+                        <input type="text"  matInput [(ngModel)]="Email" value="{{Email}}" [ngModelOptions]="{standalone: true}" placeholder="Email" />
                     </mat-form-field>
             </div>
             </mat-card-content>
