@@ -1,0 +1,54 @@
+<!--
+/*
+============================================
+; Title:  Bob's Computer
+; Author: Don Cousar
+; Date:   28 October 2019
+; Description: Bob's Computer
+;===========================================
+*/
+-->
+<div fxLayout="column">
+        <mat-card>
+            <mat-card-title>Security Questions</mat-card-title>
+            <mat-card-content>
+                    <form #f="ngForm">
+                    <table mat-table [dataSource]="questions" class="mat-elevation-z8">
+    
+                        <!--- Note that these columns can be defined in any order.
+                                The actual rendered columns are set as a property on the row definition" -->
+    
+                        <!-- Question Text Column -->
+                        <ng-container matColumnDef="questionText">
+                            <th mat-header-cell *matHeaderCellDef> Question Text </th>
+                            <!-- Edit User Name Control-->
+                            <td mat-cell *matCellDef="let element">
+                                {{element.questionText}}
+                            </td>
+                        </ng-container>
+    
+                        <!-- Edit Column -->
+                        <ng-container matColumnDef="edit">
+                            <th mat-header-cell *matHeaderCellDef>  </th>
+    
+                            <td mat-cell *matCellDef="let element">
+                                <button routerLink="/questions/edit/{{element._id}}" >Edit</button>
+                            </td>
+                        </ng-container>
+    
+                        <!-- Delete Column -->
+                        <ng-container matColumnDef="delete">
+                            <th mat-header-cell *matHeaderCellDef>  </th>
+    
+                            <td mat-cell *matCellDef="let element">
+                                <button (click)="delete(element._id, element.questionText)" >Delete</button>
+                            </td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    

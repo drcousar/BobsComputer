@@ -43,8 +43,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { Platform } from '@angular/cdk/platform';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
+import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
+import { QuestionDetailsComponent } from './pages/question-details/question-details.component';
+import { SecurityQuestionsDeleteDialogComponent } from './pages/security-questions-delete-dialog/security-questions-delete-dialog.component';
 
-
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { AuthGuard } from './shared/auth.guard';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -56,7 +61,10 @@ import { UserManagementDeleteDialogComponent } from './pages/user-management-del
     BaseLayoutComponent,
     UserManagementComponent,
     UserManagementDeleteDialogComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    SecurityQuestionsComponent,
+    QuestionDetailsComponent,
+    SecurityQuestionsDeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -80,12 +88,14 @@ import { UserManagementDeleteDialogComponent } from './pages/user-management-del
     ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes, {useHash: true, enableTracing: false})
   ],
-  providers: [
-    Platform
+  providers: [{
+    provide: LocationStrategy, useClass: HashLocationStrategy},
+    AuthGuard, CookieService
   ],
   bootstrap: [AppComponent],
   entryComponents: [
-    UserManagementDeleteDialogComponent
+    UserManagementDeleteDialogComponent,
+    SecurityQuestionsDeleteDialogComponent
   ]
 })
 export class AppModule { }

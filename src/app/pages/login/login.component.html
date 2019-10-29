@@ -1,3 +1,36 @@
+<div fxLayout="column">
+  <mat-card fxFlex>
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-subtitle>Please enter your username and password below.</mat-card-subtitle>
+    </mat-card-header>
+
+
+    <mat-card-content>
+      <small *ngIf="form.controls['username'].hasError('required') && form.controls['username'].touched" class="form-error">Username is required!</small>
+      <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="form-error">Password is required!</small>
+      <small *ngIf="errorMessage">{{errorMessage}}</small>
+
+      <br />
+
+      <form [formGroup]="form" (ngSubmit)="login()">
+        <mat-form-field>
+          <input type="text" matInput [formControl]="form.controls['username']" placeholder="username">
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text" matInput [formControl]="form.controls['password']" placeholder="password">
+        </mat-form-field>
+        <mat-card-actions>
+          <button type="submit" mat-raised-button color="accent">Login</button>
+          <a routerLink="">Sign Up</a>
+          <a routerLink="">Forgot Password?</a>
+        </mat-card-actions>
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+<!-- Alan's HTML
 <div class="mt-4 col-8 offset-2">
   <div class="card">
     <div class="card-header">Login Here</div>
@@ -52,13 +85,14 @@
         </div>
         <div class="form-group row">
                 <div class="col-sm-10 offset-2">
-                  
+
                   <a routerLink="/session/forgotPassword" class="btn btn-info float-right">Password Reset</a>
-      
-                  
+
+
                 </div>
               </div>
       </form>
     </div>
   </div>
 </div>
+-->
