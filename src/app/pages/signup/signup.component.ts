@@ -1,3 +1,11 @@
+/*
+============================================
+; Title:  Bob's Computer
+; Author: Alan
+; Date:   28 October 2019
+; Description: Bob's Computer
+;===========================================
+*/
 import { Component, OnInit } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 
@@ -19,11 +27,11 @@ export class SignupComponent implements OnInit {
     zipcode:null,
 
   };
-  
+
 public error =[];;
 
 
-  
+
   constructor(private http: HttpClient) { }
 
 
@@ -31,8 +39,8 @@ public error =[];;
     return this.http.post('url',this.form).subscribe(
       data => console.log(data),
       error => this.handleError(error)
-      
-      
+
+
     );
 
   }

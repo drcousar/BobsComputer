@@ -6,3 +6,6 @@
 ; Description: Bob's Computer
 ;===========================================
 */
+mat-card-actions button {
+  width: 48%;
+}

@@ -1,8 +1,12 @@
 /*
 ============================================
 ; Title:  Bob's Computer
-; Author: Don Cousar
+; Author: Jordan Hennessy
 ; Date:   25 October 2019
 ; Description: Bob's Computer
 ;===========================================
 */
+
+mat-card-actions button {
+  width: 48%;
+}

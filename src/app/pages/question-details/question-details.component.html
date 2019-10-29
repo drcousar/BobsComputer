@@ -11,7 +11,7 @@
 
 <div fxLayout="column">
     <mat-card>
-        <mat-card-title>Edit Questioin Details</mat-card-title>
+        <mat-card-title>Edit Question Details</mat-card-title>
         <form [formGroup]="form" (ngSubmit)="saveQuestion()" #userForm>
             <mat-card-content>
                 <div fxLayout="column" fxLayoutGap="10px">
@@ -22,9 +22,9 @@
             </mat-card-content>
             <br />
             <mat-card-actions>
-                <button mat-raised-button (click)="cancel()">Cancel</button>
-                <button mat-raised-button>Submit</button>
+                <button mat-raised-button (click)="cancel()" color="accent">Cancel</button>
+                <button mat-raised-button color="primary">Submit</button>
             </mat-card-actions>
-        </form>            
-    </mat-card>  
-</div>   
+        </form>
+    </mat-card>
+</div>
