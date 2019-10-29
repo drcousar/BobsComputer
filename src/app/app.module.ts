@@ -44,6 +44,7 @@ import { Platform } from '@angular/cdk/platform';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
+import { QuestionDetailsComponent } from './pages/question-details/question-details.component';
 
 
 
@@ -58,7 +59,8 @@ import { SecurityQuestionsComponent } from './pages/security-questions/security-
     UserManagementComponent,
     UserManagementDeleteDialogComponent,
     UserDetailsComponent,
-    SecurityQuestionsComponent
+    SecurityQuestionsComponent,
+    QuestionDetailsComponent
   ],
   imports: [
     BrowserModule,

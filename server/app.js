@@ -3,7 +3,7 @@
 ; Title:  app.js
 ; Author: Professor Krasso
 ; Date:   21 October 2019
-; Modified By: Jordan Hennessy
+; Modified By: Jordan Hennessy & Don Cousar
 ; Description: Bob's Computer Repair Shop
 ;===========================================
 */
@@ -154,6 +154,58 @@ app.delete('/api/users/:id', function(req, res, next) {
   })
 })
 
+//Get All Security Questions
+app.get('/api/questions', function(req,res,next) {
+  SecurityQuestion.find({}, function(err, questions) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(questions);
+      res.json(questions);
+    }
+  })
+});
+
+// Get User by id
+app.get('/api/questions/:id', function(req, res, next) {
+  SecurityQuestion.findOne({'_id': req.params.id}, function(err, question) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(question);
+      res.json(question);
+    }
+  })
+});
+
+// Update Question
+app.put('/api/questions/:id', function(req, res, next) {
+
+  SecurityQuestion.findOne({'_id': req.params.id}, function(err, question) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(question);
+
+      question.set({
+        questionText: req.body.questionText,
+        dateUpdated: new Date()
+      })
+      question.save(function(err, savedQuestion) {
+        if (err){
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedQuestion);
+          res.json(savedQuestion);
+        }
+      })
+    }
+  })
+})
 
 /**
  * Creates an express server and listens on port 3000

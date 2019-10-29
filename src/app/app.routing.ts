@@ -14,6 +14,7 @@ import {UserManagementComponent} from './pages/user-management/user-management.c
 import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
+import { QuestionDetailsComponent } from './pages/question-details/question-details.component';
 
 export const AppRoutes: Routes = [
   {
@@ -39,6 +40,10 @@ export const AppRoutes: Routes = [
       {
         path: 'questions',
         component: SecurityQuestionsComponent
+      },
+      {
+        path: 'questions/edit/:id',
+        component: QuestionDetailsComponent
       }
     ]
   },
