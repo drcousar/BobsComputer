@@ -51,7 +51,8 @@ export const AppRoutes: Routes = [
       },
       {
         path: 'questions/add',
-        component: AddQuestionComponent
+        component: AddQuestionComponent,
+        canActivate: [AuthGuard]
       }
     ]
   },
