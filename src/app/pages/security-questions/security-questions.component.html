@@ -11,6 +11,7 @@
 <div fxLayout="column">
         <mat-card>
             <mat-card-title>Security Questions</mat-card-title>
+            <mat-card-subtitle><button routerLink="/questions/add">Add Question</button></mat-card-subtitle>
             <mat-card-content>
                     <form #f="ngForm">
                     <table mat-table [dataSource]="questions" class="mat-elevation-z8">

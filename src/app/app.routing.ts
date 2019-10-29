@@ -15,6 +15,7 @@ import { UserManagementDeleteDialogComponent } from './pages/user-management-del
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
 import { QuestionDetailsComponent } from './pages/question-details/question-details.component';
+import { AddQuestionComponent } from './pages/add-question/add-question.component';
 
 
 export const AppRoutes: Routes = [
@@ -44,8 +45,16 @@ export const AppRoutes: Routes = [
       },
       {
         path: 'questions/edit/:id',
+<<<<<<< HEAD
         component: QuestionDetailsComponent,
         canActivate: [AuthGuard]
+=======
+        component: QuestionDetailsComponent
+      },
+      {
+        path: 'questions/add',
+        component: AddQuestionComponent
+>>>>>>> 04fe1d2958ab66439257f8b19fd7a4dba7aebfdc
       }
     ]
   },
