@@ -53,6 +53,17 @@
             /* harmony default export */ __webpack_exports__["default"] = ("<p>Page Not Found</p>");
             /***/ 
         }),
+        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/security-questions/security-questions.component.html": 
+        /*!******************************************************************************************************************!*\
+          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/security-questions/security-questions.component.html ***!
+          \******************************************************************************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("<p>security-questions works!</p>\n");
+            /***/ 
+        }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/user-details/user-details.component.html": 
         /*!******************************************************************************************************!*\
           !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/user-details/user-details.component.html ***!
@@ -94,7 +105,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: BobComputer Starter Code\r\n;===========================================\r\n*/\r\n-->\r\n<div>\r\n  <main>\r\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"primary\">\r\n      <mat-toolbar-row>\r\n        <button mat-button class=\"toolbar__icon-button mat-button\">\r\n          <a routerLink=\"/\">\r\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\r\n          </a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">About Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Service Repairs</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Contact Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/user\">User Management</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Security Questions Management</a>\r\n        </button>\r\n\r\n        <div fxFlex></div>\r\n\r\n        <button mat-button class=\"mat-button\">\r\n          <a (click)=\"logout()\" class=\"nav-link\">Logout</a>\r\n        </button>\r\n      </mat-toolbar-row>\r\n    </mat-toolbar>\r\n  </main>\r\n</div>\r\n<router-outlet></router-outlet>\r\n\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: BobComputer Starter Code\r\n;===========================================\r\n*/\r\n-->\r\n<div>\r\n  <main>\r\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"primary\">\r\n      <mat-toolbar-row>\r\n        <button mat-button class=\"toolbar__icon-button mat-button\">\r\n          <a routerLink=\"/\">\r\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\r\n          </a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">About Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Service Repairs</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Contact Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/user\">User Management</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/questions\">Security Questions Management</a>\r\n        </button>\r\n\r\n        <div fxFlex></div>\r\n\r\n        <button mat-button class=\"mat-button\">\r\n          <a (click)=\"logout()\" class=\"nav-link\">Logout</a>\r\n        </button>\r\n      </mat-toolbar-row>\r\n    </mat-toolbar>\r\n  </main>\r\n</div>\r\n<router-outlet></router-outlet>\r\n\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared/session-layout/session-layout.component.html": 
@@ -481,6 +492,7 @@
             /* harmony import */ var _angular_cdk_platform__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/cdk/platform */ "./node_modules/@angular/cdk/esm2015/platform.js");
             /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
             /* harmony import */ var _pages_user_management_delete_dialog_user_management_delete_dialog_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./pages/user-management-delete-dialog/user-management-delete-dialog.component */ "./src/app/pages/user-management-delete-dialog/user-management-delete-dialog.component.ts");
+            /* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
             /*
             ; Title:  starter code
             ; Author: Professor Krasso
@@ -507,7 +519,8 @@
                         _shared_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_11__["BaseLayoutComponent"],
                         _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_12__["UserManagementComponent"],
                         _pages_user_management_delete_dialog_user_management_delete_dialog_component__WEBPACK_IMPORTED_MODULE_31__["UserManagementDeleteDialogComponent"],
-                        _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_13__["UserDetailsComponent"]
+                        _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_13__["UserDetailsComponent"],
+                        _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_32__["SecurityQuestionsComponent"]
                     ],
                     imports: [
                         _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -559,6 +572,7 @@
             /* harmony import */ var _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/user-management/user-management.component */ "./src/app/pages/user-management/user-management.component.ts");
             /* harmony import */ var _pages_user_management_delete_dialog_user_management_delete_dialog_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/user-management-delete-dialog/user-management-delete-dialog.component */ "./src/app/pages/user-management-delete-dialog/user-management-delete-dialog.component.ts");
             /* harmony import */ var _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/user-details/user-details.component */ "./src/app/pages/user-details/user-details.component.ts");
+            /* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
             var AppRoutes = [
                 {
                     path: '',
@@ -579,6 +593,10 @@
                         {
                             path: 'edituser/:id',
                             component: _pages_user_details_user_details_component__WEBPACK_IMPORTED_MODULE_7__["UserDetailsComponent"]
+                        },
+                        {
+                            path: 'questions',
+                            component: _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__["SecurityQuestionsComponent"]
                         }
                     ]
                 },
@@ -737,6 +755,44 @@
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./not-found.component.css */ "./src/app/pages/not-found/not-found.component.css")).default]
                 })
             ], NotFoundComponent);
+            /***/ 
+        }),
+        /***/ "./src/app/pages/security-questions/security-questions.component.css": 
+        /*!***************************************************************************!*\
+          !*** ./src/app/pages/security-questions/security-questions.component.css ***!
+          \***************************************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3NlY3VyaXR5LXF1ZXN0aW9ucy9zZWN1cml0eS1xdWVzdGlvbnMuY29tcG9uZW50LmNzcyJ9 */");
+            /***/ 
+        }),
+        /***/ "./src/app/pages/security-questions/security-questions.component.ts": 
+        /*!**************************************************************************!*\
+          !*** ./src/app/pages/security-questions/security-questions.component.ts ***!
+          \**************************************************************************/
+        /*! exports provided: SecurityQuestionsComponent */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SecurityQuestionsComponent", function () { return SecurityQuestionsComponent; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            var SecurityQuestionsComponent = /** @class */ (function () {
+                function SecurityQuestionsComponent() {
+                }
+                SecurityQuestionsComponent.prototype.ngOnInit = function () {
+                };
+                return SecurityQuestionsComponent;
+            }());
+            SecurityQuestionsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+                    selector: 'app-security-questions',
+                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./security-questions.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/security-questions/security-questions.component.html")).default,
+                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./security-questions.component.css */ "./src/app/pages/security-questions/security-questions.component.css")).default]
+                })
+            ], SecurityQuestionsComponent);
             /***/ 
         }),
         /***/ "./src/app/pages/user-details/user-details.component.css": 

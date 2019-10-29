@@ -43,6 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Platform } from '@angular/cdk/platform';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
+import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
 
 
 
@@ -56,7 +57,8 @@ import { UserManagementDeleteDialogComponent } from './pages/user-management-del
     BaseLayoutComponent,
     UserManagementComponent,
     UserManagementDeleteDialogComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    SecurityQuestionsComponent
   ],
   imports: [
     BrowserModule,

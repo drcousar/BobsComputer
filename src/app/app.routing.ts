@@ -13,6 +13,7 @@ import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {UserManagementComponent} from './pages/user-management/user-management.component';
 import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
 
 export const AppRoutes: Routes = [
   {
@@ -34,6 +35,10 @@ export const AppRoutes: Routes = [
       {
        path: 'edituser/:id',
        component: UserDetailsComponent
+      },
+      {
+        path: 'questions',
+        component: SecurityQuestionsComponent
       }
     ]
   },
