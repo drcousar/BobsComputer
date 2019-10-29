@@ -35,6 +35,10 @@ export class AddQuestionComponent implements OnInit {
     })
   }
 
+  cancel() {
+    this.router.navigate(['/questions']);
+  }
+
   ngOnInit() {
     this.form = this.fb.group({
       questionText: [null, Validators.compose([Validators.required])]
