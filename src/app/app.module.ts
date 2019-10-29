@@ -45,6 +45,7 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
 import { QuestionDetailsComponent } from './pages/question-details/question-details.component';
+import { SecurityQuestionsDeleteDialogComponent } from './pages/security-questions-delete-dialog/security-questions-delete-dialog.component';
 
 
 
@@ -60,7 +61,8 @@ import { QuestionDetailsComponent } from './pages/question-details/question-deta
     UserManagementDeleteDialogComponent,
     UserDetailsComponent,
     SecurityQuestionsComponent,
-    QuestionDetailsComponent
+    QuestionDetailsComponent,
+    SecurityQuestionsDeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +91,8 @@ import { QuestionDetailsComponent } from './pages/question-details/question-deta
   ],
   bootstrap: [AppComponent],
   entryComponents: [
-    UserManagementDeleteDialogComponent
+    UserManagementDeleteDialogComponent,
+    SecurityQuestionsDeleteDialogComponent
   ]
 })
 export class AppModule { }

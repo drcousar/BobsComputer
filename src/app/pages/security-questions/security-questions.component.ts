@@ -1,6 +1,14 @@
+/*
+============================================
+; Title:  Bob's Computer
+; Author: Don Cousar
+; Date:   28 October 2019
+; Description: Bob's Computer
+;===========================================
+*/
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UserManagementDeleteDialogComponent } from '../../pages/user-management-delete-dialog/user-management-delete-dialog.component';
+import { SecurityQuestionsDeleteDialogComponent } from '../../pages/security-questions-delete-dialog/security-questions-delete-dialog.component';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
 import { ActivatedRoute, Route } from '@angular/router';
 import { Router } from "@angular/router";
@@ -34,6 +42,35 @@ export class SecurityQuestionsComponent implements OnInit {
     });
 
   }
+
+    /**
+   * Delete User Function
+   */
+  delete(questionId, question) {
+      
+
+    const dialogRef = this.dialog.open(SecurityQuestionsDeleteDialogComponent, {
+      data: {
+        questionId: questionId,
+        question: question
+      },
+      disableClose: true,
+      width: '800px'
+    })
+
+    dialogRef.afterClosed().subscribe(result => {
+
+      /**
+       * BEGIN Working Delete Code
+       */
+       
+      this.http.delete('api/questions/' + questionId).subscribe(res => {
+        console.log('Deleted User..Redirecting to User List');
+        this.questions = this.questions.filter(q => q._id !== questionId);
+      })
+    })
+}  //close delete function
+
 
   ngOnInit() {
   }

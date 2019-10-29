@@ -207,6 +207,19 @@ app.put('/api/questions/:id', function(req, res, next) {
   })
 })
 
+// Delete User
+app.delete('/api/questions/:id', function(req, res, next) {
+  SecurityQuestion.findByIdAndDelete({'_id': req.params.id}, function(err, question) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(question);
+      res.json(question);
+    }
+  })
+})
+
 /**
  * Creates an express server and listens on port 3000
  */

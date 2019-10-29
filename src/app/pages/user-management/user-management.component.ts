@@ -72,7 +72,6 @@ export class UserManagementComponent implements OnInit {
    */
     delete(userId, username) {
       
-
       const dialogRef = this.dialog.open(UserManagementDeleteDialogComponent, {
         data: {
           userId: userId,
@@ -84,7 +83,7 @@ export class UserManagementComponent implements OnInit {
 
       dialogRef.afterClosed().subscribe(result => {
         //location.reload();
-        this.users = this.users.filter(u => u._id !== userId);
+        //this.users = this.users.filter(u => u._id !== userId);
         /**
          * BEGIN Working Delete Code
          */

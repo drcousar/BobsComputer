@@ -8,21 +8,21 @@
 */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SecurityQuestionsComponent } from './security-questions.component';
+import { SecurityQuestionsDeleteDialogComponent } from './security-questions-delete-dialog.component';
 
-describe('SecurityQuestionsComponent', () => {
-  let component: SecurityQuestionsComponent;
-  let fixture: ComponentFixture<SecurityQuestionsComponent>;
+describe('SecurityQuestionsDeleteDialogComponent', () => {
+  let component: SecurityQuestionsDeleteDialogComponent;
+  let fixture: ComponentFixture<SecurityQuestionsDeleteDialogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SecurityQuestionsComponent ]
+      declarations: [ SecurityQuestionsDeleteDialogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SecurityQuestionsComponent);
+    fixture = TestBed.createComponent(SecurityQuestionsDeleteDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
