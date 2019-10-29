@@ -1,12 +1,19 @@
 /*
-; Title:  starter code
+; Title:  login.component.ts
 ; Author: Professor Krasso
-; Date:   21 October 2019
+; Date:   29 October 2019
+; Modified By: Jordan Hennessy
 ; Description: BobComputer Starter Code
 ;===========================================
 */
 
+
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-login',
@@ -15,9 +22,82 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+
+  form: FormGroup;
+  errorMessage: string;
+
+  constructor(private fb: FormBuilder,
+              private router: Router,
+              private cookieService: CookieService,
+              private http: HttpClient) { }
+
+  ngOnInit() {
+    this.form = this.fb.group({
+      username: [null, Validators.compose([Validators.required])],
+      password: [null, Validators.compose([Validators.required])]
+    });
+  }
+
+
+  login() {
+
+    const username = this.form.controls['username'].value;
+    const password = this.form.controls['password'].value; // Don
+
+    //Send POST request to authenticate - Don
+    this.http.post('/api/usersignin', {
+      'username': username,
+      'password': password
+    }).subscribe(res => {
+      if (res) {
+        this.cookieService.set('isAuthenticated', 'true', 1);
+        this.cookieService.set('username', username, 1);
+        this.router.navigate(['/']);
+        console.log(res);
+      } else {
+        this.errorMessage = "The user credentials you entered were invalid!"
+      }
+    })
+    
+    /*
+    this.http.get('/api/usersignin/' + username).subscribe(res => {
+      if (res) {
+        this.cookieService.set('isAuthenticated', 'true', 1);
+        this.cookieService.set('username', username, 1);
+        this.router.navigate(['/']);
+        console.log(res);
+      } else {
+        this.errorMessage = "The user credentials you entered were invalid!"
+      }
+    })
+    */
+  }
+
+
+/*
+  public form = {
+    email:null,
+    password:null
+  };
+
+  public error = null;
+  constructor(private http:HttpClient) { }
+
+  onSubmit(){
+    return this.http.post('url',this.form).subscribe(
+      data => console.log(data),
+      error => this.handleError(error)
+
+
+    );
+
+  }
+
+  handleError(error){
+    this.error =error.error.error;
+  };
 
   ngOnInit() {
   }
-
+*/
 }

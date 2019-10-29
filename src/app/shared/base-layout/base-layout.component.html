@@ -8,4 +8,39 @@
 ;===========================================
 */
 -->
-<p>base-layout works!</p>
+<div>
+  <main>
+    <mat-toolbar class="menu" role="header" color="accent">
+      <mat-toolbar-row>
+        <button mat-button class="toolbar__icon-button mat-button">
+          <a routerLink="/">
+            <img src="../../../assets/BobLogoWhite.png" alt="Bob's Computer Repair Shop" id="logo">
+          </a>
+        </button>
+        <button mat-button class="mat-button">
+          <a routerLink="">About Us</a>
+        </button>
+        <button mat-button class="mat-button">
+          <a routerLink="">Service Repairs</a>
+        </button>
+        <button mat-button class="mat-button">
+          <a routerLink="">Contact Us</a>
+        </button>
+        <button mat-button class="mat-button">
+          <a routerLink="/user">User Management</a>
+        </button>
+        <button mat-button class="mat-button">
+          <a routerLink="/questions">Security Questions Management</a>
+        </button>
+
+        <div fxFlex></div>
+
+        <button mat-button class="mat-button">
+          <a (click)="logout()" class="nav-link">Logout</a>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </main>
+</div>
+<router-outlet></router-outlet>
+

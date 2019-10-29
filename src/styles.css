@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+@import './bobs-computer.scss';
+*/
+
+mat-card-actions button {
+  width: 100%;
+}
+
+mat-card {
+  padding: 2em 3em;
+  margin: 1em auto;
+  width: 80%;
+  display: block;
+
+}
+
+a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+mat-card-title, mat-card-subtitle {
+  text-align: center;
+}
+
+mat-card-title {
+  font-size: 48px;
+}

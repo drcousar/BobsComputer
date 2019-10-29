@@ -1,0 +1,19 @@
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+
+
+mat-card {
+  width: 30%;
+}
+
+
+
+mat-card-actions {
+  width: 95%;
+}

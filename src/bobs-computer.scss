@@ -1,0 +1,11 @@
+@import '../node_modules/@angular/material/theming';
+
+@include mat-core();
+
+$bobs-computer-primary: mat-palette($mat-orange);
+$bobs-computer-accent: mat-palette($mat-cyan, 400, 600, A700);
+$bobs-computer-warn: mat-palette($mat-red);
+
+$bobs-computer: mat-dark-theme($bobs-computer-primary, $bobs-computer-accent, $bobs-computer-warn);
+
+@include angular-material-theme($bobs-computer);

@@ -1,0 +1,30 @@
+<!--
+/*
+============================================
+; Title:  Bob's Computer
+; Author: Don Cousar
+; Date:   28 October 2019
+; Description: Bob's Computer
+;===========================================
+*/
+-->
+
+<div fxLayout="column">
+    <mat-card>
+        <mat-card-title>Edit Question Details</mat-card-title>
+        <form [formGroup]="form" (ngSubmit)="saveQuestion()" #userForm>
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutGap="10px">
+                    <mat-form-field>
+                        <input type="text"  matInput [(ngModel)]="QuestionText" value="{{QuestionText}}" [ngModelOptions]="{standalone: true}" placeholder="Question Text" />
+                    </mat-form-field>
+            </div>
+            </mat-card-content>
+            <br />
+            <mat-card-actions>
+                <button mat-raised-button (click)="cancel()" color="accent">Cancel</button>
+                <button mat-raised-button color="primary">Submit</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</div>
