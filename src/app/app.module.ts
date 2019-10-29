@@ -51,6 +51,7 @@ import { AddQuestionComponent } from './pages/add-question/add-question.componen
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AuthGuard } from './shared/auth.guard';
 import { CookieService } from 'ngx-cookie-service';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { CookieService } from 'ngx-cookie-service';
     SecurityQuestionsComponent,
     QuestionDetailsComponent,
     SecurityQuestionsDeleteDialogComponent,
-    AddQuestionComponent
+    AddQuestionComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

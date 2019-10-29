@@ -6,7 +6,7 @@
     </mat-card-header>
 
 
-    <mat-card-content>
+    <mat-card-content >
       <small *ngIf="form.controls['username'].hasError('required') && form.controls['username'].touched" class="form-error">Username is required!</small>
       <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="form-error">Password is required!</small>
       <small *ngIf="errorMessage">{{errorMessage}}</small>
@@ -14,16 +14,26 @@
       <br />
 
       <form [formGroup]="form" (ngSubmit)="login()">
-        <mat-form-field>
+        <mat-form-field >
           <input type="text" matInput [formControl]="form.controls['username']" placeholder="username">
         </mat-form-field>
-        <mat-form-field>
+        <br />
+        <br />
+        <mat-form-field >
           <input type="text" matInput [formControl]="form.controls['password']" placeholder="password">
         </mat-form-field>
         <mat-card-actions>
-          <button type="submit" mat-raised-button color="accent">Login</button>
-          <a routerLink="">Sign Up</a>
-          <a routerLink="">Forgot Password?</a>
+          <div >
+            <button type="submit" mat-raised-button color="accent">Login</button>
+          </div>
+
+          <br />
+          <br />
+          <div >
+            <a routerLink="" class="left">Sign Up</a>
+            <a routerLink="" class="right">Forgot Password?</a>
+          </div>
+
         </mat-card-actions>
       </form>
 

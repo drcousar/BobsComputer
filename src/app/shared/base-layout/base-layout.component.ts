@@ -22,6 +22,7 @@ export class BaseLayoutComponent implements OnInit {
   }
 
   logout() {
+
     this.router.navigate(['/session/login']);
   }
 

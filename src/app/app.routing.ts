@@ -45,16 +45,13 @@ export const AppRoutes: Routes = [
       },
       {
         path: 'questions/edit/:id',
-<<<<<<< HEAD
         component: QuestionDetailsComponent,
-        canActivate: [AuthGuard]
-=======
-        component: QuestionDetailsComponent
+        canActivate: [AuthGuard],
       },
       {
         path: 'questions/add',
-        component: AddQuestionComponent
->>>>>>> 04fe1d2958ab66439257f8b19fd7a4dba7aebfdc
+        component: AddQuestionComponent,
+        canActivate:[AuthGuard]
       }
     ]
   },

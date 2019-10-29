@@ -192,11 +192,9 @@ app.get('/api/questions', function(req,res,next) {
   })
 });
 
-<<<<<<< HEAD
-// Get Questions by id
-=======
+
 // Get Question by id
->>>>>>> 04fe1d2958ab66439257f8b19fd7a4dba7aebfdc
+
 app.get('/api/questions/:id', function(req, res, next) {
   SecurityQuestion.findOne({'_id': req.params.id}, function(err, question) {
     if (err) {
