@@ -82,8 +82,8 @@ app.post('/api/usersignin', function(req, res, next) {
       }); //end return
     }  //end if
 
-    console.log('User sent by form: ' + req.body.password); //sanity check
-    console.log('User in db: ' + user.password); //sanity check
+    //console.log('User sent by form: ' + req.body.password); //sanity check
+    //console.log('User in db: ' + user.password); //sanity check
 
     return bcrypt.compare(req.body.password, user.password);
 
@@ -95,6 +95,7 @@ app.post('/api/usersignin', function(req, res, next) {
         message: "Authentication Failure: bad password"
       });
     } else {
+      
       return res.status(200).json({
         //Return Username if successful, this could be anything -Don
       });
