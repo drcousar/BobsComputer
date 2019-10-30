@@ -800,6 +800,14 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForgotPasswordComponent", function () { return ForgotPasswordComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /*
+            ============================================
+            ; Title:  Bob's Computer
+            ; Author: Don Cousar
+            ; Date:   28 October 2019
+            ; Description: Bob's Computer
+            ;===========================================
+            */
             var ForgotPasswordComponent = /** @class */ (function () {
                 function ForgotPasswordComponent() {
                 }
