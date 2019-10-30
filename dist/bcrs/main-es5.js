@@ -94,7 +94,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<p>Page Not Found</p>");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"not-found-card\">\n  <div class=\"message\">\n    <h1 class=\"not-found-message\">\n      <b>404</b>\n      <h2 style=\"text-align:center\" class=\"subtext\">\n        <b\n          >Oh No! Looks like this<br />\n          Page doesn't exist!</b\n        >\n      </h2>\n    </h1>\n\n    <div class=\"wrapper\">\n      <button\n        mat-button\n        class=\"mat-button\"\n        type=\"button\"\n        mat-raised-button\n        color=\"primary\"\n      >\n        <a routerLink=\"\">Go Back</a>\n      </button>\n    </div>\n  </div>\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/question-details/question-details.component.html": 
@@ -128,6 +128,17 @@
             "use strict";
             __webpack_require__.r(__webpack_exports__);
             /* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxLayout=\"column\">\n        <mat-card>\n            <mat-card-title>Security Questions</mat-card-title>\n            <mat-card-subtitle><button routerLink=\"/questions/add\">Add Question</button></mat-card-subtitle>\n            <mat-card-content>\n                    <form #f=\"ngForm\">\n                    <table mat-table [dataSource]=\"questions\" class=\"mat-elevation-z8\">\n    \n                        <!--- Note that these columns can be defined in any order.\n                                The actual rendered columns are set as a property on the row definition\" -->\n    \n                        <!-- Question Text Column -->\n                        <ng-container matColumnDef=\"questionText\">\n                            <th mat-header-cell *matHeaderCellDef> Question Text </th>\n                            <!-- Edit User Name Control-->\n                            <td mat-cell *matCellDef=\"let element\">\n                                {{element.questionText}}\n                            </td>\n                        </ng-container>\n    \n                        <!-- Edit Column -->\n                        <ng-container matColumnDef=\"edit\">\n                            <th mat-header-cell *matHeaderCellDef>  </th>\n    \n                            <td mat-cell *matCellDef=\"let element\">\n                                <button routerLink=\"/questions/edit/{{element._id}}\" >Edit</button>\n                            </td>\n                        </ng-container>\n    \n                        <!-- Delete Column -->\n                        <ng-container matColumnDef=\"delete\">\n                            <th mat-header-cell *matHeaderCellDef>  </th>\n    \n                            <td mat-cell *matCellDef=\"let element\">\n                                <button (click)=\"delete(element._id, element.questionText)\" >Delete</button>\n                            </td>\n                        </ng-container>\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                    </table>\n                </form>\n            </mat-card-content>\n        </mat-card>\n    </div>\n    \n");
+            /***/ 
+        }),
+        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/server-error/server-error.component.html": 
+        /*!******************************************************************************************************!*\
+          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/server-error/server-error.component.html ***!
+          \******************************************************************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"server-error-card\">\n        <div class=\"message\">\n          <h1 class=\"server-error-message\">\n            <b>500</b>\n            <h2 style=\"text-align:center\" class=\"subtext\">\n              <b\n                >Oh No! Looks like something<br />\n                Went wrong!</b\n              >\n            </h2>\n          </h1>\n      \n          <div class=\"wrapper\">\n            <button\n              mat-button\n              class=\"mat-button\"\n              type=\"button\"\n              mat-raised-button\n              color=\"primary\"\n            >\n              <a routerLink=\"\">Go Back</a>\n            </button>\n          </div>\n        </div>\n      </div>\n      \n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/user-details/user-details.component.html": 
@@ -584,6 +595,7 @@
             /* harmony import */ var _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./pages/forgot-password/forgot-password.component */ "./src/app/pages/forgot-password/forgot-password.component.ts");
             /* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
             /* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
+            /* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
             /*
             ; Title:  starter code
             ; Author: Professor Krasso
@@ -617,7 +629,8 @@
                         _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_34__["AddQuestionComponent"],
                         _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__["ForgotPasswordComponent"],
                         _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_39__["ContactComponent"],
-                        _pages_about_about_component__WEBPACK_IMPORTED_MODULE_40__["AboutComponent"]
+                        _pages_about_about_component__WEBPACK_IMPORTED_MODULE_40__["AboutComponent"],
+                        _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_41__["ServerErrorComponent"]
                     ],
                     imports: [
                         _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -677,6 +690,7 @@
             /* harmony import */ var _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/add-question/add-question.component */ "./src/app/pages/add-question/add-question.component.ts");
             /* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
             /* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
+            /* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
             var AppRoutes = [
                 {
                     path: '',
@@ -741,6 +755,10 @@
                         {
                             path: 'contact',
                             component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__["ContactComponent"]
+                        },
+                        {
+                            path: '500',
+                            component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_13__["ServerErrorComponent"]
                         }
                     ]
                 },
@@ -1041,12 +1059,12 @@
                     var username = this.form.controls['username'].value;
                     var password = this.form.controls['password'].value; // Don
                     //Send POST request to authenticate - Don
-                    this.http.post('/api/usersignin', {
+                    this.http.post('/api/users  ', {
                         'username': username,
                         'password': password
                     }).subscribe(function (res) {
                         if (res) {
-                            _this.cookieService.set('isAuthenticated', 'true', 1);
+                            _this.cookieService.set('isAuthenticated', 'true', 10);
                             _this.cookieService.set('username', username, 1);
                             _this.router.navigate(['/']);
                             console.log(res);
@@ -1093,7 +1111,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL25vdC1mb3VuZC9ub3QtZm91bmQuY29tcG9uZW50LmNzcyJ9 */");
+            /* harmony default export */ __webpack_exports__["default"] = (".not-found-card {\n  width: 100%;\n  height: 100%;\n}\n\n.message {\n  width: 100%;\n  height: 100%;\n}\n\n.not-found-message {\n  width: 100%;\n  height: 100%;\n  color: #5dbcd2;\n  text-align: center;\n  font-size: 120px;\n}\n\n.subtext {\n  width: 100%;\n  height: 100%;\n  color: white;\n  text-align: center;\n  font-size: 40px;\n}\n\nmat-button-wrapper {\n  text-align: center;\n}\n\n.wrapper {\n  text-align: center;\n  width: 100%;\n}\n\n.button {\n  width: 100%;\n  text-align: center;\n}\n\na {\n  color: #fff;\n  text-transform: uppercase;\n  text-decoration: none;\n  text-align: center;\n}\n\nmat-button {\n  text-align: center;\n}\n\nbutton{\n    width: 30%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbm90LWZvdW5kL25vdC1mb3VuZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztFQUNYLFlBQVk7QUFDZDs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsWUFBWTtFQUNaLGNBQWM7RUFDZCxrQkFBa0I7RUFDbEIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGVBQWU7QUFDakI7O0FBQ0E7RUFDRSxrQkFBa0I7QUFDcEI7O0FBQ0E7RUFDRSxrQkFBa0I7RUFDbEIsV0FBVztBQUNiOztBQUNBO0VBQ0UsV0FBVztFQUNYLGtCQUFrQjtBQUNwQjs7QUFDQTtFQUNFLFdBQVc7RUFDWCx5QkFBeUI7RUFDekIscUJBQXFCO0VBQ3JCLGtCQUFrQjtBQUNwQjs7QUFDQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFDQTtJQUNJLFVBQVU7QUFDZCIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL25vdC1mb3VuZC9ub3QtZm91bmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ub3QtZm91bmQtY2FyZCB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5tZXNzYWdlIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cblxuLm5vdC1mb3VuZC1tZXNzYWdlIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgY29sb3I6ICM1ZGJjZDI7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC1zaXplOiAxMjBweDtcbn1cblxuLnN1YnRleHQge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC1zaXplOiA0MHB4O1xufVxubWF0LWJ1dHRvbi13cmFwcGVyIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuLndyYXBwZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmJ1dHRvbiB7XG4gIHdpZHRoOiAxMDAlO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5hIHtcbiAgY29sb3I6ICNmZmY7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxubWF0LWJ1dHRvbiB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbmJ1dHRvbntcbiAgICB3aWR0aDogMzAlO1xufVxuIl19 */");
             /***/ 
         }),
         /***/ "./src/app/pages/not-found/not-found.component.ts": 
@@ -1383,6 +1401,44 @@
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./security-questions.component.css */ "./src/app/pages/security-questions/security-questions.component.css")).default]
                 })
             ], SecurityQuestionsComponent);
+            /***/ 
+        }),
+        /***/ "./src/app/pages/server-error/server-error.component.css": 
+        /*!***************************************************************!*\
+          !*** ./src/app/pages/server-error/server-error.component.css ***!
+          \***************************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = (".server-error-card {\n    width: 100%;\n    height: 100%;\n  }\n  \n  .message {\n    width: 100%;\n    height: 100%;\n  }\n  \n  .server-error-message {\n    width: 100%;\n    height: 100%;\n    color: #5dbcd2;\n    text-align: center;\n    font-size: 120px;\n  }\n  \n  .subtext {\n    width: 100%;\n    height: 100%;\n    color: white;\n    text-align: center;\n    font-size: 40px;\n  }\n  \n  mat-button-wrapper {\n    text-align: center;\n  }\n  \n  .wrapper {\n    text-align: center;\n    width: 100%;\n  }\n  \n  .button {\n    width: 100%;\n    text-align: center;\n  }\n  \n  a {\n    color: #fff;\n    text-transform: uppercase;\n    text-decoration: none;\n    text-align: center;\n  }\n  \n  mat-button {\n    text-align: center;\n    width: 100%;\n  }\n  \n  button{\n      width: 30%;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvc2VydmVyLWVycm9yL3NlcnZlci1lcnJvci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLFlBQVk7RUFDZDs7RUFFQTtJQUNFLFdBQVc7SUFDWCxZQUFZO0VBQ2Q7O0VBRUE7SUFDRSxXQUFXO0lBQ1gsWUFBWTtJQUNaLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsZ0JBQWdCO0VBQ2xCOztFQUVBO0lBQ0UsV0FBVztJQUNYLFlBQVk7SUFDWixZQUFZO0lBQ1osa0JBQWtCO0lBQ2xCLGVBQWU7RUFDakI7O0VBQ0E7SUFDRSxrQkFBa0I7RUFDcEI7O0VBQ0E7SUFDRSxrQkFBa0I7SUFDbEIsV0FBVztFQUNiOztFQUNBO0lBQ0UsV0FBVztJQUNYLGtCQUFrQjtFQUNwQjs7RUFDQTtJQUNFLFdBQVc7SUFDWCx5QkFBeUI7SUFDekIscUJBQXFCO0lBQ3JCLGtCQUFrQjtFQUNwQjs7RUFDQTtJQUNFLGtCQUFrQjtJQUNsQixXQUFXO0VBQ2I7O0VBRUE7TUFDSSxVQUFVO0VBQ2QiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9zZXJ2ZXItZXJyb3Ivc2VydmVyLWVycm9yLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VydmVyLWVycm9yLWNhcmQge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgfVxuICBcbiAgLm1lc3NhZ2Uge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgfVxuICBcbiAgLnNlcnZlci1lcnJvci1tZXNzYWdlIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgY29sb3I6ICM1ZGJjZDI7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGZvbnQtc2l6ZTogMTIwcHg7XG4gIH1cbiAgXG4gIC5zdWJ0ZXh0IHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDQwcHg7XG4gIH1cbiAgbWF0LWJ1dHRvbi13cmFwcGVyIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIH1cbiAgLndyYXBwZXIge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuICAuYnV0dG9uIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIH1cbiAgYSB7XG4gICAgY29sb3I6ICNmZmY7XG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB9XG4gIG1hdC1idXR0b24ge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuICBcbiAgYnV0dG9ue1xuICAgICAgd2lkdGg6IDMwJTtcbiAgfSJdfQ== */");
+            /***/ 
+        }),
+        /***/ "./src/app/pages/server-error/server-error.component.ts": 
+        /*!**************************************************************!*\
+          !*** ./src/app/pages/server-error/server-error.component.ts ***!
+          \**************************************************************/
+        /*! exports provided: ServerErrorComponent */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServerErrorComponent", function () { return ServerErrorComponent; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            var ServerErrorComponent = /** @class */ (function () {
+                function ServerErrorComponent() {
+                }
+                ServerErrorComponent.prototype.ngOnInit = function () {
+                };
+                return ServerErrorComponent;
+            }());
+            ServerErrorComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+                    selector: 'app-server-error',
+                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./server-error.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/server-error/server-error.component.html")).default,
+                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./server-error.component.css */ "./src/app/pages/server-error/server-error.component.css")).default]
+                })
+            ], ServerErrorComponent);
             /***/ 
         }),
         /***/ "./src/app/pages/user-details/user-details.component.css": 
@@ -1914,7 +1970,7 @@
           \***************************/
         /*! no static exports found */
         /***/ (function (module, exports, __webpack_require__) {
-            module.exports = __webpack_require__(/*! /Users/jordanhennessy/bu-webdev/BobsComputer/src/main.ts */ "./src/main.ts");
+            module.exports = __webpack_require__(/*! /Users/alan/Documents/BobsComputer/src/main.ts */ "./src/main.ts");
             /***/ 
         })
     }, [[0, "runtime", "vendor"]]]);
