@@ -70,7 +70,7 @@ app.get('/api/users/:id', function(req, res, next) {
 });
 
 //POST User validating username/pass - Don
-app.post('/api/usersignin', function(req, res, next) {
+app.post('/api/users', function(req, res, next) {
 
 /*  User.findOne({ username: req.body.username }), function(err, user) {
     if(err) {
@@ -127,7 +127,7 @@ app.post('/api/usersignin', function(req, res, next) {
 }); //end POST
 
 // Get User by username
-app.get('/api/usersignin/:username', function(req, res, next) {
+app.get('/api/users/:username', function(req, res, next) {
   User.findOne({'username': req.params.username}, function(err, user) {
     if (err) {
       console.log(err);
