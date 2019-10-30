@@ -16,6 +16,10 @@ a {
 }
 
 .mat-card-header-text {
-  display: block;
-  margin: auto;
+  justify-content: center;
+
+}
+.mat-card-title{
+  justify-content:center;
+  text-align: center;
 }
