@@ -6,6 +6,11 @@ mat-card-actions button {
   width: 100%;
 }
 
+.mat-card-actions {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 mat-card {
   padding: 2em 3em;
   margin: 1em auto;
@@ -25,5 +30,5 @@ mat-card-title, mat-card-subtitle {
 }
 
 mat-card-title {
-  font-size: 48px;
+  font-size: 48px !important;
 }
