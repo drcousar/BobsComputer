@@ -1,1 +1,37 @@
+<!--
+/*
+============================================
+; Title:  Bob's Computer
+; Author: Jordan Hennessy
+; Date:   28 October 2019
+; Description: BobComputer Starter Code
+;===========================================
+*/
+-->
+<div>
+  <main>
+    <mat-toolbar class="menu" role="header" color="accent">
+      <mat-toolbar-row>
+        <button mat-button class="toolbar__icon-button mat-button">
+          <a routerLink="/">
+            <img src="../../../assets/BobLogoWhite.png" alt="Bob's Computer Repair Shop" id="logo">
+          </a>
+        </button>
+        <button mat-button class="mat-button">
+          <a routerLink="/session/about">About Us</a>
+        </button>
+        <button mat-button class="mat-button">
+          <a routerLink="/session/contact">Contact Us</a>
+        </button>
+
+
+        <div fxFlex></div>
+
+        <button mat-button class="mat-button">
+          <a routerLink="/session/login" class="nav-link">Login</a>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </main>
+</div>
 <router-outlet></router-outlet>
