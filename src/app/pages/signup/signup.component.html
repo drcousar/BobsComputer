@@ -14,61 +14,75 @@
             <mat-card-content>
                 <div fxLayout="column" fxLayoutGap="10px">
                     <mat-form-field>
-                        <input type="text"  matInput [(ngModel)]="FirstName" value="{{FirstName}}" [ngModelOptions]="{standalone: true}" placeholder="First Name" />
+                        <input type="text" required matInput [(ngModel)]="FirstName" value="{{FirstName}}" [ngModelOptions]="{standalone: true}" placeholder="First Name" />
+                        <mat-error>First Name is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input type="text"  matInput [(ngModel)]="LastName" value="{{LastName}}" [ngModelOptions]="{standalone: true}" placeholder="Last Name" />
+                        <input type="text" required matInput [(ngModel)]="LastName" value="{{LastName}}" [ngModelOptions]="{standalone: true}" placeholder="Last Name" />
+                        <mat-error>Last Name is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input type="text"  matInput [(ngModel)]="Address" value="{{Address}}" [ngModelOptions]="{standalone: true}" placeholder="Address" />
+                        <input type="text" required matInput [(ngModel)]="Address" value="{{Address}}" [ngModelOptions]="{standalone: true}" placeholder="Address" />
+                        <mat-error>Address is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input type="text"  matInput [(ngModel)]="PhoneNumber" value="{{PhoneNumber}}" [ngModelOptions]="{standalone: true}" placeholder="Phone Number" />
+                        <input type="text" required matInput [(ngModel)]="PhoneNumber" value="{{PhoneNumber}}" [ngModelOptions]="{standalone: true}" placeholder="Phone Number" />
+                        <mat-error>Phone Number is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input type="text"  matInput [(ngModel)]="Email" value="{{Email}}" [ngModelOptions]="{standalone: true}" placeholder="Email" />
+                        <input type="text" required matInput [(ngModel)]="Email" value="{{Email}}" [ngModelOptions]="{standalone: true}" placeholder="Email" />
+                        <mat-error>Email is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input type="text"  matInput [(ngModel)]="Username" value="{{Username}}" [ngModelOptions]="{standalone: true}" placeholder="User Name" />
+                        <input type="text" required matInput [(ngModel)]="Username" value="{{Username}}" [ngModelOptions]="{standalone: true}" placeholder="User Name" />
+                        <mat-error>Username is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input type="text"  type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" matInput [(ngModel)]="Password" value="{{Password}}" [ngModelOptions]="{standalone: true}" placeholder="Create Password" />
+                        <input type="text" required type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" matInput [(ngModel)]="Password" value="{{Password}}" [ngModelOptions]="{standalone: true}" placeholder="Create Password" />
+                        <mat-error>Password is required and must be at least 8 characters, one Uppercase, and one Number</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input type="text"  type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" matInput [(ngModel)]="ConfirmPassword" value="{{ConfirmPassword}}" [ngModelOptions]="{standalone: true}" placeholder="Confirm Password" />
+                        <input type="text" required type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" matInput [(ngModel)]="ConfirmPassword" value="{{ConfirmPassword}}" [ngModelOptions]="{standalone: true}" placeholder="Confirm Password" />
+                        <mat-error>Both passwords must match</mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Choose Security Question #1</mat-label>
-                        <select matNativeControl [(ngModel)]="secQuestion1" [ngModelOptions]="{standalone: true}">
+                        <select required matNativeControl [(ngModel)]="secQuestion1" [ngModelOptions]="{standalone: true}">
                             <option *ngFor="let question of questions" value={{question._id}}>
                                 {{question.questionText}}
                             </option>
                         </select> 
+                        <mat-error>Security Question #1 is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input type="text"  matInput [(ngModel)]="secAnswer1" value="{{secAnswer1}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 1" />
+                        <input type="text" required matInput [(ngModel)]="secAnswer1" value="{{secAnswer1}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 1" />
+                        <mat-error>Security answer #1 is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Choose Security Question #2</mat-label>
-                        <select matNativeControl [(ngModel)]="secQuestion2" [ngModelOptions]="{standalone: true}">
+                        <select required matNativeControl [(ngModel)]="secQuestion2" [ngModelOptions]="{standalone: true}">
                             <option *ngFor="let question of questions" value={{question._id}}>
                                 {{question.questionText}}
                             </option>
                         </select> 
+                        <mat-error>Security Question #2 is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input type="text"  matInput [(ngModel)]="secAnswer2" value="{{secAnswer2}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 2" />
+                        <input type="text" required matInput [(ngModel)]="secAnswer2" value="{{secAnswer2}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 2" />
+                        <mat-error>Security answer #2 is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Choose Security Question #3</mat-label>
-                        <select matNativeControl [(ngModel)]="secQuestion3" [ngModelOptions]="{standalone: true}">
+                        <select required matNativeControl [(ngModel)]="secQuestion3" [ngModelOptions]="{standalone: true}">
                             <option *ngFor="let question of questions" value={{question._id}}>
                                 {{question.questionText}}
                             </option>
                         </select> 
+                        <mat-error>Security Question #3 is required</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input type="text"  matInput [(ngModel)]="secAnswer3" value="{{secAnswer3}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 3" />
+                        <input type="text" required matInput [(ngModel)]="secAnswer3" value="{{secAnswer3}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 3" />
+                        <mat-error>Security answer #3 is required</mat-error>
                     </mat-form-field>
                 </div>
             </mat-card-content>

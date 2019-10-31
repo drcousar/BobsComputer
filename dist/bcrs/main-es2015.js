@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\n============================================\n; Title:  Bob's Computer Signup\n; Authors: Don Cousar / Alan Edwards\n; Date:   30 October 2019\n; Description: Bob's Computer\n; Attribution: Form Control Logic inspired by Professor Krasso @Bellevue University\n;===========================================\n-->\n<div fxLayout=\"column\">\n    <mat-card>\n        <mat-card-title>Account Registration</mat-card-title>\n        <form [formGroup]=\"form\" (ngSubmit)=\"register()\" #userForm>\n            <mat-card-content>\n                <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"FirstName\" value=\"{{FirstName}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"First Name\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"LastName\" value=\"{{LastName}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Last Name\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"Address\" value=\"{{Address}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Address\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"PhoneNumber\" value=\"{{PhoneNumber}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Phone Number\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"Email\" value=\"{{Email}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Email\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"Username\" value=\"{{Username}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"User Name\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  type=\"password\" pattern=\"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$\" matInput [(ngModel)]=\"Password\" value=\"{{Password}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Create Password\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  type=\"password\" pattern=\"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$\" matInput [(ngModel)]=\"ConfirmPassword\" value=\"{{ConfirmPassword}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Confirm Password\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <mat-label>Choose Security Question #1</mat-label>\n                        <select matNativeControl [(ngModel)]=\"secQuestion1\" [ngModelOptions]=\"{standalone: true}\">\n                            <option *ngFor=\"let question of questions\" value={{question._id}}>\n                                {{question.questionText}}\n                            </option>\n                        </select> \n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"secAnswer1\" value=\"{{secAnswer1}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Enter Answer to Security Question 1\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <mat-label>Choose Security Question #2</mat-label>\n                        <select matNativeControl [(ngModel)]=\"secQuestion2\" [ngModelOptions]=\"{standalone: true}\">\n                            <option *ngFor=\"let question of questions\" value={{question._id}}>\n                                {{question.questionText}}\n                            </option>\n                        </select> \n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"secAnswer2\" value=\"{{secAnswer2}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Enter Answer to Security Question 2\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <mat-label>Choose Security Question #3</mat-label>\n                        <select matNativeControl [(ngModel)]=\"secQuestion3\" [ngModelOptions]=\"{standalone: true}\">\n                            <option *ngFor=\"let question of questions\" value={{question._id}}>\n                                {{question.questionText}}\n                            </option>\n                        </select> \n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"secAnswer3\" value=\"{{secAnswer3}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Enter Answer to Security Question 3\" />\n                    </mat-form-field>\n                </div>\n            </mat-card-content>\n            <br />\n            <mat-card-actions>\n                <button mat-raised-button (click)=\"cancel()\" color=\"accent\">Cancel</button>\n                <button mat-raised-button color=\"primary\">Submit</button>\n            </mat-card-actions>\n        </form>\n    </mat-card>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n============================================\n; Title:  Bob's Computer Signup\n; Authors: Don Cousar / Alan Edwards\n; Date:   30 October 2019\n; Description: Bob's Computer\n; Attribution: Form Control Logic inspired by Professor Krasso @Bellevue University\n;===========================================\n-->\n<div fxLayout=\"column\">\n    <mat-card>\n        <mat-card-title>Account Registration</mat-card-title>\n        <form [formGroup]=\"form\" (ngSubmit)=\"register()\" #userForm>\n            <mat-card-content>\n                <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n                    <mat-form-field>\n                        <input type=\"text\" required matInput [(ngModel)]=\"FirstName\" value=\"{{FirstName}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"First Name\" />\n                        <mat-error>First Name is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\" required matInput [(ngModel)]=\"LastName\" value=\"{{LastName}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Last Name\" />\n                        <mat-error>Last Name is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\" required matInput [(ngModel)]=\"Address\" value=\"{{Address}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Address\" />\n                        <mat-error>Address is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\" required matInput [(ngModel)]=\"PhoneNumber\" value=\"{{PhoneNumber}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Phone Number\" />\n                        <mat-error>Phone Number is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\" required matInput [(ngModel)]=\"Email\" value=\"{{Email}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Email\" />\n                        <mat-error>Email is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\" required matInput [(ngModel)]=\"Username\" value=\"{{Username}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"User Name\" />\n                        <mat-error>Username is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\" required type=\"password\" pattern=\"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$\" matInput [(ngModel)]=\"Password\" value=\"{{Password}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Create Password\" />\n                        <mat-error>Password is required and must be at least 8 characters, one Uppercase, and one Number</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\" required type=\"password\" pattern=\"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$\" matInput [(ngModel)]=\"ConfirmPassword\" value=\"{{ConfirmPassword}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Confirm Password\" />\n                        <mat-error>Both passwords must match</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <mat-label>Choose Security Question #1</mat-label>\n                        <select required matNativeControl [(ngModel)]=\"secQuestion1\" [ngModelOptions]=\"{standalone: true}\">\n                            <option *ngFor=\"let question of questions\" value={{question._id}}>\n                                {{question.questionText}}\n                            </option>\n                        </select> \n                        <mat-error>Security Question #1 is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\" required matInput [(ngModel)]=\"secAnswer1\" value=\"{{secAnswer1}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Enter Answer to Security Question 1\" />\n                        <mat-error>Security answer #1 is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <mat-label>Choose Security Question #2</mat-label>\n                        <select required matNativeControl [(ngModel)]=\"secQuestion2\" [ngModelOptions]=\"{standalone: true}\">\n                            <option *ngFor=\"let question of questions\" value={{question._id}}>\n                                {{question.questionText}}\n                            </option>\n                        </select> \n                        <mat-error>Security Question #2 is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\" required matInput [(ngModel)]=\"secAnswer2\" value=\"{{secAnswer2}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Enter Answer to Security Question 2\" />\n                        <mat-error>Security answer #2 is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <mat-label>Choose Security Question #3</mat-label>\n                        <select required matNativeControl [(ngModel)]=\"secQuestion3\" [ngModelOptions]=\"{standalone: true}\">\n                            <option *ngFor=\"let question of questions\" value={{question._id}}>\n                                {{question.questionText}}\n                            </option>\n                        </select> \n                        <mat-error>Security Question #3 is required</mat-error>\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\" required matInput [(ngModel)]=\"secAnswer3\" value=\"{{secAnswer3}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Enter Answer to Security Question 3\" />\n                        <mat-error>Security answer #3 is required</mat-error>\n                    </mat-form-field>\n                </div>\n            </mat-card-content>\n            <br />\n            <mat-card-actions>\n                <button mat-raised-button (click)=\"cancel()\" color=\"accent\">Cancel</button>\n                <button mat-raised-button color=\"primary\">Submit</button>\n            </mat-card-actions>\n        </form>\n    </mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -1743,31 +1743,55 @@ class SignupComponent {
      * Register user with form input
      */
     register() {
-        console.log(this.FirstName);
-        console.log(this.secQuestion3);
         //STEP 1 Validate all Fields    
         this.validateFields();
-        //STEP 2: Build array of security questions and answers
-        this.pushQuestionArr(this.secQuestion1, this.secAnswer1);
-        this.pushQuestionArr(this.secQuestion2, this.secAnswer2);
-        this.pushQuestionArr(this.secQuestion3, this.secAnswer3);
+        //STEP 2: Build array of security questions and answers, if user answered all questions
+        if (this.secQuestion1 &&
+            this.secQuestion2 &&
+            this.secQuestion3 &&
+            this.secAnswer1 &&
+            this.secAnswer2 &&
+            this.secAnswer3) {
+            this.pushQuestionArr(this.secQuestion1, this.secAnswer1);
+            this.pushQuestionArr(this.secQuestion2, this.secAnswer2);
+            this.pushQuestionArr(this.secQuestion3, this.secAnswer3);
+        }
         //Write array of security questions to console
         console.log(this.securityQuestions);
-        //Assemble array for security questions
-        //this.checkUser(this.Username);
-        this.http.post('/api/users/register', {
-            username: this.Username,
-            password: this.Password,
-            firstName: this.FirstName,
-            lastName: this.LastName,
-            phoneNumber: this.PhoneNumber,
-            address: this.Address,
-            email: this.Email,
-            selectedSecurityQuestions: this.securityQuestions
-        }).subscribe(res => {
-            this.passMessage("User added successfully");
-            this.router.navigate(['/']);
-        });
+        //STEP 3: Verify user completed all required fields
+        if (this.FirstName &&
+            this.LastName &&
+            this.Address &&
+            this.PhoneNumber &&
+            this.Email &&
+            this.Username &&
+            this.Password &&
+            this.ConfirmPassword &&
+            this.secQuestion1 &&
+            this.secQuestion2 &&
+            this.secQuestion3 &&
+            this.secAnswer1 &&
+            this.secAnswer2 &&
+            this.secAnswer3) {
+            //User completed form in full so attempt registration
+            this.http.post('/api/users/register', {
+                username: this.Username,
+                password: this.Password,
+                firstName: this.FirstName,
+                lastName: this.LastName,
+                phoneNumber: this.PhoneNumber,
+                address: this.Address,
+                email: this.Email,
+                selectedSecurityQuestions: this.securityQuestions
+            }).subscribe(res => {
+                this.passMessage("User added successfully");
+                this.router.navigate(['/']);
+            });
+        }
+        else {
+            this.passMessage('Error: Please fill out all required fields');
+            return;
+        }
     } //END REGISTER FUNCTION
     /**
      * Get question text for a particular ID
@@ -1807,48 +1831,63 @@ class SignupComponent {
      * Validate all Fields
      */
     validateFields() {
-        if (!this.FirstName) {
-            this.passMessage('Error: First Name is a required field');
+        /*
+        if(!this.FirstName) {
+          this.passMessage('Error: First Name is a required field');
         }
-        if (!this.LastName) {
-            this.passMessage('Error: Last Name is a required field');
+    
+        if(!this.LastName) {
+          this.passMessage('Error: Last Name is a required field');
         }
-        if (!this.Address) {
-            this.passMessage('Error: Address is a required field');
+    
+        if(!this.Address) {
+          this.passMessage('Error: Address is a required field');
         }
-        if (!this.PhoneNumber) {
-            this.passMessage('Error: Phone Number is a required field');
+    
+        if(!this.PhoneNumber) {
+          this.passMessage('Error: Phone Number is a required field');
         }
-        if (!this.Email) {
-            this.passMessage('Error: Email is a required field');
+    
+        if(!this.Email) {
+          this.passMessage('Error: Email is a required field');
         }
-        if (!this.Username) {
-            this.passMessage('Error: Username is a required field');
+    
+        if(!this.Username) {
+          this.passMessage('Error: Username is a required field');
         }
-        if (!this.Password) {
-            this.passMessage('Error: Password is a required field');
+    
+        if(!this.Password) {
+          this.passMessage('Error: Password is a required field');
         }
-        if (!this.ConfirmPassword) {
-            this.passMessage('Error: Confirm Password is a required field');
+    
+        if(!this.ConfirmPassword) {
+          this.passMessage('Error: Confirm Password is a required field');
         }
-        if (!this.secQuestion1) {
-            this.passMessage('Error: Security Question 1 is a required field');
+    
+        if(!this.secQuestion1) {
+          this.passMessage('Error: Security Question 1 is a required field');
         }
-        if (!this.secQuestion2) {
-            this.passMessage('Error: Security Question 2 is a required field');
+    
+        if(!this.secQuestion2) {
+          this.passMessage('Error: Security Question 2 is a required field');
         }
-        if (!this.secQuestion3) {
-            this.passMessage('Error: Security Question 3 is a required field');
+    
+        if(!this.secQuestion3) {
+          this.passMessage('Error: Security Question 3 is a required field');
         }
-        if (!this.secAnswer1) {
-            this.passMessage('Error: Security Answer 1 is a required field');
+    
+        if(!this.secAnswer1) {
+          this.passMessage('Error: Security Answer 1 is a required field');
         }
-        if (!this.secAnswer2) {
-            this.passMessage('Error: Security Answer 2 is a required field');
+    
+        if(!this.secAnswer2) {
+          this.passMessage('Error: Security Answer 2 is a required field');
         }
-        if (!this.secAnswer3) {
-            this.passMessage('Error: Security Answer 3 is a required field');
+    
+        if(!this.secAnswer3) {
+          this.passMessage('Error: Security Answer 3 is a required field');
         }
+    */
         if (this.Password != this.ConfirmPassword) {
             this.passMessage('Error: Passwords Do no match');
         }
@@ -1876,6 +1915,11 @@ class SignupComponent {
     cancel() {
         this.router.navigate(['/']);
     }
+    fnBlur() {
+        if (this.FirstName.length < 1) {
+            this.passMessage('broke');
+        }
+    }
     ngOnInit() {
         this.form = this.fb.group({
             firstName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
@@ -1884,7 +1928,7 @@ class SignupComponent {
             phoneNumber: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
             email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
             username: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
-            password: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+            password: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].minLength(8)])],
             confirmpassword: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
             secAnswer1: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
             secAnswer2: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],

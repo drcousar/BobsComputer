@@ -13,6 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { SignupDialogComponent } from '../signup-dialog/signup-dialog.component'
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
+import { IfStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-signup',
@@ -84,41 +85,66 @@ export class SignupComponent implements OnInit {
     * Register user with form input
     */
    register() {
-    console.log(this.FirstName);
-    console.log(this.secQuestion3);
 
     //STEP 1 Validate all Fields    
 
     this.validateFields();
 
-    //STEP 2: Build array of security questions and answers
+    //STEP 2: Build array of security questions and answers, if user answered all questions
   
-    this.pushQuestionArr(this.secQuestion1, this.secAnswer1);
-    this.pushQuestionArr(this.secQuestion2, this.secAnswer2);
-    this.pushQuestionArr(this.secQuestion3, this.secAnswer3);
+    if(
+      this.secQuestion1 &&
+      this.secQuestion2 &&
+      this.secQuestion3 &&
+      this.secAnswer1 &&
+      this.secAnswer2 &&
+      this.secAnswer3
+    ) {
+      this.pushQuestionArr(this.secQuestion1, this.secAnswer1);
+      this.pushQuestionArr(this.secQuestion2, this.secAnswer2);
+      this.pushQuestionArr(this.secQuestion3, this.secAnswer3);
+    }
+
 
     //Write array of security questions to console
     console.log(this.securityQuestions);
 
-    //Assemble array for security questions
-    //this.checkUser(this.Username);
-
-    this.http.post('/api/users/register', {
-      username: this.Username,
-      password: this.Password,
-      firstName: this.FirstName,
-      lastName: this.LastName,
-      phoneNumber: this.PhoneNumber,
-      address: this.Address,
-      email: this.Email,
-      selectedSecurityQuestions: this.securityQuestions
-      
-    }).subscribe(res => {
-      this.passMessage("User added successfully");
-      this.router.navigate(['/']);
-    })
-    
-   
+  //STEP 3: Verify user completed all required fields
+    if(
+      this.FirstName && 
+      this.LastName &&
+      this.Address &&
+      this.PhoneNumber &&
+      this.Email &&
+      this.Username &&
+      this.Password &&
+      this.ConfirmPassword &&
+      this.secQuestion1 &&
+      this.secQuestion2 &&
+      this.secQuestion3 &&
+      this.secAnswer1 &&
+      this.secAnswer2 &&
+      this.secAnswer3
+      ) {
+        //User completed form in full so attempt registration
+        this.http.post('/api/users/register', {
+          username: this.Username,
+          password: this.Password,
+          firstName: this.FirstName,
+          lastName: this.LastName,
+          phoneNumber: this.PhoneNumber,
+          address: this.Address,
+          email: this.Email,
+          selectedSecurityQuestions: this.securityQuestions
+          
+        }).subscribe(res => {
+          this.passMessage("User added successfully");
+          this.router.navigate(['/']);
+        })
+    } else {
+      this.passMessage('Error: Please fill out all required fields');
+      return;
+    }
   } //END REGISTER FUNCTION
 
 /**
@@ -165,61 +191,6 @@ export class SignupComponent implements OnInit {
    * Validate all Fields
    */
   validateFields() {
-    if(!this.FirstName) {
-      this.passMessage('Error: First Name is a required field');
-    }
-
-    if(!this.LastName) {
-      this.passMessage('Error: Last Name is a required field');
-    }
-
-    if(!this.Address) {
-      this.passMessage('Error: Address is a required field');
-    }
-
-    if(!this.PhoneNumber) {
-      this.passMessage('Error: Phone Number is a required field');
-    }
-
-    if(!this.Email) {
-      this.passMessage('Error: Email is a required field');
-    }
-
-    if(!this.Username) {
-      this.passMessage('Error: Username is a required field');
-    }
-
-    if(!this.Password) {
-      this.passMessage('Error: Password is a required field');
-    }
-
-    if(!this.ConfirmPassword) {
-      this.passMessage('Error: Confirm Password is a required field');
-    }
-
-    if(!this.secQuestion1) {
-      this.passMessage('Error: Security Question 1 is a required field');
-    }
-
-    if(!this.secQuestion2) {
-      this.passMessage('Error: Security Question 2 is a required field');
-    }
-
-    if(!this.secQuestion3) {
-      this.passMessage('Error: Security Question 3 is a required field');
-    }
-
-    if(!this.secAnswer1) {
-      this.passMessage('Error: Security Answer 1 is a required field');
-    }
-
-    if(!this.secAnswer2) {
-      this.passMessage('Error: Security Answer 2 is a required field');
-    }
-
-    if(!this.secAnswer3) {
-      this.passMessage('Error: Security Answer 3 is a required field');
-    }
 
     if(this.Password != this.ConfirmPassword) {
       this.passMessage('Error: Passwords Do no match');
@@ -253,6 +224,12 @@ export class SignupComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  fnBlur() {
+  if(this.FirstName.length < 1) {
+    this.passMessage('broke');
+  }
+}
+
   ngOnInit() {
     type SecurityQuestionType = { questionId: string, questionText: string, answerText: string } ;
 
@@ -263,7 +240,7 @@ export class SignupComponent implements OnInit {
       phoneNumber: [null, Validators.compose([Validators.required])],
       email: [null, Validators.compose([Validators.required])],
       username: [null, Validators.compose([Validators.required])],
-      password: [null, Validators.compose([Validators.required])],
+      password: [null, Validators.compose([Validators.required, Validators.minLength(8)])],
       confirmpassword: [null, Validators.compose([Validators.required])],
       secAnswer1: [null, Validators.compose([Validators.required])],
       secAnswer2: [null, Validators.compose([Validators.required])],
