@@ -15,12 +15,14 @@
 
       <form [formGroup]="form" (ngSubmit)="login()">
         <mat-form-field >
-          <input type="text" matInput [formControl]="form.controls['username']" placeholder="username">
+          <input type="text" required matInput [formControl]="form.controls['username']" placeholder="username">
+          <mat-error>Username is required</mat-error>
         </mat-form-field>
         <br />
         <br />
         <mat-form-field >
-          <input type="text" matInput [formControl]="form.controls['password']" placeholder="password">
+          <input type="password" required matInput [formControl]="form.controls['password']" placeholder="password">
+          <mat-error>Password is required</mat-error>
         </mat-form-field>
         <mat-card-actions>
           <div >
