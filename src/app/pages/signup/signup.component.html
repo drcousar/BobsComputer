@@ -1,0 +1,82 @@
+<!--
+============================================
+; Title:  Bob's Computer Signup
+; Authors: Don Cousar / Alan Edwards
+; Date:   30 October 2019
+; Description: Bob's Computer
+; Attribution: Form Control Logic inspired by Professor Krasso @Bellevue University
+;===========================================
+-->
+<div fxLayout="column">
+    <mat-card>
+        <mat-card-title>Account Registration</mat-card-title>
+        <form [formGroup]="form" (ngSubmit)="register()" #userForm>
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutGap="10px">
+                    <mat-form-field>
+                        <input type="text"  matInput [(ngModel)]="FirstName" value="{{FirstName}}" [ngModelOptions]="{standalone: true}" placeholder="First Name" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text"  matInput [(ngModel)]="LastName" value="{{LastName}}" [ngModelOptions]="{standalone: true}" placeholder="Last Name" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text"  matInput [(ngModel)]="Address" value="{{Address}}" [ngModelOptions]="{standalone: true}" placeholder="Address" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text"  matInput [(ngModel)]="PhoneNumber" value="{{PhoneNumber}}" [ngModelOptions]="{standalone: true}" placeholder="Phone Number" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text"  matInput [(ngModel)]="Email" value="{{Email}}" [ngModelOptions]="{standalone: true}" placeholder="Email" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text"  matInput [(ngModel)]="Username" value="{{Username}}" [ngModelOptions]="{standalone: true}" placeholder="User Name" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text"  type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" matInput [(ngModel)]="Password" value="{{Password}}" [ngModelOptions]="{standalone: true}" placeholder="Create Password" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text"  type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" matInput [(ngModel)]="ConfirmPassword" value="{{ConfirmPassword}}" [ngModelOptions]="{standalone: true}" placeholder="Confirm Password" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Choose Security Question #1</mat-label>
+                        <select matNativeControl [(ngModel)]="secQuestion1" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let question of questions" value={{question._id}}>
+                                {{question.questionText}}
+                            </option>
+                        </select> 
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text"  matInput [(ngModel)]="secAnswer1" value="{{secAnswer1}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 1" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Choose Security Question #2</mat-label>
+                        <select matNativeControl [(ngModel)]="secQuestion2" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let question of questions" value={{question._id}}>
+                                {{question.questionText}}
+                            </option>
+                        </select> 
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text"  matInput [(ngModel)]="secAnswer2" value="{{secAnswer2}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 2" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Choose Security Question #3</mat-label>
+                        <select matNativeControl [(ngModel)]="secQuestion3" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let question of questions" value={{question._id}}>
+                                {{question.questionText}}
+                            </option>
+                        </select> 
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text"  matInput [(ngModel)]="secAnswer3" value="{{secAnswer3}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 3" />
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+            <br />
+            <mat-card-actions>
+                <button mat-raised-button (click)="cancel()" color="accent">Cancel</button>
+                <button mat-raised-button color="primary">Submit</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</div>

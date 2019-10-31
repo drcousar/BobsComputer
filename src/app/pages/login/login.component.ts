@@ -2,7 +2,7 @@
 ; Title:  login.component.ts
 ; Author: Professor Krasso
 ; Date:   29 October 2019
-; Modified By: Jordan Hennessy
+; Modified By: Jordan Hennessy & Don CousarS
 ; Description: BobComputer Starter Code
 ;===========================================
 */
@@ -58,46 +58,5 @@ export class LoginComponent implements OnInit {
         this.errorMessage = "The user credentials you entered were invalid!"
       }
     })
-    
-    /*
-    this.http.get('/api/usersignin/' + username).subscribe(res => {
-      if (res) {
-        this.cookieService.set('isAuthenticated', 'true', 1);
-        this.cookieService.set('username', username, 1);
-        this.router.navigate(['/']);
-        console.log(res);
-      } else {
-        this.errorMessage = "The user credentials you entered were invalid!"
-      }
-    })
-    */
   }
-
-
-/*
-  public form = {
-    email:null,
-    password:null
-  };
-
-  public error = null;
-  constructor(private http:HttpClient) { }
-
-  onSubmit(){
-    return this.http.post('url',this.form).subscribe(
-      data => console.log(data),
-      error => this.handleError(error)
-
-
-    );
-
-  }
-
-  handleError(error){
-    this.error =error.error.error;
-  };
-
-  ngOnInit() {
-  }
-*/
 }

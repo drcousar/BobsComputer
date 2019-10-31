@@ -1,0 +1,11 @@
+/*
+============================================
+; Title:  Bob's Computer Signup
+; Authors: Don Cousar / Alan Edwards
+; Date:   30 October 2019
+; Description: Bob's Computer
+;===========================================
+*/
+mat-card-actions button {
+    width: 48%;
+  }

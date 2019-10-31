@@ -28,7 +28,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   28 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n<div fxLayout=\"column\">\r\n        <mat-card>\r\n            <mat-card-title>Add Security Question</mat-card-title>\r\n            <form [formGroup]=\"form\" (ngSubmit)=\"saveQuestion()\" #userForm>\r\n                <mat-card-content>\r\n                    <div fxLayout=\"column\" fxLayoutGap=\"10px\">\r\n                        <mat-form-field>\r\n                            <input type=\"text\"  matInput [(ngModel)]=\"QuestionText\" value=\"{{QuestionText}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Question Text\" />\r\n                        </mat-form-field>\r\n                </div>\r\n                </mat-card-content>\r\n                <br />\r\n                <mat-card-actions>\r\n                    <button mat-raised-button (click)=\"cancel()\" color=\"accent\">Cancel</button>\r\n                    <button mat-raised-button color=\"primary\">Submit</button>\r\n                </mat-card-actions>\r\n            </form>\r\n        </mat-card>\r\n    </div>\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   28 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n<div fxLayout=\"column\">\r\n    <mat-card>\r\n        <mat-card-title>Add Security Question</mat-card-title>\r\n        <form [formGroup]=\"form\" (ngSubmit)=\"saveQuestion()\" #userForm>\r\n            <mat-card-content>\r\n                <div fxLayout=\"column\" fxLayoutGap=\"10px\">\r\n                    <mat-form-field>\r\n                        <input type=\"text\"  matInput [(ngModel)]=\"QuestionText\" value=\"{{QuestionText}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Question Text\" />\r\n                    </mat-form-field>\r\n            </div>\r\n            </mat-card-content>\r\n            <br />\r\n            <mat-card-actions>\r\n                <button mat-raised-button (click)=\"cancel()\" color=\"accent\">Cancel</button>\r\n                <button mat-raised-button color=\"primary\">Submit</button>\r\n            </mat-card-actions>\r\n        </form>\r\n    </mat-card>\r\n</div>\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/forgot-password/forgot-password.component.html": 
@@ -61,7 +61,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n  <mat-card fxFlex>\r\n    <mat-card-header>\r\n      <mat-card-title>Login</mat-card-title>\r\n      <mat-card-subtitle>Please enter your username and password below.</mat-card-subtitle>\r\n    </mat-card-header>\r\n\r\n\r\n    <mat-card-content >\r\n      <small *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\" class=\"form-error\">Username is required!</small>\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-error\">Password is required!</small>\r\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\r\n\r\n      <br />\r\n\r\n      <form [formGroup]=\"form\" (ngSubmit)=\"login()\">\r\n        <mat-form-field >\r\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\r\n        </mat-form-field>\r\n        <br />\r\n        <br />\r\n        <mat-form-field >\r\n          <input type=\"text\" matInput [formControl]=\"form.controls['password']\" placeholder=\"password\">\r\n        </mat-form-field>\r\n        <mat-card-actions>\r\n          <div >\r\n            <button type=\"submit\" mat-raised-button color=\"primary\">Login</button>\r\n          </div>\r\n\r\n          <br />\r\n          <br />\r\n          <div >\r\n            <a routerLink=\"\" class=\"left\">Sign Up</a>\r\n            <a routerLink=\"\" class=\"right\">Forgot Password?</a>\r\n          </div>\r\n\r\n        </mat-card-actions>\r\n      </form>\r\n\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n<!-- Alan's HTML\r\n<div class=\"mt-4 col-8 offset-2\">\r\n  <div class=\"card\">\r\n    <div class=\"card-header\">Login Here</div>\r\n    <div class=\"card-body\">\r\n      <form #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n        <div class=\"alert alert-danger\" [hidden]=\"!error\">\r\n          {{ error }}\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"inputuserName3\" class=\"col-sm-2 col-form-label\">User Name</label>\r\n          <div class=\"col-sm-10\">\r\n            <input\r\n              type=\"text\"\r\n              name=\"userName\"\r\n              class=\"form-control\"\r\n              id=\"inputuserName3\"\r\n              placeholder=\"userName\"\r\n              [(ngModel)]=\"form.userName\"\r\n              required\r\n            />\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"inputPassword3\" class=\"col-sm-2 col-form-label\"\r\n            >Password</label\r\n          >\r\n          <div class=\"col-sm-10\">\r\n            <input\r\n              type=\"password\"\r\n              name=\"password\"\r\n              class=\"form-control\"\r\n              id=\"inputPassword3\"\r\n              placeholder=\"Password\"\r\n              [(ngModel)]=\"form.password\"\r\n              required\r\n            />\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <div class=\"col-sm-10 offset-2\">\r\n            <button\r\n              type=\"submit\"\r\n              class=\"btn btn-primary\"\r\n              [disabled]=\"!loginForm.valid\"\r\n            >\r\n              Sign in\r\n            </button>\r\n\r\n            <a routerLink=\"/session/signup\" class=\"btn btn-info float-right\">Sign Up</a>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n                <div class=\"col-sm-10 offset-2\">\r\n\r\n                  <a routerLink=\"/session/forgotPassword\" class=\"btn btn-info float-right\">Password Reset</a>\r\n\r\n\r\n                </div>\r\n              </div>\r\n      </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n-->\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n  <mat-card fxFlex>\r\n    <mat-card-header>\r\n      <mat-card-title>Login</mat-card-title>\r\n      <mat-card-subtitle>Please enter your username and password below.</mat-card-subtitle>\r\n    </mat-card-header>\r\n\r\n\r\n    <mat-card-content >\r\n      <small *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\" class=\"form-error\">Username is required!</small>\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-error\">Password is required!</small>\r\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\r\n\r\n      <br />\r\n\r\n      <form [formGroup]=\"form\" (ngSubmit)=\"login()\">\r\n        <mat-form-field >\r\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\r\n        </mat-form-field>\r\n        <br />\r\n        <br />\r\n        <mat-form-field >\r\n          <input type=\"text\" matInput [formControl]=\"form.controls['password']\" placeholder=\"password\">\r\n        </mat-form-field>\r\n        <mat-card-actions>\r\n          <div >\r\n            <button type=\"submit\" mat-raised-button color=\"primary\">Login</button>\r\n          </div>\r\n\r\n          <br />\r\n          <br />\r\n          <div >\r\n            <a routerLink=\"/signup\" class=\"left\">Sign Up</a>\r\n            <a routerLink=\"\" class=\"right\">Forgot Password?</a>\r\n          </div>\r\n\r\n        </mat-card-actions>\r\n      </form>\r\n\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n<!-- Alan's HTML\r\n<div class=\"mt-4 col-8 offset-2\">\r\n  <div class=\"card\">\r\n    <div class=\"card-header\">Login Here</div>\r\n    <div class=\"card-body\">\r\n      <form #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n        <div class=\"alert alert-danger\" [hidden]=\"!error\">\r\n          {{ error }}\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"inputuserName3\" class=\"col-sm-2 col-form-label\">User Name</label>\r\n          <div class=\"col-sm-10\">\r\n            <input\r\n              type=\"text\"\r\n              name=\"userName\"\r\n              class=\"form-control\"\r\n              id=\"inputuserName3\"\r\n              placeholder=\"userName\"\r\n              [(ngModel)]=\"form.userName\"\r\n              required\r\n            />\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"inputPassword3\" class=\"col-sm-2 col-form-label\"\r\n            >Password</label\r\n          >\r\n          <div class=\"col-sm-10\">\r\n            <input\r\n              type=\"password\"\r\n              name=\"password\"\r\n              class=\"form-control\"\r\n              id=\"inputPassword3\"\r\n              placeholder=\"Password\"\r\n              [(ngModel)]=\"form.password\"\r\n              required\r\n            />\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <div class=\"col-sm-10 offset-2\">\r\n            <button\r\n              type=\"submit\"\r\n              class=\"btn btn-primary\"\r\n              [disabled]=\"!loginForm.valid\"\r\n            >\r\n              Sign in\r\n            </button>\r\n\r\n            <a routerLink=\"/session/signup\" class=\"btn btn-info float-right\">Sign Up</a>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n                <div class=\"col-sm-10 offset-2\">\r\n\r\n                  <a routerLink=\"/session/forgotPassword\" class=\"btn btn-info float-right\">Password Reset</a>\r\n\r\n\r\n                </div>\r\n              </div>\r\n      </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n-->\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/not-found/not-found.component.html": 
@@ -106,6 +106,28 @@
             "use strict";
             __webpack_require__.r(__webpack_exports__);
             /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   28 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n<div fxLayout=\"column\">\r\n        <mat-card>\r\n            <mat-card-title>Security Questions</mat-card-title>\r\n            <mat-card-subtitle><button routerLink=\"/questions/add\">Add Question</button></mat-card-subtitle>\r\n            <mat-card-content>\r\n                    <form #f=\"ngForm\">\r\n                    <table mat-table [dataSource]=\"questions\" class=\"mat-elevation-z8\">\r\n    \r\n                        <!--- Note that these columns can be defined in any order.\r\n                                The actual rendered columns are set as a property on the row definition\" -->\r\n    \r\n                        <!-- Question Text Column -->\r\n                        <ng-container matColumnDef=\"questionText\">\r\n                            <th mat-header-cell *matHeaderCellDef> Question Text </th>\r\n                            <!-- Edit User Name Control-->\r\n                            <td mat-cell *matCellDef=\"let element\">\r\n                                {{element.questionText}}\r\n                            </td>\r\n                        </ng-container>\r\n    \r\n                        <!-- Edit Column -->\r\n                        <ng-container matColumnDef=\"edit\">\r\n                            <th mat-header-cell *matHeaderCellDef>  </th>\r\n    \r\n                            <td mat-cell *matCellDef=\"let element\">\r\n                                <button routerLink=\"/questions/edit/{{element._id}}\" >Edit</button>\r\n                            </td>\r\n                        </ng-container>\r\n    \r\n                        <!-- Delete Column -->\r\n                        <ng-container matColumnDef=\"delete\">\r\n                            <th mat-header-cell *matHeaderCellDef>  </th>\r\n    \r\n                            <td mat-cell *matCellDef=\"let element\">\r\n                                <button (click)=\"delete(element._id, element.questionText)\" >Delete</button>\r\n                            </td>\r\n                        </ng-container>\r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n                    </table>\r\n                </form>\r\n            </mat-card-content>\r\n        </mat-card>\r\n    </div>\r\n    \r\n");
+            /***/ 
+        }),
+        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/signup-dialog/signup-dialog.component.html": 
+        /*!********************************************************************************************************!*\
+          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/signup-dialog/signup-dialog.component.html ***!
+          \********************************************************************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n    /*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   30 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<h1 mat-dialog-title>Bob's Computer Repair Shop</h1>\n<div mat-dialog-content>\n    <p>{{message}}</p>\n</div>\n<div mat-dialog-actions>\n    <button mat-button [mat-dialog-close]=\"\" cdkFocusInitial color=\"warn\">Ok</button>\n</div>\n");
+            /***/ 
+        }),
+        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/signup/signup.component.html": 
+        /*!******************************************************************************************!*\
+          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/signup/signup.component.html ***!
+          \******************************************************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n============================================\n; Title:  Bob's Computer Signup\n; Authors: Don Cousar / Alan Edwards\n; Date:   30 October 2019\n; Description: Bob's Computer\n; Attribution: Form Control Logic inspired by Professor Krasso @Bellevue University\n;===========================================\n-->\n<div fxLayout=\"column\">\n    <mat-card>\n        <mat-card-title>Account Registration</mat-card-title>\n        <form [formGroup]=\"form\" (ngSubmit)=\"register()\" #userForm>\n            <mat-card-content>\n                <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"FirstName\" value=\"{{FirstName}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"First Name\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"LastName\" value=\"{{LastName}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Last Name\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"Address\" value=\"{{Address}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Address\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"PhoneNumber\" value=\"{{PhoneNumber}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Phone Number\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"Email\" value=\"{{Email}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Email\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"Username\" value=\"{{Username}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"User Name\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  type=\"password\" pattern=\"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$\" matInput [(ngModel)]=\"Password\" value=\"{{Password}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Create Password\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  type=\"password\" pattern=\"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$\" matInput [(ngModel)]=\"ConfirmPassword\" value=\"{{ConfirmPassword}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Confirm Password\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <mat-label>Choose Security Question #1</mat-label>\n                        <select matNativeControl [(ngModel)]=\"secQuestion1\" [ngModelOptions]=\"{standalone: true}\">\n                            <option *ngFor=\"let question of questions\" value={{question._id}}>\n                                {{question.questionText}}\n                            </option>\n                        </select> \n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"secAnswer1\" value=\"{{secAnswer1}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Enter Answer to Security Question 1\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <mat-label>Choose Security Question #2</mat-label>\n                        <select matNativeControl [(ngModel)]=\"secQuestion2\" [ngModelOptions]=\"{standalone: true}\">\n                            <option *ngFor=\"let question of questions\" value={{question._id}}>\n                                {{question.questionText}}\n                            </option>\n                        </select> \n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"secAnswer2\" value=\"{{secAnswer2}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Enter Answer to Security Question 2\" />\n                    </mat-form-field>\n                    <mat-form-field>\n                        <mat-label>Choose Security Question #3</mat-label>\n                        <select matNativeControl [(ngModel)]=\"secQuestion3\" [ngModelOptions]=\"{standalone: true}\">\n                            <option *ngFor=\"let question of questions\" value={{question._id}}>\n                                {{question.questionText}}\n                            </option>\n                        </select> \n                    </mat-form-field>\n                    <mat-form-field>\n                        <input type=\"text\"  matInput [(ngModel)]=\"secAnswer3\" value=\"{{secAnswer3}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Enter Answer to Security Question 3\" />\n                    </mat-form-field>\n                </div>\n            </mat-card-content>\n            <br />\n            <mat-card-actions>\n                <button mat-raised-button (click)=\"cancel()\" color=\"accent\">Cancel</button>\n                <button mat-raised-button color=\"primary\">Submit</button>\n            </mat-card-actions>\n        </form>\n    </mat-card>\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/user-details/user-details.component.html": 
@@ -560,6 +582,8 @@
             /* harmony import */ var _shared_auth_guard__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./shared/auth.guard */ "./src/app/shared/auth.guard.ts");
             /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
             /* harmony import */ var _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./pages/forgot-password/forgot-password.component */ "./src/app/pages/forgot-password/forgot-password.component.ts");
+            /* harmony import */ var _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./pages/signup/signup.component */ "./src/app/pages/signup/signup.component.ts");
+            /* harmony import */ var _pages_signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./pages/signup-dialog/signup-dialog.component */ "./src/app/pages/signup-dialog/signup-dialog.component.ts");
             /*
             ; Title:  starter code
             ; Author: Professor Krasso
@@ -591,7 +615,9 @@
                         _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_32__["QuestionDetailsComponent"],
                         _pages_security_questions_delete_dialog_security_questions_delete_dialog_component__WEBPACK_IMPORTED_MODULE_33__["SecurityQuestionsDeleteDialogComponent"],
                         _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_34__["AddQuestionComponent"],
-                        _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__["ForgotPasswordComponent"]
+                        _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__["ForgotPasswordComponent"],
+                        _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_39__["SignupComponent"],
+                        _pages_signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_40__["SignupDialogComponent"]
                     ],
                     imports: [
                         _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -623,7 +649,8 @@
                     bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
                     entryComponents: [
                         _pages_user_management_delete_dialog_user_management_delete_dialog_component__WEBPACK_IMPORTED_MODULE_30__["UserManagementDeleteDialogComponent"],
-                        _pages_security_questions_delete_dialog_security_questions_delete_dialog_component__WEBPACK_IMPORTED_MODULE_33__["SecurityQuestionsDeleteDialogComponent"]
+                        _pages_security_questions_delete_dialog_security_questions_delete_dialog_component__WEBPACK_IMPORTED_MODULE_33__["SecurityQuestionsDeleteDialogComponent"],
+                        _pages_signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_40__["SignupDialogComponent"]
                     ]
                 })
             ], AppModule);
@@ -649,6 +676,7 @@
             /* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
             /* harmony import */ var _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/question-details/question-details.component */ "./src/app/pages/question-details/question-details.component.ts");
             /* harmony import */ var _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/add-question/add-question.component */ "./src/app/pages/add-question/add-question.component.ts");
+            /* harmony import */ var _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/signup/signup.component */ "./src/app/pages/signup/signup.component.ts");
             var AppRoutes = [
                 {
                     path: '',
@@ -683,6 +711,10 @@
                             path: 'questions/add',
                             component: _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_10__["AddQuestionComponent"],
                             canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
+                        },
+                        {
+                            path: 'signup',
+                            component: _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_11__["SignupComponent"]
                         }
                     ]
                 },
@@ -755,6 +787,9 @@
                     }).subscribe(function (res) {
                         _this.router.navigate(['/questions']);
                     });
+                };
+                AddQuestionComponent.prototype.cancel = function () {
+                    this.router.navigate(['/questions']);
                 };
                 AddQuestionComponent.prototype.ngOnInit = function () {
                     this.form = this.fb.group({
@@ -899,7 +934,7 @@
             ; Title:  login.component.ts
             ; Author: Professor Krasso
             ; Date:   29 October 2019
-            ; Modified By: Jordan Hennessy
+            ; Modified By: Jordan Hennessy & Don CousarS
             ; Description: BobComputer Starter Code
             ;===========================================
             */
@@ -935,18 +970,6 @@
                             _this.errorMessage = "The user credentials you entered were invalid!";
                         }
                     });
-                    /*
-                    this.http.get('/api/usersignin/' + username).subscribe(res => {
-                      if (res) {
-                        this.cookieService.set('isAuthenticated', 'true', 1);
-                        this.cookieService.set('username', username, 1);
-                        this.router.navigate(['/']);
-                        console.log(res);
-                      } else {
-                        this.errorMessage = "The user credentials you entered were invalid!"
-                      }
-                    })
-                    */
                 };
                 return LoginComponent;
             }());
@@ -1263,6 +1286,315 @@
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./security-questions.component.css */ "./src/app/pages/security-questions/security-questions.component.css")).default]
                 })
             ], SecurityQuestionsComponent);
+            /***/ 
+        }),
+        /***/ "./src/app/pages/signup-dialog/signup-dialog.component.css": 
+        /*!*****************************************************************!*\
+          !*** ./src/app/pages/signup-dialog/signup-dialog.component.css ***!
+          \*****************************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3NpZ251cC1kaWFsb2cvc2lnbnVwLWRpYWxvZy5jb21wb25lbnQuY3NzIn0= */");
+            /***/ 
+        }),
+        /***/ "./src/app/pages/signup-dialog/signup-dialog.component.ts": 
+        /*!****************************************************************!*\
+          !*** ./src/app/pages/signup-dialog/signup-dialog.component.ts ***!
+          \****************************************************************/
+        /*! exports provided: SignupDialogComponent */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupDialogComponent", function () { return SignupDialogComponent; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /*
+            ============================================
+            ; Title:  Bob's Computer
+            ; Author: Don Cousar
+            ; Date:   23 October 2019
+            ; Description: Bob's Computer
+            ;===========================================
+            */
+            var SignupDialogComponent = /** @class */ (function () {
+                function SignupDialogComponent(dialogRef, data, router) {
+                    this.dialogRef = dialogRef;
+                    this.router = router;
+                    this.message = data.message;
+                }
+                SignupDialogComponent.prototype.ngOnInit = function () {
+                };
+                return SignupDialogComponent;
+            }());
+            SignupDialogComponent.ctorParameters = function () { return [
+                { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
+                { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+            ]; };
+            SignupDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+                    selector: 'app-signup-dialog',
+                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./signup-dialog.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/signup-dialog/signup-dialog.component.html")).default,
+                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./signup-dialog.component.css */ "./src/app/pages/signup-dialog/signup-dialog.component.css")).default]
+                }),
+                tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
+            ], SignupDialogComponent);
+            /***/ 
+        }),
+        /***/ "./src/app/pages/signup/signup.component.css": 
+        /*!***************************************************!*\
+          !*** ./src/app/pages/signup/signup.component.css ***!
+          \***************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("/*\r\n============================================\r\n; Title:  Bob's Computer Signup\r\n; Authors: Don Cousar / Alan Edwards\r\n; Date:   30 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\nmat-card-actions button {\r\n    width: 48%;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvc2lnbnVwL3NpZ251cC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7O0NBT0M7QUFDRDtJQUNJLFVBQVU7RUFDWiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3NpZ251cC9zaWdudXAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXHJcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbjsgVGl0bGU6ICBCb2IncyBDb21wdXRlciBTaWdudXBcclxuOyBBdXRob3JzOiBEb24gQ291c2FyIC8gQWxhbiBFZHdhcmRzXHJcbjsgRGF0ZTogICAzMCBPY3RvYmVyIDIwMTlcclxuOyBEZXNjcmlwdGlvbjogQm9iJ3MgQ29tcHV0ZXJcclxuOz09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuKi9cclxubWF0LWNhcmQtYWN0aW9ucyBidXR0b24ge1xyXG4gICAgd2lkdGg6IDQ4JTtcclxuICB9Il19 */");
+            /***/ 
+        }),
+        /***/ "./src/app/pages/signup/signup.component.ts": 
+        /*!**************************************************!*\
+          !*** ./src/app/pages/signup/signup.component.ts ***!
+          \**************************************************/
+        /*! exports provided: SignupComponent */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupComponent", function () { return SignupComponent; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+            /* harmony import */ var _signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../signup-dialog/signup-dialog.component */ "./src/app/pages/signup-dialog/signup-dialog.component.ts");
+            /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
+            /*
+            ============================================
+            ; Title:  Bob's Computer Signup
+            ; Authors: Don Cousar / Alan Edwards
+            ; Date:   30 October 2019
+            ; Description: Bob's Computer
+            ; Attribution: Form Control Logic inspired by Professor Krasso @Bellevue University
+            ;===========================================
+            */
+            var SignupComponent = /** @class */ (function () {
+                function SignupComponent(route, http, fb, router, dialog) {
+                    var _this = this;
+                    this.route = route;
+                    this.http = http;
+                    this.fb = fb;
+                    this.router = router;
+                    this.dialog = dialog;
+                    this.FirstName = '';
+                    this.LastName = '';
+                    this.Address = '';
+                    this.PhoneNumber = '';
+                    this.Email = '';
+                    this.Username = '';
+                    this.Password = '';
+                    this.ConfirmPassword = '';
+                    this.securityQuestions = new Array();
+                    //Call Jordan's API to get all users
+                    this.http.get('/api/questions').subscribe(function (res) {
+                        _this.questions = res;
+                        //Prove that this.users is populated
+                        console.log('API GET Questions: ');
+                        console.table(_this.questions);
+                    }, function (err) {
+                        console.log('API GET QUESTIONS ERROR: ' + err);
+                    }, function () {
+                        //What to do upon success
+                        //nothing for now
+                    });
+                }
+                /**
+                 * Register user with form input
+                 */
+                SignupComponent.prototype.register = function () {
+                    var _this = this;
+                    console.log(this.FirstName);
+                    console.log(this.secQuestion3);
+                    //STEP 1 Validate all Fields    
+                    this.validateFields();
+                    //STEP 2: Build array of security questions and answers
+                    this.pushQuestionArr(this.secQuestion1, this.secAnswer1);
+                    this.pushQuestionArr(this.secQuestion2, this.secAnswer2);
+                    this.pushQuestionArr(this.secQuestion3, this.secAnswer3);
+                    //Write array of security questions to console
+                    console.log(this.securityQuestions);
+                    //Assemble array for security questions
+                    //this.checkUser(this.Username);
+                    this.http.post('/api/users/register', {
+                        username: this.Username,
+                        password: this.Password,
+                        firstName: this.FirstName,
+                        lastName: this.LastName,
+                        phoneNumber: this.PhoneNumber,
+                        address: this.Address,
+                        email: this.Email,
+                        selectedSecurityQuestions: this.securityQuestions
+                    }).subscribe(function (res) {
+                        _this.passMessage("User added successfully");
+                        _this.router.navigate(['/']);
+                    });
+                }; //END REGISTER FUNCTION
+                /**
+                 * Get question text for a particular ID
+                 * @param id - ID from security questions collection
+                 */
+                SignupComponent.prototype.pushQuestionArr = function (id, answer) {
+                    var _this = this;
+                    var quest;
+                    //Call Jordan's API to get question by id
+                    this.http.get('/api/questions/' + id).subscribe(function (res) {
+                        quest = res['questionText'];
+                        _this.securityQuestions.push({ questionId: id, questionText: quest, answerText: answer });
+                        //debug verification
+                        console.log('getQuestion(): API GET Question: ');
+                        console.table(quest);
+                    }, function (err) {
+                        console.log('getQuestion(): API GET QUESTIONS ERROR: ' + err);
+                    }, function () {
+                        //What to do upon success
+                    });
+                };
+                /**
+                 * Send message to dialog modal and open dialog
+                 * @param message Message text to send to dialog
+                 */
+                SignupComponent.prototype.passMessage = function (message) {
+                    var dialogRef = this.dialog.open(_signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_5__["SignupDialogComponent"], {
+                        data: {
+                            message: message
+                        },
+                        disableClose: true,
+                        width: '800px'
+                    });
+                    dialogRef.afterClosed().subscribe(function (result) {
+                    });
+                };
+                /**
+                 * Validate all Fields
+                 */
+                SignupComponent.prototype.validateFields = function () {
+                    if (!this.FirstName) {
+                        this.passMessage('Error: First Name is a required field');
+                    }
+                    if (!this.LastName) {
+                        this.passMessage('Error: Last Name is a required field');
+                    }
+                    if (!this.Address) {
+                        this.passMessage('Error: Address is a required field');
+                    }
+                    if (!this.PhoneNumber) {
+                        this.passMessage('Error: Phone Number is a required field');
+                    }
+                    if (!this.Email) {
+                        this.passMessage('Error: Email is a required field');
+                    }
+                    if (!this.Username) {
+                        this.passMessage('Error: Username is a required field');
+                    }
+                    if (!this.Password) {
+                        this.passMessage('Error: Password is a required field');
+                    }
+                    if (!this.ConfirmPassword) {
+                        this.passMessage('Error: Confirm Password is a required field');
+                    }
+                    if (!this.secQuestion1) {
+                        this.passMessage('Error: Security Question 1 is a required field');
+                    }
+                    if (!this.secQuestion2) {
+                        this.passMessage('Error: Security Question 2 is a required field');
+                    }
+                    if (!this.secQuestion3) {
+                        this.passMessage('Error: Security Question 3 is a required field');
+                    }
+                    if (!this.secAnswer1) {
+                        this.passMessage('Error: Security Answer 1 is a required field');
+                    }
+                    if (!this.secAnswer2) {
+                        this.passMessage('Error: Security Answer 2 is a required field');
+                    }
+                    if (!this.secAnswer3) {
+                        this.passMessage('Error: Security Answer 3 is a required field');
+                    }
+                    if (this.Password != this.ConfirmPassword) {
+                        this.passMessage('Error: Passwords Do no match');
+                    }
+                    return;
+                };
+                SignupComponent.prototype.checkUser = function (uname) {
+                    var _this = this;
+                    this.http.get('/api/usersignin/' + uname).subscribe(function (res) {
+                        if (!res) {
+                            console.log('user not found');
+                        }
+                        else {
+                            console.log('user found');
+                        }
+                    }, function (err) {
+                        console.log('getQuestion(): API GET QUESTIONS ERROR: ' + err);
+                        _this.passMessage('Error: Username already taken');
+                        return;
+                    }, function () {
+                        //What to do upon success
+                    });
+                };
+                /**
+                 * cancel out of signup form and go back to the home page
+                 */
+                SignupComponent.prototype.cancel = function () {
+                    this.router.navigate(['/']);
+                };
+                SignupComponent.prototype.ngOnInit = function () {
+                    this.form = this.fb.group({
+                        firstName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                        lastName: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                        address: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                        phoneNumber: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                        email: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                        username: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                        password: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                        confirmpassword: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                        secAnswer1: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                        secAnswer2: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                        secAnswer3: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])]
+                    });
+                };
+                return SignupComponent;
+            }());
+            SignupComponent.ctorParameters = function () { return [
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+                { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+                { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+                { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"] }
+            ]; };
+            SignupComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+                    selector: 'app-signup',
+                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./signup.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/signup/signup.component.html")).default,
+                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./signup.component.css */ "./src/app/pages/signup/signup.component.css")).default]
+                })
+                /*
+                export interface questionArr {
+                  questionId: string;
+                  questionText: string;
+                  answerText: string;
+                }
+                
+                const myQuestions: questionArr[] = [
+                  {questionId: "dcousar", questionText: 'Donald', answerText: 'Cousar'},
+                  {questionId: "dcousar", questionText: 'Donald', answerText: 'Cousar'},
+                  {questionId: "dcousar", questionText: 'Donald', answerText: 'Cousar'}
+                ];
+                */
+            ], SignupComponent);
             /***/ 
         }),
         /***/ "./src/app/pages/user-details/user-details.component.css": 

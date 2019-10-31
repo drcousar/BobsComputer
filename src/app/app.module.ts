@@ -52,6 +52,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AuthGuard } from './shared/auth.guard';
 import { CookieService } from 'ngx-cookie-service';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { SignupDialogComponent } from './pages/signup-dialog/signup-dialog.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,9 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     QuestionDetailsComponent,
     SecurityQuestionsDeleteDialogComponent,
     AddQuestionComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    SignupComponent,
+    SignupDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +103,8 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
   bootstrap: [AppComponent],
   entryComponents: [
     UserManagementDeleteDialogComponent,
-    SecurityQuestionsDeleteDialogComponent
+    SecurityQuestionsDeleteDialogComponent,
+    SignupDialogComponent
   ]
 })
 export class AppModule { }
