@@ -1,0 +1,25 @@
+h3, a, p {
+  text-align: center;
+}
+
+.mat-icon {
+  display: block;
+  margin: auto;
+  width: 62px;
+  height: 62px;
+  font-size: 62px;
+}
+
+a {
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+.mat-card-header-text {
+  justify-content: center;
+
+}
+.mat-card-title{
+  justify-content:center;
+  text-align: center;
+}

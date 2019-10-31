@@ -23,6 +23,7 @@ import { BaseLayoutComponent } from './shared/base-layout/base-layout.component'
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
+
 //material
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -54,6 +55,10 @@ import { CookieService } from 'ngx-cookie-service';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SignupDialogComponent } from './pages/signup-dialog/signup-dialog.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ServerErrorComponent } from './pages/server-error/server-error.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -72,7 +77,10 @@ import { SignupDialogComponent } from './pages/signup-dialog/signup-dialog.compo
     AddQuestionComponent,
     ForgotPasswordComponent,
     SignupComponent,
-    SignupDialogComponent
+    SignupDialogComponent,
+    ContactComponent,
+    AboutComponent,
+    ServerErrorComponent
   ],
   imports: [
     BrowserModule,

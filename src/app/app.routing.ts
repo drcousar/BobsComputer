@@ -18,6 +18,10 @@ import { SecurityQuestionsComponent } from './pages/security-questions/security-
 import { QuestionDetailsComponent } from './pages/question-details/question-details.component';
 import { AddQuestionComponent } from './pages/add-question/add-question.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import {ServerErrorComponent} from './pages/server-error/server-error.component';
+  
 
 
 export const AppRoutes: Routes = [
@@ -58,7 +62,16 @@ export const AppRoutes: Routes = [
       {
         path: 'signup',
         component: SignupComponent
+      },
+      {
+        path: 'about',
+        component: AboutComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
       }
+
     ]
   },
   {
@@ -72,6 +85,19 @@ export const AppRoutes: Routes = [
       {
         path: '404',
         component: NotFoundComponent
+      },
+      {
+        path: 'about',
+        component: AboutComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
+        
+      },
+      {
+        path: '500',
+        component: ServerErrorComponent
       }
     ]
   },

@@ -45,12 +45,12 @@ export class LoginComponent implements OnInit {
     const password = this.form.controls['password'].value; // Don
 
     //Send POST request to authenticate - Don
-    this.http.post('/api/usersignin', {
+    this.http.post  ('/api/users  ', {
       'username': username,
       'password': password
     }).subscribe(res => {
       if (res) {
-        this.cookieService.set('isAuthenticated', 'true', 1);
+        this.cookieService.set('isAuthenticated', 'true', 10);
         this.cookieService.set('username', username, 1);
         this.router.navigate(['/']);
         console.log(res);

@@ -70,7 +70,27 @@ app.get('/api/users/:id', function(req, res, next) {
 });
 
 //POST User validating username/pass - Don
-app.post('/api/usersignin', function(req, res, next) {
+app.post('/api/users', function(req, res, next) {
+
+/*  User.findOne({ username: req.body.username }), function(err, user) {
+    if(err) {
+      console.log(err);
+      return next(err);
+    } else if (!user) {
+      var err = new Error('User not found!');
+      console.log(err);
+      err.status = 401;
+      return next(err);
+    } bcrypt.compare(req.body.password, user.password, function(err, result) {
+      if (result === true ) {
+        console.log(user);
+        return next(user);
+      } else {
+        console.log(err);
+        return next(err);
+      }
+    })
+  }*/
 
   User.findOne({ username: req.body.username }).then(user => {
     console.log('Searching user: ' + req.body.username);
@@ -108,7 +128,7 @@ app.post('/api/usersignin', function(req, res, next) {
 }); //end POST
 
 // Get User by username
-app.get('/api/usersignin/:username', function(req, res, next) {
+app.get('/api/users/:username', function(req, res, next) {
   User.findOne({'username': req.params.username}, function(err, user) {
     if (err) {
       console.log(err);
@@ -125,8 +145,7 @@ app.get('/api/usersignin/:username', function(req, res, next) {
           }
         })
       } else {
-        console.log(res);
-        return next(res);
+        console.log(err);
       }
     }
   })

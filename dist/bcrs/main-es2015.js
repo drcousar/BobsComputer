@@ -23,6 +23,19 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/about/about.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/about/about.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>about works!</p>\r\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/add-question/add-question.component.html":
 /*!******************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/add-question/add-question.component.html ***!
@@ -36,6 +49,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/contact/contact.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/contact/contact.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n  <mat-card fxFlex>\r\n\r\n    <mat-card-header fxLayoutAlign=\"center\">\r\n      <mat-card-title style=\"text-align:center\">Contact Us</mat-card-title>\r\n      <mat-card-subtitle style=\"text-align:center\">Have a question? Give us a call or send us an email!</mat-card-subtitle>\r\n    </mat-card-header>\r\n\r\n    <mat-card-content fxLayout=\"row\">\r\n      <div fxFlex=\"33\">\r\n        <mat-icon color=\"primary\" aria-hidden=\"false\">phone</mat-icon>\r\n        <h3>Phone</h3>\r\n        <p><a href=\"tel:4011111111\">402-111-1111</a></p>\r\n      </div>\r\n\r\n      <div fxFlex=\"33\">\r\n        <mat-icon color=\"primary\" aria-hidden=\"false\">email</mat-icon>\r\n        <h3>Email</h3>\r\n        <p><a href=\"mailto:info@bobscomputer.com\">info@bobscomputer.com</a></p>\r\n      </div>\r\n\r\n      <div fxFlex=\"33\">\r\n        <mat-icon color=\"primary\" aria-hidden=\"false\">navigation</mat-icon>\r\n        <h3>Address</h3>\r\n        <p>111 Main St.\r\n          <br />\r\n          Omaha, NE 68144\r\n        </p>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/forgot-password/forgot-password.component.html":
 /*!************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/forgot-password/forgot-password.component.html ***!
@@ -45,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>forgot-password works!</p>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n  <mat-card fxFlex>\r\n    <mat-card-header>\r\n      <mat-card-title>Forgot Password</mat-card-title>\r\n      <mat-card-subtitle>Fill out the form below to reset your password</mat-card-subtitle>\r\n    </mat-card-header>\r\n\r\n    <mat-card-content>\r\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\r\n\r\n      <br />\r\n\r\n      <form [formGroup]=\"stepone\" (ngSubmit)=getQuestions()>\r\n        <mat-form-field >\r\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\r\n        </mat-form-field>\r\n      </form>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -71,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n  <mat-card fxFlex>\r\n    <mat-card-header>\r\n      <mat-card-title>Login</mat-card-title>\r\n      <mat-card-subtitle>Please enter your username and password below.</mat-card-subtitle>\r\n    </mat-card-header>\r\n\r\n\r\n    <mat-card-content >\r\n      <small *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\" class=\"form-error\">Username is required!</small>\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-error\">Password is required!</small>\r\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\r\n\r\n      <br />\r\n\r\n      <form [formGroup]=\"form\" (ngSubmit)=\"login()\">\r\n        <mat-form-field >\r\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\r\n        </mat-form-field>\r\n        <br />\r\n        <br />\r\n        <mat-form-field >\r\n          <input type=\"text\" matInput [formControl]=\"form.controls['password']\" placeholder=\"password\">\r\n        </mat-form-field>\r\n        <mat-card-actions>\r\n          <div >\r\n            <button type=\"submit\" mat-raised-button color=\"primary\">Login</button>\r\n          </div>\r\n\r\n          <br />\r\n          <br />\r\n          <div >\r\n            <a routerLink=\"/signup\" class=\"left\">Sign Up</a>\r\n            <a routerLink=\"\" class=\"right\">Forgot Password?</a>\r\n          </div>\r\n\r\n        </mat-card-actions>\r\n      </form>\r\n\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n<!-- Alan's HTML\r\n<div class=\"mt-4 col-8 offset-2\">\r\n  <div class=\"card\">\r\n    <div class=\"card-header\">Login Here</div>\r\n    <div class=\"card-body\">\r\n      <form #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n        <div class=\"alert alert-danger\" [hidden]=\"!error\">\r\n          {{ error }}\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"inputuserName3\" class=\"col-sm-2 col-form-label\">User Name</label>\r\n          <div class=\"col-sm-10\">\r\n            <input\r\n              type=\"text\"\r\n              name=\"userName\"\r\n              class=\"form-control\"\r\n              id=\"inputuserName3\"\r\n              placeholder=\"userName\"\r\n              [(ngModel)]=\"form.userName\"\r\n              required\r\n            />\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"inputPassword3\" class=\"col-sm-2 col-form-label\"\r\n            >Password</label\r\n          >\r\n          <div class=\"col-sm-10\">\r\n            <input\r\n              type=\"password\"\r\n              name=\"password\"\r\n              class=\"form-control\"\r\n              id=\"inputPassword3\"\r\n              placeholder=\"Password\"\r\n              [(ngModel)]=\"form.password\"\r\n              required\r\n            />\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <div class=\"col-sm-10 offset-2\">\r\n            <button\r\n              type=\"submit\"\r\n              class=\"btn btn-primary\"\r\n              [disabled]=\"!loginForm.valid\"\r\n            >\r\n              Sign in\r\n            </button>\r\n\r\n            <a routerLink=\"/session/signup\" class=\"btn btn-info float-right\">Sign Up</a>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n                <div class=\"col-sm-10 offset-2\">\r\n\r\n                  <a routerLink=\"/session/forgotPassword\" class=\"btn btn-info float-right\">Password Reset</a>\r\n\r\n\r\n                </div>\r\n              </div>\r\n      </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n-->\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n  <mat-card fxFlex style=\"text-align: center;\">\r\n    <mat-card-header>\r\n      <mat-card-title>Login</mat-card-title>\r\n      <mat-card-subtitle>Please enter your username and password below.</mat-card-subtitle>\r\n    </mat-card-header>\r\n\r\n\r\n    <mat-card-content >\r\n      <small *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\" class=\"form-error\">Username is required!</small>\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-error\">Password is required!</small>\r\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\r\n\r\n      <br />\r\n\r\n      <form [formGroup]=\"form\" (ngSubmit)=\"login()\">\r\n        <mat-form-field >\r\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\r\n        </mat-form-field>\r\n        <br />\r\n        <br />\r\n        <mat-form-field >\r\n          <input type=\"text\" matInput [formControl]=\"form.controls['password']\" placeholder=\"password\">\r\n        </mat-form-field>\r\n        <mat-card-actions>\r\n          <div >\r\n            <button type=\"submit\" mat-raised-button color=\"primary\">Login</button>\r\n          </div>\r\n\r\n          <br />\r\n          <br />\r\n          <div >\r\n            <a routerLink=\"/signup\" class=\"left\">Sign Up</a>\r\n            <a routerLink=\"\" class=\"right\">Forgot Password?</a>\r\n          </div>\r\n\r\n        </mat-card-actions>\r\n      </form>\r\n\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n<!-- Alan's HTML\r\n<div class=\"mt-4 col-8 offset-2\">\r\n  <div class=\"card\">\r\n    <div class=\"card-header\">Login Here</div>\r\n    <div class=\"card-body\">\r\n      <form #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n        <div class=\"alert alert-danger\" [hidden]=\"!error\">\r\n          {{ error }}\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"inputuserName3\" class=\"col-sm-2 col-form-label\">User Name</label>\r\n          <div class=\"col-sm-10\">\r\n            <input\r\n              type=\"text\"\r\n              name=\"userName\"\r\n              class=\"form-control\"\r\n              id=\"inputuserName3\"\r\n              placeholder=\"userName\"\r\n              [(ngModel)]=\"form.userName\"\r\n              required\r\n            />\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"inputPassword3\" class=\"col-sm-2 col-form-label\"\r\n            >Password</label\r\n          >\r\n          <div class=\"col-sm-10\">\r\n            <input\r\n              type=\"password\"\r\n              name=\"password\"\r\n              class=\"form-control\"\r\n              id=\"inputPassword3\"\r\n              placeholder=\"Password\"\r\n              [(ngModel)]=\"form.password\"\r\n              required\r\n            />\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <div class=\"col-sm-10 offset-2\">\r\n            <button\r\n              type=\"submit\"\r\n              class=\"btn btn-primary\"\r\n              [disabled]=\"!loginForm.valid\"\r\n            >\r\n              Sign in\r\n            </button>\r\n\r\n            <a routerLink=\"/session/signup\" class=\"btn btn-info float-right\">Sign Up</a>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n                <div class=\"col-sm-10 offset-2\">\r\n\r\n                  <a routerLink=\"/session/forgotPassword\" class=\"btn btn-info float-right\">Password Reset</a>\r\n\r\n\r\n                </div>\r\n              </div>\r\n      </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n-->\r\n");
 
 /***/ }),
 
@@ -84,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>Page Not Found</p>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"not-found-card\">\r\n  <div class=\"message\">\r\n    <h1 class=\"not-found-message\">\r\n      <b>404</b>\r\n      <h2 style=\"text-align:center\" class=\"subtext\">\r\n        <b\r\n          >Oh No! Looks like this<br />\r\n          Page doesn't exist!</b\r\n        >\r\n      </h2>\r\n    </h1>\r\n\r\n    <div class=\"wrapper\">\r\n      <button\r\n        mat-button\r\n        class=\"mat-button\"\r\n        type=\"button\"\r\n        mat-raised-button\r\n        color=\"primary\"\r\n      >\r\n        <a routerLink=\"\">Go Back</a>\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -124,6 +150,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   28 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n<div fxLayout=\"column\">\r\n        <mat-card>\r\n            <mat-card-title>Security Questions</mat-card-title>\r\n            <mat-card-subtitle><button routerLink=\"/questions/add\">Add Question</button></mat-card-subtitle>\r\n            <mat-card-content>\r\n                    <form #f=\"ngForm\">\r\n                    <table mat-table [dataSource]=\"questions\" class=\"mat-elevation-z8\">\r\n    \r\n                        <!--- Note that these columns can be defined in any order.\r\n                                The actual rendered columns are set as a property on the row definition\" -->\r\n    \r\n                        <!-- Question Text Column -->\r\n                        <ng-container matColumnDef=\"questionText\">\r\n                            <th mat-header-cell *matHeaderCellDef> Question Text </th>\r\n                            <!-- Edit User Name Control-->\r\n                            <td mat-cell *matCellDef=\"let element\">\r\n                                {{element.questionText}}\r\n                            </td>\r\n                        </ng-container>\r\n    \r\n                        <!-- Edit Column -->\r\n                        <ng-container matColumnDef=\"edit\">\r\n                            <th mat-header-cell *matHeaderCellDef>  </th>\r\n    \r\n                            <td mat-cell *matCellDef=\"let element\">\r\n                                <button routerLink=\"/questions/edit/{{element._id}}\" >Edit</button>\r\n                            </td>\r\n                        </ng-container>\r\n    \r\n                        <!-- Delete Column -->\r\n                        <ng-container matColumnDef=\"delete\">\r\n                            <th mat-header-cell *matHeaderCellDef>  </th>\r\n    \r\n                            <td mat-cell *matCellDef=\"let element\">\r\n                                <button (click)=\"delete(element._id, element.questionText)\" >Delete</button>\r\n                            </td>\r\n                        </ng-container>\r\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n                    </table>\r\n                </form>\r\n            </mat-card-content>\r\n        </mat-card>\r\n    </div>\r\n    \r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/server-error/server-error.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/server-error/server-error.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"server-error-card\">\r\n        <div class=\"message\">\r\n          <h1 class=\"server-error-message\">\r\n            <b>500</b>\r\n            <h2 style=\"text-align:center\" class=\"subtext\">\r\n              <b\r\n                >Oh No! Looks like something<br />\r\n                Went wrong!</b\r\n              >\r\n            </h2>\r\n          </h1>\r\n      \r\n          <div class=\"wrapper\">\r\n            <button\r\n              mat-button\r\n              class=\"mat-button\"\r\n              type=\"button\"\r\n              mat-raised-button\r\n              color=\"primary\"\r\n            >\r\n              <a routerLink=\"\">Go Back</a>\r\n            </button>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      \r\n");
 
 /***/ }),
 
@@ -201,7 +240,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: BobComputer Starter Code\r\n;===========================================\r\n*/\r\n-->\r\n<div>\r\n  <main>\r\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"accent\">\r\n      <mat-toolbar-row>\r\n        <button mat-button class=\"toolbar__icon-button mat-button\">\r\n          <a routerLink=\"/\">\r\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\r\n          </a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">About Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Service Repairs</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Contact Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/user\">User Management</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/questions\">Security Questions Management</a>\r\n        </button>\r\n\r\n        <div fxFlex></div>\r\n\r\n        <button mat-button class=\"mat-button\">\r\n          <a (click)=\"logout()\" class=\"nav-link\">Logout</a>\r\n        </button>\r\n      </mat-toolbar-row>\r\n    </mat-toolbar>\r\n  </main>\r\n</div>\r\n<router-outlet></router-outlet>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: BobComputer Starter Code\r\n;===========================================\r\n*/\r\n-->\r\n<div>\r\n  <main>\r\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"accent\">\r\n      <mat-toolbar-row>\r\n        <button mat-button class=\"toolbar__icon-button mat-button\">\r\n          <a routerLink=\"/\">\r\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\r\n          </a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/about\">About Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"\">Service Repairs</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/contact\">Contact Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/user\">User Management</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/questions\">Security Questions Management</a>\r\n        </button>\r\n\r\n        <div fxFlex></div>\r\n\r\n        <button mat-button class=\"mat-button\">\r\n          <a (click)=\"logout()\" class=\"nav-link\">Logout</a>\r\n        </button>\r\n      </mat-toolbar-row>\r\n    </mat-toolbar>\r\n  </main>\r\n</div>\r\n<router-outlet></router-outlet>\r\n\r\n");
 
 /***/ }),
 
@@ -214,7 +253,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<router-outlet></router-outlet>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Jordan Hennessy\r\n; Date:   28 October 2019\r\n; Description: BobComputer Starter Code\r\n;===========================================\r\n*/\r\n-->\r\n<div>\r\n  <main>\r\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"accent\">\r\n      <mat-toolbar-row>\r\n        <button mat-button class=\"toolbar__icon-button mat-button\">\r\n          <a routerLink=\"/\">\r\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\r\n          </a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/session/about\">About Us</a>\r\n        </button>\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/session/contact\">Contact Us</a>\r\n        </button>\r\n\r\n\r\n        <div fxFlex></div>\r\n\r\n        <button mat-button class=\"mat-button\">\r\n          <a routerLink=\"/session/login\" class=\"nav-link\">Login</a>\r\n        </button>\r\n      </mat-toolbar-row>\r\n    </mat-toolbar>\r\n  </main>\r\n</div>\r\n<router-outlet></router-outlet>\r\n");
 
 /***/ }),
 
@@ -555,6 +594,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./pages/forgot-password/forgot-password.component */ "./src/app/pages/forgot-password/forgot-password.component.ts");
 /* harmony import */ var _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./pages/signup/signup.component */ "./src/app/pages/signup/signup.component.ts");
 /* harmony import */ var _pages_signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./pages/signup-dialog/signup-dialog.component */ "./src/app/pages/signup-dialog/signup-dialog.component.ts");
+/* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
+/* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
+/* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
 /*
 ; Title:  starter code
 ; Author: Professor Krasso
@@ -606,6 +648,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -626,7 +671,10 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_34__["AddQuestionComponent"],
             _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__["ForgotPasswordComponent"],
             _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_39__["SignupComponent"],
-            _pages_signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_40__["SignupDialogComponent"]
+            _pages_signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_40__["SignupDialogComponent"],
+            _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_41__["ContactComponent"],
+            _pages_about_about_component__WEBPACK_IMPORTED_MODULE_42__["AboutComponent"],
+            _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_43__["ServerErrorComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -690,6 +738,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/question-details/question-details.component */ "./src/app/pages/question-details/question-details.component.ts");
 /* harmony import */ var _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/add-question/add-question.component */ "./src/app/pages/add-question/add-question.component.ts");
 /* harmony import */ var _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/signup/signup.component */ "./src/app/pages/signup/signup.component.ts");
+/* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
+/* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
+/* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
+
+
+
 
 
 
@@ -740,6 +794,14 @@ const AppRoutes = [
             {
                 path: 'signup',
                 component: _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_11__["SignupComponent"]
+            },
+            {
+                path: 'about',
+                component: _pages_about_about_component__WEBPACK_IMPORTED_MODULE_12__["AboutComponent"]
+            },
+            {
+                path: 'contact',
+                component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_13__["ContactComponent"]
             }
         ]
     },
@@ -754,6 +816,18 @@ const AppRoutes = [
             {
                 path: '404',
                 component: _pages_not_found_not_found_component__WEBPACK_IMPORTED_MODULE_5__["NotFoundComponent"]
+            },
+            {
+                path: 'about',
+                component: _pages_about_about_component__WEBPACK_IMPORTED_MODULE_12__["AboutComponent"]
+            },
+            {
+                path: 'contact',
+                component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_13__["ContactComponent"]
+            },
+            {
+                path: '500',
+                component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_14__["ServerErrorComponent"]
             }
         ]
     },
@@ -762,6 +836,50 @@ const AppRoutes = [
         redirectTo: 'session/404'
     }
 ];
+
+
+/***/ }),
+
+/***/ "./src/app/pages/about/about.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/pages/about/about.component.css ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Fib3V0L2Fib3V0LmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/pages/about/about.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/pages/about/about.component.ts ***!
+  \************************************************/
+/*! exports provided: AboutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function() { return AboutComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let AboutComponent = class AboutComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+AboutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-about',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./about.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/about/about.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./about.component.css */ "./src/app/pages/about/about.component.css")).default]
+    })
+], AboutComponent);
+
 
 
 /***/ }),
@@ -844,6 +962,50 @@ AddQuestionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./add-question.component.css */ "./src/app/pages/add-question/add-question.component.css")).default]
     })
 ], AddQuestionComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/contact/contact.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/pages/contact/contact.component.css ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("h3, a, p {\r\n  text-align: center;\r\n}\r\n\r\n.mat-icon {\r\n  display: block;\r\n  margin: auto;\r\n  width: 62px;\r\n  height: 62px;\r\n  font-size: 62px;\r\n}\r\n\r\na {\r\n  text-transform: lowercase;\r\n  text-decoration: none;\r\n}\r\n\r\n.mat-card-header-text {\r\n  justify-content: center;\r\n\r\n}\r\n\r\n.mat-card-title{\r\n  justify-content:center;\r\n  text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvY29udGFjdC9jb250YWN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsWUFBWTtFQUNaLFdBQVc7RUFDWCxZQUFZO0VBQ1osZUFBZTtBQUNqQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSx1QkFBdUI7O0FBRXpCOztBQUNBO0VBQ0Usc0JBQXNCO0VBQ3RCLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2NvbnRhY3QvY29udGFjdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDMsIGEsIHAge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLm1hdC1pY29uIHtcclxuICBkaXNwbGF5OiBibG9jaztcclxuICBtYXJnaW46IGF1dG87XHJcbiAgd2lkdGg6IDYycHg7XHJcbiAgaGVpZ2h0OiA2MnB4O1xyXG4gIGZvbnQtc2l6ZTogNjJweDtcclxufVxyXG5cclxuYSB7XHJcbiAgdGV4dC10cmFuc2Zvcm06IGxvd2VyY2FzZTtcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuXHJcbi5tYXQtY2FyZC1oZWFkZXItdGV4dCB7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcblxyXG59XHJcbi5tYXQtY2FyZC10aXRsZXtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/contact/contact.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/pages/contact/contact.component.ts ***!
+  \****************************************************/
+/*! exports provided: ContactComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactComponent", function() { return ContactComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let ContactComponent = class ContactComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+ContactComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-contact',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./contact.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/contact/contact.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./contact.component.css */ "./src/app/pages/contact/contact.component.css")).default]
+    })
+], ContactComponent);
 
 
 
@@ -1012,12 +1174,12 @@ let LoginComponent = class LoginComponent {
         const username = this.form.controls['username'].value;
         const password = this.form.controls['password'].value; // Don
         //Send POST request to authenticate - Don
-        this.http.post('/api/usersignin', {
+        this.http.post('/api/users  ', {
             'username': username,
             'password': password
         }).subscribe(res => {
             if (res) {
-                this.cookieService.set('isAuthenticated', 'true', 1);
+                this.cookieService.set('isAuthenticated', 'true', 10);
                 this.cookieService.set('username', username, 1);
                 this.router.navigate(['/']);
                 console.log(res);
@@ -1055,7 +1217,7 @@ LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL25vdC1mb3VuZC9ub3QtZm91bmQuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = (".not-found-card {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.message {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.not-found-message {\r\n  width: 100%;\r\n  height: 100%;\r\n  color: #5dbcd2;\r\n  text-align: center;\r\n  font-size: 120px;\r\n}\r\n\r\n.subtext {\r\n  width: 100%;\r\n  height: 100%;\r\n  color: white;\r\n  text-align: center;\r\n  font-size: 40px;\r\n}\r\n\r\nmat-button-wrapper {\r\n  text-align: center;\r\n}\r\n\r\n.wrapper {\r\n  text-align: center;\r\n  width: 100%;\r\n}\r\n\r\n.button {\r\n  width: 100%;\r\n  text-align: center;\r\n}\r\n\r\na {\r\n  color: #fff;\r\n  text-transform: uppercase;\r\n  text-decoration: none;\r\n  text-align: center;\r\n}\r\n\r\nmat-button {\r\n  text-align: center;\r\n}\r\n\r\nbutton{\r\n    width: 30%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbm90LWZvdW5kL25vdC1mb3VuZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztFQUNYLFlBQVk7QUFDZDs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsWUFBWTtFQUNaLGNBQWM7RUFDZCxrQkFBa0I7RUFDbEIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGVBQWU7QUFDakI7O0FBQ0E7RUFDRSxrQkFBa0I7QUFDcEI7O0FBQ0E7RUFDRSxrQkFBa0I7RUFDbEIsV0FBVztBQUNiOztBQUNBO0VBQ0UsV0FBVztFQUNYLGtCQUFrQjtBQUNwQjs7QUFDQTtFQUNFLFdBQVc7RUFDWCx5QkFBeUI7RUFDekIscUJBQXFCO0VBQ3JCLGtCQUFrQjtBQUNwQjs7QUFDQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFDQTtJQUNJLFVBQVU7QUFDZCIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL25vdC1mb3VuZC9ub3QtZm91bmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ub3QtZm91bmQtY2FyZCB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4ubWVzc2FnZSB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4ubm90LWZvdW5kLW1lc3NhZ2Uge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBjb2xvcjogIzVkYmNkMjtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgZm9udC1zaXplOiAxMjBweDtcclxufVxyXG5cclxuLnN1YnRleHQge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGZvbnQtc2l6ZTogNDBweDtcclxufVxyXG5tYXQtYnV0dG9uLXdyYXBwZXIge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4ud3JhcHBlciB7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcbi5idXR0b24ge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5hIHtcclxuICBjb2xvcjogI2ZmZjtcclxuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxubWF0LWJ1dHRvbiB7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbmJ1dHRvbntcclxuICAgIHdpZHRoOiAzMCU7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -1373,6 +1535,50 @@ SecurityQuestionsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./security-questions.component.css */ "./src/app/pages/security-questions/security-questions.component.css")).default]
     })
 ], SecurityQuestionsComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/server-error/server-error.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/pages/server-error/server-error.component.css ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".server-error-card {\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n  \r\n  .message {\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n  \r\n  .server-error-message {\r\n    width: 100%;\r\n    height: 100%;\r\n    color: #5dbcd2;\r\n    text-align: center;\r\n    font-size: 120px;\r\n  }\r\n  \r\n  .subtext {\r\n    width: 100%;\r\n    height: 100%;\r\n    color: white;\r\n    text-align: center;\r\n    font-size: 40px;\r\n  }\r\n  \r\n  mat-button-wrapper {\r\n    text-align: center;\r\n  }\r\n  \r\n  .wrapper {\r\n    text-align: center;\r\n    width: 100%;\r\n  }\r\n  \r\n  .button {\r\n    width: 100%;\r\n    text-align: center;\r\n  }\r\n  \r\n  a {\r\n    color: #fff;\r\n    text-transform: uppercase;\r\n    text-decoration: none;\r\n    text-align: center;\r\n  }\r\n  \r\n  mat-button {\r\n    text-align: center;\r\n    width: 100%;\r\n  }\r\n  \r\n  button{\r\n      width: 30%;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvc2VydmVyLWVycm9yL3NlcnZlci1lcnJvci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLFlBQVk7RUFDZDs7RUFFQTtJQUNFLFdBQVc7SUFDWCxZQUFZO0VBQ2Q7O0VBRUE7SUFDRSxXQUFXO0lBQ1gsWUFBWTtJQUNaLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsZ0JBQWdCO0VBQ2xCOztFQUVBO0lBQ0UsV0FBVztJQUNYLFlBQVk7SUFDWixZQUFZO0lBQ1osa0JBQWtCO0lBQ2xCLGVBQWU7RUFDakI7O0VBQ0E7SUFDRSxrQkFBa0I7RUFDcEI7O0VBQ0E7SUFDRSxrQkFBa0I7SUFDbEIsV0FBVztFQUNiOztFQUNBO0lBQ0UsV0FBVztJQUNYLGtCQUFrQjtFQUNwQjs7RUFDQTtJQUNFLFdBQVc7SUFDWCx5QkFBeUI7SUFDekIscUJBQXFCO0lBQ3JCLGtCQUFrQjtFQUNwQjs7RUFDQTtJQUNFLGtCQUFrQjtJQUNsQixXQUFXO0VBQ2I7O0VBRUE7TUFDSSxVQUFVO0VBQ2QiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9zZXJ2ZXItZXJyb3Ivc2VydmVyLWVycm9yLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VydmVyLWVycm9yLWNhcmQge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgfVxyXG4gIFxyXG4gIC5tZXNzYWdlIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gIH1cclxuICBcclxuICAuc2VydmVyLWVycm9yLW1lc3NhZ2Uge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBjb2xvcjogIzVkYmNkMjtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogMTIwcHg7XHJcbiAgfVxyXG4gIFxyXG4gIC5zdWJ0ZXh0IHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZm9udC1zaXplOiA0MHB4O1xyXG4gIH1cclxuICBtYXQtYnV0dG9uLXdyYXBwZXIge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIH1cclxuICAud3JhcHBlciB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgLmJ1dHRvbiB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICB9XHJcbiAgYSB7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgfVxyXG4gIG1hdC1idXR0b24ge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgfVxyXG4gIFxyXG4gIGJ1dHRvbntcclxuICAgICAgd2lkdGg6IDMwJTtcclxuICB9Il19 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/server-error/server-error.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/pages/server-error/server-error.component.ts ***!
+  \**************************************************************/
+/*! exports provided: ServerErrorComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServerErrorComponent", function() { return ServerErrorComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let ServerErrorComponent = class ServerErrorComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+ServerErrorComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-server-error',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./server-error.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/server-error/server-error.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./server-error.component.css */ "./src/app/pages/server-error/server-error.component.css")).default]
+    })
+], ServerErrorComponent);
 
 
 
@@ -2195,7 +2401,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9zZXNzaW9uLWxheW91dC9zZXNzaW9uLWxheW91dC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Jordan Hennessy\r\n; Date:   23 October 2019\r\n; Description: BobComputer Starter Code\r\n;===========================================\r\n*/\r\n\r\n#logo {\r\n  height: 50px;\r\n  width: auto;\r\n  vertical-align: middle;\r\n}\r\n\r\na {\r\n  color: #fff;\r\n  text-transform: uppercase;\r\n  text-decoration: none;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL3Nlc3Npb24tbGF5b3V0L3Nlc3Npb24tbGF5b3V0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Q0FPQzs7QUFFRDtFQUNFLFlBQVk7RUFDWixXQUFXO0VBQ1gsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsV0FBVztFQUNYLHlCQUF5QjtFQUN6QixxQkFBcUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvc2Vzc2lvbi1sYXlvdXQvc2Vzc2lvbi1sYXlvdXQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXHJcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbjsgVGl0bGU6ICBCb2IncyBDb21wdXRlclxyXG47IEF1dGhvcjogSm9yZGFuIEhlbm5lc3N5XHJcbjsgRGF0ZTogICAyMyBPY3RvYmVyIDIwMTlcclxuOyBEZXNjcmlwdGlvbjogQm9iQ29tcHV0ZXIgU3RhcnRlciBDb2RlXHJcbjs9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbiovXHJcblxyXG4jbG9nbyB7XHJcbiAgaGVpZ2h0OiA1MHB4O1xyXG4gIHdpZHRoOiBhdXRvO1xyXG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XHJcbn1cclxuXHJcbmEge1xyXG4gIGNvbG9yOiAjZmZmO1xyXG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
