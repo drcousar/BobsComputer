@@ -28,7 +28,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<p>about works!</p>\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   25 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n\r\n<div fxLayout=\"column\">\r\n    <mat-card>\r\n        <img src=\"../../../assets/about_img.jpg\" alt=\"About Bob's Computer Repair Service\" class=\"center\" />\r\n        <br /><br /><br />\r\n            <mat-card-title>About Us</mat-card-title> \r\n            <br /><br /><br />\r\n                <mat-card-content>\r\n                        <mat-card-subtitle style=\"text-align: left;\">Who is Bob? </mat-card-subtitle>\r\n                    <p>\r\n                        Bob’s Computer Repair Shop provides computer services for your business or home.  \r\n                        20 years ago, Bob started this company on the southwest side of Omaha, Nebraska.  \r\n                        Bob holds a bachelor’s degree from Bellevue University.  Bob lives with his wife and family in Omaha.  \r\n                    </p>\r\n                        <br />\r\n                        <mat-card-subtitle style=\"text-align: left;\">What we do at Bob's Computer Repair Service</mat-card-subtitle>\r\n                    <p>\r\n                        If you are looking for computer repair services for your desktop or laptop in the greater Omaha area, don’t look any further.  \r\n                        We are local, fast and fair.  Our technicians are trained to fix any computer brand.  \r\n                        If you have an Apple or Windows device, just bring it to the store or fill out our services form. \r\n                    </p>\r\n                        <br />\r\n                        <mat-card-subtitle style=\"text-align: left;\">Why Choose Bob's Computer Repair Service?</mat-card-subtitle>\r\n                    <p>\r\n                        We employ certified technicians and stand behind our work 100%.  \r\n                        We are members of the Chamber of Omaha and work hard to establish and maintain a great working relationship for our business with the greater Omaha business community.  \r\n                        Many of you already do business with us while some never heard of us.  \r\n                        We feel that this is a great way to introduce us to those of you who haven’t had the pleasure of doing business with us.  \r\n                        We offer a full range of computer services.   \r\n                        If you have a broken screen or a virus or even a software problem we can fix it for you.  \r\n                        Bob’s Computer Repair Shop parts come with a lifetime warranty on any manufacturer defect.  \r\n                        Our technicians are all experts and have years of prior experience in the repair industry.  \r\n                        Everyone you speak to in our shop is a technician that can answer your questions.  \r\n                        Call, Click or Come by to obtain the best computer repair services you will ever have.\r\n                    </p>\r\n                </mat-card-content>\r\n        </mat-card>\r\n</div>\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/add-question/add-question.component.html": 
@@ -620,6 +620,7 @@
             /* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
             /* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
             /* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
+            /* harmony import */ var _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./shared/route-interceptors/error.interceptor */ "./src/app/shared/route-interceptors/error.interceptor.ts");
             /*
             ; Title:  starter code
             ; Author: Professor Krasso
@@ -683,7 +684,8 @@
                     providers: [{
                             provide: _angular_common__WEBPACK_IMPORTED_MODULE_35__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_35__["HashLocationStrategy"]
                         },
-                        _shared_auth_guard__WEBPACK_IMPORTED_MODULE_36__["AuthGuard"], ngx_cookie_service__WEBPACK_IMPORTED_MODULE_37__["CookieService"]
+                        _shared_auth_guard__WEBPACK_IMPORTED_MODULE_36__["AuthGuard"], ngx_cookie_service__WEBPACK_IMPORTED_MODULE_37__["CookieService"],
+                        { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_28__["HTTP_INTERCEPTORS"], useClass: _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_44__["ErrorInterceptor"], multi: true }
                     ],
                     bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
                     entryComponents: [
@@ -809,7 +811,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Fib3V0L2Fib3V0LmNvbXBvbmVudC5jc3MifQ== */");
+            /* harmony default export */ __webpack_exports__["default"] = ("/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   28 October 2019\r\n; Description: About Us\r\n;===========================================\r\n*/\r\n.center {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 50%;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWJvdXQvYWJvdXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7OztDQU9DO0FBQ0Q7SUFDSSxjQUFjO0lBQ2QsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixVQUFVO0VBQ1oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9hYm91dC9hYm91dC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcclxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuOyBUaXRsZTogIEJvYidzIENvbXB1dGVyXHJcbjsgQXV0aG9yOiBEb24gQ291c2FyXHJcbjsgRGF0ZTogICAyOCBPY3RvYmVyIDIwMTlcclxuOyBEZXNjcmlwdGlvbjogQWJvdXQgVXNcclxuOz09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuKi9cclxuLmNlbnRlciB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xyXG4gICAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xyXG4gICAgd2lkdGg6IDUwJTtcclxuICB9Il19 */");
             /***/ 
         }),
         /***/ "./src/app/pages/about/about.component.ts": 
@@ -823,6 +825,14 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function () { return AboutComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /*
+            ============================================
+            ; Title:  Bob's Computer
+            ; Author: Don Cousar
+            ; Date:   28 October 2019
+            ; Description: About Us
+            ;===========================================
+            */
             var AboutComponent = /** @class */ (function () {
                 function AboutComponent() {
                 }
@@ -2174,6 +2184,51 @@
             ; Description: BobComputer Starter Code
             ;===========================================
             */
+            /***/ 
+        }),
+        /***/ "./src/app/shared/route-interceptors/error.interceptor.ts": 
+        /*!****************************************************************!*\
+          !*** ./src/app/shared/route-interceptors/error.interceptor.ts ***!
+          \****************************************************************/
+        /*! exports provided: ErrorInterceptor */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ErrorInterceptor", function () { return ErrorInterceptor; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+            /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+            var ErrorInterceptor = /** @class */ (function () {
+                function ErrorInterceptor(cookieService, router) {
+                    this.cookieService = cookieService;
+                    this.router = router;
+                }
+                ErrorInterceptor.prototype.intercept = function (req, next) {
+                    var _this = this;
+                    return next.handle(req).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(function (err) {
+                        if ([404].indexOf(err.status) !== -1) {
+                            _this.router.navigate(['/session/404']);
+                        }
+                        if ([500].indexOf(err.status) !== -1) {
+                            _this.router.navigate(['/session/500']);
+                        }
+                        //Otherwise, catch the error and throw
+                        var error = err.error.message || err.statusText;
+                        return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["throwError"])(error);
+                    }));
+                };
+                return ErrorInterceptor;
+            }());
+            ErrorInterceptor.ctorParameters = function () { return [
+                { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_2__["CookieService"] },
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+            ]; };
+            ErrorInterceptor = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+            ], ErrorInterceptor);
             /***/ 
         }),
         /***/ "./src/app/shared/session-layout/session-layout.component.css": 
