@@ -53,6 +53,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AuthGuard } from './shared/auth.guard';
 import { CookieService } from 'ngx-cookie-service';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { SignupDialogComponent } from './pages/signup-dialog/signup-dialog.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ServerErrorComponent } from './pages/server-error/server-error.component';
@@ -75,6 +77,8 @@ import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor'
     SecurityQuestionsDeleteDialogComponent,
     AddQuestionComponent,
     ForgotPasswordComponent,
+    SignupComponent,
+    SignupDialogComponent,
     ContactComponent,
     AboutComponent,
     ServerErrorComponent
@@ -109,7 +113,8 @@ import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor'
   bootstrap: [AppComponent],
   entryComponents: [
     UserManagementDeleteDialogComponent,
-    SecurityQuestionsDeleteDialogComponent
+    SecurityQuestionsDeleteDialogComponent,
+    SignupDialogComponent
   ]
 })
 export class AppModule { }
