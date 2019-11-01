@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  Bob's Computer Signup
+; Author: Alan Edwards
+; Date:   31 October 2019
+; Description: Bob's Computer
+; Attribution: inspired by Professor Krasso @Bellevue University
+;===========================================
+*/
+
 import {Injectable} from '@angular/core';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import { CookieService} from 'ngx-cookie-service';
