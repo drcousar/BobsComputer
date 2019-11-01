@@ -40,7 +40,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Platform } from '@angular/cdk/platform';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
@@ -57,6 +57,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ServerErrorComponent } from './pages/server-error/server-error.component';
 import { from } from 'rxjs';
+import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -102,7 +103,8 @@ import { from } from 'rxjs';
   ],
   providers: [{
     provide: LocationStrategy, useClass: HashLocationStrategy},
-    AuthGuard, CookieService
+    AuthGuard, CookieService,
+    {provide:HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
   ],
   bootstrap: [AppComponent],
   entryComponents: [
