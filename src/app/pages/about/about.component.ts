@@ -1,3 +1,12 @@
+/*
+============================================
+; Title:  Bob's Computer
+; Author: Don Cousar
+; Date:   28 October 2019
+; Description: About Us
+;===========================================
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

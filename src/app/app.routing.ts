@@ -17,6 +17,7 @@ import { UserDetailsComponent } from './pages/user-details/user-details.componen
 import { SecurityQuestionsComponent } from './pages/security-questions/security-questions.component';
 import { QuestionDetailsComponent } from './pages/question-details/question-details.component';
 import { AddQuestionComponent } from './pages/add-question/add-question.component';
+import { SignupComponent } from './pages/signup/signup.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import {ServerErrorComponent} from './pages/server-error/server-error.component';
@@ -60,6 +61,10 @@ export const AppRoutes: Routes = [
         path: 'questions/add',
         component: AddQuestionComponent,
         canActivate: [AuthGuard]
+      },
+      {
+        path: 'signup',
+        component: SignupComponent
       },
       {
         path: 'about',

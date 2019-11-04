@@ -1,142 +1,96 @@
-<div class="mt-4 col-8 offset-2">
-        <div class="card">
-          <div class="card-header">Register Up</div>
-          <div class="card-body">
-            <form #signupForm="ngForm" (ngSubmit)="onSubmit()">
-              
-              <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                  <input
-                    type="email"
-                    name="email"
-                    class="form-control"
-                    id="inputEmail3"
-                    placeholder="Email"
-                    [(ngModel)]="form.email"
-                    required
-                  />
+<!--
+============================================
+; Title:  Bob's Computer Signup
+; Authors: Don Cousar / Alan Edwards
+; Date:   30 October 2019
+; Description: Bob's Computer
+; Attribution: Form Control Logic inspired by Professor Krasso @Bellevue University
+;===========================================
+-->
+<div fxLayout="column">
+    <mat-card>
+        <mat-card-title>Account Registration</mat-card-title>
+        <form [formGroup]="form" (ngSubmit)="register()" #userForm>
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutGap="10px">
+                    <mat-form-field>
+                        <input type="text" required matInput [(ngModel)]="FirstName" value="{{FirstName}}" [ngModelOptions]="{standalone: true}" placeholder="First Name" />
+                        <mat-error>First Name is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text" required matInput [(ngModel)]="LastName" value="{{LastName}}" [ngModelOptions]="{standalone: true}" placeholder="Last Name" />
+                        <mat-error>Last Name is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text" required matInput [(ngModel)]="Address" value="{{Address}}" [ngModelOptions]="{standalone: true}" placeholder="Address" />
+                        <mat-error>Address is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text" required matInput [(ngModel)]="PhoneNumber" value="{{PhoneNumber}}" [ngModelOptions]="{standalone: true}" placeholder="Phone Number" />
+                        <mat-error>Phone Number is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text" required matInput [(ngModel)]="Email" value="{{Email}}" [ngModelOptions]="{standalone: true}" placeholder="Email" />
+                        <mat-error>Email is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text" required matInput [(ngModel)]="Username" value="{{Username}}" [ngModelOptions]="{standalone: true}" placeholder="User Name" />
+                        <mat-error>Username is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text" required type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" matInput [(ngModel)]="Password" value="{{Password}}" [ngModelOptions]="{standalone: true}" placeholder="Create Password" />
+                        <mat-error>Password is required and must be at least 8 characters, one Uppercase, and one Number</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text" required type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" matInput [(ngModel)]="ConfirmPassword" value="{{ConfirmPassword}}" [ngModelOptions]="{standalone: true}" placeholder="Confirm Password" />
+                        <mat-error>Both passwords must match</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Choose Security Question #1</mat-label>
+                        <select required matNativeControl [(ngModel)]="secQuestion1" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let question of questions" value={{question._id}}>
+                                {{question.questionText}}
+                            </option>
+                        </select> 
+                        <mat-error>Security Question #1 is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text" required matInput [(ngModel)]="secAnswer1" value="{{secAnswer1}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 1" />
+                        <mat-error>Security answer #1 is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Choose Security Question #2</mat-label>
+                        <select required matNativeControl [(ngModel)]="secQuestion2" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let question of questions" value={{question._id}}>
+                                {{question.questionText}}
+                            </option>
+                        </select> 
+                        <mat-error>Security Question #2 is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text" required matInput [(ngModel)]="secAnswer2" value="{{secAnswer2}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 2" />
+                        <mat-error>Security answer #2 is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Choose Security Question #3</mat-label>
+                        <select required matNativeControl [(ngModel)]="secQuestion3" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let question of questions" value={{question._id}}>
+                                {{question.questionText}}
+                            </option>
+                        </select> 
+                        <mat-error>Security Question #3 is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input type="text" required matInput [(ngModel)]="secAnswer3" value="{{secAnswer3}}" [ngModelOptions]="{standalone: true}" placeholder="Enter Answer to Security Question 3" />
+                        <mat-error>Security answer #3 is required</mat-error>
+                    </mat-form-field>
                 </div>
-              </div>
-              <div class="form-group row">
-                    <label for="inputFirstName3" class="col-sm-2 col-form-label">First Name</label>
-                    <div class="col-sm-10">
-                      <input
-                        type="text"
-                        name="FirstName"
-                        class="form-control"
-                        id="inputFirstName3"
-                        placeholder="First Name"
-                        [(ngModel)]="form.FirstName"
-                        required
-                      />
-                    </div>
-                  </div>
-              <div class="form-group row">
-                    <label for="inputLastName3" class="col-sm-2 col-form-label">Last Name</label>
-                    <div class="col-sm-10">
-                      <input
-                        type="text"
-                        name="LastName"
-                        class="form-control"
-                        id="inputLastName3"
-                        placeholder="Last Name"
-                        [(ngModel)]="form.LastName"
-                        required
-                      />
-                    </div>
-                  </div>
-                  
-                  <div class="form-group row">
-                        <label for="inputAddress3" class="col-sm-2 col-form-label">Address</label>
-                        <div class="col-sm-10">
-                          <input
-                            type="text"
-                            name="address"
-                            class="form-control"
-                            id="inputAddress3"
-                            placeholder="Address"
-                            [(ngModel)]="form.Address"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                            <label for="inputZipcode3" class="col-sm-2 col-form-label">Zipcode</label>
-                            <div class="col-sm-10">
-                              <input
-                                type="text"
-                                name="Zipcode"
-                                class="form-control"
-                                id="inputZipcode3"
-                                placeholder="Zipcode"
-                                [(ngModel)]="form.Zipcode"
-                                required
-                              />
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                                <label for="inputState3" class="col-sm-2 col-form-label">State</label>
-                                <div class="col-sm-10">
-                                  <input
-                                    type="text"
-                                    name="State"
-                                    class="form-control"
-                                    id="inputState3"
-                                    placeholder="State"
-                                    [(ngModel)]="form.State"
-                                    required
-                                  />
-                                </div>
-                              </div>
-              <div class="form-group row">
-                <label for="inputPassword3" class="col-sm-2 col-form-label"
-                  >Password</label
-                >
-                <div class="col-sm-10">
-                  <input
-                    type="password"
-                    name="password"
-                    class="form-control"
-                    id="inputPassword3"
-                    placeholder="Password"
-                    [(ngModel)]="form.password"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-group row">
-                    <label for="inputPasswordConfirmation3" class="col-sm-2 col-form-label"
-                      >Confrim Password</label
-                    >
-                    <div class="col-sm-10">
-                      <input
-                        type="password"
-                        name="password_confirmation"
-                        class="form-control"
-                        id="inputPasswordConfirmation3"
-                        placeholder="Password"
-                        [(ngModel)]="form.password_confirmation"
-                        required
-                      />
-                    </div>
-                  </div>
-      
-              <div class="form-group row">
-                <div class="col-sm-10 offset-2">
-                  <button
-                    type="submit"
-                    class="btn btn-primary"
-                    [disabled]="!signupForm.valid"
-                  >
-                    Sign up
-                  </button>
-      
-                  <a routerLink="/session/login" class="btn btn-info float-right">Sign In</a>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      
+            </mat-card-content>
+            <br />
+            <mat-card-actions>
+                <button mat-raised-button (click)="cancel()" color="accent">Cancel</button>
+                <button mat-raised-button color="primary">Submit</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</div>
