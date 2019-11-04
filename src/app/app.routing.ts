@@ -20,7 +20,10 @@ import { AddQuestionComponent } from './pages/add-question/add-question.componen
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import {ServerErrorComponent} from './pages/server-error/server-error.component';
-  
+import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
+import { VerifyQuestionsComponent } from './pages/verify-questions/verify-questions.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+
 
 
 export const AppRoutes: Routes = [
@@ -88,11 +91,23 @@ export const AppRoutes: Routes = [
       {
         path: 'contact',
         component: ContactComponent
-        
+
       },
       {
         path: '500',
         component: ServerErrorComponent
+      },
+      {
+        path: 'forgot-password',
+        component: VerifyUserComponent
+      },
+      {
+        path: 'verify-questions',
+        component: VerifyQuestionsComponent
+      },
+      {
+        path: 'reset-password',
+        component: ForgotPasswordComponent
       }
     ]
   },

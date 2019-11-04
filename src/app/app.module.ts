@@ -57,6 +57,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ServerErrorComponent } from './pages/server-error/server-error.component';
 import { from } from 'rxjs';
+import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
+import { VerifyQuestionsComponent } from './pages/verify-questions/verify-questions.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { from } from 'rxjs';
     ForgotPasswordComponent,
     ContactComponent,
     AboutComponent,
-    ServerErrorComponent
+    ServerErrorComponent,
+    VerifyUserComponent,
+    VerifyQuestionsComponent
   ],
   imports: [
     BrowserModule,

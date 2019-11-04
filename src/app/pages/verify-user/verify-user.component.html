@@ -2,20 +2,19 @@
   <mat-card fxFlex>
     <mat-card-header>
       <mat-card-title>Forgot Password</mat-card-title>
-      <mat-card-subtitle>Your account has been verified, enter your new password below.</mat-card-subtitle>
+      <mat-card-subtitle>Enter your username below to start reset your password.</mat-card-subtitle>
     </mat-card-header>
 
     <mat-card-content>
-
-      <br />
-
-      <form [formGroup]="form" (ngSubmit)=resetPassword() #resetPasswordForm>
+      <form [formGroup]="form" (ngSubmit)="validateUsername()" #usernameForm >
         <mat-form-field >
-          <input type="password" matInput [formControl]="form.controls['password']" placeholder="new password">
+          <input type="text" matInput [formControl]="form.controls['username']" placeholder="username">
         </mat-form-field>
+
         <br />
 
         <button mat-raised-button color="primary">Submit</button>
+
       </form>
     </mat-card-content>
   </mat-card>
