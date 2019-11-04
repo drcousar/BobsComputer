@@ -32,11 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   25 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n\r\n<div fxLayout=\"column\">\r\n    <mat-card>\r\n        <img src=\"../../../assets/about_img.jpg\" alt=\"About Bob's Computer Repair Service\" class=\"center\" />\r\n        <br /><br /><br />\r\n            <mat-card-title>About Us</mat-card-title> \r\n            <br /><br /><br />\r\n                <mat-card-content>\r\n                        <mat-card-subtitle style=\"text-align: left;\">Who is Bob? </mat-card-subtitle>\r\n                    <p>\r\n                        Bob’s Computer Repair Shop provides computer services for your business or home.  \r\n                        20 years ago, Bob started this company on the southwest side of Omaha, Nebraska.  \r\n                        Bob holds a bachelor’s degree from Bellevue University.  Bob lives with his wife and family in Omaha.  \r\n                    </p>\r\n                        <br />\r\n                        <mat-card-subtitle style=\"text-align: left;\">What we do at Bob's Computer Repair Service</mat-card-subtitle>\r\n                    <p>\r\n                        If you are looking for computer repair services for your desktop or laptop in the greater Omaha area, don’t look any further.  \r\n                        We are local, fast and fair.  Our technicians are trained to fix any computer brand.  \r\n                        If you have an Apple or Windows device, just bring it to the store or fill out our services form. \r\n                    </p>\r\n                        <br />\r\n                        <mat-card-subtitle style=\"text-align: left;\">Why Choose Bob's Computer Repair Service?</mat-card-subtitle>\r\n                    <p>\r\n                        We employ certified technicians and stand behind our work 100%.  \r\n                        We are members of the Chamber of Omaha and work hard to establish and maintain a great working relationship for our business with the greater Omaha business community.  \r\n                        Many of you already do business with us while some never heard of us.  \r\n                        We feel that this is a great way to introduce us to those of you who haven’t had the pleasure of doing business with us.  \r\n                        We offer a full range of computer services.   \r\n                        If you have a broken screen or a virus or even a software problem we can fix it for you.  \r\n                        Bob’s Computer Repair Shop parts come with a lifetime warranty on any manufacturer defect.  \r\n                        Our technicians are all experts and have years of prior experience in the repair industry.  \r\n                        Everyone you speak to in our shop is a technician that can answer your questions.  \r\n                        Call, Click or Come by to obtain the best computer repair services you will ever have.\r\n                    </p>\r\n                </mat-card-content>\r\n        </mat-card>\r\n</div>\r\n");
-=======
-/* harmony default export */ __webpack_exports__["default"] = ("<p>about works!</p>\n");
->>>>>>> 872b31e18bb61e17a2f5e4b4cde007f39619e0ed
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   25 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n\n<div fxLayout=\"column\">\n    <mat-card>\n        <img src=\"../../../assets/about_img.jpg\" alt=\"About Bob's Computer Repair Service\" class=\"center\" />\n        <br /><br /><br />\n            <mat-card-title>About Us</mat-card-title> \n            <br /><br /><br />\n                <mat-card-content>\n                        <mat-card-subtitle style=\"text-align: left;\">Who is Bob? </mat-card-subtitle>\n                    <p>\n                        Bob’s Computer Repair Shop provides computer services for your business or home.  \n                        20 years ago, Bob started this company on the southwest side of Omaha, Nebraska.  \n                        Bob holds a bachelor’s degree from Bellevue University.  Bob lives with his wife and family in Omaha.  \n                    </p>\n                        <br />\n                        <mat-card-subtitle style=\"text-align: left;\">What we do at Bob's Computer Repair Service</mat-card-subtitle>\n                    <p>\n                        If you are looking for computer repair services for your desktop or laptop in the greater Omaha area, don’t look any further.  \n                        We are local, fast and fair.  Our technicians are trained to fix any computer brand.  \n                        If you have an Apple or Windows device, just bring it to the store or fill out our services form. \n                    </p>\n                        <br />\n                        <mat-card-subtitle style=\"text-align: left;\">Why Choose Bob's Computer Repair Service?</mat-card-subtitle>\n                    <p>\n                        We employ certified technicians and stand behind our work 100%.  \n                        We are members of the Chamber of Omaha and work hard to establish and maintain a great working relationship for our business with the greater Omaha business community.  \n                        Many of you already do business with us while some never heard of us.  \n                        We feel that this is a great way to introduce us to those of you who haven’t had the pleasure of doing business with us.  \n                        We offer a full range of computer services.   \n                        If you have a broken screen or a virus or even a software problem we can fix it for you.  \n                        Bob’s Computer Repair Shop parts come with a lifetime warranty on any manufacturer defect.  \n                        Our technicians are all experts and have years of prior experience in the repair industry.  \n                        Everyone you speak to in our shop is a technician that can answer your questions.  \n                        Call, Click or Come by to obtain the best computer repair services you will ever have.\n                    </p>\n                </mat-card-content>\n    </mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -75,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex>\n    <mat-card-header>\n      <mat-card-title>Forgot Password</mat-card-title>\n      <mat-card-subtitle>Your account has been verified, enter your new password below.</mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n\n      <br />\n\n      <form [formGroup]=\"form\" (ngSubmit)=resetPassword() #resetPasswordForm>\n        <mat-form-field >\n          <input type=\"password\" matInput [formControl]=\"form.controls['password']\" placeholder=\"new password\">\n        </mat-form-field>\n        <br />\n\n        <button mat-raised-button color=\"primary\">Submit</button>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Forgot Password</mat-card-title>\n      <mat-card-subtitle>Your account has been verified, enter your new password below.</mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n\n      <br />\n\n      <form [formGroup]=\"form\" (ngSubmit)=resetPassword() #resetPasswordForm>\n        <mat-form-field >\n          <input type=\"password\" matInput [formControl]=\"form.controls['password']\" placeholder=\"new password\">\n        </mat-form-field>\n        <br />\n\n        <button mat-raised-button color=\"primary\">Submit</button>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -101,11 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Login</mat-card-title>\n      <mat-card-subtitle>Please enter your username and password below.</mat-card-subtitle>\n    </mat-card-header>\n\n\n    <mat-card-content >\n      <small *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\" class=\"form-error\">Username is required!</small>\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-error\">Password is required!</small>\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\n\n      <br />\n\n      <form [formGroup]=\"form\" (ngSubmit)=\"login()\">\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\n        </mat-form-field>\n        <br />\n        <br />\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['password']\" placeholder=\"password\">\n        </mat-form-field>\n        <mat-card-actions>\n          <div >\n            <button type=\"submit\" mat-raised-button color=\"primary\">Login</button>\n          </div>\n\n          <br />\n          <br />\n          <div >\n            <a routerLink=\"\" class=\"left\">Sign Up</a>\n            <a routerLink=\"/session/forgot-password\" class=\"right\">Forgot Password?</a>\n          </div>\n\n        </mat-card-actions>\n      </form>\n\n    </mat-card-content>\n  </mat-card>\n</div>\n<!-- Alan's HTML\n<div class=\"mt-4 col-8 offset-2\">\n  <div class=\"card\">\n    <div class=\"card-header\">Login Here</div>\n    <div class=\"card-body\">\n      <form #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"alert alert-danger\" [hidden]=\"!error\">\n          {{ error }}\n        </div>\n        <div class=\"form-group row\">\n          <label for=\"inputuserName3\" class=\"col-sm-2 col-form-label\">User Name</label>\n          <div class=\"col-sm-10\">\n            <input\n              type=\"text\"\n              name=\"userName\"\n              class=\"form-control\"\n              id=\"inputuserName3\"\n              placeholder=\"userName\"\n              [(ngModel)]=\"form.userName\"\n              required\n            />\n          </div>\n        </div>\n        <div class=\"form-group row\">\n          <label for=\"inputPassword3\" class=\"col-sm-2 col-form-label\"\n            >Password</label\n          >\n          <div class=\"col-sm-10\">\n            <input\n              type=\"password\"\n              name=\"password\"\n              class=\"form-control\"\n              id=\"inputPassword3\"\n              placeholder=\"Password\"\n              [(ngModel)]=\"form.password\"\n              required\n            />\n          </div>\n        </div>\n\n        <div class=\"form-group row\">\n          <div class=\"col-sm-10 offset-2\">\n            <button\n              type=\"submit\"\n              class=\"btn btn-primary\"\n              [disabled]=\"!loginForm.valid\"\n            >\n              Sign in\n            </button>\n\n            <a routerLink=\"/session/signup\" class=\"btn btn-info float-right\">Sign Up</a>\n          </div>\n        </div>\n        <div class=\"form-group row\">\n                <div class=\"col-sm-10 offset-2\">\n\n                  <a routerLink=\"/session/forgotPassword\" class=\"btn btn-info float-right\">Password Reset</a>\n\n\n                </div>\n              </div>\n      </form>\n    </div>\n  </div>\n</div>\n-->\n");
-=======
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Login</mat-card-title>\n      <mat-card-subtitle>Please enter your username and password below.</mat-card-subtitle>\n    </mat-card-header>\n\n\n    <mat-card-content >\n      <small *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\" class=\"form-error\">Username is required!</small>\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-error\">Password is required!</small>\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\n\n      <br />\n\n      <form [formGroup]=\"form\" (ngSubmit)=\"login()\">\n        <mat-form-field >\n          <input type=\"text\" required matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\n          <mat-error>Username is required</mat-error>\n        </mat-form-field>\n        <br />\n        <br />\n        <mat-form-field >\n          <input type=\"password\" required matInput [formControl]=\"form.controls['password']\" placeholder=\"password\">\n          <mat-error>Password is required</mat-error>\n        </mat-form-field>\n        <mat-card-actions>\n          <div >\n            <button type=\"submit\" mat-raised-button color=\"primary\">Login</button>\n          </div>\n\n          <br />\n          <br />\n          <div >\n            <a routerLink=\"/signup\" class=\"left\">Sign Up</a>\n            <a routerLink=\"\" class=\"right\">Forgot Password?</a>\n          </div>\n\n        </mat-card-actions>\n      </form>\n\n    </mat-card-content>\n  </mat-card>\n</div>\n<!-- Alan's HTML\n<div class=\"mt-4 col-8 offset-2\">\n  <div class=\"card\">\n    <div class=\"card-header\">Login Here</div>\n    <div class=\"card-body\">\n      <form #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"alert alert-danger\" [hidden]=\"!error\">\n          {{ error }}\n        </div>\n        <div class=\"form-group row\">\n          <label for=\"inputuserName3\" class=\"col-sm-2 col-form-label\">User Name</label>\n          <div class=\"col-sm-10\">\n            <input\n              type=\"text\"\n              name=\"userName\"\n              class=\"form-control\"\n              id=\"inputuserName3\"\n              placeholder=\"userName\"\n              [(ngModel)]=\"form.userName\"\n              required\n            />\n          </div>\n        </div>\n        <div class=\"form-group row\">\n          <label for=\"inputPassword3\" class=\"col-sm-2 col-form-label\"\n            >Password</label\n          >\n          <div class=\"col-sm-10\">\n            <input\n              type=\"password\"\n              name=\"password\"\n              class=\"form-control\"\n              id=\"inputPassword3\"\n              placeholder=\"Password\"\n              [(ngModel)]=\"form.password\"\n              required\n            />\n          </div>\n        </div>\n\n        <div class=\"form-group row\">\n          <div class=\"col-sm-10 offset-2\">\n            <button\n              type=\"submit\"\n              class=\"btn btn-primary\"\n              [disabled]=\"!loginForm.valid\"\n            >\n              Sign in\n            </button>\n\n            <a routerLink=\"/session/signup\" class=\"btn btn-info float-right\">Sign Up</a>\n          </div>\n        </div>\n        <div class=\"form-group row\">\n                <div class=\"col-sm-10 offset-2\">\n\n                  <a routerLink=\"/session/forgotPassword\" class=\"btn btn-info float-right\">Password Reset</a>\n\n\n                </div>\n              </div>\n      </form>\n    </div>\n  </div>\n</div>\n-->\n");
->>>>>>> 39d699a8cc5b61b8aa7804b299f66f91c0aea7db
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Login</mat-card-title>\n      <mat-card-subtitle>Please enter your username and password below.</mat-card-subtitle>\n    </mat-card-header>\n\n\n    <mat-card-content >\n      <small *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\" class=\"form-error\">Username is required!</small>\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-error\">Password is required!</small>\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\n\n      <br />\n\n      <form [formGroup]=\"form\" (ngSubmit)=\"login()\">\n        <mat-form-field >\n          <input type=\"text\" required matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\n          <mat-error>Username is required</mat-error>\n        </mat-form-field>\n        <br />\n        <br />\n        <mat-form-field >\n          <input type=\"password\" required matInput [formControl]=\"form.controls['password']\" placeholder=\"password\">\n          <mat-error>Password is required</mat-error>\n        </mat-form-field>\n        <mat-card-actions>\n          <div >\n            <button type=\"submit\" mat-raised-button color=\"primary\">Login</button>\n          </div>\n\n          <br />\n          <br />\n          <div >\n            <a routerLink=\"/signup\" class=\"left\">Sign Up</a>\n            <a routerLink=\"/session/forgot-password\" class=\"right\">Forgot Password?</a>\n          </div>\n\n        </mat-card-actions>\n      </form>\n\n    </mat-card-content>\n  </mat-card>\n</div>\n<!-- Alan's HTML\n<div class=\"mt-4 col-8 offset-2\">\n  <div class=\"card\">\n    <div class=\"card-header\">Login Here</div>\n    <div class=\"card-body\">\n      <form #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"alert alert-danger\" [hidden]=\"!error\">\n          {{ error }}\n        </div>\n        <div class=\"form-group row\">\n          <label for=\"inputuserName3\" class=\"col-sm-2 col-form-label\">User Name</label>\n          <div class=\"col-sm-10\">\n            <input\n              type=\"text\"\n              name=\"userName\"\n              class=\"form-control\"\n              id=\"inputuserName3\"\n              placeholder=\"userName\"\n              [(ngModel)]=\"form.userName\"\n              required\n            />\n          </div>\n        </div>\n        <div class=\"form-group row\">\n          <label for=\"inputPassword3\" class=\"col-sm-2 col-form-label\"\n            >Password</label\n          >\n          <div class=\"col-sm-10\">\n            <input\n              type=\"password\"\n              name=\"password\"\n              class=\"form-control\"\n              id=\"inputPassword3\"\n              placeholder=\"Password\"\n              [(ngModel)]=\"form.password\"\n              required\n            />\n          </div>\n        </div>\n\n        <div class=\"form-group row\">\n          <div class=\"col-sm-10 offset-2\">\n            <button\n              type=\"submit\"\n              class=\"btn btn-primary\"\n              [disabled]=\"!loginForm.valid\"\n            >\n              Sign in\n            </button>\n\n            <a routerLink=\"/session/signup\" class=\"btn btn-info float-right\">Sign Up</a>\n          </div>\n        </div>\n        <div class=\"form-group row\">\n                <div class=\"col-sm-10 offset-2\">\n\n                  <a routerLink=\"/session/forgotPassword\" class=\"btn btn-info float-right\">Password Reset</a>\n\n\n                </div>\n              </div>\n      </form>\n    </div>\n  </div>\n</div>\n-->\n");
 
 /***/ }),
 
@@ -248,7 +240,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex>\n    <mat-card-header>\n      <mat-card-title>Forgot Password</mat-card-title>\n      <mat-card-subtitle>Answer your security questions below.</mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"form\" (ngSubmit)=\"verifySecurityQuestions()\" #securityQuestionsForm >\n\n        <h3>{{question1}}</h3>\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['answerToSecurityQuestion1']\" placeholder=\"answer\" id=\"question1\">\n        </mat-form-field>\n\n        <br />\n\n        <h3>{{question2}}</h3>\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['answerToSecurityQuestion2']\" placeholder=\"answer\" id=\"question2\">\n        </mat-form-field>\n\n        <br />\n\n        <h3>{{question3}}</h3>\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['answerToSecurityQuestion3']\" placeholder=\"answer\" id=\"question3\">\n        </mat-form-field>\n\n        <br />\n\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Forgot Password</mat-card-title>\n      <mat-card-subtitle>Answer your security questions below.</mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"form\" (ngSubmit)=\"verifySecurityQuestions()\" #securityQuestionsForm >\n\n        <h3>{{question1}}</h3>\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['answerToSecurityQuestion1']\" placeholder=\"answer\" id=\"question1\">\n        </mat-form-field>\n\n        <br />\n\n        <h3>{{question2}}</h3>\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['answerToSecurityQuestion2']\" placeholder=\"answer\" id=\"question2\">\n        </mat-form-field>\n\n        <br />\n\n        <h3>{{question3}}</h3>\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['answerToSecurityQuestion3']\" placeholder=\"answer\" id=\"question3\">\n        </mat-form-field>\n\n        <br />\n\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -261,7 +253,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex>\n    <mat-card-header>\n      <mat-card-title>Forgot Password</mat-card-title>\n      <mat-card-subtitle>Enter your username below to start reset your password.</mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"form\" (ngSubmit)=\"validateUsername()\" #usernameForm >\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\n        </mat-form-field>\n\n        <br />\n\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Forgot Password</mat-card-title>\n      <mat-card-subtitle>Enter your username below to start reset your password.</mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"form\" (ngSubmit)=\"validateUsername()\" #usernameForm >\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\n        </mat-form-field>\n\n        <br />\n\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -626,20 +618,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_auth_guard__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./shared/auth.guard */ "./src/app/shared/auth.guard.ts");
 /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
 /* harmony import */ var _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./pages/forgot-password/forgot-password.component */ "./src/app/pages/forgot-password/forgot-password.component.ts");
-<<<<<<< HEAD
-/* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
-/* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
-/* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
-/* harmony import */ var _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./pages/verify-user/verify-user.component */ "./src/app/pages/verify-user/verify-user.component.ts");
-/* harmony import */ var _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./pages/verify-questions/verify-questions.component */ "./src/app/pages/verify-questions/verify-questions.component.ts");
-=======
 /* harmony import */ var _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./pages/signup/signup.component */ "./src/app/pages/signup/signup.component.ts");
 /* harmony import */ var _pages_signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./pages/signup-dialog/signup-dialog.component */ "./src/app/pages/signup-dialog/signup-dialog.component.ts");
 /* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
 /* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
 /* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
-/* harmony import */ var _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./shared/route-interceptors/error.interceptor */ "./src/app/shared/route-interceptors/error.interceptor.ts");
->>>>>>> 39d699a8cc5b61b8aa7804b299f66f91c0aea7db
+/* harmony import */ var _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./pages/verify-user/verify-user.component */ "./src/app/pages/verify-user/verify-user.component.ts");
+/* harmony import */ var _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./pages/verify-questions/verify-questions.component */ "./src/app/pages/verify-questions/verify-questions.component.ts");
+/* harmony import */ var _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./shared/route-interceptors/error.interceptor */ "./src/app/shared/route-interceptors/error.interceptor.ts");
 /*
 ; Title:  starter code
 ; Author: Professor Krasso
@@ -694,10 +680,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 39d699a8cc5b61b8aa7804b299f66f91c0aea7db
+
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -717,19 +702,13 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _pages_security_questions_delete_dialog_security_questions_delete_dialog_component__WEBPACK_IMPORTED_MODULE_33__["SecurityQuestionsDeleteDialogComponent"],
             _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_34__["AddQuestionComponent"],
             _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_38__["ForgotPasswordComponent"],
-<<<<<<< HEAD
-            _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_39__["ContactComponent"],
-            _pages_about_about_component__WEBPACK_IMPORTED_MODULE_40__["AboutComponent"],
-            _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_41__["ServerErrorComponent"],
-            _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_42__["VerifyUserComponent"],
-            _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_43__["VerifyQuestionsComponent"]
-=======
             _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_39__["SignupComponent"],
             _pages_signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_40__["SignupDialogComponent"],
             _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_41__["ContactComponent"],
             _pages_about_about_component__WEBPACK_IMPORTED_MODULE_42__["AboutComponent"],
-            _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_43__["ServerErrorComponent"]
->>>>>>> 39d699a8cc5b61b8aa7804b299f66f91c0aea7db
+            _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_43__["ServerErrorComponent"],
+            _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_44__["VerifyUserComponent"],
+            _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_45__["VerifyQuestionsComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -757,7 +736,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 provide: _angular_common__WEBPACK_IMPORTED_MODULE_35__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_35__["HashLocationStrategy"]
             },
             _shared_auth_guard__WEBPACK_IMPORTED_MODULE_36__["AuthGuard"], ngx_cookie_service__WEBPACK_IMPORTED_MODULE_37__["CookieService"],
-            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_28__["HTTP_INTERCEPTORS"], useClass: _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_44__["ErrorInterceptor"], multi: true }
+            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_28__["HTTP_INTERCEPTORS"], useClass: _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_46__["ErrorInterceptor"], multi: true }
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
         entryComponents: [
@@ -793,21 +772,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_security_questions_security_questions_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/security-questions/security-questions.component */ "./src/app/pages/security-questions/security-questions.component.ts");
 /* harmony import */ var _pages_question_details_question_details_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/question-details/question-details.component */ "./src/app/pages/question-details/question-details.component.ts");
 /* harmony import */ var _pages_add_question_add_question_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/add-question/add-question.component */ "./src/app/pages/add-question/add-question.component.ts");
-<<<<<<< HEAD
-/* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
-/* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
-/* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
-/* harmony import */ var _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/verify-user/verify-user.component */ "./src/app/pages/verify-user/verify-user.component.ts");
-/* harmony import */ var _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/verify-questions/verify-questions.component */ "./src/app/pages/verify-questions/verify-questions.component.ts");
-/* harmony import */ var _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/forgot-password/forgot-password.component */ "./src/app/pages/forgot-password/forgot-password.component.ts");
-
-
-=======
 /* harmony import */ var _pages_signup_signup_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/signup/signup.component */ "./src/app/pages/signup/signup.component.ts");
 /* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
 /* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
 /* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
->>>>>>> 39d699a8cc5b61b8aa7804b299f66f91c0aea7db
+/* harmony import */ var _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/verify-user/verify-user.component */ "./src/app/pages/verify-user/verify-user.component.ts");
+/* harmony import */ var _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/verify-questions/verify-questions.component */ "./src/app/pages/verify-questions/verify-questions.component.ts");
+/* harmony import */ var _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/forgot-password/forgot-password.component */ "./src/app/pages/forgot-password/forgot-password.component.ts");
+
+
+
 
 
 
@@ -894,23 +868,19 @@ const AppRoutes = [
             },
             {
                 path: '500',
-<<<<<<< HEAD
-                component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_13__["ServerErrorComponent"]
+                component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_14__["ServerErrorComponent"]
             },
             {
                 path: 'forgot-password',
-                component: _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_14__["VerifyUserComponent"]
+                component: _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_15__["VerifyUserComponent"]
             },
             {
                 path: 'verify-questions',
-                component: _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_15__["VerifyQuestionsComponent"]
+                component: _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_16__["VerifyQuestionsComponent"]
             },
             {
                 path: 'reset-password',
-                component: _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_16__["ForgotPasswordComponent"]
-=======
-                component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_14__["ServerErrorComponent"]
->>>>>>> 39d699a8cc5b61b8aa7804b299f66f91c0aea7db
+                component: _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_17__["ForgotPasswordComponent"]
             }
         ]
     },
@@ -932,7 +902,7 @@ const AppRoutes = [
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   28 October 2019\r\n; Description: About Us\r\n;===========================================\r\n*/\r\n.center {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 50%;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWJvdXQvYWJvdXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7OztDQU9DO0FBQ0Q7SUFDSSxjQUFjO0lBQ2QsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixVQUFVO0VBQ1oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9hYm91dC9hYm91dC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcclxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuOyBUaXRsZTogIEJvYidzIENvbXB1dGVyXHJcbjsgQXV0aG9yOiBEb24gQ291c2FyXHJcbjsgRGF0ZTogICAyOCBPY3RvYmVyIDIwMTlcclxuOyBEZXNjcmlwdGlvbjogQWJvdXQgVXNcclxuOz09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuKi9cclxuLmNlbnRlciB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xyXG4gICAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xyXG4gICAgd2lkdGg6IDUwJTtcclxuICB9Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: About Us\n;===========================================\n*/\n.center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 50%;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWJvdXQvYWJvdXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7OztDQU9DO0FBQ0Q7SUFDSSxjQUFjO0lBQ2QsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixVQUFVO0VBQ1oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9hYm91dC9hYm91dC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG47IFRpdGxlOiAgQm9iJ3MgQ29tcHV0ZXJcbjsgQXV0aG9yOiBEb24gQ291c2FyXG47IERhdGU6ICAgMjggT2N0b2JlciAyMDE5XG47IERlc2NyaXB0aW9uOiBBYm91dCBVc1xuOz09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiovXG4uY2VudGVyIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBtYXJnaW4tbGVmdDogYXV0bztcbiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gICAgd2lkdGg6IDUwJTtcbiAgfSJdfQ== */");
 
 /***/ }),
 
@@ -1111,7 +1081,7 @@ ContactComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2ZvcmdvdC1wYXNzd29yZC9mb3Jnb3QtcGFzc3dvcmQuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("mat-card {\n  width: 30%;\n}\n\n\n\nmat-card-actions {\n  width: 95%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZm9yZ290LXBhc3N3b3JkL2ZvcmdvdC1wYXNzd29yZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsVUFBVTtBQUNaOzs7O0FBSUE7RUFDRSxVQUFVO0FBQ1oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9mb3Jnb3QtcGFzc3dvcmQvZm9yZ290LXBhc3N3b3JkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtY2FyZCB7XG4gIHdpZHRoOiAzMCU7XG59XG5cblxuXG5tYXQtY2FyZC1hY3Rpb25zIHtcbiAgd2lkdGg6IDk1JTtcbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -1693,6 +1663,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServerErrorComponent", function() { return ServerErrorComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/*
+============================================
+; Title:  Bob's Computer
+; Author: Alan Edwards
+; Date:   31 October 2019
+; Description: Bob's Computer
+;===========================================
+*/
 
 
 let ServerErrorComponent = class ServerErrorComponent {
@@ -2359,7 +2337,7 @@ UserManagementComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3ZlcmlmeS1xdWVzdGlvbnMvdmVyaWZ5LXF1ZXN0aW9ucy5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("mat-card {\n  width: 30%;\n}\n\n\n\nmat-card-actions {\n  width: 95%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdmVyaWZ5LXF1ZXN0aW9ucy92ZXJpZnktcXVlc3Rpb25zLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxVQUFVO0FBQ1o7Ozs7QUFJQTtFQUNFLFVBQVU7QUFDWiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3ZlcmlmeS1xdWVzdGlvbnMvdmVyaWZ5LXF1ZXN0aW9ucy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWNhcmQge1xuICB3aWR0aDogMzAlO1xufVxuXG5cblxubWF0LWNhcmQtYWN0aW9ucyB7XG4gIHdpZHRoOiA5NSU7XG59XG4iXX0= */");
 
 /***/ }),
 
@@ -2454,7 +2432,7 @@ VerifyQuestionsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3ZlcmlmeS11c2VyL3ZlcmlmeS11c2VyLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("mat-card {\n  width: 30%;\n}\n\n\n\nmat-card-actions {\n  width: 95%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdmVyaWZ5LXVzZXIvdmVyaWZ5LXVzZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFVBQVU7QUFDWjs7OztBQUlBO0VBQ0UsVUFBVTtBQUNaIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvdmVyaWZ5LXVzZXIvdmVyaWZ5LXVzZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1jYXJkIHtcbiAgd2lkdGg6IDMwJTtcbn1cblxuXG5cbm1hdC1jYXJkLWFjdGlvbnMge1xuICB3aWR0aDogOTUlO1xufVxuIl19 */");
 
 /***/ }),
 
@@ -2643,7 +2621,7 @@ BaseLayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!*********************************!*\
   !*** ./src/app/shared/index.ts ***!
   \*********************************/
-/*! exports provided: AuthGuard, BaseLayoutComponent, SessionLayoutComponent */
+/*! exports provided: BaseLayoutComponent, AuthGuard, SessionLayoutComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2690,6 +2668,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/*
+============================================
+; Title:  Bob's Computer Signup
+; Author: Alan Edwards
+; Date:   31 October 2019
+; Description: Bob's Computer
+; Attribution: inspired by Professor Krasso @Bellevue University
+;===========================================
+*/
 
 
 
