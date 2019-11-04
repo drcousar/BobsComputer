@@ -1,3 +1,11 @@
+/*
+============================================
+; Title:  contact.component.spec.ts
+; Author: Jordan Hennessy
+; Date:   3 November 2019
+; Description: Bob's Computer
+;===========================================
+*/
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';

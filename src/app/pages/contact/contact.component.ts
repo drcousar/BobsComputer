@@ -1,3 +1,11 @@
+/*
+============================================
+; Title:  contact.component.ts
+; Author: Jordan Hennessy
+; Date:   3 November 2019
+; Description: Bob's Computer
+;===========================================
+*/
 import { Component, OnInit } from '@angular/core';
 
 @Component({

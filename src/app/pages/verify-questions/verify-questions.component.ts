@@ -1,3 +1,12 @@
+/*
+============================================
+; Title:  verify-questions.component.ts
+; Author: Professor Krasso
+; Date:   3 November 2019
+; Modified By: Jordan Hennessy
+; Description: Bob's Computer
+;===========================================
+*/
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';

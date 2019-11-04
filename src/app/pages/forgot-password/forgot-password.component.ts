@@ -1,8 +1,9 @@
 /*
 ============================================
 ; Title:  forgot-password.component.ts
-; Author: Jordan Hennessy
+; Author: Professor Krasso
 ; Date:   3 November 2019
+; Modified By: Jordan Hennessy
 ; Description: Bob's Computer
 ;===========================================
 */
