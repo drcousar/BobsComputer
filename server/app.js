@@ -16,6 +16,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const User = require('./models/user');
 const SecurityQuestion = require('./models/securityQuestion');
+const Role = require('./models/role');
 
 let app = express();
 
@@ -115,7 +116,7 @@ app.post('/api/users', function(req, res, next) {
         message: "Authentication Failure: bad password"
       });
     } else {
-      
+
       return res.status(200).json({
         //Return Username if successful, this could be anything -Don
       });
@@ -470,6 +471,19 @@ app.post('/api/find-by-ids', function (req, res, next) {
     }
   })
 });
+
+// Roles API
+app.get('/api/roles', function(req, res, next) {
+  Role.find({}, function(err, roles) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(roles);
+      res.json(roles);
+    }
+  })
+})
 
 /**
  * Creates an express server and listens on port 3000

@@ -1054,6 +1054,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
+/*
+============================================
+; Title:  contact.component.ts
+; Author: Jordan Hennessy
+; Date:   3 November 2019
+; Description: Bob's Computer
+;===========================================
+*/
 
 let ContactComponent = class ContactComponent {
     constructor() { }
@@ -1105,8 +1113,9 @@ __webpack_require__.r(__webpack_exports__);
 /*
 ============================================
 ; Title:  forgot-password.component.ts
-; Author: Jordan Hennessy
+; Author: Professor Krasso
 ; Date:   3 November 2019
+; Modified By: Jordan Hennessy
 ; Description: Bob's Computer
 ;===========================================
 */
@@ -2357,6 +2366,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 
+/*
+============================================
+; Title:  verify-questions.component.ts
+; Author: Professor Krasso
+; Date:   3 November 2019
+; Modified By: Jordan Hennessy
+; Description: Bob's Computer
+;===========================================
+*/
 
 
 
@@ -2452,6 +2470,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 
+/*
+============================================
+; Title:  verify-user.component.ts
+; Author: Professor Krasso
+; Date:   3 November 2019
+; Modified By: Jordan Hennessy
+; Description: Bob's Computer
+;===========================================
+*/
 
 
 

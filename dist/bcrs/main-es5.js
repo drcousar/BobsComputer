@@ -986,6 +986,14 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactComponent", function () { return ContactComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /*
+            ============================================
+            ; Title:  contact.component.ts
+            ; Author: Jordan Hennessy
+            ; Date:   3 November 2019
+            ; Description: Bob's Computer
+            ;===========================================
+            */
             var ContactComponent = /** @class */ (function () {
                 function ContactComponent() {
                 }
@@ -1031,8 +1039,9 @@
             /*
             ============================================
             ; Title:  forgot-password.component.ts
-            ; Author: Jordan Hennessy
+            ; Author: Professor Krasso
             ; Date:   3 November 2019
+            ; Modified By: Jordan Hennessy
             ; Description: Bob's Computer
             ;===========================================
             */
@@ -2162,6 +2171,15 @@
             /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
             /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
             /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+            /*
+            ============================================
+            ; Title:  verify-questions.component.ts
+            ; Author: Professor Krasso
+            ; Date:   3 November 2019
+            ; Modified By: Jordan Hennessy
+            ; Description: Bob's Computer
+            ;===========================================
+            */
             var VerifyQuestionsComponent = /** @class */ (function () {
                 function VerifyQuestionsComponent(route, router, http, fb) {
                     var _this = this;
@@ -2249,6 +2267,15 @@
             /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
             /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
             /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /*
+            ============================================
+            ; Title:  verify-user.component.ts
+            ; Author: Professor Krasso
+            ; Date:   3 November 2019
+            ; Modified By: Jordan Hennessy
+            ; Description: Bob's Computer
+            ;===========================================
+            */
             var VerifyUserComponent = /** @class */ (function () {
                 function VerifyUserComponent(http, fb, router) {
                     this.http = http;
