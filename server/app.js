@@ -155,6 +155,8 @@ app.get('/api/users/:username', function(req, res, next) {
 
 // Add new User
 app.post('/api/users/register', function(req, res, next) {
+  console.log('Debug: Show Sec Questions');
+  console.log(req.body.selectedSecurityQuestions);
   User.findOne({'username': req.body.username}, function(err, user) {
     if (err) {
       console.log(err);
@@ -162,6 +164,7 @@ app.post('/api/users/register', function(req, res, next) {
     } else {
       if (!user) {
         // The selected username is unique
+        console.table(req.body);
         let hashedPassword = bcrypt.hashSync(req.body.password, saltRounds);
         let u = {
           username: req.body.username,

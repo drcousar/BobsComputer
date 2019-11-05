@@ -155,7 +155,7 @@ export class SignupComponent implements OnInit {
     let quest: any;
 
       //Call Jordan's API to get question by id
-      this.http.get('/api/questions/' + id).subscribe(res => {
+      this.http.get('/api/securityQuestions/' + id).subscribe(res => {
         quest = res['questionText'];
         this.securityQuestions.push({questionId: id, questionText: quest, answerText: answer});
         //debug verification
