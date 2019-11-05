@@ -11,8 +11,10 @@
 const mongoose = require('mongoose');
 
 let selectedSecurityQuestions = mongoose.Schema({
+  answerText: {type: String},
   questionId: {type: String},
-  answerText: {type: String}
+  questionText: {type: String }
+  
 });
 
 

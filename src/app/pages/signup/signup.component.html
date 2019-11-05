@@ -48,7 +48,7 @@
                     <mat-form-field>
                         <mat-label>Choose Security Question #1</mat-label>
                         <select required matNativeControl [(ngModel)]="secQuestion1" [ngModelOptions]="{standalone: true}">
-                            <option *ngFor="let question of questions" value={{question._id}}>
+                            <option *ngFor="let question of questions" value={{question.questionText}}>
                                 {{question.questionText}}
                             </option>
                         </select> 
@@ -61,7 +61,7 @@
                     <mat-form-field>
                         <mat-label>Choose Security Question #2</mat-label>
                         <select required matNativeControl [(ngModel)]="secQuestion2" [ngModelOptions]="{standalone: true}">
-                            <option *ngFor="let question of questions" value={{question._id}}>
+                            <option *ngFor="let question of questions" value={{question.questionText}}>
                                 {{question.questionText}}
                             </option>
                         </select> 
@@ -74,7 +74,7 @@
                     <mat-form-field>
                         <mat-label>Choose Security Question #3</mat-label>
                         <select required matNativeControl [(ngModel)]="secQuestion3" [ngModelOptions]="{standalone: true}">
-                            <option *ngFor="let question of questions" value={{question._id}}>
+                            <option *ngFor="let question of questions" value={{question.questionText}}>
                                 {{question.questionText}}
                             </option>
                         </select> 
