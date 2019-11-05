@@ -59,6 +59,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ServerErrorComponent } from './pages/server-error/server-error.component';
 import { from } from 'rxjs';
+import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
+import { VerifyQuestionsComponent } from './pages/verify-questions/verify-questions.component';
 import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor';
 
 @NgModule({
@@ -81,7 +83,9 @@ import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor'
     SignupDialogComponent,
     ContactComponent,
     AboutComponent,
-    ServerErrorComponent
+    ServerErrorComponent,
+    VerifyUserComponent,
+    VerifyQuestionsComponent
   ],
   imports: [
     BrowserModule,

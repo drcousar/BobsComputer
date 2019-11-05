@@ -1,28 +1,29 @@
 /*
 ============================================
-; Title:  contact.component.spec.ts
-; Author: Jordan Hennessy
+; Title:  verify-questions.component.spec.ts
+; Author: Professor Krasso
 ; Date:   3 November 2019
+; Modified By: Jordan Hennessy
 ; Description: Bob's Computer
 ;===========================================
 */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactComponent } from './contact.component';
+import { VerifyQuestionsComponent } from './verify-questions.component';
 
-describe('ContactComponent', () => {
-  let component: ContactComponent;
-  let fixture: ComponentFixture<ContactComponent>;
+describe('VerifyQuestionsComponent', () => {
+  let component: VerifyQuestionsComponent;
+  let fixture: ComponentFixture<VerifyQuestionsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactComponent ]
+      declarations: [ VerifyQuestionsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContactComponent);
+    fixture = TestBed.createComponent(VerifyQuestionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

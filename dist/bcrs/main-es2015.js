@@ -32,7 +32,11 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   25 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n\r\n<div fxLayout=\"column\">\r\n    <mat-card>\r\n        <img src=\"../../../assets/about_img.jpg\" alt=\"About Bob's Computer Repair Service\" class=\"center\" />\r\n        <br /><br /><br />\r\n            <mat-card-title>About Us</mat-card-title> \r\n            <br /><br /><br />\r\n                <mat-card-content>\r\n                        <mat-card-subtitle style=\"text-align: left;\">Who is Bob? </mat-card-subtitle>\r\n                    <p>\r\n                        Bob’s Computer Repair Shop provides computer services for your business or home.  \r\n                        20 years ago, Bob started this company on the southwest side of Omaha, Nebraska.  \r\n                        Bob holds a bachelor’s degree from Bellevue University.  Bob lives with his wife and family in Omaha.  \r\n                    </p>\r\n                        <br />\r\n                        <mat-card-subtitle style=\"text-align: left;\">What we do at Bob's Computer Repair Service</mat-card-subtitle>\r\n                    <p>\r\n                        If you are looking for computer repair services for your desktop or laptop in the greater Omaha area, don’t look any further.  \r\n                        We are local, fast and fair.  Our technicians are trained to fix any computer brand.  \r\n                        If you have an Apple or Windows device, just bring it to the store or fill out our services form. \r\n                    </p>\r\n                        <br />\r\n                        <mat-card-subtitle style=\"text-align: left;\">Why Choose Bob's Computer Repair Service?</mat-card-subtitle>\r\n                    <p>\r\n                        We employ certified technicians and stand behind our work 100%.  \r\n                        We are members of the Chamber of Omaha and work hard to establish and maintain a great working relationship for our business with the greater Omaha business community.  \r\n                        Many of you already do business with us while some never heard of us.  \r\n                        We feel that this is a great way to introduce us to those of you who haven’t had the pleasure of doing business with us.  \r\n                        We offer a full range of computer services.   \r\n                        If you have a broken screen or a virus or even a software problem we can fix it for you.  \r\n                        Bob’s Computer Repair Shop parts come with a lifetime warranty on any manufacturer defect.  \r\n                        Our technicians are all experts and have years of prior experience in the repair industry.  \r\n                        Everyone you speak to in our shop is a technician that can answer your questions.  \r\n                        Call, Click or Come by to obtain the best computer repair services you will ever have.\r\n                    </p>\r\n                </mat-card-content>\r\n    </mat-card>\r\n</div>\r\n");
+=======
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   25 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n\n<div fxLayout=\"column\">\n    <mat-card>\n        <img src=\"../../../assets/about_img.jpg\" alt=\"About Bob's Computer Repair Service\" class=\"center\" />\n        <br /><br /><br />\n            <mat-card-title>About Us</mat-card-title> \n            <br /><br /><br />\n                <mat-card-content>\n                        <mat-card-subtitle style=\"text-align: left;\">Who is Bob? </mat-card-subtitle>\n                    <p>\n                        Bob’s Computer Repair Shop provides computer services for your business or home.  \n                        20 years ago, Bob started this company on the southwest side of Omaha, Nebraska.  \n                        Bob holds a bachelor’s degree from Bellevue University.  Bob lives with his wife and family in Omaha.  \n                    </p>\n                        <br />\n                        <mat-card-subtitle style=\"text-align: left;\">What we do at Bob's Computer Repair Service</mat-card-subtitle>\n                    <p>\n                        If you are looking for computer repair services for your desktop or laptop in the greater Omaha area, don’t look any further.  \n                        We are local, fast and fair.  Our technicians are trained to fix any computer brand.  \n                        If you have an Apple or Windows device, just bring it to the store or fill out our services form. \n                    </p>\n                        <br />\n                        <mat-card-subtitle style=\"text-align: left;\">Why Choose Bob's Computer Repair Service?</mat-card-subtitle>\n                    <p>\n                        We employ certified technicians and stand behind our work 100%.  \n                        We are members of the Chamber of Omaha and work hard to establish and maintain a great working relationship for our business with the greater Omaha business community.  \n                        Many of you already do business with us while some never heard of us.  \n                        We feel that this is a great way to introduce us to those of you who haven’t had the pleasure of doing business with us.  \n                        We offer a full range of computer services.   \n                        If you have a broken screen or a virus or even a software problem we can fix it for you.  \n                        Bob’s Computer Repair Shop parts come with a lifetime warranty on any manufacturer defect.  \n                        Our technicians are all experts and have years of prior experience in the repair industry.  \n                        Everyone you speak to in our shop is a technician that can answer your questions.  \n                        Call, Click or Come by to obtain the best computer repair services you will ever have.\n                    </p>\n                </mat-card-content>\n    </mat-card>\n</div>\n");
+>>>>>>> d806ec0cd1135c5f7fc80dbfcc5ef55b94246190
 
 /***/ }),
 
@@ -71,7 +75,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n  <mat-card fxFlex>\r\n    <mat-card-header>\r\n      <mat-card-title>Forgot Password</mat-card-title>\r\n      <mat-card-subtitle>Fill out the form below to reset your password</mat-card-subtitle>\r\n    </mat-card-header>\r\n\r\n    <mat-card-content>\r\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\r\n\r\n      <br />\r\n\r\n      <form [formGroup]=\"stepone\" (ngSubmit)=getQuestions()>\r\n        <mat-form-field >\r\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\r\n        </mat-form-field>\r\n      </form>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n");
+=======
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Forgot Password</mat-card-title>\n      <mat-card-subtitle>Your account has been verified, enter your new password below.</mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n\n      <br />\n\n      <form [formGroup]=\"form\" (ngSubmit)=resetPassword() #resetPasswordForm>\n        <mat-form-field >\n          <input type=\"password\" matInput [formControl]=\"form.controls['password']\" placeholder=\"new password\">\n        </mat-form-field>\n        <br />\n\n        <button mat-raised-button color=\"primary\">Submit</button>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
+>>>>>>> d806ec0cd1135c5f7fc80dbfcc5ef55b94246190
 
 /***/ }),
 
@@ -97,7 +105,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n  <mat-card fxFlex style=\"text-align: center;\">\r\n    <mat-card-header>\r\n      <mat-card-title>Login</mat-card-title>\r\n      <mat-card-subtitle>Please enter your username and password below.</mat-card-subtitle>\r\n    </mat-card-header>\r\n\r\n\r\n    <mat-card-content >\r\n      <small *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\" class=\"form-error\">Username is required!</small>\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-error\">Password is required!</small>\r\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\r\n\r\n      <br />\r\n\r\n      <form [formGroup]=\"form\" (ngSubmit)=\"login()\">\r\n        <mat-form-field >\r\n          <input type=\"text\" required matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\r\n          <mat-error>Username is required</mat-error>\r\n        </mat-form-field>\r\n        <br />\r\n        <br />\r\n        <mat-form-field >\r\n          <input type=\"password\" required matInput [formControl]=\"form.controls['password']\" placeholder=\"password\">\r\n          <mat-error>Password is required</mat-error>\r\n        </mat-form-field>\r\n        <mat-card-actions>\r\n          <div >\r\n            <button type=\"submit\" mat-raised-button color=\"primary\">Login</button>\r\n          </div>\r\n\r\n          <br />\r\n          <br />\r\n          <div >\r\n            <a routerLink=\"/signup\" class=\"left\">Sign Up</a>\r\n            <a routerLink=\"\" class=\"right\">Forgot Password?</a>\r\n          </div>\r\n\r\n        </mat-card-actions>\r\n      </form>\r\n\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n<!-- Alan's HTML\r\n<div class=\"mt-4 col-8 offset-2\">\r\n  <div class=\"card\">\r\n    <div class=\"card-header\">Login Here</div>\r\n    <div class=\"card-body\">\r\n      <form #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n        <div class=\"alert alert-danger\" [hidden]=\"!error\">\r\n          {{ error }}\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"inputuserName3\" class=\"col-sm-2 col-form-label\">User Name</label>\r\n          <div class=\"col-sm-10\">\r\n            <input\r\n              type=\"text\"\r\n              name=\"userName\"\r\n              class=\"form-control\"\r\n              id=\"inputuserName3\"\r\n              placeholder=\"userName\"\r\n              [(ngModel)]=\"form.userName\"\r\n              required\r\n            />\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"inputPassword3\" class=\"col-sm-2 col-form-label\"\r\n            >Password</label\r\n          >\r\n          <div class=\"col-sm-10\">\r\n            <input\r\n              type=\"password\"\r\n              name=\"password\"\r\n              class=\"form-control\"\r\n              id=\"inputPassword3\"\r\n              placeholder=\"Password\"\r\n              [(ngModel)]=\"form.password\"\r\n              required\r\n            />\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"form-group row\">\r\n          <div class=\"col-sm-10 offset-2\">\r\n            <button\r\n              type=\"submit\"\r\n              class=\"btn btn-primary\"\r\n              [disabled]=\"!loginForm.valid\"\r\n            >\r\n              Sign in\r\n            </button>\r\n\r\n            <a routerLink=\"/session/signup\" class=\"btn btn-info float-right\">Sign Up</a>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n                <div class=\"col-sm-10 offset-2\">\r\n\r\n                  <a routerLink=\"/session/forgotPassword\" class=\"btn btn-info float-right\">Password Reset</a>\r\n\r\n\r\n                </div>\r\n              </div>\r\n      </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n-->\r\n");
+=======
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Login</mat-card-title>\n      <mat-card-subtitle>Please enter your username and password below.</mat-card-subtitle>\n    </mat-card-header>\n\n\n    <mat-card-content >\n      <small *ngIf=\"form.controls['username'].hasError('required') && form.controls['username'].touched\" class=\"form-error\">Username is required!</small>\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-error\">Password is required!</small>\n      <small *ngIf=\"errorMessage\">{{errorMessage}}</small>\n\n      <br />\n\n      <form [formGroup]=\"form\" (ngSubmit)=\"login()\">\n        <mat-form-field >\n          <input type=\"text\" required matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\n          <mat-error>Username is required</mat-error>\n        </mat-form-field>\n        <br />\n        <br />\n        <mat-form-field >\n          <input type=\"password\" required matInput [formControl]=\"form.controls['password']\" placeholder=\"password\">\n          <mat-error>Password is required</mat-error>\n        </mat-form-field>\n        <mat-card-actions>\n          <div >\n            <button type=\"submit\" mat-raised-button color=\"primary\">Login</button>\n          </div>\n\n          <br />\n          <br />\n          <div >\n            <a routerLink=\"/signup\" class=\"left\">Sign Up</a>\n            <a routerLink=\"/session/forgot-password\" class=\"right\">Forgot Password?</a>\n          </div>\n\n        </mat-card-actions>\n      </form>\n\n    </mat-card-content>\n  </mat-card>\n</div>\n<!-- Alan's HTML\n<div class=\"mt-4 col-8 offset-2\">\n  <div class=\"card\">\n    <div class=\"card-header\">Login Here</div>\n    <div class=\"card-body\">\n      <form #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"alert alert-danger\" [hidden]=\"!error\">\n          {{ error }}\n        </div>\n        <div class=\"form-group row\">\n          <label for=\"inputuserName3\" class=\"col-sm-2 col-form-label\">User Name</label>\n          <div class=\"col-sm-10\">\n            <input\n              type=\"text\"\n              name=\"userName\"\n              class=\"form-control\"\n              id=\"inputuserName3\"\n              placeholder=\"userName\"\n              [(ngModel)]=\"form.userName\"\n              required\n            />\n          </div>\n        </div>\n        <div class=\"form-group row\">\n          <label for=\"inputPassword3\" class=\"col-sm-2 col-form-label\"\n            >Password</label\n          >\n          <div class=\"col-sm-10\">\n            <input\n              type=\"password\"\n              name=\"password\"\n              class=\"form-control\"\n              id=\"inputPassword3\"\n              placeholder=\"Password\"\n              [(ngModel)]=\"form.password\"\n              required\n            />\n          </div>\n        </div>\n\n        <div class=\"form-group row\">\n          <div class=\"col-sm-10 offset-2\">\n            <button\n              type=\"submit\"\n              class=\"btn btn-primary\"\n              [disabled]=\"!loginForm.valid\"\n            >\n              Sign in\n            </button>\n\n            <a routerLink=\"/session/signup\" class=\"btn btn-info float-right\">Sign Up</a>\n          </div>\n        </div>\n        <div class=\"form-group row\">\n                <div class=\"col-sm-10 offset-2\">\n\n                  <a routerLink=\"/session/forgotPassword\" class=\"btn btn-info float-right\">Password Reset</a>\n\n\n                </div>\n              </div>\n      </form>\n    </div>\n  </div>\n</div>\n-->\n");
+>>>>>>> d806ec0cd1135c5f7fc80dbfcc5ef55b94246190
 
 /***/ }),
 
@@ -228,6 +240,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n<div fxLayout=\"column\">\r\n    <mat-card>\r\n        <mat-card-title>User Management</mat-card-title>\r\n        <mat-card-content>\r\n                <form #f=\"ngForm\">\r\n                <table mat-table [dataSource]=\"users\" class=\"mat-elevation-z8\">\r\n\r\n                    <!--- Note that these columns can be defined in any order.\r\n                            The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n                    <!-- Last Name Column -->\r\n                    <ng-container matColumnDef=\"username\">\r\n                        <th mat-header-cell *matHeaderCellDef> Username </th>\r\n                        <!-- Edit User Name Control-->\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.username}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- First Name Column -->\r\n                    <ng-container matColumnDef=\"firstName\">\r\n                        <th mat-header-cell *matHeaderCellDef> First Name </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.firstName}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Last Name Column -->\r\n                    <ng-container matColumnDef=\"lastName\">\r\n                        <th mat-header-cell *matHeaderCellDef> Last Name </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.lastName}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Phone Number Column -->\r\n                    <ng-container matColumnDef=\"phoneNumber\">\r\n                        <th mat-header-cell *matHeaderCellDef> Phone Number </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.phoneNumber}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Address Column -->\r\n                    <ng-container matColumnDef=\"address\">\r\n                        <th mat-header-cell *matHeaderCellDef> Address </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.address}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Email Column -->\r\n                    <ng-container matColumnDef=\"email\">\r\n                        <th mat-header-cell *matHeaderCellDef> Email </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            {{element.email}}\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Edit Column -->\r\n                    <ng-container matColumnDef=\"edit\">\r\n                        <th mat-header-cell *matHeaderCellDef>  </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            <button routerLink=\"/user/edit/{{element._id}}\" > Edit </button>\r\n                        </td>\r\n                    </ng-container>\r\n\r\n                    <!-- Delete Column -->\r\n                    <ng-container matColumnDef=\"delete\">\r\n                        <th mat-header-cell *matHeaderCellDef>  </th>\r\n\r\n                        <td mat-cell *matCellDef=\"let element\">\r\n                            <button (click)=\"delete(element._id, element.username)\" > Delete </button>\r\n                        </td>\r\n                    </ng-container>\r\n                    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n                    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n                </table>\r\n            </form>\r\n        </mat-card-content>\r\n    </mat-card>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/verify-questions/verify-questions.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/verify-questions/verify-questions.component.html ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Forgot Password</mat-card-title>\n      <mat-card-subtitle>Answer your security questions below.</mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"form\" (ngSubmit)=\"verifySecurityQuestions()\" #securityQuestionsForm >\n\n        <h3>{{question1}}</h3>\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['answerToSecurityQuestion1']\" placeholder=\"answer\" id=\"question1\">\n        </mat-form-field>\n\n        <br />\n\n        <h3>{{question2}}</h3>\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['answerToSecurityQuestion2']\" placeholder=\"answer\" id=\"question2\">\n        </mat-form-field>\n\n        <br />\n\n        <h3>{{question3}}</h3>\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['answerToSecurityQuestion3']\" placeholder=\"answer\" id=\"question3\">\n        </mat-form-field>\n\n        <br />\n\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/verify-user/verify-user.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/verify-user/verify-user.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Forgot Password</mat-card-title>\n      <mat-card-subtitle>Enter your username below to start reset your password.</mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form [formGroup]=\"form\" (ngSubmit)=\"validateUsername()\" #usernameForm >\n        <mat-form-field >\n          <input type=\"text\" matInput [formControl]=\"form.controls['username']\" placeholder=\"username\">\n        </mat-form-field>\n\n        <br />\n\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -597,7 +635,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
 /* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
 /* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
-/* harmony import */ var _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./shared/route-interceptors/error.interceptor */ "./src/app/shared/route-interceptors/error.interceptor.ts");
+/* harmony import */ var _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./pages/verify-user/verify-user.component */ "./src/app/pages/verify-user/verify-user.component.ts");
+/* harmony import */ var _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./pages/verify-questions/verify-questions.component */ "./src/app/pages/verify-questions/verify-questions.component.ts");
+/* harmony import */ var _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./shared/route-interceptors/error.interceptor */ "./src/app/shared/route-interceptors/error.interceptor.ts");
 /*
 ; Title:  starter code
 ; Author: Professor Krasso
@@ -653,6 +693,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -676,7 +718,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _pages_signup_dialog_signup_dialog_component__WEBPACK_IMPORTED_MODULE_40__["SignupDialogComponent"],
             _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_41__["ContactComponent"],
             _pages_about_about_component__WEBPACK_IMPORTED_MODULE_42__["AboutComponent"],
-            _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_43__["ServerErrorComponent"]
+            _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_43__["ServerErrorComponent"],
+            _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_44__["VerifyUserComponent"],
+            _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_45__["VerifyQuestionsComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -704,7 +748,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 provide: _angular_common__WEBPACK_IMPORTED_MODULE_35__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_35__["HashLocationStrategy"]
             },
             _shared_auth_guard__WEBPACK_IMPORTED_MODULE_36__["AuthGuard"], ngx_cookie_service__WEBPACK_IMPORTED_MODULE_37__["CookieService"],
-            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_28__["HTTP_INTERCEPTORS"], useClass: _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_44__["ErrorInterceptor"], multi: true }
+            { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_28__["HTTP_INTERCEPTORS"], useClass: _shared_route_interceptors_error_interceptor__WEBPACK_IMPORTED_MODULE_46__["ErrorInterceptor"], multi: true }
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
         entryComponents: [
@@ -744,6 +788,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_about_about_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/about/about.component */ "./src/app/pages/about/about.component.ts");
 /* harmony import */ var _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
 /* harmony import */ var _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/server-error/server-error.component */ "./src/app/pages/server-error/server-error.component.ts");
+/* harmony import */ var _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/verify-user/verify-user.component */ "./src/app/pages/verify-user/verify-user.component.ts");
+/* harmony import */ var _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/verify-questions/verify-questions.component */ "./src/app/pages/verify-questions/verify-questions.component.ts");
+/* harmony import */ var _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/forgot-password/forgot-password.component */ "./src/app/pages/forgot-password/forgot-password.component.ts");
+
+
+
 
 
 
@@ -831,6 +881,18 @@ const AppRoutes = [
             {
                 path: '500',
                 component: _pages_server_error_server_error_component__WEBPACK_IMPORTED_MODULE_14__["ServerErrorComponent"]
+            },
+            {
+                path: 'forgot-password',
+                component: _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_15__["VerifyUserComponent"]
+            },
+            {
+                path: 'verify-questions',
+                component: _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_16__["VerifyQuestionsComponent"]
+            },
+            {
+                path: 'reset-password',
+                component: _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_17__["ForgotPasswordComponent"]
             }
         ]
     },
@@ -852,7 +914,7 @@ const AppRoutes = [
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   28 October 2019\r\n; Description: About Us\r\n;===========================================\r\n*/\r\n.center {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 50%;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWJvdXQvYWJvdXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7OztDQU9DO0FBQ0Q7SUFDSSxjQUFjO0lBQ2QsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixVQUFVO0VBQ1oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9hYm91dC9hYm91dC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcclxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuOyBUaXRsZTogIEJvYidzIENvbXB1dGVyXHJcbjsgQXV0aG9yOiBEb24gQ291c2FyXHJcbjsgRGF0ZTogICAyOCBPY3RvYmVyIDIwMTlcclxuOyBEZXNjcmlwdGlvbjogQWJvdXQgVXNcclxuOz09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuKi9cclxuLmNlbnRlciB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xyXG4gICAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xyXG4gICAgd2lkdGg6IDUwJTtcclxuICB9Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: About Us\n;===========================================\n*/\n.center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 50%;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWJvdXQvYWJvdXQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7OztDQU9DO0FBQ0Q7SUFDSSxjQUFjO0lBQ2QsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixVQUFVO0VBQ1oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9hYm91dC9hYm91dC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG47IFRpdGxlOiAgQm9iJ3MgQ29tcHV0ZXJcbjsgQXV0aG9yOiBEb24gQ291c2FyXG47IERhdGU6ICAgMjggT2N0b2JlciAyMDE5XG47IERlc2NyaXB0aW9uOiBBYm91dCBVc1xuOz09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiovXG4uY2VudGVyIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBtYXJnaW4tbGVmdDogYXV0bztcbiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gICAgd2lkdGg6IDUwJTtcbiAgfSJdfQ== */");
 
 /***/ }),
 
@@ -1031,7 +1093,7 @@ ContactComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2ZvcmdvdC1wYXNzd29yZC9mb3Jnb3QtcGFzc3dvcmQuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("mat-card {\n  width: 30%;\n}\n\n\n\nmat-card-actions {\n  width: 95%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZm9yZ290LXBhc3N3b3JkL2ZvcmdvdC1wYXNzd29yZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsVUFBVTtBQUNaOzs7O0FBSUE7RUFDRSxVQUFVO0FBQ1oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9mb3Jnb3QtcGFzc3dvcmQvZm9yZ290LXBhc3N3b3JkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtY2FyZCB7XG4gIHdpZHRoOiAzMCU7XG59XG5cblxuXG5tYXQtY2FyZC1hY3Rpb25zIHtcbiAgd2lkdGg6IDk1JTtcbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -1047,21 +1109,58 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForgotPasswordComponent", function() { return ForgotPasswordComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
 
 /*
 ============================================
-; Title:  Bob's Computer
-; Author: Don Cousar
-; Date:   28 October 2019
+; Title:  forgot-password.component.ts
+; Author: Jordan Hennessy
+; Date:   3 November 2019
 ; Description: Bob's Computer
 ;===========================================
 */
 
+
+
+
+
 let ForgotPasswordComponent = class ForgotPasswordComponent {
-    constructor() { }
+    constructor(http, route, router, fb, cookieService) {
+        this.http = http;
+        this.route = route;
+        this.router = router;
+        this.fb = fb;
+        this.cookieService = cookieService;
+        this.isAuthenticated = this.route.snapshot.queryParamMap.get('isAuthenticated');
+        this.username = this.route.snapshot.queryParamMap.get('username');
+    }
     ngOnInit() {
+        this.form = this.fb.group({
+            password: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])]
+        });
+    }
+    resetPassword() {
+        this.http.post('/api/users/' + this.username + '/reset-password', {
+            password: this.form.controls['password'].value
+        }).subscribe(res => {
+            this.cookieService.set('isAuthenticated', 'true', 1);
+            this.cookieService.set('username', this.username, 1);
+            this.router.navigate(['/']);
+        }, err => {
+            console.log(err);
+        });
     }
 };
+ForgotPasswordComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_5__["CookieService"] }
+];
 ForgotPasswordComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-forgot-password',
@@ -2213,6 +2312,173 @@ UserManagementComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/pages/verify-questions/verify-questions.component.css":
+/*!***********************************************************************!*\
+  !*** ./src/app/pages/verify-questions/verify-questions.component.css ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("mat-card {\n  width: 30%;\n}\n\n\n\nmat-card-actions {\n  width: 95%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdmVyaWZ5LXF1ZXN0aW9ucy92ZXJpZnktcXVlc3Rpb25zLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxVQUFVO0FBQ1o7Ozs7QUFJQTtFQUNFLFVBQVU7QUFDWiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3ZlcmlmeS1xdWVzdGlvbnMvdmVyaWZ5LXF1ZXN0aW9ucy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWNhcmQge1xuICB3aWR0aDogMzAlO1xufVxuXG5cblxubWF0LWNhcmQtYWN0aW9ucyB7XG4gIHdpZHRoOiA5NSU7XG59XG4iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/verify-questions/verify-questions.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/verify-questions/verify-questions.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: VerifyQuestionsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerifyQuestionsComponent", function() { return VerifyQuestionsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+
+
+let VerifyQuestionsComponent = class VerifyQuestionsComponent {
+    constructor(route, router, http, fb) {
+        this.route = route;
+        this.router = router;
+        this.http = http;
+        this.fb = fb;
+        this.username = this.route.snapshot.queryParamMap.get('username');
+        console.log(this.username);
+        this.http.get('/api/users/' + this.username + '/security-questions').subscribe(res => {
+            this.selectedSecurityQuestions = res;
+            this.question1 = this.selectedSecurityQuestions[0].questionText;
+            this.question2 = this.selectedSecurityQuestions[1].questionText;
+            this.question3 = this.selectedSecurityQuestions[2].questionText;
+            console.log(this.selectedSecurityQuestions);
+            console.log(this.question3);
+        }, err => {
+            console.log(err);
+        });
+    }
+    ngOnInit() {
+        this.form = this.fb.group({
+            answerToSecurityQuestion1: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+            answerToSecurityQuestion2: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+            answerToSecurityQuestion3: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+        });
+    }
+    verifySecurityQuestions() {
+        const answerToSecurityQuestion1 = this.form.controls['answerToSecurityQuestion1'].value;
+        const answerToSecurityQuestion2 = this.form.controls['answerToSecurityQuestion2'].value;
+        const answerToSecurityQuestion3 = this.form.controls['answerToSecurityQuestion3'].value;
+        this.http.post('/api/verify/users/' + this.username + '/security-questions', {
+            answerToSecurityQuestion1: answerToSecurityQuestion1,
+            answerToSecurityQuestion2: answerToSecurityQuestion2,
+            answerToSecurityQuestion3: answerToSecurityQuestion3
+        }).subscribe(res => {
+            if (res['auth']) {
+                this.router.navigate(['/session/reset-password'], { queryParams: { isAuthenticated: 'true', username: this.username }, skipLocationChange: true });
+            }
+            else {
+                console.log('Unable to verify security question answers');
+            }
+        });
+    }
+};
+VerifyQuestionsComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] }
+];
+VerifyQuestionsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-verify-questions',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./verify-questions.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/verify-questions/verify-questions.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./verify-questions.component.css */ "./src/app/pages/verify-questions/verify-questions.component.css")).default]
+    })
+], VerifyQuestionsComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/verify-user/verify-user.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/pages/verify-user/verify-user.component.css ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("mat-card {\n  width: 30%;\n}\n\n\n\nmat-card-actions {\n  width: 95%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdmVyaWZ5LXVzZXIvdmVyaWZ5LXVzZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFVBQVU7QUFDWjs7OztBQUlBO0VBQ0UsVUFBVTtBQUNaIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvdmVyaWZ5LXVzZXIvdmVyaWZ5LXVzZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1jYXJkIHtcbiAgd2lkdGg6IDMwJTtcbn1cblxuXG5cbm1hdC1jYXJkLWFjdGlvbnMge1xuICB3aWR0aDogOTUlO1xufVxuIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/verify-user/verify-user.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/pages/verify-user/verify-user.component.ts ***!
+  \************************************************************/
+/*! exports provided: VerifyUserComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerifyUserComponent", function() { return VerifyUserComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+
+let VerifyUserComponent = class VerifyUserComponent {
+    constructor(http, fb, router) {
+        this.http = http;
+        this.fb = fb;
+        this.router = router;
+    }
+    ngOnInit() {
+        this.form = this.fb.group({
+            username: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])]
+        });
+    }
+    validateUsername() {
+        const username = this.form.controls['username'].value;
+        this.http.get('/api/verify/users/' + username).subscribe(res => {
+            if (res) {
+                this.router.navigate(['/session/verify-questions'], { queryParams: { username: username }, skipLocationChange: true });
+            }
+        }, err => {
+            console.log(err);
+        });
+    }
+};
+VerifyUserComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+VerifyUserComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-verify-user',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./verify-user.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/verify-user/verify-user.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./verify-user.component.css */ "./src/app/pages/verify-user/verify-user.component.css")).default]
+    })
+], VerifyUserComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/auth.guard.ts":
 /*!**************************************!*\
   !*** ./src/app/shared/auth.guard.ts ***!
@@ -2564,7 +2830,11 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\Users\drcousar\bu-webdev\BobsComputer\src\main.ts */"./src/main.ts");
+=======
+module.exports = __webpack_require__(/*! /Users/jordanhennessy/bu-webdev/BobsComputer/src/main.ts */"./src/main.ts");
+>>>>>>> d806ec0cd1135c5f7fc80dbfcc5ef55b94246190
 
 
 /***/ })
