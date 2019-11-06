@@ -62,6 +62,7 @@ import { from } from 'rxjs';
 import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
 import { VerifyQuestionsComponent } from './pages/verify-questions/verify-questions.component';
 import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor';
+import { NotAuthorizedComponent } from './pages/not-authorized/not-authorized.component';
 import { RoleManagementComponent } from './pages/role-management/role-management.component';
 import { RoleDetailsComponent } from './pages/role-details/role-details.component';
 import { RoleDeleteDialogComponent } from './pages/role-delete-dialog/role-delete-dialog.component';
@@ -90,6 +91,7 @@ import { AddRoleComponent } from './pages/add-role/add-role.component';
     ServerErrorComponent,
     VerifyUserComponent,
     VerifyQuestionsComponent,
+    NotAuthorizedComponent,
     RoleManagementComponent,
     RoleDetailsComponent,
     RoleDeleteDialogComponent,
