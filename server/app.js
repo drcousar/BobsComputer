@@ -489,18 +489,31 @@ app.get('/api/roles', function(req, res, next) {
   })
 });
 
+// Get Role by ID
+app.get('/api/roles/:id', function(req, res, next) {
+  Role.findOne({'_id': req.params.id}, function(err, role) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(role);
+      res.json(role);
+    }
+  })
+});
+
 // Create new role
-app.post('/api/roles', function(req, res, next) {
+app.post('/api/roles/add', function(req, res, next) {
   Role.findOne({'name': req.body.name}, function(err, role) {
     if (err) {
       console.log(err);
       return next(err);
     } else {
       if (!role) {
-        let role = {
+        let r = {
           name: req.body.name
         }
-        Role.create(role, function(err, newRole) {
+        Role.create(r, function(err, newRole) {
           if (err) {
             console.log(err);
             return next(err);

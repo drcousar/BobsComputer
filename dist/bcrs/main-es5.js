@@ -50,7 +50,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<p>add-role works!</p>\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Add User Role</mat-card-title>\n      <mat-card-subtitle>Add a new user role below</mat-card-subtitle>\n    </mat-card-header>\n\n    <form [formGroup]=\"form\" (ngSubmit)=\"saveRole()\" #roleForm>\n      <mat-card-content>\n\n        <mat-form-field>\n          <input type=\"text\" matInput [(ngModel)]=\"name\" value=\"{{name}}\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"user role\"/>\n        </mat-form-field>\n\n      </mat-card-content>\n\n      <mat-card-actions>\n\n        <button mat-raised-button (click)=\"cancel()\" color=\"accent\">Cancel</button>\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n      </mat-card-actions>\n    </form>\n\n  </mat-card>\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/contact/contact.component.html": 
@@ -138,7 +138,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<p>role-details works!</p>\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Edit User Role</mat-card-title>\n      <mat-card-subtitle>Change the name of {{name}} user role below</mat-card-subtitle>\n    </mat-card-header>\n\n    <form [formGroup]=\"form\" (ngSubmit)=\"updateRole()\" #roleUpdateForm>\n      <mat-card-content>\n        <mat-form-field>\n          <input type=\"text\" matInput [(ngModel)]=\"name\" [ngModelOptions]=\"{standalone: true}\" value=\"{{name}}\" placeholder=\"user role\">\n        </mat-form-field>\n      </mat-card-content>\n      <mat-card-actions>\n        <button mat-raised-button (click)=\"cancel()\" color=\"accent\">Cancel</button>\n        <button mat-raised-button color=\"primary\">Submit</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/role-management/role-management.component.html": 
@@ -149,7 +149,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Roles Management</mat-card-title>\n      <mat-card-subtitle>\n        <button routerLink='/roles/add'>Add User Role</button>\n      </mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form #f=\"ngForm\">\n        <table mat-table [dataSource]=\"roles\" class=\"mat-elevation-z8\">\n\n          <ng-container matColumnDef=\"name\">\n            <th mat-header-cell *matHeaderCellDef>User Role</th>\n            <td mat-cell *matCellDef=\"let element\" style=\"vertical-align: middle;\">\n              {{element.name}}\n            </td>\n          </ng-container>\n\n          <ng-container matColumnDef=\"edit\">\n            <th mat-header-cell *matHeaderCellDef></th>\n            <td mat-cell *matCellDef=\"let element\" style=\"vertical-align: middle;\">\n              <a routerLink=\"/roles/edit/{{element._id}}\" color=\"primary\">\n                <mat-icon color=\"primary\">edit</mat-icon>\n                Edit\n              </a>\n            </td>\n          </ng-container>\n\n          <ng-container matColumnDef=\"delete\">\n              <th mat-header-cell *matHeaderCellDef></th>\n              <td mat-cell *matCellDef=\"let element\" style=\"vertical-align: middle;\">\n                <a (click)=\"delete(element._id, element.name)\" color=\"warn\">\n                  <mat-icon >delete</mat-icon>\n                  Delete\n                </a>\n              </td>\n            </ng-container>\n\n            <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n            <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n        </table>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card>\n    <mat-card-header>\n      <mat-card-title>Roles Management</mat-card-title>\n      <mat-card-subtitle>\n        <button mat-raised-button color=\"primary\" routerLink='/roles/add'>Add User Role</button>\n      </mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n      <form #f=\"ngForm\">\n        <table mat-table [dataSource]=\"roles\" class=\"mat-elevation-z8\">\n\n          <ng-container matColumnDef=\"name\">\n            <th mat-header-cell *matHeaderCellDef>User Role</th>\n            <td mat-cell *matCellDef=\"let element\" style=\"vertical-align: middle;\">\n              {{element.name}}\n            </td>\n          </ng-container>\n\n          <ng-container matColumnDef=\"edit\">\n            <th mat-header-cell *matHeaderCellDef></th>\n            <td mat-cell *matCellDef=\"let element\" style=\"vertical-align: middle;\">\n              <a routerLink=\"/roles/edit/{{element._id}}\">\n                <mat-icon color=\"accent\">edit</mat-icon>\n              </a>\n            </td>\n          </ng-container>\n\n          <ng-container matColumnDef=\"delete\">\n              <th mat-header-cell *matHeaderCellDef></th>\n              <td mat-cell *matCellDef=\"let element\" style=\"vertical-align: middle;\">\n                <a (click)=\"delete(element._id, element.name)\">\n                  <mat-icon color=\"warn\">delete</mat-icon>\n                </a>\n              </td>\n            </ng-container>\n\n            <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n            <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n        </table>\n      </form>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/security-questions-delete-dialog/security-questions-delete-dialog.component.html": 
@@ -697,7 +697,7 @@
             ; Title:  starter code
             ; Author: Professor Krasso
             ; Date:   21 October 2019
-            ; ModifiedBy: Don Cousar
+            ; ModifiedBy: Don Cousar and Jordan Hennessy
             ; ModifiedDate: 25 October 2019
             ; Description: BobComputer Starter Code
             ;===========================================
@@ -1043,7 +1043,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2FkZC1yb2xlL2FkZC1yb2xlLmNvbXBvbmVudC5jc3MifQ== */");
+            /* harmony default export */ __webpack_exports__["default"] = ("mat-card-actions button {\n  width: 48%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYWRkLXJvbGUvYWRkLXJvbGUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFVBQVU7QUFDWiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2FkZC1yb2xlL2FkZC1yb2xlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtY2FyZC1hY3Rpb25zIGJ1dHRvbiB7XG4gIHdpZHRoOiA0OCU7XG59XG4iXX0= */");
             /***/ 
         }),
         /***/ "./src/app/pages/add-role/add-role.component.ts": 
@@ -1057,13 +1057,50 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddRoleComponent", function () { return AddRoleComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+            /*
+            ============================================
+            ; Title:  add-role.component.ts
+            ; Author: Jordan Hennessy
+            ; Date:   6 November 2019
+            ; Description: Bob's Computer Repair Shop
+            ;===========================================
+            */
             var AddRoleComponent = /** @class */ (function () {
-                function AddRoleComponent() {
+                function AddRoleComponent(route, http, fb, router) {
+                    this.route = route;
+                    this.http = http;
+                    this.fb = fb;
+                    this.router = router;
+                    this.name = '';
                 }
+                AddRoleComponent.prototype.saveRole = function () {
+                    var _this = this;
+                    this.http.post('/api/roles/add', {
+                        name: this.name
+                    }).subscribe(function (res) {
+                        _this.router.navigate(['/roles']);
+                        console.log(res);
+                    });
+                };
+                AddRoleComponent.prototype.cancel = function () {
+                    this.router.navigate(['/roles']);
+                };
                 AddRoleComponent.prototype.ngOnInit = function () {
+                    this.form = this.fb.group({
+                        name: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])]
+                    });
                 };
                 return AddRoleComponent;
             }());
+            AddRoleComponent.ctorParameters = function () { return [
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+                { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+                { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+            ]; };
             AddRoleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-add-role',
@@ -1493,6 +1530,14 @@
             /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
             /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
             /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+            /*
+            ============================================
+            ; Title:  role-delete-dialog.component.ts
+            ; Author: Jordan Hennessy
+            ; Date:   6 November 2019
+            ; Description: Bob's Computer Repair Shop
+            ;===========================================
+            */
             var RoleDeleteDialogComponent = /** @class */ (function () {
                 function RoleDeleteDialogComponent(dialogRef, data, router, http) {
                     this.dialogRef = dialogRef;
@@ -1534,7 +1579,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JvbGUtZGV0YWlscy9yb2xlLWRldGFpbHMuY29tcG9uZW50LmNzcyJ9 */");
+            /* harmony default export */ __webpack_exports__["default"] = ("mat-card-actions button {\n  width: 48%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvcm9sZS1kZXRhaWxzL3JvbGUtZGV0YWlscy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsVUFBVTtBQUNaIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvcm9sZS1kZXRhaWxzL3JvbGUtZGV0YWlscy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWNhcmQtYWN0aW9ucyBidXR0b24ge1xuICB3aWR0aDogNDglO1xufVxuIl19 */");
             /***/ 
         }),
         /***/ "./src/app/pages/role-details/role-details.component.ts": 
@@ -1548,13 +1593,57 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleDetailsComponent", function () { return RoleDetailsComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+            /*
+            ============================================
+            ; Title:  role-details.component.ts
+            ; Author: Jordan Hennessy
+            ; Date:   6 November 2019
+            ; Description: Bob's Computer Repair Shop
+            ;===========================================
+            */
             var RoleDetailsComponent = /** @class */ (function () {
-                function RoleDetailsComponent() {
+                function RoleDetailsComponent(route, http, fb, router) {
+                    var _this = this;
+                    this.route = route;
+                    this.http = http;
+                    this.fb = fb;
+                    this.router = router;
+                    this.name = '';
+                    this._id = this.route.snapshot.paramMap.get('id');
+                    this.http.get('/api/roles/' + this._id).subscribe(function (res) {
+                        _this.role = res;
+                        _this.name = res['name'];
+                    }, function (err) {
+                        console.log(err);
+                    });
                 }
+                RoleDetailsComponent.prototype.updateRole = function () {
+                    var _this = this;
+                    this.http.put('/api/roles/' + this._id, {
+                        name: this.name
+                    }).subscribe(function (res) {
+                        _this.router.navigate(['/roles']);
+                    });
+                };
+                RoleDetailsComponent.prototype.cancel = function () {
+                    this.router.navigate(['/roles']);
+                };
                 RoleDetailsComponent.prototype.ngOnInit = function () {
+                    this.form = this.fb.group({
+                        name: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])]
+                    });
                 };
                 return RoleDetailsComponent;
             }());
+            RoleDetailsComponent.ctorParameters = function () { return [
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+                { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+                { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+            ]; };
             RoleDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
                     selector: 'app-role-details',
@@ -1590,6 +1679,14 @@
             /* harmony import */ var _role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../role-delete-dialog/role-delete-dialog.component */ "./src/app/pages/role-delete-dialog/role-delete-dialog.component.ts");
             /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
             /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /*
+            ============================================
+            ; Title:  role-management.component.ts
+            ; Author: Jordan Hennessy
+            ; Date:   6 November 2019
+            ; Description: Bob's Computer Repair Shop
+            ;===========================================
+            */
             var RoleManagementComponent = /** @class */ (function () {
                 function RoleManagementComponent(http, dialog, router) {
                     var _this = this;
