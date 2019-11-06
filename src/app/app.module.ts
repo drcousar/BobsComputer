@@ -2,7 +2,7 @@
 ; Title:  starter code
 ; Author: Professor Krasso
 ; Date:   21 October 2019
-; ModifiedBy: Don Cousar
+; ModifiedBy: Don Cousar and Jordan Hennessy
 ; ModifiedDate: 25 October 2019
 ; Description: BobComputer Starter Code
 ;===========================================
@@ -63,6 +63,10 @@ import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
 import { VerifyQuestionsComponent } from './pages/verify-questions/verify-questions.component';
 import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor';
 import { NotAuthorizedComponent } from './pages/not-authorized/not-authorized.component';
+import { RoleManagementComponent } from './pages/role-management/role-management.component';
+import { RoleDetailsComponent } from './pages/role-details/role-details.component';
+import { RoleDeleteDialogComponent } from './pages/role-delete-dialog/role-delete-dialog.component';
+import { AddRoleComponent } from './pages/add-role/add-role.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +91,11 @@ import { NotAuthorizedComponent } from './pages/not-authorized/not-authorized.co
     ServerErrorComponent,
     VerifyUserComponent,
     VerifyQuestionsComponent,
-    NotAuthorizedComponent
+    NotAuthorizedComponent,
+    RoleManagementComponent,
+    RoleDetailsComponent,
+    RoleDeleteDialogComponent,
+    AddRoleComponent
   ],
   imports: [
     BrowserModule,
@@ -120,7 +128,8 @@ import { NotAuthorizedComponent } from './pages/not-authorized/not-authorized.co
   entryComponents: [
     UserManagementDeleteDialogComponent,
     SecurityQuestionsDeleteDialogComponent,
-    SignupDialogComponent
+    SignupDialogComponent,
+    RoleDeleteDialogComponent
   ]
 })
 export class AppModule { }
