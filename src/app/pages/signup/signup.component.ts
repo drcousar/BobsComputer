@@ -4,7 +4,7 @@
 ; Authors: Don Cousar / Alan Edwards
 ; Date:   30 October 2019
 ; Description: Bob's Computer
-; Attribution: Form Control Logic inspired by Professor Krasso @Bellevue University
+; Attribution: Form Control Logic & Array Buildout inspired by Professor Krasso @Bellevue University
 ;===========================================
 */
 import { Component, OnInit } from '@angular/core';
@@ -20,21 +20,6 @@ import { IfStmt } from '@angular/compiler';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-/*
-export interface questionArr {
-  questionId: string;
-  questionText: string;
-  answerText: string;
-}
-
-const myQuestions: questionArr[] = [
-  {questionId: "dcousar", questionText: 'Donald', answerText: 'Cousar'},
-  {questionId: "dcousar", questionText: 'Donald', answerText: 'Cousar'},
-  {questionId: "dcousar", questionText: 'Donald', answerText: 'Cousar'}
-];
-*/
-
-
 
 export class SignupComponent implements OnInit {
   form: FormGroup;
@@ -60,7 +45,7 @@ export class SignupComponent implements OnInit {
   
   myResult: any;
   
-  securityQuestions = new Array<SecurityQuestionType>();
+  securityQuestions: any;
 
   constructor(private route: ActivatedRoute, private http: HttpClient, private fb: FormBuilder, private router: Router, private dialog: MatDialog) {
 
@@ -100,14 +85,27 @@ export class SignupComponent implements OnInit {
       this.secAnswer2 &&
       this.secAnswer3
     ) {
-      this.pushQuestionArr(this.secQuestion1, this.secAnswer1);
-      this.pushQuestionArr(this.secQuestion2, this.secAnswer2);
-      this.pushQuestionArr(this.secQuestion3, this.secAnswer3);
+      
+      /**
+       * Had to replace array push with a manual build out of array.  
+       * Attribution: Worked directly with Professor Krasso from Bellevue University
+       */
+      this.securityQuestions = [ 
+        {
+          questionText: this.secQuestion1, answerText: this.secAnswer1
+        },
+        {
+          questionText: this.secQuestion2, answerText: this.secAnswer2
+        },
+        {
+          questionText: this.secQuestion3, answerText: this.secAnswer3
+        }
+      ]
     }
-
 
     //Write array of security questions to console
     console.log(this.securityQuestions);
+    
 
   //STEP 3: Verify user completed all required fields
     if(
@@ -127,6 +125,8 @@ export class SignupComponent implements OnInit {
       this.secAnswer3
       ) {
         //User completed form in full so attempt registration
+        console.log('Inside If Statement');
+        console.log(this.securityQuestions);
         this.http.post('/api/users/register', {
           username: this.Username,
           password: this.Password,
@@ -136,8 +136,9 @@ export class SignupComponent implements OnInit {
           address: this.Address,
           email: this.Email,
           selectedSecurityQuestions: this.securityQuestions
-          
+                                     
         }).subscribe(res => {
+          console.table(this.securityQuestions);
           this.passMessage("User added successfully");
           this.router.navigate(['/']);
         })
@@ -151,14 +152,18 @@ export class SignupComponent implements OnInit {
  * Get question text for a particular ID
  * @param id - ID from security questions collection
  */
+/*
   pushQuestionArr(id, answer) {
     let quest: any;
 
       //Call Jordan's API to get question by id
-      this.http.get('/api/securityQuestions/' + id).subscribe(res => {
+      this.http.get('/api/questions/' + id).subscribe(res => {
         quest = res['questionText'];
-        this.securityQuestions.push({questionId: id, questionText: quest, answerText: answer});
+        this.securityQuestions.push({questionId: id, questionText: res['questionText'], answerText: answer});
         //debug verification
+        console.log('SECURITY QUESTIONS');
+        console.log(this.securityQuestions);
+
         console.log('getQuestion(): API GET Question: ');
         console.table(quest);
       }, err => {
@@ -168,7 +173,7 @@ export class SignupComponent implements OnInit {
         //What to do upon success
       });
   }
-
+*/
  /**
   * Send message to dialog modal and open dialog
   * @param message Message text to send to dialog
@@ -250,4 +255,4 @@ export class SignupComponent implements OnInit {
 
 }
 //Declare Custom Array Type
-type SecurityQuestionType = { questionId: string, questionText: string, answerText: string } ;
+//type SecurityQuestionType = { questionId: string, questionText: string, answerText: string } ;

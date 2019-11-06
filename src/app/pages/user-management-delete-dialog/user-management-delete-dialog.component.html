@@ -8,11 +8,13 @@
 ;===========================================
 */
 -->
-<h1 mat-dialog-title>Bob's Computer Repair Shop</h1>
+<h1 mat-dialog-title>Delete User</h1>
 <div mat-dialog-content>
-    <h3>You have elected to delete user: {{myUserName}} </h3>
-    <p>This cannot be undone!</p>
+  <h3>Are you sure you want to delete the following user?</h3>
+  <p color="warn">This action can not be undone!</p>
+  <h4>{{myUserName}}</h4>
 </div>
 <div mat-dialog-actions>
-    <button mat-button [mat-dialog-close]="" cdkFocusInitial color="warn">Ok</button>
+  <button mat-button color="primary" (click)="onCancel()">Cancel</button>
+  <button mat-button color="warn" (click)="delete()">Delete</button>
 </div>

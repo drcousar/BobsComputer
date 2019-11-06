@@ -9,6 +9,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-management-delete-dialog',
@@ -18,16 +19,19 @@ import { Router } from '@angular/router';
 export class UserManagementDeleteDialogComponent implements OnInit {
   myUserId: string;
   myUserName: string;
+  users: any;
 
   constructor(
     private dialogRef: MatDialogRef<UserManagementDeleteDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data,
-    private router: Router
+    private router: Router,
+    private http: HttpClient
   ) { 
 
     //Define variables to call from HTML
     this.myUserId = data.userId;
     this.myUserName = data.username;
+    this.users = data.users;
 
     console.log('Dialog User: ' + this.myUserId);
     /**
@@ -36,6 +40,19 @@ export class UserManagementDeleteDialogComponent implements OnInit {
     console.log('Delete Dialog: ');
     console.table(data);
     
+  }
+
+  onCancel(): void {
+    this.dialogRef.close()
+  }
+
+  delete() {
+        this.http.delete('api/users/' + this.myUserId).subscribe(res => {
+          console.log('Deleted User..Redirecting to User List');
+          
+        })
+        this.dialogRef.close();
+        this.users = this.users.filter(u => u._id !== this.myUserId);
   }
 
   ngOnInit() {

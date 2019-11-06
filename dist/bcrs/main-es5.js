@@ -237,7 +237,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n    /*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n<h1 mat-dialog-title>Bob's Computer Repair Shop</h1>\r\n<div mat-dialog-content>\r\n    <h3>You have elected to delete user: {{myUserName}} </h3>\r\n    <p>This cannot be undone!</p>\r\n</div>\r\n<div mat-dialog-actions>\r\n    <button mat-button [mat-dialog-close]=\"\" cdkFocusInitial color=\"warn\">Ok</button>\r\n</div>\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n    /*\r\n============================================\r\n; Title:  Bob's Computer\r\n; Author: Don Cousar\r\n; Date:   23 October 2019\r\n; Description: Bob's Computer\r\n;===========================================\r\n*/\r\n-->\r\n<h1 mat-dialog-title>Delete User</h1>\r\n<div mat-dialog-content>\r\n  <h3>Are you sure you want to delete the following user?</h3>\r\n  <p color=\"warn\">This action can not be undone!</p>\r\n  <h4>{{myUserName}}</h4>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-button color=\"primary\" (click)=\"onCancel()\">Cancel</button>\r\n  <button mat-button color=\"warn\" (click)=\"delete()\">Delete</button>\r\n</div>\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/user-management/user-management.component.html": 
@@ -2032,7 +2032,7 @@
             ; Authors: Don Cousar / Alan Edwards
             ; Date:   30 October 2019
             ; Description: Bob's Computer
-            ; Attribution: Form Control Logic inspired by Professor Krasso @Bellevue University
+            ; Attribution: Form Control Logic & Array Buildout inspired by Professor Krasso @Bellevue University
             ;===========================================
             */
             var SignupComponent = /** @class */ (function () {
@@ -2051,7 +2051,6 @@
                     this.Username = '';
                     this.Password = '';
                     this.ConfirmPassword = '';
-                    this.securityQuestions = new Array();
                     //Call Jordan's API to get all users
                     this.http.get('/api/questions').subscribe(function (res) {
                         _this.questions = res;
@@ -2079,9 +2078,21 @@
                         this.secAnswer1 &&
                         this.secAnswer2 &&
                         this.secAnswer3) {
-                        this.pushQuestionArr(this.secQuestion1, this.secAnswer1);
-                        this.pushQuestionArr(this.secQuestion2, this.secAnswer2);
-                        this.pushQuestionArr(this.secQuestion3, this.secAnswer3);
+                        /**
+                         * Had to replace array push with a manual build out of array.
+                         * Attribution: Worked directly with Professor Krasso from Bellevue University
+                         */
+                        this.securityQuestions = [
+                            {
+                                questionText: this.secQuestion1, answerText: this.secAnswer1
+                            },
+                            {
+                                questionText: this.secQuestion2, answerText: this.secAnswer2
+                            },
+                            {
+                                questionText: this.secQuestion3, answerText: this.secAnswer3
+                            }
+                        ];
                     }
                     //Write array of security questions to console
                     console.log(this.securityQuestions);
@@ -2101,6 +2112,8 @@
                         this.secAnswer2 &&
                         this.secAnswer3) {
                         //User completed form in full so attempt registration
+                        console.log('Inside If Statement');
+                        console.log(this.securityQuestions);
                         this.http.post('/api/users/register', {
                             username: this.Username,
                             password: this.Password,
@@ -2111,6 +2124,7 @@
                             email: this.Email,
                             selectedSecurityQuestions: this.securityQuestions
                         }).subscribe(function (res) {
+                            console.table(_this.securityQuestions);
                             _this.passMessage("User added successfully");
                             _this.router.navigate(['/']);
                         });
@@ -2124,22 +2138,28 @@
                  * Get question text for a particular ID
                  * @param id - ID from security questions collection
                  */
-                SignupComponent.prototype.pushQuestionArr = function (id, answer) {
-                    var _this = this;
-                    var quest;
-                    //Call Jordan's API to get question by id
-                    this.http.get('/api/securityQuestions/' + id).subscribe(function (res) {
+                /*
+                  pushQuestionArr(id, answer) {
+                    let quest: any;
+                
+                      //Call Jordan's API to get question by id
+                      this.http.get('/api/questions/' + id).subscribe(res => {
                         quest = res['questionText'];
-                        _this.securityQuestions.push({ questionId: id, questionText: quest, answerText: answer });
+                        this.securityQuestions.push({questionId: id, questionText: res['questionText'], answerText: answer});
                         //debug verification
+                        console.log('SECURITY QUESTIONS');
+                        console.log(this.securityQuestions);
+                
                         console.log('getQuestion(): API GET Question: ');
                         console.table(quest);
-                    }, function (err) {
+                      }, err => {
                         console.log('getQuestion(): API GET QUESTIONS ERROR: ' + err);
-                    }, function () {
+                      },
+                      () => {
                         //What to do upon success
-                    });
-                };
+                      });
+                  }
+                */
                 /**
                  * Send message to dialog modal and open dialog
                  * @param message Message text to send to dialog
@@ -2222,20 +2242,9 @@
                     template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./signup.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/signup/signup.component.html")).default,
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./signup.component.css */ "./src/app/pages/signup/signup.component.css")).default]
                 })
-                /*
-                export interface questionArr {
-                  questionId: string;
-                  questionText: string;
-                  answerText: string;
-                }
-                
-                const myQuestions: questionArr[] = [
-                  {questionId: "dcousar", questionText: 'Donald', answerText: 'Cousar'},
-                  {questionId: "dcousar", questionText: 'Donald', answerText: 'Cousar'},
-                  {questionId: "dcousar", questionText: 'Donald', answerText: 'Cousar'}
-                ];
-                */
             ], SignupComponent);
+            //Declare Custom Array Type
+            //type SecurityQuestionType = { questionId: string, questionText: string, answerText: string } ;
             /***/ 
         }),
         /***/ "./src/app/pages/user-details/user-details.component.css": 
@@ -2400,6 +2409,7 @@
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
             /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
             /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
             /*
             ============================================
             ; Title:  Bob's Computer
@@ -2409,12 +2419,14 @@
             ;===========================================
             */
             var UserManagementDeleteDialogComponent = /** @class */ (function () {
-                function UserManagementDeleteDialogComponent(dialogRef, data, router) {
+                function UserManagementDeleteDialogComponent(dialogRef, data, router, http) {
                     this.dialogRef = dialogRef;
                     this.router = router;
+                    this.http = http;
                     //Define variables to call from HTML
                     this.myUserId = data.userId;
                     this.myUserName = data.username;
+                    this.users = data.users;
                     console.log('Dialog User: ' + this.myUserId);
                     /**
                      * Prove that data made it over from User Management Component
@@ -2422,6 +2434,17 @@
                     console.log('Delete Dialog: ');
                     console.table(data);
                 }
+                UserManagementDeleteDialogComponent.prototype.onCancel = function () {
+                    this.dialogRef.close();
+                };
+                UserManagementDeleteDialogComponent.prototype.delete = function () {
+                    var _this = this;
+                    this.http.delete('api/users/' + this.myUserId).subscribe(function (res) {
+                        console.log('Deleted User..Redirecting to User List');
+                    });
+                    this.dialogRef.close();
+                    this.users = this.users.filter(function (u) { return u._id !== _this.myUserId; });
+                };
                 UserManagementDeleteDialogComponent.prototype.ngOnInit = function () {
                 };
                 return UserManagementDeleteDialogComponent;
@@ -2429,7 +2452,8 @@
             UserManagementDeleteDialogComponent.ctorParameters = function () { return [
                 { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
                 { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
-                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+                { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
             ]; };
             UserManagementDeleteDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2512,25 +2536,16 @@
                     var dialogRef = this.dialog.open(_pages_user_management_delete_dialog_user_management_delete_dialog_component__WEBPACK_IMPORTED_MODULE_3__["UserManagementDeleteDialogComponent"], {
                         data: {
                             userId: userId,
-                            username: username
+                            username: username,
+                            users: this.users
                         },
                         disableClose: true,
                         width: '800px'
                     });
                     dialogRef.afterClosed().subscribe(function (result) {
+                        _this.users = _this.users.filter(function (u) { return u._id !== userId; });
                         //location.reload();
                         //this.users = this.users.filter(u => u._id !== userId);
-                        /**
-                         * BEGIN Working Delete Code
-                         */
-                        _this.http.delete('api/users/' + userId).subscribe(function (res) {
-                            console.log('Deleted User..Redirecting to User List');
-                            _this.users = _this.users.filter(function (u) { return u._id !== userId; });
-                            //this.router.navigate(['/user']);
-                        });
-                        /**
-                         * END Working Delete Code
-                         */
                         /*
                         if (result === 'confirm') {
                           console.log('Deleting');
