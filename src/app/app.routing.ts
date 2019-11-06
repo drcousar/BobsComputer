@@ -25,13 +25,10 @@ import {ServerErrorComponent} from './pages/server-error/server-error.component'
 import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
 import { VerifyQuestionsComponent } from './pages/verify-questions/verify-questions.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
-<<<<<<< HEAD
 import { RoleGuard } from './shared/role.guard';
-=======
 import { RoleManagementComponent } from './pages/role-management/role-management.component';
 import { RoleDetailsComponent } from './pages/role-details/role-details.component';
 import { AddRoleComponent } from './pages/add-role/add-role.component';
->>>>>>> 68e60cb20ec7b8776100bfd176742a181fee7694
 
 
 

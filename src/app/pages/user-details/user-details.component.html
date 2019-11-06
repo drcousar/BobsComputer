@@ -30,8 +30,8 @@
 
                     <mat-form-field>
                         <select [(value)]="selected" matNativeControl [(ngModel)]="Role" [ngModelOptions]="{standalone: true}" placeholder="Role">
-                            <option *ngFor="let role of roles" value={{role}}>
-                                {{role}}
+                            <option *ngFor="let role of roles" value={{role.name}}>
+                                {{role.name}}
                             </option>
                         </select> 
                     </mat-form-field>
