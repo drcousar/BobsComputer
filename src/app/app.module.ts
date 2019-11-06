@@ -2,7 +2,7 @@
 ; Title:  starter code
 ; Author: Professor Krasso
 ; Date:   21 October 2019
-; ModifiedBy: Don Cousar
+; ModifiedBy: Don Cousar and Jordan Hennessy
 ; ModifiedDate: 25 October 2019
 ; Description: BobComputer Starter Code
 ;===========================================
@@ -62,6 +62,10 @@ import { from } from 'rxjs';
 import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
 import { VerifyQuestionsComponent } from './pages/verify-questions/verify-questions.component';
 import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor';
+import { RoleManagementComponent } from './pages/role-management/role-management.component';
+import { RoleDetailsComponent } from './pages/role-details/role-details.component';
+import { RoleDeleteDialogComponent } from './pages/role-delete-dialog/role-delete-dialog.component';
+import { AddRoleComponent } from './pages/add-role/add-role.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +89,11 @@ import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor'
     AboutComponent,
     ServerErrorComponent,
     VerifyUserComponent,
-    VerifyQuestionsComponent
+    VerifyQuestionsComponent,
+    RoleManagementComponent,
+    RoleDetailsComponent,
+    RoleDeleteDialogComponent,
+    AddRoleComponent
   ],
   imports: [
     BrowserModule,
@@ -118,7 +126,8 @@ import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor'
   entryComponents: [
     UserManagementDeleteDialogComponent,
     SecurityQuestionsDeleteDialogComponent,
-    SignupDialogComponent
+    SignupDialogComponent,
+    RoleDeleteDialogComponent
   ]
 })
 export class AppModule { }

@@ -24,6 +24,9 @@ import {ServerErrorComponent} from './pages/server-error/server-error.component'
 import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
 import { VerifyQuestionsComponent } from './pages/verify-questions/verify-questions.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { RoleManagementComponent } from './pages/role-management/role-management.component';
+import { RoleDetailsComponent } from './pages/role-details/role-details.component';
+import { AddRoleComponent } from './pages/add-role/add-role.component';
 
 
 
@@ -73,8 +76,22 @@ export const AppRoutes: Routes = [
       {
         path: 'contact',
         component: ContactComponent
+      },
+      {
+        path: 'roles',
+        component: RoleManagementComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'roles/edit/:id',
+        component: RoleDetailsComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'roles/add',
+        component: AddRoleComponent,
+        canActivate: [AuthGuard]
       }
-
     ]
   },
   {

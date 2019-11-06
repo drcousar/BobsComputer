@@ -476,6 +476,7 @@ app.post('/api/find-by-ids', function (req, res, next) {
 });
 
 // Roles API
+// Get all Roles
 app.get('/api/roles', function(req, res, next) {
   Role.find({}, function(err, roles) {
     if (err) {
@@ -484,6 +485,73 @@ app.get('/api/roles', function(req, res, next) {
     } else {
       console.log(roles);
       res.json(roles);
+    }
+  })
+});
+
+// Create new role
+app.post('/api/roles', function(req, res, next) {
+  Role.findOne({'name': req.body.name}, function(err, role) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      if (!role) {
+        let role = {
+          name: req.body.name
+        }
+        Role.create(role, function(err, newRole) {
+          if (err) {
+            console.log(err);
+            return next(err);
+          } else {
+            console.log(newRole);
+            res.json(newRole);
+          }
+        })
+      } else {
+        console.log('${req.body.name} is already a user role!');
+        res.status(500).send({
+          test: '${req.body.name} is already a user role!',
+          time_stamp: new Date()
+        })
+      }
+    }
+  })
+});
+
+// Update role
+app.put('/api/roles/:id', function(req, res, next) {
+  Role.findOne({'_id': req.params.id}, function(err, role) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      role.set({
+        name: req.body.name
+      })
+      role.save( function(err, savedRole) {
+        if (err) {
+          console.log(err);
+          return next(err);
+        } else {
+          console.log(savedRole);
+          res.json(savedRole);
+        }
+      })
+    }
+  })
+});
+
+// Delete role
+app.delete('/api/roles/:id', function(req, res, next) {
+  Role.findByIdAndDelete({'_id': req.params.id}, function(err, role) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(role);
+      res.json(role);
     }
   })
 })
