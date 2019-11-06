@@ -11,6 +11,7 @@ import { AuthGuard } from './shared/auth.guard'
 import {LoginComponent} from './pages/login/login.component';
 import {HomeComponent} from './pages/home/home.component';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
+import {NotAuthorizedComponent} from './pages/not-authorized/not-authorized.component';
 import {UserManagementComponent} from './pages/user-management/user-management.component';
 import { UserManagementDeleteDialogComponent } from './pages/user-management-delete-dialog/user-management-delete-dialog.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
@@ -24,6 +25,7 @@ import {ServerErrorComponent} from './pages/server-error/server-error.component'
 import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
 import { VerifyQuestionsComponent } from './pages/verify-questions/verify-questions.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { RoleGuard } from './shared/role.guard';
 
 
 
@@ -88,6 +90,10 @@ export const AppRoutes: Routes = [
       {
         path: '404',
         component: NotFoundComponent
+      },
+      {
+        path: '401',
+        component: NotAuthorizedComponent
       },
       {
         path: 'about',

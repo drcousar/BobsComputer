@@ -24,13 +24,14 @@ export interface users {
   phoneNumber: string;
   address: string;
   email: string;
+  role: string;
   userId: number;
 }
 
 const USERS: users[] = [
-  {userName: "dcousar", firstName: 'Donald', lastName: 'Cousar', phoneNumber: '6015551010', address: '100 Main St', email: "dcousar@yahoo.com", userId: 1},
-  {userName: "aedwards", firstName: 'Alan', lastName: 'Edwards', phoneNumber: '6015551011', address: '102 Main St', email: "aedwards@yahoo.com", userId: 2},
-  {userName: "jhennessy", firstName: 'Jordan', lastName: 'Hennessy', phoneNumber: '6015551012', address: '101 Main St', email: "jhennessy@yahoo.com", userId: 3}
+  {userName: "dcousar", firstName: 'Donald', lastName: 'Cousar', phoneNumber: '6015551010', address: '100 Main St', email: "dcousar@yahoo.com", role: "admin", userId: 1},
+  {userName: "aedwards", firstName: 'Alan', lastName: 'Edwards', phoneNumber: '6015551011', address: '102 Main St', email: "aedwards@yahoo.com", role: "admin", userId: 2},
+  {userName: "jhennessy", firstName: 'Jordan', lastName: 'Hennessy', phoneNumber: '6015551012', address: '101 Main St', email: "jhennessy@yahoo.com", role: "admin", userId: 3}
 ];
 
 /**
@@ -45,7 +46,7 @@ const USERS: users[] = [
 export class UserManagementComponent implements OnInit {
 
   users: any;
-  displayedColumns = ['username', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'edit', 'delete'];
+  displayedColumns = ['username', 'firstName', 'lastName', 'phoneNumber', 'address', 'email', 'role', 'edit', 'delete'];
 
   constructor(private http: HttpClient, private dialog: MatDialog, private router: Router) {
     // console.table(USERS);  //Displays Static array of users defined above

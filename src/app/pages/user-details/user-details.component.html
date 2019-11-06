@@ -27,6 +27,14 @@
                     <mat-form-field>
                         <input type="text"  matInput [(ngModel)]="Email" value="{{Email}}" [ngModelOptions]="{standalone: true}" placeholder="Email" />
                     </mat-form-field>
+
+                    <mat-form-field>
+                        <select [(value)]="selected" matNativeControl [(ngModel)]="Role" [ngModelOptions]="{standalone: true}" placeholder="Role">
+                            <option *ngFor="let role of roles" value={{role}}>
+                                {{role}}
+                            </option>
+                        </select> 
+                    </mat-form-field>
             </div>
             </mat-card-content>
             <br />

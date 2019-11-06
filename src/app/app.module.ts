@@ -62,6 +62,7 @@ import { from } from 'rxjs';
 import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
 import { VerifyQuestionsComponent } from './pages/verify-questions/verify-questions.component';
 import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor';
+import { NotAuthorizedComponent } from './pages/not-authorized/not-authorized.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { ErrorInterceptor } from './shared/route-interceptors/error.interceptor'
     AboutComponent,
     ServerErrorComponent,
     VerifyUserComponent,
-    VerifyQuestionsComponent
+    VerifyQuestionsComponent,
+    NotAuthorizedComponent
   ],
   imports: [
     BrowserModule,
