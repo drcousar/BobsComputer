@@ -29,6 +29,7 @@ import { RoleGuard } from './shared/role.guard';
 import { RoleManagementComponent } from './pages/role-management/role-management.component';
 import { RoleDetailsComponent } from './pages/role-details/role-details.component';
 import { AddRoleComponent } from './pages/add-role/add-role.component';
+import { ServiceGraphComponent } from './pages/service-graph/service-graph.component';
 
 
 
@@ -93,6 +94,11 @@ export const AppRoutes: Routes = [
         path: 'roles/add',
         component: AddRoleComponent,
         canActivate: [AuthGuard]
+      },
+      {
+        path: 'graph',
+        component: ServiceGraphComponent,
+        canActivate: [AuthGuard, RoleGuard]
       }
     ]
   },

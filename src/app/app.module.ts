@@ -67,6 +67,7 @@ import { RoleManagementComponent } from './pages/role-management/role-management
 import { RoleDetailsComponent } from './pages/role-details/role-details.component';
 import { RoleDeleteDialogComponent } from './pages/role-delete-dialog/role-delete-dialog.component';
 import { AddRoleComponent } from './pages/add-role/add-role.component';
+import { ServiceGraphComponent } from './pages/service-graph/service-graph.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,8 @@ import { AddRoleComponent } from './pages/add-role/add-role.component';
     RoleManagementComponent,
     RoleDetailsComponent,
     RoleDeleteDialogComponent,
-    AddRoleComponent
+    AddRoleComponent,
+    ServiceGraphComponent
   ],
   imports: [
     BrowserModule,
