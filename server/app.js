@@ -17,6 +17,7 @@ const bcrypt = require('bcryptjs');
 const User = require('./models/user');
 const SecurityQuestion = require('./models/securityQuestion');
 const Role = require('./models/role');
+const Invoice = require('./models/invoice');
 
 let app = express();
 
@@ -539,6 +540,59 @@ app.delete('/api/roles/:id', function(req, res, next) {
     }
   })
 })
+
+
+// Invoice API
+// Create an invoice
+app.post('/:username', function(req, res, next) {
+  const username = req.params.username;
+
+  let invoice = {
+    number: req.body.number,
+    selectedServices: req.body.selectedServices,
+    partsCost: req.body.partsCost,
+    laborHours: req.body.laborHours,
+    selectedServicesTotal: req.body.selectedServicesTotal,
+    total: req.body.total,
+    username: username,
+    dateCreated: req.body.dateCreated
+  };
+
+  console.log(invoice);
+
+  Invoice.create(invoice, function(err, newInvoice) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(newInvoice);
+      res.json(newInvoice);
+    }
+  })
+});
+
+// Get Services for Graph
+app.get('/graph', function(req, res,next) {
+  Invoice.aggregate([
+    {"$unwind": "$selectedServices"},
+    {"$group": {
+      "_id": {
+        "title": "$selectedServices.serviceName",
+        "price": "$selectedServices.serviceCost"
+      },
+      "count": {"$sum": 1},
+      }},
+    {"$sort": {"$_id.title": 1} },
+  ], function(err, graph) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(graph);
+      res.json(graph);
+    }
+  });
+});
 
 /**
  * Creates an express server and listens on port 3000

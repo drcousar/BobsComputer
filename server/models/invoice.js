@@ -10,19 +10,19 @@
 const mongoose = require('mongoose');
 
 let selectedServices = mongoose.Schema({
-  serviceId: {type: String},
   serviceName: {type: String},
   serviceCost: {type: String}
 });
 
 
 let invoiceSchema = mongoose.Schema({
-  userId: {type: String},
+  username: {type: String},
   number: {type: String},
   selectedServices: [selectedServices],
   dateCreated: {type: Date, default: new Date()},
   partsCost: {type: String},
   laborHours: {type: String},
+  selectedServicesTotal: {type: String},
   total: {type: String}
 }, {collection: 'invoices'});
 
