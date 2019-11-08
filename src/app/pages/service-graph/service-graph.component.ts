@@ -25,6 +25,25 @@ export class ServiceGraphComponent implements OnInit {
         labels: this.labels,
         datasets:[
           {
+            backgroundColor: [
+              '#80DEEA',
+              '#FFB74D',
+              '#26C6DA',
+              '#FF9800',
+              '#00ACC1',
+              '#F57C00',
+              '#00838F'
+            ],
+            hoverBackgroundColor: [
+              '#FFCC80',
+              '#4DD0E1',
+              '#FFA726',
+              '#00BCD4',
+              '#FB8C00',
+              '#0097A7',
+              '#EF6C00'
+            ],
+            label: this.labels,
             data: this.itemCount
           },
         ]

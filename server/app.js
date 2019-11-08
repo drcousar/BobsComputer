@@ -572,7 +572,7 @@ app.post('/api/invoices/:username', function(req, res, next) {
 });
 
 // Get Services for Graph
-app.get('/api/invoices/graph', function(req, res,next) {
+app.get('/api/invoices/graph', function(req, res, next) {
   Invoice.aggregate([
     {"$unwind": "$selectedServices"},
     {"$group": {
@@ -582,7 +582,7 @@ app.get('/api/invoices/graph', function(req, res,next) {
       },
       "count": {"$sum": 1},
       }},
-    {"$sort": {"$_id.title": 1} },
+    {"$sort": {"_id.title": 1} },
   ], function(err, graph) {
     if (err) {
       console.log(err);
