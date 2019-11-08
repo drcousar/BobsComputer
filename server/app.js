@@ -544,7 +544,7 @@ app.delete('/api/roles/:id', function(req, res, next) {
 
 // Invoice API
 // Create an invoice
-app.post('/:username', function(req, res, next) {
+app.post('/api/invoices/:username', function(req, res, next) {
   const username = req.params.username;
 
   let invoice = {
@@ -572,7 +572,7 @@ app.post('/:username', function(req, res, next) {
 });
 
 // Get Services for Graph
-app.get('/graph', function(req, res,next) {
+app.get('/api/invoices/graph', function(req, res,next) {
   Invoice.aggregate([
     {"$unwind": "$selectedServices"},
     {"$group": {

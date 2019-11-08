@@ -68,6 +68,8 @@ import { RoleDetailsComponent } from './pages/role-details/role-details.componen
 import { RoleDeleteDialogComponent } from './pages/role-delete-dialog/role-delete-dialog.component';
 import { AddRoleComponent } from './pages/add-role/add-role.component';
 import { ServiceGraphComponent } from './pages/service-graph/service-graph.component';
+import {ChartModule} from 'primeng/chart';
+
 
 @NgModule({
   declarations: [
@@ -119,6 +121,7 @@ import { ServiceGraphComponent } from './pages/service-graph/service-graph.compo
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ChartModule,
     RouterModule.forRoot(AppRoutes, {useHash: true, enableTracing: false})
   ],
   providers: [{
