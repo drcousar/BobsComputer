@@ -13,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { resolve } from 'url';
 import { promise } from 'protractor';
+import { reject } from 'q';
 
 @Injectable({providedIn: 'root'})
 export class RoleGuard implements CanActivate {
@@ -22,12 +23,11 @@ export class RoleGuard implements CanActivate {
     constructor(private router: Router, private http: HttpClient, private cookieService: CookieService) {}
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean> {
-
         //Grab username from cookie
         const username = this.cookieService.get('username');
-        
+
         //wrap HTTP POST in a promise
-        return new Promise ((resolve) =>{
+        return new Promise ((resolve, reject) =>{
             this.http.get('/api/users/getuname/' + username)
             .subscribe(res => {
                 this.role = res['role'];
@@ -44,10 +44,9 @@ export class RoleGuard implements CanActivate {
 
                     //Send user to a not authorized error page
                     this.router.navigate(['/session/401']);
-                    resolve(false);
+                    reject(false);
                 }
             }) //end subscribe
-            return resolve;
-        })
+        }) //end return
     } //end CanActivate
 } //end class

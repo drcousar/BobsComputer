@@ -817,9 +817,10 @@
             /* harmony import */ var _pages_verify_user_verify_user_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/verify-user/verify-user.component */ "./src/app/pages/verify-user/verify-user.component.ts");
             /* harmony import */ var _pages_verify_questions_verify_questions_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/verify-questions/verify-questions.component */ "./src/app/pages/verify-questions/verify-questions.component.ts");
             /* harmony import */ var _pages_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/forgot-password/forgot-password.component */ "./src/app/pages/forgot-password/forgot-password.component.ts");
-            /* harmony import */ var _pages_role_management_role_management_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/role-management/role-management.component */ "./src/app/pages/role-management/role-management.component.ts");
-            /* harmony import */ var _pages_role_details_role_details_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/role-details/role-details.component */ "./src/app/pages/role-details/role-details.component.ts");
-            /* harmony import */ var _pages_add_role_add_role_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/add-role/add-role.component */ "./src/app/pages/add-role/add-role.component.ts");
+            /* harmony import */ var _shared_role_guard__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./shared/role.guard */ "./src/app/shared/role.guard.ts");
+            /* harmony import */ var _pages_role_management_role_management_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/role-management/role-management.component */ "./src/app/pages/role-management/role-management.component.ts");
+            /* harmony import */ var _pages_role_details_role_details_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/role-details/role-details.component */ "./src/app/pages/role-details/role-details.component.ts");
+            /* harmony import */ var _pages_add_role_add_role_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/add-role/add-role.component */ "./src/app/pages/add-role/add-role.component.ts");
             var AppRoutes = [
                 {
                     path: '',
@@ -833,7 +834,7 @@
                         {
                             path: 'user',
                             component: _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_7__["UserManagementComponent"],
-                            canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
+                            canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"], _shared_role_guard__WEBPACK_IMPORTED_MODULE_19__["RoleGuard"]]
                         },
                         {
                             path: 'user/edit/:id',
@@ -869,17 +870,17 @@
                         },
                         {
                             path: 'roles',
-                            component: _pages_role_management_role_management_component__WEBPACK_IMPORTED_MODULE_19__["RoleManagementComponent"],
+                            component: _pages_role_management_role_management_component__WEBPACK_IMPORTED_MODULE_20__["RoleManagementComponent"],
                             canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
                         },
                         {
                             path: 'roles/edit/:id',
-                            component: _pages_role_details_role_details_component__WEBPACK_IMPORTED_MODULE_20__["RoleDetailsComponent"],
+                            component: _pages_role_details_role_details_component__WEBPACK_IMPORTED_MODULE_21__["RoleDetailsComponent"],
                             canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
                         },
                         {
                             path: 'roles/add',
-                            component: _pages_add_role_add_role_component__WEBPACK_IMPORTED_MODULE_21__["AddRoleComponent"],
+                            component: _pages_add_role_add_role_component__WEBPACK_IMPORTED_MODULE_22__["AddRoleComponent"],
                             canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]]
                         }
                     ]
@@ -2499,11 +2500,9 @@
             ; Description: Bob's Computer
             ;===========================================
             */
-            var USERS = [
-                { userName: "dcousar", firstName: 'Donald', lastName: 'Cousar', phoneNumber: '6015551010', address: '100 Main St', email: "dcousar@yahoo.com", role: "admin", userId: 1 },
-                { userName: "aedwards", firstName: 'Alan', lastName: 'Edwards', phoneNumber: '6015551011', address: '102 Main St', email: "aedwards@yahoo.com", role: "admin", userId: 2 },
-                { userName: "jhennessy", firstName: 'Jordan', lastName: 'Hennessy', phoneNumber: '6015551012', address: '101 Main St', email: "jhennessy@yahoo.com", role: "admin", userId: 3 }
-            ];
+            /**
+             * BEGIN STATIC TEST DATA TO BEGIN CODING WITH
+             */
             /**
              * END STATIC TEST DATA
              */
@@ -2544,17 +2543,6 @@
                     });
                     dialogRef.afterClosed().subscribe(function (result) {
                         _this.users = _this.users.filter(function (u) { return u._id !== userId; });
-                        //location.reload();
-                        //this.users = this.users.filter(u => u._id !== userId);
-                        /*
-                        if (result === 'confirm') {
-                          console.log('Deleting');
-                          this.http.delete('api/users/ + userId').subscribe(res => {
-                            console.log('Deleted User');
-                            this.users = this.users.filter(u => u._id !== userId);
-                          })
-                        }
-                        */
                     });
                 }; //close delete function
                 UserManagementComponent.prototype.ngOnInit = function () {
@@ -2872,6 +2860,75 @@
             ; Description: BobComputer Starter Code
             ;===========================================
             */
+            /***/ 
+        }),
+        /***/ "./src/app/shared/role.guard.ts": 
+        /*!**************************************!*\
+          !*** ./src/app/shared/role.guard.ts ***!
+          \**************************************/
+        /*! exports provided: RoleGuard */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoleGuard", function () { return RoleGuard; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+            /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.js");
+            /*
+            ============================================
+            ; Title:  auth.guard.ts
+            ; Author: Don Cousar
+            ; Date:   5 November 2019
+            ; Description: Bob's Computer Repair Shop
+            ; If user has role set as admin on their profile, grant admin access
+            ;===========================================
+            */
+            var RoleGuard = /** @class */ (function () {
+                function RoleGuard(router, http, cookieService) {
+                    this.router = router;
+                    this.http = http;
+                    this.cookieService = cookieService;
+                    this.role = '';
+                    this.isAdmin = false;
+                }
+                RoleGuard.prototype.canActivate = function (route, state) {
+                    var _this = this;
+                    //Grab username from cookie
+                    var username = this.cookieService.get('username');
+                    //wrap HTTP POST in a promise
+                    return new Promise(function (resolve, reject) {
+                        _this.http.get('/api/users/getuname/' + username)
+                            .subscribe(function (res) {
+                            _this.role = res['role'];
+                            console.log('Role Type: ' + _this.role);
+                            //Determine if user has the admin role set in the user collection
+                            if (_this.role === "admin") {
+                                _this.isAdmin = true;
+                                console.log('Admin Verified');
+                                resolve(true);
+                            }
+                            else {
+                                console.log('Not an Admin...Rejecting...');
+                                _this.isAdmin = false;
+                                //Send user to a not authorized error page
+                                _this.router.navigate(['/session/401']);
+                                reject(false);
+                            }
+                        }); //end subscribe
+                    }); //end return
+                }; //end CanActivate
+                return RoleGuard;
+            }()); //end class
+            RoleGuard.ctorParameters = function () { return [
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+                { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+                { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_4__["CookieService"] }
+            ]; };
+            RoleGuard = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({ providedIn: 'root' })
+            ], RoleGuard);
             /***/ 
         }),
         /***/ "./src/app/shared/route-interceptors/error.interceptor.ts": 

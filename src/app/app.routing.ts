@@ -45,7 +45,7 @@ export const AppRoutes: Routes = [
       {
         path: 'user',
         component: UserManagementComponent,
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard, RoleGuard]
       },
       {
        path: 'user/edit/:id',
