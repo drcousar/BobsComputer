@@ -30,6 +30,8 @@ import { RoleManagementComponent } from './pages/role-management/role-management
 import { RoleDetailsComponent } from './pages/role-details/role-details.component';
 import { AddRoleComponent } from './pages/add-role/add-role.component';
 import { ServiceGraphComponent } from './pages/service-graph/service-graph.component';
+import { InvoiceComponent } from './pages/invoice/invoice.component';
+
 
 
 
@@ -109,6 +111,10 @@ export const AppRoutes: Routes = [
       {
         path: 'login',
         component: LoginComponent
+      },
+      {
+        path: 'invoice',
+        component: InvoiceComponent
       },
       {
         path: '404',

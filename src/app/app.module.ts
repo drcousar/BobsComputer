@@ -69,6 +69,7 @@ import { RoleDeleteDialogComponent } from './pages/role-delete-dialog/role-delet
 import { AddRoleComponent } from './pages/add-role/add-role.component';
 import { ServiceGraphComponent } from './pages/service-graph/service-graph.component';
 import {ChartModule} from 'primeng/chart';
+import { InvoiceComponent } from './pages/invoice/invoice.component';
 
 
 @NgModule({
@@ -99,7 +100,8 @@ import {ChartModule} from 'primeng/chart';
     RoleDetailsComponent,
     RoleDeleteDialogComponent,
     AddRoleComponent,
-    ServiceGraphComponent
+    ServiceGraphComponent,
+    InvoiceComponent
   ],
   imports: [
     BrowserModule,
