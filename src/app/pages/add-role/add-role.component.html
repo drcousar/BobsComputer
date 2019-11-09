@@ -1,1 +1,26 @@
-<p>add-role works!</p>
+<div fxLayout="column">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Add User Role</mat-card-title>
+      <mat-card-subtitle>Add a new user role below</mat-card-subtitle>
+    </mat-card-header>
+
+    <form [formGroup]="form" (ngSubmit)="saveRole()" #roleForm>
+      <mat-card-content>
+
+        <mat-form-field>
+          <input type="text" matInput [(ngModel)]="name" value="{{name}}" [ngModelOptions]="{standalone: true}" placeholder="user role"/>
+        </mat-form-field>
+
+      </mat-card-content>
+
+      <mat-card-actions>
+
+        <button mat-raised-button (click)="cancel()" color="accent">Cancel</button>
+        <button mat-raised-button color="primary">Submit</button>
+
+      </mat-card-actions>
+    </form>
+
+  </mat-card>
+</div>
