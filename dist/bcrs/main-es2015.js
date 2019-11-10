@@ -383,7 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\n    <mat-card-content>\n        <!-- service repair-->\n        <div fxLayout=\"column\">\n            <h4 fxFlex>Services</h4>\n\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\n                <mat-checkbox name=\"{{service.id}}\" ngModel>\n                    {{service.title}} ({{service.price | currency}})\n                </mat-checkbox>\n                <br/>\n            </div>\n        </div>\n\n        <br/><br/>\n        <mat-divider></mat-divider>\n        <br/><br/>\n        <!-- parts & labor-->\n\n        <div fxLayout=\"column\">\n                <h4 fxFlex>Standard Fees</h4>\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                    <input matInput\n                            name=\"parts\"\n                            ngModel=\"0\"\n                            placeholder=\"Parts\"/>\n                </mat-form-field>\n\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                        <input matInput\n                                name=\"labor\"\n                                ngModel=\"0\"\n                                placeholder=\"Labor\"/>\n                    </mat-form-field>\n            </div>\n        \n\n\n    </mat-card-content>\n    <!-- form actions-->\n    <br/><br/>\n    <mat-divider></mat-divider>\n    <br/><br/>\n\n    <mat-card-actions align='end'>\n        <button mat-raised-button type=\"reset\" color=\"warn\">Cancel</button>\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n    </mat-card-actions>\n\n</form>\n</mat-card>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\n    <mat-card-content>\n        <!-- service repair-->\n        <div fxLayout=\"column\">\n            <h4 fxFlex>Services</h4>\n\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\n                <mat-checkbox name=\"{{service.id}}\" ngModel>\n                    {{service.title}} ({{service.price | currency}})\n                </mat-checkbox>\n                <br/>\n            </div>\n        </div>\n\n        <br/><br/>\n        <mat-divider></mat-divider>\n        <br/><br/>\n        <!-- parts & labor-->\n\n        <div fxLayout=\"column\">\n                <h4 fxFlex>Standard Fees</h4>\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                    <input matInput\n                            name=\"parts\"\n                            ngModel=\"0\"\n                            placeholder=\"Parts\"/>\n                </mat-form-field>\n\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                        <input matInput\n                                name=\"labor\"\n                                ngModel=\"0\"\n                                placeholder=\"Labor\"/>\n                    </mat-form-field>\n            </div>\n        \n\n\n    </mat-card-content>\n    <!-- form actions-->\n    <br/><br/>\n    <mat-divider></mat-divider>\n    <br/><br/>\n\n    <mat-card-actions align='end'>\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n    </mat-card-actions>\n\n</form>\n</mat-card>\n</div>");
 
 /***/ }),
 
@@ -396,7 +396,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <h3 style=\"text-align: center;\">{{data.invoice.username}}, please confirm your order</h3>\n      \n    </mat-card-header>\n\n    <br/>\n      <p style=\"text-align: left;\">{{data.invoice.orderDate}}</p>\n\n      <br/><br/>\n      <mat-divider></mat-divider>\n      <h3 style=\"text-align: left;\"><b>Services</b></h3>\n      <ul>\n        <li style=\"text-align-last: justify; text-align: justify;\">{{data.invoice.lineItems}}</li>\n      </ul>\n      \n\n        <br/><br/>\n        <mat-divider></mat-divider>\n        <br/><br/>\n\n        <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\n        <p style=\"text-align: justify; text-align-last: justify;\">Parts: ${{data.invoice.partsAmount}}</p>\n        <p style=\"text-align: justify; text-align-last: justify;\">Labor: ${{data.invoice.laborAmount}}</p>\n\n        <br/><br/>\n        <mat-divider></mat-divider>\n        <br/><br/>\n        <p style=\"text-align: end;\">Total charges: ${{data.invoice.total}}</p>\n      \n      \n        <mat-card-actions align='end'>\n\n\n        <button mat-raised-button type=\"reset\" color=\"warn\">Cancel</button>\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n    </mat-card-actions>\n  \n          <!--\n          <ol>\n            Line Items = {{data.invoice.lineItems}}\n            partsAmount = {{data.invoice.partsAmount}} \n            laborAmount = {{data.invoice.laborAmount}}\n            lineItemTotal = {{data.invoice.lineItemTotal}}\n            total = {{data.invoice.total}}\n          </ol>\n  \n    \n\n  \n        \n\nconst invoice = {\n  lineItems: lineItems,\n  partsAmount: partsAmount,\n  laborAmount: laborAmount,\n  lineItemTotal: lineItemTotal,\n  total: total,\n  username: this.username,\n  orderDate: new Date()\n};\n    \n\n\n\n-->\n\n\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <h3 style=\"text-align: center;\">\n        {{ data.invoice.username }}, please confirm your order\n      </h3>\n    </mat-card-header>\n    <form (ngSubmit)=\"confirm()\">\n      <br />\n      <p style=\"text-align: left;\">{{ data.invoice.orderDate }}</p>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <h3 style=\"text-align: left;\"><b>Services</b></h3>\n      <div *ngFor=\"let item of data.invoice.lineItems\">\n        <p style=\"text-align: left;\">\n          {{ item.title }}: <span style=\"float:right\"> ${{ item.price }}</span>\n        </p>\n      </div>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <br /><br />\n\n      <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\n      <p style=\"text-align: justify; text-align-last: justify;\">\n        Parts: ${{ data.invoice.partsAmount }}\n      </p>\n      <p style=\"text-align: justify; text-align-last: justify;\">\n        Labor: ${{ data.invoice.laborAmount }}\n      </p>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <br /><br />\n      <p style=\"text-align: end;\">Total charges: ${{ data.invoice.total }}</p>\n\n      <mat-card-actions align=\"end\">\n        <button mat-raised-button matDialogClose color=\"primary\">Confirm</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -1891,30 +1891,22 @@ let InvoiceComponent = class InvoiceComponent {
         this.data = data;
         console.log(data.invoice);
     }
-    ngOnInit() {
-        //Send POST request to authenticate 
-        // this.http.post  ('/api/invoices  ', + invoice.username, {
-        // }).subscribe(res => {
-        //  if (res) {
-        //this.router.navigate(['/']);
-        //    console.log(res);
+    confirm() {
     }
+    ngOnInit() { }
 };
 InvoiceComponent.ctorParameters = () => [
     { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
 ];
 InvoiceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-invoice',
+        selector: "app-invoice",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./invoice.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/invoice/invoice.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./invoice.component.css */ "./src/app/pages/invoice/invoice.component.css")).default]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
 ], InvoiceComponent);
 
-//  })
-//  }
-//}
 
 
 /***/ }),
