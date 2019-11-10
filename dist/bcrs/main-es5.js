@@ -365,7 +365,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\n    <mat-card-content>\n        <!-- service repair-->\n        <div fxLayout=\"column\">\n            <h4 fxFlex>Services</h4>\n\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\n                <mat-checkbox name=\"{{service.id}}\" ngModel>\n                    {{service.title}} ({{service.price | currency}})\n                </mat-checkbox>\n                <br/>\n            </div>\n        </div>\n\n        <br/><br/>\n        <mat-divider></mat-divider>\n        <br/><br/>\n        <!-- parts & labor-->\n\n        <div fxLayout=\"column\">\n                <h4 fxFlex>Standard Fees</h4>\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                    <input matInput\n                            name=\"parts\"\n                            ngModel=\"0\"\n                            placeholder=\"Parts\"/>\n                </mat-form-field>\n\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                        <input matInput\n                                name=\"labor\"\n                                ngModel=\"0\"\n                                placeholder=\"Labor\"/>\n                    </mat-form-field>\n            </div>\n        \n\n\n    </mat-card-content>\n    <!-- form actions-->\n    <br/><br/>\n    <mat-divider></mat-divider>\n    <br/><br/>\n\n    <mat-card-actions align='end'>\n        <button mat-raised-button color=\"primary\">Submit</button>\n\n    </mat-card-actions>\n\n</form>\n</mat-card>\n</div>");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\n    <mat-card-content>\n        <!-- service repair-->\n        <div fxLayout=\"column\">\n            <h4 fxFlex>Services</h4>\n\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\n                <mat-checkbox name=\"{{service.id}}\" ngModel>\n                    {{service.title}} ({{service.price | currency}})\n                </mat-checkbox>\n                <br/>\n            </div>\n        </div>\n\n        <br/><br/>\n        <mat-divider></mat-divider>\n        <br/><br/>\n        <!-- parts & labor-->\n\n        <div fxLayout=\"column\">\n                <h4 fxFlex>Standard Fees</h4>\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                    <input matInput\n                            name=\"parts\"\n                            ngModel=\"0\"\n                            placeholder=\"Parts\"/>\n                </mat-form-field>\n\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                        <input matInput\n                                name=\"labor\"\n                                ngModel=\"0\"\n                                placeholder=\"Labor\"/>\n                    </mat-form-field>\n            </div>\n        \n\n\n    </mat-card-content>\n    <!-- form actions-->\n    <br/><br/>\n    <mat-divider></mat-divider>\n    <br/><br/>\n\n    <mat-card-actions align='end'>\n        <button mat-raised-button color=\"primary\" >Submit</button>\n\n    </mat-card-actions>\n\n</form>\n</mat-card>\n</div>");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/invoice/invoice.component.html": 
@@ -376,7 +376,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <h3 style=\"text-align: center;\">\n        {{ data.invoice.username }}, please confirm your order\n      </h3>\n    </mat-card-header>\n    <form (ngSubmit)=\"confirm()\">\n      <br />\n      <p style=\"text-align: left;\">{{ data.invoice.orderDate }}</p>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <h3 style=\"text-align: left;\"><b>Services</b></h3>\n      <div *ngFor=\"let item of data.invoice.lineItems\">\n        <p style=\"text-align: left;\">\n          {{ item.title }}: <span style=\"float:right\"> ${{ item.price }}</span>\n        </p>\n      </div>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <br /><br />\n\n      <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\n      <p style=\"text-align: justify; text-align-last: justify;\">\n        Parts: ${{ data.invoice.partsAmount }}\n      </p>\n      <p style=\"text-align: justify; text-align-last: justify;\">\n        Labor: ${{ data.invoice.laborAmount }}\n      </p>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <br /><br />\n      <p style=\"text-align: end;\">Total charges: ${{ data.invoice.total }}</p>\n\n      <mat-card-actions align=\"end\">\n        <button mat-raised-button matDialogClose color=\"primary\">Confirm</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <h3 style=\"text-align: center;\">\n        {{ data.invoice.username }}, please confirm your order\n      </h3>\n    </mat-card-header>\n    <form (ngSubmit)=\"confirm()\">\n      <br />\n      <p style=\"text-align: left;\">{{ data.invoice.orderDate }}</p>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <h3 style=\"text-align: left;\"><b>Services</b></h3>\n      <div *ngFor=\"let item of data.invoice.lineItems\">\n        <p style=\"text-align: left;\">\n          {{ item.title }}: <span style=\"float:right\"> ${{ item.price }}</span>\n        </p>\n      </div>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <br /><br />\n\n      <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\n      <p style=\"text-align: justify; text-align-last: justify;\">\n        Parts: ${{ data.invoice.partsAmount }}\n      </p>\n      <p style=\"text-align: justify; text-align-last: justify;\">\n        Labor: ${{ data.invoice.laborAmount }}\n      </p>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <br /><br />\n      <p style=\"text-align: end;\">Total charges: ${{ data.invoice.total }}</p>\n\n      <mat-card-actions align=\"end\">\n        <button mat-raised-button matDialogClose type=\"reset\" value=\"reset\" (click)=\"cancel()\" color=\"accent\">Cancel</button>\n        <button mat-raised-button matDialogClose color=\"primary\" type=\"confirm\" value=\"confirm\">Confirm</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/login/login.component.html": 
@@ -1639,7 +1639,6 @@
                     });
                 };
                 HomeComponent.prototype.submit = function (form) {
-                    var _this = this;
                     console.log(form);
                     var selectedServiceIds = [];
                     for (var _i = 0, _a = Object.entries(form.checkGroup); _i < _a.length; _i++) {
@@ -1661,11 +1660,12 @@
                             if (savedService.id === selectedService.id) {
                                 lineItems.push({
                                     title: savedService.title,
-                                    price: savedService.price
+                                    price: savedService.price,
                                 });
                             }
                         }
                     }
+                    this.number = lineItems.length;
                     console.log(lineItems);
                     var partsAmount = parseFloat(form.parts);
                     var laborAmount = form.labor * 50;
@@ -1678,7 +1678,8 @@
                         lineItemTotal: lineItemTotal,
                         total: total,
                         username: this.username,
-                        orderDate: new Date()
+                        orderDate: new Date(),
+                        number: this.number,
                     };
                     console.log(invoice);
                     var dialogRef = this.dialog.open(_invoice_invoice_component__WEBPACK_IMPORTED_MODULE_7__["InvoiceComponent"], {
@@ -1691,20 +1692,23 @@
                     dialogRef.afterClosed().subscribe(function (result) {
                         if (result === "confirm") {
                             console.log("invoice saved");
-                            _this.http
-                                .post("api/invoices/" + invoice.username, {
+                            /*this.http
+                              .post("api/invoices/" + invoice.username, {
                                 lineItems: invoice.lineItems,
                                 partsAmount: invoice.partsAmount,
                                 laborAmount: invoice.laborAmount,
                                 lineItemTotal: invoice.lineItemTotal,
                                 total: invoice.total,
                                 orderDate: invoice.orderDate
-                            })
-                                .subscribe(function (res) {
-                                _this.router.navigate(["/"]);
-                            }, function (err) {
-                                console.log(err);
-                            });
+                              })
+                              .subscribe(
+                                res => {
+                                  this.router.navigate(["/"]);
+                                },
+                                err => {
+                                  console.log(err);
+                                }
+                              );*/
                         }
                     });
                 };
@@ -1749,18 +1753,47 @@
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
             /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+            /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
             var InvoiceComponent = /** @class */ (function () {
-                function InvoiceComponent(data) {
+                function InvoiceComponent(data, http, router) {
                     this.data = data;
+                    this.http = http;
+                    this.router = router;
                     console.log(data.invoice);
+                    this.invoice = data.invoice;
+                    this.number = this.invoice.lineItems,
+                        console.log(this.lineItems);
                 }
                 InvoiceComponent.prototype.confirm = function () {
+                    var _this = this;
+                    console.log('Calling API!');
+                    this.http
+                        .post("api/invoices/" + this.invoice.username, {
+                        number: this.invoice.lineItems,
+                        selectedServices: this.invoice.lineItems,
+                        partsCost: this.invoice.partsAmount,
+                        laborHours: this.invoice.laborAmount,
+                        selectedServicesTotal: this.invoice.lineItemTotal,
+                        total: this.invoice.total,
+                        dateCreated: this.invoice.orderDate,
+                    })
+                        .subscribe(function (res) {
+                        _this.router.navigate(["/"]);
+                    }, function (err) {
+                        console.log(err);
+                    });
+                };
+                InvoiceComponent.prototype.cancel = function () {
+                    this.router.navigate(['/']);
                 };
                 InvoiceComponent.prototype.ngOnInit = function () { };
                 return InvoiceComponent;
             }());
             InvoiceComponent.ctorParameters = function () { return [
-                { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
+                { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
+                { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
             ]; };
             InvoiceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1770,6 +1803,14 @@
                 }),
                 tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
             ], InvoiceComponent);
+            /*number: req.body.number,
+            selectedServices: req.body.selectedServices,
+            partsCost: req.body.partsCost,
+            laborHours: req.body.laborHours,
+            selectedServicesTotal: req.body.selectedServicesTotal,
+            total: req.body.total,
+            username: username,
+            dateCreated: req.body.dateCreated*/
             /***/ 
         }),
         /***/ "./src/app/pages/login/login.component.css": 
