@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
     { title: "Keyboard Cleaning", price: 19.00, id: "106" },
     { title: "Disk Clean-up", price: 139.00, id: "107" }
   ];
+  number: any;
 
   constructor(
     private http: HttpClient,
@@ -73,11 +74,14 @@ export class HomeComponent implements OnInit {
         if (savedService.id === selectedService.id) {
           lineItems.push({
             title: savedService.title,
-            price: savedService.price
+            price: savedService.price,
+            
           });
         }
       }
     }
+
+    this.number = lineItems.length;
 
     console.log(lineItems);
     const partsAmount = parseFloat(form.parts);
@@ -92,7 +96,8 @@ export class HomeComponent implements OnInit {
       lineItemTotal: lineItemTotal,
       total: total,
       username: this.username,
-      orderDate: new Date()
+      orderDate: new Date(),
+      number: this.number,
     };
     console.log(invoice);
 
@@ -108,7 +113,7 @@ export class HomeComponent implements OnInit {
       if (result === "confirm") {
         console.log("invoice saved");
 
-        this.http
+        /*this.http
           .post("api/invoices/" + invoice.username, {
             lineItems: invoice.lineItems,
             partsAmount: invoice.partsAmount,
@@ -124,7 +129,7 @@ export class HomeComponent implements OnInit {
             err => {
               console.log(err);
             }
-          );
+          );*/
           
       }
     });

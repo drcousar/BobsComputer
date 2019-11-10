@@ -36,7 +36,12 @@
       <p style="text-align: end;">Total charges: ${{ data.invoice.total }}</p>
 
       <mat-card-actions align="end">
+<<<<<<< HEAD
         <button mat-raised-button matDialogClose color="primary" (click)="confirm()">Confirm</button>
+=======
+        <button mat-raised-button matDialogClose type="reset" value="reset" (click)="cancel()" color="accent">Cancel</button>
+        <button mat-raised-button matDialogClose color="primary" type="confirm" value="confirm">Confirm</button>
+>>>>>>> b3ce013faa3227c06a77ead85b408a5b76c4222a
       </mat-card-actions>
     </form>
   </mat-card>
