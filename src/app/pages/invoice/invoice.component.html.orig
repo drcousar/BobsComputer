@@ -1,0 +1,43 @@
+<div fxLayout="column">
+  <mat-card fxFlex style="text-align: center;">
+    <mat-card-header>
+      <h3 style="text-align: center;">
+        {{ data.invoice.username }}, please confirm your order
+      </h3>
+    </mat-card-header>
+    <form (ngSubmit)="confirm()">
+      <br />
+      <p style="text-align: left;">{{ data.invoice.orderDate }}</p>
+
+      <br /><br />
+      <mat-divider></mat-divider>
+      <h3 style="text-align: left;"><b>Services</b></h3>
+      <div *ngFor="let item of data.invoice.lineItems">
+        <p style="text-align: left;">
+          {{ item.title }}: <span style="float:right"> ${{ item.price }}</span>
+        </p>
+      </div>
+
+      <br /><br />
+      <mat-divider></mat-divider>
+      <br /><br />
+
+      <h3 style="text-align: start;"><b>Standard Fees</b></h3>
+      <p style="text-align: justify; text-align-last: justify;">
+        Parts: ${{ data.invoice.partsAmount }}
+      </p>
+      <p style="text-align: justify; text-align-last: justify;">
+        Labor: ${{ data.invoice.laborAmount }}
+      </p>
+
+      <br /><br />
+      <mat-divider></mat-divider>
+      <br /><br />
+      <p style="text-align: end;">Total charges: ${{ data.invoice.total }}</p>
+
+      <mat-card-actions align="end">
+        <button mat-raised-button matDialogClose color="primary">Confirm</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
