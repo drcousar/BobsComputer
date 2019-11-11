@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 
 let serviceSchema = mongoose.Schema({
   serviceName: {type: String},
-  cost: {type: String}
+  cost: {type: Number}
 }, {collection: 'services'});
 
 module.exports = mongoose.model('Service', serviceSchema);

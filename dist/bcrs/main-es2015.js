@@ -383,7 +383,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\n  <mat-card-header>\n    <mat-card-title>\n      New Order Form\n    </mat-card-title>\n    <mat-card-subtitle>\n      Fill out the form below to create a new order\n    </mat-card-subtitle>\n  </mat-card-header>\n  <form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\n    <mat-card-content>\n        <!-- service repair-->\n        <div fxLayout=\"column\">\n            <h4 fxFlex>Services</h4>\n\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\n                <mat-checkbox name=\"{{service.id}}\" ngModel>\n                    {{service.title}} ({{service.price | currency}})\n                </mat-checkbox>\n                <br/>\n            </div>\n        </div>\n\n        <br/><br/>\n        <mat-divider></mat-divider>\n        <br/><br/>\n        <!-- parts & labor-->\n\n        <div fxLayout=\"column\">\n                <h4 fxFlex>Standard Fees</h4>\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                    <input matInput\n                            name=\"parts\"\n                            ngModel=\"0\"\n                            placeholder=\"Parts\"/>\n                </mat-form-field>\n\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                        <input matInput\n                                name=\"labor\"\n                                ngModel=\"0\"\n                                placeholder=\"Labor\"/>\n                    </mat-form-field>\n            </div>\n\n\n\n    </mat-card-content>\n    <!-- form actions-->\n\n    <mat-card-actions>\n        <button mat-raised-button color=\"primary\" >Submit</button>\n\n    </mat-card-actions>\n\n</form>\n</mat-card>\n</div>\n");
+
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\r\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\r\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\r\n    <mat-card-content>\r\n        <!-- service repair-->\r\n        <div fxLayout=\"column\">\r\n            <h4 fxFlex>Services</h4>\r\n\r\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\r\n                <mat-checkbox name=\"{{service._id}}\" ngModel>\r\n                    {{service.serviceName}} ({{service.cost | currency}})\r\n                </mat-checkbox>\r\n                <br/>\r\n            </div>\r\n        </div>\r\n\r\n        <br/><br/>\r\n        <mat-divider></mat-divider>\r\n        <br/><br/>\r\n        <!-- parts & labor-->\r\n\r\n        <div fxLayout=\"column\">\r\n                <h4 fxFlex>Standard Fees</h4>\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                    <input matInput\r\n                            name=\"parts\"\r\n                            ngModel=\"0\"\r\n                            placeholder=\"Parts\"/>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                        <input matInput\r\n                                name=\"labor\"\r\n                                ngModel=\"0\"\r\n                                placeholder=\"Labor\"/>\r\n                    </mat-form-field>\r\n            </div>\r\n        \r\n\r\n\r\n    </mat-card-content>\r\n    <!-- form actions-->\r\n    <br/><br/>\r\n    <mat-divider></mat-divider>\r\n    <br/><br/>\r\n\r\n    <mat-card-actions align='end'>\r\n        <button mat-raised-button color=\"primary\" >Submit</button>\r\n\r\n    </mat-card-actions>\r\n\r\n</form>\r\n</mat-card>\r\n</div>");
+
 
 /***/ }),
 
@@ -1753,17 +1755,20 @@ let HomeComponent = class HomeComponent {
         this.fb = fb;
         this.dialog = dialog;
         this.router = router;
-        this.services = [
-            { title: "Password Reset", price: 39.00, id: "101" },
-            { title: "Spyware Removal", price: 39.00, id: "102" },
-            { title: "RAM Upgrade", price: 149.00, id: "103" },
-            { title: "Software Installation", price: 69.00, id: "104" },
-            { title: "PC Tune-up", price: 49.00, id: "105" },
-            { title: "Keyboard Cleaning", price: 19.00, id: "106" },
-            { title: "Disk Clean-up", price: 139.00, id: "107" }
-        ];
         //get username
         this.username = this.cookieservice.get("username");
+        http.get('/api/services').subscribe(res => {
+            //assign services from API
+            this.services = res;
+            //Prove that this.users is populated
+            console.log('API GET SERVICES: ');
+            console.table(this.services);
+        }, err => {
+            console.log('API GET SERVICES ERROR: ' + err);
+        }, () => {
+            //What to do upon success
+            //nothing for now
+        });
     }
     ngOnInit() {
         this.form = this.fb.group({
@@ -1788,10 +1793,10 @@ let HomeComponent = class HomeComponent {
          */
         for (const savedService of this.services) {
             for (const selectedService of selectedServiceIds) {
-                if (savedService.id === selectedService.id) {
+                if (savedService._id === selectedService.id) {
                     lineItems.push({
-                        serviceName: savedService.title,
-                        serviceCost: savedService.price,
+                        serviceName: savedService.serviceName,
+                        serviceCost: savedService.cost,
                     });
                 }
             }
@@ -1802,6 +1807,7 @@ let HomeComponent = class HomeComponent {
         const laborAmount = form.labor * 50;
         const lineItemTotal = lineItems.reduce((prev, cur) => prev + cur.serviceCost, 0);
         const total = partsAmount + laborAmount + lineItemTotal;
+        console.log(lineItemTotal);
         const invoice = {
             lineItems: lineItems,
             partsAmount: partsAmount,
@@ -1957,7 +1963,7 @@ laborHours: req.body.laborHours,
 selectedServicesTotal: req.body.selectedServicesTotal,
 total: req.body.total,
 username: username,
-dateCreated: req.body.dateCreated*/ 
+dateCreated: req.body.dateCreated*/
 
 
 /***/ }),
@@ -2985,7 +2991,7 @@ let SignupComponent = class SignupComponent {
      * Register user with form input
      */
     register() {
-        //STEP 1 Validate all Fields    
+        //STEP 1 Validate all Fields
         this.validateFields();
         //STEP 2: Build array of security questions and answers, if user answered all questions
         if (this.secQuestion1 &&
@@ -3057,7 +3063,7 @@ let SignupComponent = class SignupComponent {
     /*
       pushQuestionArr(id, answer) {
         let quest: any;
-    
+
           //Call Jordan's API to get question by id
           this.http.get('/api/questions/' + id).subscribe(res => {
             quest = res['questionText'];
@@ -3065,7 +3071,7 @@ let SignupComponent = class SignupComponent {
             //debug verification
             console.log('SECURITY QUESTIONS');
             console.log(this.securityQuestions);
-    
+
             console.log('getQuestion(): API GET Question: ');
             console.table(quest);
           }, err => {

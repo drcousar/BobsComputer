@@ -23,6 +23,8 @@ import { InvoiceComponent } from '../invoice/invoice.component';
 export class HomeComponent implements OnInit {
   form: FormGroup;
   username: string;
+  services: any;
+  /*
   services = [
     { title: "Password Reset", price: 39.00, id: "101" },
     { title: "Spyware Removal", price: 39.00, id: "102" },
@@ -32,6 +34,8 @@ export class HomeComponent implements OnInit {
     { title: "Keyboard Cleaning", price: 19.00, id: "106" },
     { title: "Disk Clean-up", price: 139.00, id: "107" }
   ];
+*/
+
   number: any;
 
   constructor(
@@ -43,6 +47,22 @@ export class HomeComponent implements OnInit {
   ) {
     //get username
     this.username = this.cookieservice.get("username");
+
+    http.get('/api/services').subscribe(res => {
+      //assign services from API
+      this.services = res;
+  
+      //Prove that this.users is populated
+      console.log('API GET SERVICES: ');
+      console.table(this.services);
+  
+    }, err => {
+      console.log('API GET SERVICES ERROR: ' + err);
+    },
+    () => {
+      //What to do upon success
+      //nothing for now
+    });
   }
 
   ngOnInit() {
@@ -72,10 +92,10 @@ export class HomeComponent implements OnInit {
 
     for (const savedService of this.services) {
       for (const selectedService of selectedServiceIds) {
-        if (savedService.id === selectedService.id) {
+        if (savedService._id === selectedService.id) {
           lineItems.push({
-            serviceName: savedService.title,
-            serviceCost: savedService.price,
+            serviceName: savedService.serviceName,
+            serviceCost: savedService.cost,
             
           });
         }
@@ -90,6 +110,8 @@ export class HomeComponent implements OnInit {
     const lineItemTotal = lineItems.reduce((prev, cur) => prev + cur.serviceCost, 0);
     const total = partsAmount + laborAmount + lineItemTotal;
 
+    console.log(lineItemTotal);
+    
     const invoice = {
       lineItems: lineItems,
       partsAmount: partsAmount,
