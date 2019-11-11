@@ -365,7 +365,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\r\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\r\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\r\n    <mat-card-content>\r\n        <!-- service repair-->\r\n        <div fxLayout=\"column\">\r\n            <h4 fxFlex>Services</h4>\r\n\r\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\r\n                <mat-checkbox name=\"{{service.id}}\" ngModel>\r\n                    {{service.title}} ({{service.price | currency}})\r\n                </mat-checkbox>\r\n                <br/>\r\n            </div>\r\n        </div>\r\n\r\n        <br/><br/>\r\n        <mat-divider></mat-divider>\r\n        <br/><br/>\r\n        <!-- parts & labor-->\r\n\r\n        <div fxLayout=\"column\">\r\n                <h4 fxFlex>Standard Fees</h4>\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                    <input matInput\r\n                            name=\"parts\"\r\n                            ngModel=\"0\"\r\n                            placeholder=\"Parts\"/>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                        <input matInput\r\n                                name=\"labor\"\r\n                                ngModel=\"0\"\r\n                                placeholder=\"Labor\"/>\r\n                    </mat-form-field>\r\n            </div>\r\n        \r\n\r\n\r\n    </mat-card-content>\r\n    <!-- form actions-->\r\n    <br/><br/>\r\n    <mat-divider></mat-divider>\r\n    <br/><br/>\r\n\r\n    <mat-card-actions align='end'>\r\n        <button mat-raised-button color=\"primary\" >Submit</button>\r\n\r\n    </mat-card-actions>\r\n\r\n</form>\r\n</mat-card>\r\n</div>");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\r\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\r\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\r\n    <mat-card-content>\r\n        <!-- service repair-->\r\n        <div fxLayout=\"column\">\r\n            <h4 fxFlex>Services</h4>\r\n\r\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\r\n                <mat-checkbox name=\"{{service._id}}\" ngModel>\r\n                    {{service.serviceName}} ({{service.cost | currency}})\r\n                </mat-checkbox>\r\n                <br/>\r\n            </div>\r\n        </div>\r\n\r\n        <br/><br/>\r\n        <mat-divider></mat-divider>\r\n        <br/><br/>\r\n        <!-- parts & labor-->\r\n\r\n        <div fxLayout=\"column\">\r\n                <h4 fxFlex>Standard Fees</h4>\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                    <input matInput\r\n                            name=\"parts\"\r\n                            ngModel=\"0\"\r\n                            placeholder=\"Parts\"/>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                        <input matInput\r\n                                name=\"labor\"\r\n                                ngModel=\"0\"\r\n                                placeholder=\"Labor\"/>\r\n                    </mat-form-field>\r\n            </div>\r\n        \r\n\r\n\r\n    </mat-card-content>\r\n    <!-- form actions-->\r\n    <br/><br/>\r\n    <mat-divider></mat-divider>\r\n    <br/><br/>\r\n\r\n    <mat-card-actions align='end'>\r\n        <button mat-raised-button color=\"primary\" >Submit</button>\r\n\r\n    </mat-card-actions>\r\n\r\n</form>\r\n</mat-card>\r\n</div>");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/invoice/invoice.component.html": 
@@ -1614,22 +1614,26 @@
             */
             var HomeComponent = /** @class */ (function () {
                 function HomeComponent(http, cookieservice, fb, dialog, router) {
+                    var _this = this;
                     this.http = http;
                     this.cookieservice = cookieservice;
                     this.fb = fb;
                     this.dialog = dialog;
                     this.router = router;
-                    this.services = [
-                        { title: "Password Reset", price: 39.00, id: "101" },
-                        { title: "Spyware Removal", price: 39.00, id: "102" },
-                        { title: "RAM Upgrade", price: 149.00, id: "103" },
-                        { title: "Software Installation", price: 69.00, id: "104" },
-                        { title: "PC Tune-up", price: 49.00, id: "105" },
-                        { title: "Keyboard Cleaning", price: 19.00, id: "106" },
-                        { title: "Disk Clean-up", price: 139.00, id: "107" }
-                    ];
                     //get username
                     this.username = this.cookieservice.get("username");
+                    http.get('/api/services').subscribe(function (res) {
+                        //assign services from API
+                        _this.services = res;
+                        //Prove that this.users is populated
+                        console.log('API GET SERVICES: ');
+                        console.table(_this.services);
+                    }, function (err) {
+                        console.log('API GET SERVICES ERROR: ' + err);
+                    }, function () {
+                        //What to do upon success
+                        //nothing for now
+                    });
                 }
                 HomeComponent.prototype.ngOnInit = function () {
                     this.form = this.fb.group({
@@ -1657,10 +1661,10 @@
                         var savedService = _d[_c];
                         for (var _e = 0, selectedServiceIds_1 = selectedServiceIds; _e < selectedServiceIds_1.length; _e++) {
                             var selectedService = selectedServiceIds_1[_e];
-                            if (savedService.id === selectedService.id) {
+                            if (savedService._id === selectedService.id) {
                                 lineItems.push({
-                                    serviceName: savedService.title,
-                                    serviceCost: savedService.price,
+                                    serviceName: savedService.serviceName,
+                                    serviceCost: savedService.cost,
                                 });
                             }
                         }
@@ -1671,6 +1675,7 @@
                     var laborAmount = form.labor * 50;
                     var lineItemTotal = lineItems.reduce(function (prev, cur) { return prev + cur.serviceCost; }, 0);
                     var total = partsAmount + laborAmount + lineItemTotal;
+                    console.log(lineItemTotal);
                     var invoice = {
                         lineItems: lineItems,
                         partsAmount: partsAmount,

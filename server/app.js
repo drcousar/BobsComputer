@@ -18,6 +18,7 @@ const User = require('./models/user');
 const SecurityQuestion = require('./models/securityQuestion');
 const Role = require('./models/role');
 const Invoice = require('./models/invoice');
+const Service = require('./models/service');
 
 let app = express();
 
@@ -593,6 +594,20 @@ app.get('/api/invoices/graph', function(req, res, next) {
       res.json(graph);
     }
   });
+});
+
+//Get services for form
+// Get all Users
+app.get('/api/services', function(req,res,next) {
+  Service.find({}, function(err, services) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(services);
+      res.json(services);
+    }
+  })
 });
 
 /**
