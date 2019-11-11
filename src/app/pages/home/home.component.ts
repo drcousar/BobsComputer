@@ -73,8 +73,8 @@ export class HomeComponent implements OnInit {
       for (const selectedService of selectedServiceIds) {
         if (savedService.id === selectedService.id) {
           lineItems.push({
-            title: savedService.title,
-            price: savedService.price,
+            serviceName: savedService.title,
+            serviceCost: savedService.price,
             
           });
         }

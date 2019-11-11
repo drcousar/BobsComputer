@@ -546,6 +546,7 @@ app.delete('/api/roles/:id', function(req, res, next) {
 // Create an invoice
 app.post('/api/invoices/:username', function(req, res, next) {
   const username = req.params.username;
+  console.table(req.body);
 
   let invoice = {
     number: req.body.number,

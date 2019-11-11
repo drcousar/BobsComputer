@@ -365,11 +365,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\r\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\r\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\r\n    <mat-card-content>\r\n        <!-- service repair-->\r\n        <div fxLayout=\"column\">\r\n            <h4 fxFlex>Services</h4>\r\n\r\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\r\n                <mat-checkbox name=\"{{service.id}}\" ngModel>\r\n                    {{service.title}} ({{service.price | currency}})\r\n                </mat-checkbox>\r\n                <br/>\r\n            </div>\r\n        </div>\r\n\r\n        <br/><br/>\r\n        <mat-divider></mat-divider>\r\n        <br/><br/>\r\n        <!-- parts & labor-->\r\n\r\n        <div fxLayout=\"column\">\r\n                <h4 fxFlex>Standard Fees</h4>\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                    <input matInput\r\n                            name=\"parts\"\r\n                            ngModel=\"0\"\r\n                            placeholder=\"Parts\"/>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                        <input matInput\r\n                                name=\"labor\"\r\n                                ngModel=\"0\"\r\n                                placeholder=\"Labor\"/>\r\n                    </mat-form-field>\r\n            </div>\r\n        \r\n\r\n\r\n    </mat-card-content>\r\n    <!-- form actions-->\r\n    <br/><br/>\r\n    <mat-divider></mat-divider>\r\n    <br/><br/>\r\n\r\n    <mat-card-actions align='end'>\r\n        <button mat-raised-button color=\"primary\">Submit</button>\r\n\r\n    </mat-card-actions>\r\n\r\n</form>\r\n</mat-card>\r\n</div>");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\n    <mat-card-content>\n        <!-- service repair-->\n        <div fxLayout=\"column\">\n            <h4 fxFlex>Services</h4>\n\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\n                <mat-checkbox name=\"{{service.id}}\" ngModel>\n                    {{service.title}} ({{service.price | currency}})\n                </mat-checkbox>\n                <br/>\n            </div>\n        </div>\n\n        <br/><br/>\n        <mat-divider></mat-divider>\n        <br/><br/>\n        <!-- parts & labor-->\n\n        <div fxLayout=\"column\">\n                <h4 fxFlex>Standard Fees</h4>\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                    <input matInput\n                            name=\"parts\"\n                            ngModel=\"0\"\n                            placeholder=\"Parts\"/>\n                </mat-form-field>\n\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                        <input matInput\n                                name=\"labor\"\n                                ngModel=\"0\"\n                                placeholder=\"Labor\"/>\n                    </mat-form-field>\n            </div>\n        \n\n\n    </mat-card-content>\n    <!-- form actions-->\n    <br/><br/>\n    <mat-divider></mat-divider>\n    <br/><br/>\n\n    <mat-card-actions align='end'>\n        <button mat-raised-button color=\"primary\" >Submit</button>\n\n    </mat-card-actions>\n\n</form>\n</mat-card>\n</div>");
->>>>>>> b3ce013faa3227c06a77ead85b408a5b76c4222a
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\r\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\r\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\r\n    <mat-card-content>\r\n        <!-- service repair-->\r\n        <div fxLayout=\"column\">\r\n            <h4 fxFlex>Services</h4>\r\n\r\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\r\n                <mat-checkbox name=\"{{service.id}}\" ngModel>\r\n                    {{service.title}} ({{service.price | currency}})\r\n                </mat-checkbox>\r\n                <br/>\r\n            </div>\r\n        </div>\r\n\r\n        <br/><br/>\r\n        <mat-divider></mat-divider>\r\n        <br/><br/>\r\n        <!-- parts & labor-->\r\n\r\n        <div fxLayout=\"column\">\r\n                <h4 fxFlex>Standard Fees</h4>\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                    <input matInput\r\n                            name=\"parts\"\r\n                            ngModel=\"0\"\r\n                            placeholder=\"Parts\"/>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                        <input matInput\r\n                                name=\"labor\"\r\n                                ngModel=\"0\"\r\n                                placeholder=\"Labor\"/>\r\n                    </mat-form-field>\r\n            </div>\r\n        \r\n\r\n\r\n    </mat-card-content>\r\n    <!-- form actions-->\r\n    <br/><br/>\r\n    <mat-divider></mat-divider>\r\n    <br/><br/>\r\n\r\n    <mat-card-actions align='end'>\r\n        <button mat-raised-button color=\"primary\" >Submit</button>\r\n\r\n    </mat-card-actions>\r\n\r\n</form>\r\n</mat-card>\r\n</div>");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/invoice/invoice.component.html": 
@@ -380,11 +376,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n  <mat-card fxFlex style=\"text-align: center;\">\r\n    <mat-card-header>\r\n      <h3 style=\"text-align: center;\">\r\n        {{ data.invoice.username }}, please confirm your order\r\n      </h3>\r\n    </mat-card-header>\r\n    <form (ngSubmit)=\"confirm()\">\r\n      <br />\r\n      <p style=\"text-align: left;\">{{ data.invoice.orderDate }}</p>\r\n\r\n      <br /><br />\r\n      <mat-divider></mat-divider>\r\n      <h3 style=\"text-align: left;\"><b>Services</b></h3>\r\n      <div *ngFor=\"let item of data.invoice.lineItems\">\r\n        <p style=\"text-align: left;\">\r\n          {{ item.title }}: <span style=\"float:right\"> ${{ item.price }}</span>\r\n        </p>\r\n      </div>\r\n\r\n      <br /><br />\r\n      <mat-divider></mat-divider>\r\n      <br /><br />\r\n\r\n      <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\r\n      <p style=\"text-align: justify; text-align-last: justify;\">\r\n        Parts: ${{ data.invoice.partsAmount }}\r\n      </p>\r\n      <p style=\"text-align: justify; text-align-last: justify;\">\r\n        Labor: ${{ data.invoice.laborAmount }}\r\n      </p>\r\n\r\n      <br /><br />\r\n      <mat-divider></mat-divider>\r\n      <br /><br />\r\n      <p style=\"text-align: end;\">Total charges: ${{ data.invoice.total }}</p>\r\n\r\n      <mat-card-actions align=\"end\">\r\n        <button mat-raised-button matDialogClose color=\"primary\" (click)=\"confirm()\">Confirm</button>\r\n      </mat-card-actions>\r\n    </form>\r\n  </mat-card>\r\n</div>\r\n");
-=======
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <h3 style=\"text-align: center;\">\n        {{ data.invoice.username }}, please confirm your order\n      </h3>\n    </mat-card-header>\n    <form (ngSubmit)=\"confirm()\">\n      <br />\n      <p style=\"text-align: left;\">{{ data.invoice.orderDate }}</p>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <h3 style=\"text-align: left;\"><b>Services</b></h3>\n      <div *ngFor=\"let item of data.invoice.lineItems\">\n        <p style=\"text-align: left;\">\n          {{ item.title }}: <span style=\"float:right\"> ${{ item.price }}</span>\n        </p>\n      </div>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <br /><br />\n\n      <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\n      <p style=\"text-align: justify; text-align-last: justify;\">\n        Parts: ${{ data.invoice.partsAmount }}\n      </p>\n      <p style=\"text-align: justify; text-align-last: justify;\">\n        Labor: ${{ data.invoice.laborAmount }}\n      </p>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <br /><br />\n      <p style=\"text-align: end;\">Total charges: ${{ data.invoice.total }}</p>\n\n      <mat-card-actions align=\"end\">\n        <button mat-raised-button matDialogClose type=\"reset\" value=\"reset\" (click)=\"cancel()\" color=\"accent\">Cancel</button>\n        <button mat-raised-button matDialogClose color=\"primary\" type=\"confirm\" value=\"confirm\">Confirm</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>\n");
->>>>>>> b3ce013faa3227c06a77ead85b408a5b76c4222a
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n  <mat-card fxFlex style=\"text-align: center;\">\r\n    <mat-card-header>\r\n      <h3 style=\"text-align: center;\">\r\n        {{ data.invoice.username }}, please confirm your order\r\n      </h3>\r\n    </mat-card-header>\r\n    <form (ngSubmit)=\"confirm()\">\r\n      <br />\r\n      <p style=\"text-align: left;\">{{ data.invoice.orderDate }}</p>\r\n\r\n      <br /><br />\r\n      <mat-divider></mat-divider>\r\n      <h3 style=\"text-align: left;\"><b>Services</b></h3>\r\n      <div *ngFor=\"let item of data.invoice.lineItems\">\r\n        <p style=\"text-align: left;\">\r\n          {{ item.title }}: <span style=\"float:right\"> ${{ item.price }}</span>\r\n        </p>\r\n      </div>\r\n\r\n      <br /><br />\r\n      <mat-divider></mat-divider>\r\n      <br /><br />\r\n\r\n      <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\r\n      <p style=\"text-align: justify; text-align-last: justify;\">\r\n        Parts: ${{ data.invoice.partsAmount }}\r\n      </p>\r\n      <p style=\"text-align: justify; text-align-last: justify;\">\r\n        Labor: ${{ data.invoice.laborAmount }}\r\n      </p>\r\n\r\n      <br /><br />\r\n      <mat-divider></mat-divider>\r\n      <br /><br />\r\n      <p style=\"text-align: end;\">Total charges: ${{ data.invoice.total }}</p>\r\n\r\n      <mat-card-actions align=\"end\">\r\n        <button mat-raised-button matDialogClose type=\"reset\" value=\"reset\" (click)=\"cancel()\" color=\"accent\">Cancel</button>\r\n        <button mat-raised-button matDialogClose color=\"primary\" type=\"confirm\" value=\"confirm\">Confirm</button>\r\n      </mat-card-actions>\r\n    </form>\r\n  </mat-card>\r\n</div>\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/login/login.component.html": 
@@ -1638,7 +1630,6 @@
                     ];
                     //get username
                     this.username = this.cookieservice.get("username");
-                    console.log('username' + this.username);
                 }
                 HomeComponent.prototype.ngOnInit = function () {
                     this.form = this.fb.group({
@@ -1668,15 +1659,14 @@
                             var selectedService = selectedServiceIds_1[_e];
                             if (savedService.id === selectedService.id) {
                                 lineItems.push({
-                                    title: savedService.title,
-                                    price: savedService.price,
+                                    serviceName: savedService.title,
+                                    serviceCost: savedService.price,
                                 });
                             }
                         }
                     }
                     this.number = lineItems.length;
                     console.log(lineItems);
-                    console.log('count: ' + lineItems.length);
                     var partsAmount = parseFloat(form.parts);
                     var laborAmount = form.labor * 50;
                     var lineItemTotal = lineItems.reduce(function (prev, cur) { return prev + cur.price; }, 0);
@@ -1700,8 +1690,6 @@
                         width: "800px"
                     });
                     dialogRef.afterClosed().subscribe(function (result) {
-<<<<<<< HEAD
-=======
                         if (result === "confirm") {
                             console.log("invoice saved");
                             /*this.http
@@ -1722,7 +1710,6 @@
                                 }
                               );*/
                         }
->>>>>>> b3ce013faa3227c06a77ead85b408a5b76c4222a
                     });
                 };
                 return HomeComponent;
@@ -1766,15 +1753,6 @@
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
             /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-<<<<<<< HEAD
-            /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-            var InvoiceComponent = /** @class */ (function () {
-                function InvoiceComponent(data, http) {
-                    this.data = data;
-                    this.http = http;
-                    console.log(data.invoice);
-                    this.invoice = data.invoice;
-=======
             /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
             /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
             var InvoiceComponent = /** @class */ (function () {
@@ -1784,55 +1762,37 @@
                     this.router = router;
                     console.log(data.invoice);
                     this.invoice = data.invoice;
-                    this.number = this.invoice.lineItems,
-                        console.log(this.lineItems);
->>>>>>> b3ce013faa3227c06a77ead85b408a5b76c4222a
+                    console.log(data.invoice.number);
                 }
                 InvoiceComponent.prototype.confirm = function () {
                     var _this = this;
                     console.log('Calling API!');
                     this.http
                         .post("api/invoices/" + this.invoice.username, {
-<<<<<<< HEAD
-                        lineItems: this.invoice.lineItems,
-                        partsAmount: this.invoice.partsAmount,
-                        laborAmount: this.invoice.laborAmount,
-                        lineItemTotal: this.invoice.lineItemTotal,
-                        total: this.invoice.total,
-                        orderDate: this.invoice.orderDate
-=======
-                        number: this.invoice.lineItems,
+                        number: this.data.invoice.number,
                         selectedServices: this.invoice.lineItems,
                         partsCost: this.invoice.partsAmount,
                         laborHours: this.invoice.laborAmount,
                         selectedServicesTotal: this.invoice.lineItemTotal,
                         total: this.invoice.total,
                         dateCreated: this.invoice.orderDate,
->>>>>>> b3ce013faa3227c06a77ead85b408a5b76c4222a
                     })
                         .subscribe(function (res) {
                         _this.router.navigate(["/"]);
                     }, function (err) {
                         console.log(err);
                     });
-<<<<<<< HEAD
-=======
                 };
                 InvoiceComponent.prototype.cancel = function () {
                     this.router.navigate(['/']);
->>>>>>> b3ce013faa3227c06a77ead85b408a5b76c4222a
                 };
                 InvoiceComponent.prototype.ngOnInit = function () { };
                 return InvoiceComponent;
             }());
             InvoiceComponent.ctorParameters = function () { return [
                 { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
-<<<<<<< HEAD
-                { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
-=======
                 { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
                 { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
->>>>>>> b3ce013faa3227c06a77ead85b408a5b76c4222a
             ]; };
             InvoiceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

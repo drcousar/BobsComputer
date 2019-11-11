@@ -29,8 +29,9 @@ export class InvoiceComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient, private router: Router) {
     console.log(data.invoice);
     this.invoice = data.invoice;
-    this.number = this.invoice.lineItems,
-    console.log(this.lineItems);
+
+    console.log(data.invoice.number);
+
   }
   
   confirm() {
@@ -38,7 +39,7 @@ export class InvoiceComponent implements OnInit {
       this.http
         .post("api/invoices/" + this.invoice.username, {
           
-          number:this.invoice.lineItems,
+          number: this.data.invoice.number,
           selectedServices: this.invoice.lineItems,
           partsCost: this.invoice.partsAmount,
           laborHours: this.invoice.laborAmount,
