@@ -1,9 +1,10 @@
 <div fxLayout="column">
   <mat-card fxFlex style="text-align: center;">
     <mat-card-header>
-      <h3 style="text-align: center;">
+      <mat-card-title>Invoice #{{data.invoice.number}}</mat-card-title>
+      <mat-card-subtitle style="text-align: center;">
         {{ data.invoice.username }}, please confirm your order
-      </h3>
+      </mat-card-subtitle>
     </mat-card-header>
     <form (ngSubmit)="confirm()">
       <br />
@@ -35,7 +36,7 @@
       <br /><br />
       <p style="text-align: end;">Total charges: ${{ data.invoice.total }}</p>
 
-      <mat-card-actions align="end">
+      <mat-card-actions>
         <button mat-raised-button matDialogClose type="reset" value="reset" (click)="cancel()" color="accent">Cancel</button>
         <button mat-raised-button matDialogClose color="primary" type="confirm" value="confirm">Confirm</button>
       </mat-card-actions>

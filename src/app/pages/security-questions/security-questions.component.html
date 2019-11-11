@@ -9,16 +9,16 @@
 */
 -->
 <div fxLayout="column">
-        <mat-card>
+        <mat-card fxFlex style="text-align: center;">
             <mat-card-title>Security Questions</mat-card-title>
-            <mat-card-subtitle><button routerLink="/questions/add">Add Question</button></mat-card-subtitle>
+            <mat-card-actions><button mat-raised-button routerLink="/questions/add" color="primary">Add Question</button></mat-card-actions>
             <mat-card-content>
                     <form #f="ngForm">
                     <table mat-table [dataSource]="questions" class="mat-elevation-z8">
-    
+
                         <!--- Note that these columns can be defined in any order.
                                 The actual rendered columns are set as a property on the row definition" -->
-    
+
                         <!-- Question Text Column -->
                         <ng-container matColumnDef="questionText">
                             <th mat-header-cell *matHeaderCellDef> Question Text </th>
@@ -27,22 +27,26 @@
                                 {{element.questionText}}
                             </td>
                         </ng-container>
-    
+
                         <!-- Edit Column -->
                         <ng-container matColumnDef="edit">
-                            <th mat-header-cell *matHeaderCellDef>  </th>
-    
+                            <th mat-header-cell *matHeaderCellDef>Edit</th>
+
                             <td mat-cell *matCellDef="let element">
-                                <button routerLink="/questions/edit/{{element._id}}" >Edit</button>
+                                <a routerLink="/questions/edit/{{element._id}}">
+                                  <mat-icon color="accent">edit</mat-icon>
+                                </a>
                             </td>
                         </ng-container>
-    
+
                         <!-- Delete Column -->
                         <ng-container matColumnDef="delete">
-                            <th mat-header-cell *matHeaderCellDef>  </th>
-    
+                            <th mat-header-cell *matHeaderCellDef>Delete</th>
+
                             <td mat-cell *matCellDef="let element">
-                                <button (click)="delete(element._id, element.questionText)" >Delete</button>
+                                <a (click)="delete(element._id, element.questionText)">
+                                    <mat-icon color="warn">delete</mat-icon>
+                                </a>
                             </td>
                         </ng-container>
                         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -52,4 +56,4 @@
             </mat-card-content>
         </mat-card>
     </div>
-    
+

@@ -10,7 +10,7 @@
 -->
 
 <div fxLayout="column">
-    <mat-card>
+    <mat-card fxFlex style="text-align: center;">
         <mat-card-title>Edit User Details</mat-card-title>
         <form [formGroup]="form" (ngSubmit)="saveUser()" #userForm>
             <mat-card-content>
@@ -33,7 +33,7 @@
                             <option *ngFor="let role of roles" value={{role.name}}>
                                 {{role.name}}
                             </option>
-                        </select> 
+                        </select>
                     </mat-form-field>
             </div>
             </mat-card-content>

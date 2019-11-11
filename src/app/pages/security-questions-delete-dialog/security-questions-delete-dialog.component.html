@@ -8,12 +8,15 @@
 ;===========================================
 */
 -->
-<h1 mat-dialog-title>Bob's Computer Repair Shop</h1>
-<div mat-dialog-content>
+<div fxFlex style="text-align: center;">
+  <h1 mat-dialog-title>Bob's Computer Repair Shop</h1>
+  <div mat-dialog-content>
     <h3>You have elected to delete the following Security Question: </h3>
     <h4>{{myQuestion}}</h4>
     <p>This cannot be undone!</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button [mat-dialog-close]="" cdkFocusInitial color="warn">Ok</button>
+  </div>
 </div>
-<div mat-dialog-actions>
-    <button mat-button [mat-dialog-close]="" cdkFocusInitial color="warn">Ok</button>
-</div>
+

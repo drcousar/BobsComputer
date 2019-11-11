@@ -1,11 +1,12 @@
 <div fxLayout="column">
-  <mat-card>
+  <mat-card fxFlex style="text-align: center;">
     <mat-card-header>
       <mat-card-title>Roles Management</mat-card-title>
-      <mat-card-subtitle>
-        <button mat-raised-button color="primary" routerLink='/roles/add'>Add User Role</button>
-      </mat-card-subtitle>
     </mat-card-header>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" routerLink='/roles/add'>Add User Role</button>
+    </mat-card-actions>
 
     <mat-card-content>
       <form #f="ngForm">
@@ -19,7 +20,7 @@
           </ng-container>
 
           <ng-container matColumnDef="edit">
-            <th mat-header-cell *matHeaderCellDef></th>
+            <th mat-header-cell *matHeaderCellDef>Edit</th>
             <td mat-cell *matCellDef="let element" style="vertical-align: middle;">
               <a routerLink="/roles/edit/{{element._id}}">
                 <mat-icon color="accent">edit</mat-icon>
@@ -28,7 +29,7 @@
           </ng-container>
 
           <ng-container matColumnDef="delete">
-              <th mat-header-cell *matHeaderCellDef></th>
+              <th mat-header-cell *matHeaderCellDef>Delete</th>
               <td mat-cell *matCellDef="let element" style="vertical-align: middle;">
                 <a (click)="delete(element._id, element.name)">
                   <mat-icon color="warn">delete</mat-icon>
