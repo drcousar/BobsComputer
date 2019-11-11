@@ -43,7 +43,6 @@ export class ServiceGraphComponent implements OnInit {
               '#0097A7',
               '#EF6C00'
             ],
-            label: this.labels,
             data: this.itemCount
           },
         ]

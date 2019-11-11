@@ -1,6 +1,9 @@
-.invoice-card{
+/*.invoice-card{
     width: 600px;
-    overflow: scroll;
+} */
+
+.mat-dialog-container {
+  overflow: scroll;
 }
 
 .mat-icon {
@@ -16,11 +19,7 @@
     text-decoration: none;
   }
 
-  .mat-card-header-text {
-    justify-content: center;
+  mat-dialog-actions button {
+    width: 48%;
+  }
 
-  }
-  .mat-card-title{
-    justify-content:center;
-    text-align: center;
-  }

@@ -383,9 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\r\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\r\n<form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\r\n    <mat-card-content>\r\n        <!-- service repair-->\r\n        <div fxLayout=\"column\">\r\n            <h4 fxFlex>Services</h4>\r\n\r\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\r\n                <mat-checkbox name=\"{{service._id}}\" ngModel>\r\n                    {{service.serviceName}} ({{service.cost | currency}})\r\n                </mat-checkbox>\r\n                <br/>\r\n            </div>\r\n        </div>\r\n\r\n        <br/><br/>\r\n        <mat-divider></mat-divider>\r\n        <br/><br/>\r\n        <!-- parts & labor-->\r\n\r\n        <div fxLayout=\"column\">\r\n                <h4 fxFlex>Standard Fees</h4>\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                    <input matInput\r\n                            name=\"parts\"\r\n                            ngModel=\"0\"\r\n                            placeholder=\"Parts\"/>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                        <input matInput\r\n                                name=\"labor\"\r\n                                ngModel=\"0\"\r\n                                placeholder=\"Labor\"/>\r\n                    </mat-form-field>\r\n            </div>\r\n        \r\n\r\n\r\n    </mat-card-content>\r\n    <!-- form actions-->\r\n    <br/><br/>\r\n    <mat-divider></mat-divider>\r\n    <br/><br/>\r\n\r\n    <mat-card-actions align='end'>\r\n        <button mat-raised-button color=\"primary\" >Submit</button>\r\n\r\n    </mat-card-actions>\r\n\r\n</form>\r\n</mat-card>\r\n</div>");
-
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\n  <mat-card-header>\n    <mat-card-title>\n      New Order Form\n    </mat-card-title>\n    <mat-card-subtitle>\n      Fill out the form below to create a new order\n    </mat-card-subtitle>\n  </mat-card-header>\n  <form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\n    <mat-card-content>\n        <!-- service repair-->\n        <div fxLayout=\"column\">\n            <h4 fxFlex>Services</h4>\n\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\n                <mat-checkbox name=\"{{service._id}}\" ngModel>\n                    {{service.serviceName}} ({{service.cost | currency}})\n                </mat-checkbox>\n                <br/>\n            </div>\n        </div>\n\n        <br/><br/>\n        <mat-divider></mat-divider>\n        <br/><br/>\n        <!-- parts & labor-->\n\n        <div fxLayout=\"column\">\n                <h4 fxFlex>Standard Fees</h4>\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                    <input matInput\n                            name=\"parts\"\n                            ngModel=\"0\"\n                            placeholder=\"Parts\"/>\n                </mat-form-field>\n\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                        <input matInput\n                                name=\"labor\"\n                                ngModel=\"0\"\n                                placeholder=\"Labor\"/>\n                    </mat-form-field>\n            </div>\n\n\n\n    </mat-card-content>\n    <!-- form actions-->\n\n    <mat-card-actions>\n        <button mat-raised-button color=\"primary\" >Submit</button>\n\n    </mat-card-actions>\n\n</form>\n</mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -515,7 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxLayout=\"column\">\n        <mat-card fxFlex style=\"text-align: center;\">\n            <mat-card-title>Security Questions</mat-card-title>\n            <mat-card-actions><button mat-raised-button routerLink=\"/questions/add\" color=\"primary\">Add Question</button></mat-card-actions>\n            <mat-card-content>\n                    <form #f=\"ngForm\">\n                    <table mat-table [dataSource]=\"questions\" class=\"mat-elevation-z8\">\n\n                        <!--- Note that these columns can be defined in any order.\n                                The actual rendered columns are set as a property on the row definition\" -->\n\n                        <!-- Question Text Column -->\n                        <ng-container matColumnDef=\"questionText\">\n                            <th mat-header-cell *matHeaderCellDef> Question Text </th>\n                            <!-- Edit User Name Control-->\n                            <td mat-cell *matCellDef=\"let element\">\n                                {{element.questionText}}\n                            </td>\n                        </ng-container>\n\n                        <!-- Edit Column -->\n                        <ng-container matColumnDef=\"edit\">\n                            <th mat-header-cell *matHeaderCellDef>  </th>\n\n                            <td mat-cell *matCellDef=\"let element\">\n                                <a routerLink=\"/questions/edit/{{element._id}}\">\n                                  <mat-icon color=\"accent\">edit</mat-icon>\n                                </a>\n                            </td>\n                        </ng-container>\n\n                        <!-- Delete Column -->\n                        <ng-container matColumnDef=\"delete\">\n                            <th mat-header-cell *matHeaderCellDef>Delete</th>\n\n                            <td mat-cell *matCellDef=\"let element\">\n                                <a (click)=\"delete(element._id, element.questionText)\">\n                                    <mat-icon color=\"warn\">delete</mat-icon>\n                                </a>\n                            </td>\n                        </ng-container>\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                    </table>\n                </form>\n            </mat-card-content>\n        </mat-card>\n    </div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxLayout=\"column\">\n        <mat-card fxFlex style=\"text-align: center;\">\n            <mat-card-title>Security Questions</mat-card-title>\n            <mat-card-actions><button mat-raised-button routerLink=\"/questions/add\" color=\"primary\">Add Question</button></mat-card-actions>\n            <mat-card-content>\n                    <form #f=\"ngForm\">\n                    <table mat-table [dataSource]=\"questions\" class=\"mat-elevation-z8\">\n\n                        <!--- Note that these columns can be defined in any order.\n                                The actual rendered columns are set as a property on the row definition\" -->\n\n                        <!-- Question Text Column -->\n                        <ng-container matColumnDef=\"questionText\">\n                            <th mat-header-cell *matHeaderCellDef> Question Text </th>\n                            <!-- Edit User Name Control-->\n                            <td mat-cell *matCellDef=\"let element\">\n                                {{element.questionText}}\n                            </td>\n                        </ng-container>\n\n                        <!-- Edit Column -->\n                        <ng-container matColumnDef=\"edit\">\n                            <th mat-header-cell *matHeaderCellDef>Edit</th>\n\n                            <td mat-cell *matCellDef=\"let element\">\n                                <a routerLink=\"/questions/edit/{{element._id}}\">\n                                  <mat-icon color=\"accent\">edit</mat-icon>\n                                </a>\n                            </td>\n                        </ng-container>\n\n                        <!-- Delete Column -->\n                        <ng-container matColumnDef=\"delete\">\n                            <th mat-header-cell *matHeaderCellDef>Delete</th>\n\n                            <td mat-cell *matCellDef=\"let element\">\n                                <a (click)=\"delete(element._id, element.questionText)\">\n                                    <mat-icon color=\"warn\">delete</mat-icon>\n                                </a>\n                            </td>\n                        </ng-container>\n                        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                    </table>\n                </form>\n            </mat-card-content>\n        </mat-card>\n    </div>\n\n");
 
 /***/ }),
 
@@ -541,7 +539,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"columns\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Service Purchases</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <p-chart type=\"bar\" [data]=\"data\"></p-chart>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"columns\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Service Purchases</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content>\n      <p-chart type=\"pie\" [data]=\"data\"></p-chart>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -1878,7 +1876,7 @@ HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".invoice-card{\n    width: 600px;\n    overflow: scroll;\n}\n\n.mat-icon {\n    display: block;\n    margin: auto;\n    width: 62px;\n    height: 62px;\n    font-size: 62px;\n  }\n\na {\n    text-transform: lowercase;\n    text-decoration: none;\n  }\n\n.mat-card-header-text {\n    justify-content: center;\n\n  }\n\n.mat-card-title{\n    justify-content:center;\n    text-align: center;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaW52b2ljZS9pbnZvaWNlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0ksY0FBYztJQUNkLFlBQVk7SUFDWixXQUFXO0lBQ1gsWUFBWTtJQUNaLGVBQWU7RUFDakI7O0FBRUE7SUFDRSx5QkFBeUI7SUFDekIscUJBQXFCO0VBQ3ZCOztBQUVBO0lBQ0UsdUJBQXVCOztFQUV6Qjs7QUFDQTtJQUNFLHNCQUFzQjtJQUN0QixrQkFBa0I7RUFDcEIiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9pbnZvaWNlL2ludm9pY2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbnZvaWNlLWNhcmR7XG4gICAgd2lkdGg6IDYwMHB4O1xuICAgIG92ZXJmbG93OiBzY3JvbGw7XG59XG5cbi5tYXQtaWNvbiB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgbWFyZ2luOiBhdXRvO1xuICAgIHdpZHRoOiA2MnB4O1xuICAgIGhlaWdodDogNjJweDtcbiAgICBmb250LXNpemU6IDYycHg7XG4gIH1cblxuICBhIHtcbiAgICB0ZXh0LXRyYW5zZm9ybTogbG93ZXJjYXNlO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgfVxuXG4gIC5tYXQtY2FyZC1oZWFkZXItdGV4dCB7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cbiAgfVxuICAubWF0LWNhcmQtdGl0bGV7XG4gICAganVzdGlmeS1jb250ZW50OmNlbnRlcjtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIH1cbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("/*.invoice-card{\n    width: 600px;\n} */\n\n.mat-dialog-container {\n  overflow: scroll;\n}\n\n.mat-icon {\n    display: block;\n    margin: auto;\n    width: 62px;\n    height: 62px;\n    font-size: 62px;\n  }\n\na {\n    text-transform: lowercase;\n    text-decoration: none;\n  }\n\nmat-dialog-actions button {\n    width: 48%;\n  }\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaW52b2ljZS9pbnZvaWNlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7O0FBRUg7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsWUFBWTtJQUNaLFdBQVc7SUFDWCxZQUFZO0lBQ1osZUFBZTtFQUNqQjs7QUFFQTtJQUNFLHlCQUF5QjtJQUN6QixxQkFBcUI7RUFDdkI7O0FBRUE7SUFDRSxVQUFVO0VBQ1oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9pbnZvaWNlL2ludm9pY2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qLmludm9pY2UtY2FyZHtcbiAgICB3aWR0aDogNjAwcHg7XG59ICovXG5cbi5tYXQtZGlhbG9nLWNvbnRhaW5lciB7XG4gIG92ZXJmbG93OiBzY3JvbGw7XG59XG5cbi5tYXQtaWNvbiB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgbWFyZ2luOiBhdXRvO1xuICAgIHdpZHRoOiA2MnB4O1xuICAgIGhlaWdodDogNjJweDtcbiAgICBmb250LXNpemU6IDYycHg7XG4gIH1cblxuICBhIHtcbiAgICB0ZXh0LXRyYW5zZm9ybTogbG93ZXJjYXNlO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgfVxuXG4gIG1hdC1kaWFsb2ctYWN0aW9ucyBidXR0b24ge1xuICAgIHdpZHRoOiA0OCU7XG4gIH1cblxuIl19 */");
 
 /***/ }),
 
@@ -1963,7 +1961,7 @@ laborHours: req.body.laborHours,
 selectedServicesTotal: req.body.selectedServicesTotal,
 total: req.body.total,
 username: username,
-dateCreated: req.body.dateCreated*/
+dateCreated: req.body.dateCreated*/ 
 
 
 /***/ }),
@@ -2819,7 +2817,6 @@ let ServiceGraphComponent = class ServiceGraphComponent {
                             '#0097A7',
                             '#EF6C00'
                         ],
-                        label: this.labels,
                         data: this.itemCount
                     },
                 ]
@@ -2991,7 +2988,7 @@ let SignupComponent = class SignupComponent {
      * Register user with form input
      */
     register() {
-        //STEP 1 Validate all Fields
+        //STEP 1 Validate all Fields    
         this.validateFields();
         //STEP 2: Build array of security questions and answers, if user answered all questions
         if (this.secQuestion1 &&
@@ -3063,7 +3060,7 @@ let SignupComponent = class SignupComponent {
     /*
       pushQuestionArr(id, answer) {
         let quest: any;
-
+    
           //Call Jordan's API to get question by id
           this.http.get('/api/questions/' + id).subscribe(res => {
             quest = res['questionText'];
@@ -3071,7 +3068,7 @@ let SignupComponent = class SignupComponent {
             //debug verification
             console.log('SECURITY QUESTIONS');
             console.log(this.securityQuestions);
-
+    
             console.log('getQuestion(): API GET Question: ');
             console.table(quest);
           }, err => {
