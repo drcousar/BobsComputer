@@ -86,7 +86,7 @@ export class HomeComponent implements OnInit {
     console.log(lineItems);
     const partsAmount = parseFloat(form.parts);
     const laborAmount = form.labor * 50;
-    const lineItemTotal = lineItems.reduce((prev, cur) => prev + cur.price, 0);
+    const lineItemTotal = lineItems.reduce((prev, cur) => prev + cur.serviceCost, 0);
     const total = partsAmount + laborAmount + lineItemTotal;
 
     const invoice = {

@@ -14,7 +14,7 @@
       <h3 style="text-align: left;"><b>Services</b></h3>
       <div *ngFor="let item of data.invoice.lineItems">
         <p style="text-align: left;">
-          {{ item.title }}: <span style="float:right"> ${{ item.price }}</span>
+          {{ item.serviceName }}: <span style="float:right"> ${{ item.serviceCost }}</span>
         </p>
       </div>
 
