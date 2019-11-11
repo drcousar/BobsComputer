@@ -1,3 +1,13 @@
+/*
+; Title:  starter code
+; Author: Professor Krasso
+:Modified by Group 2
+; Date:   21 October 2019
+; Description: BobComputer Starter Code
+;===========================================
+*/
+
+
 import { Component, OnInit, Inject } from "@angular/core";
 import { MAT_DIALOG_DATA } from "@angular/material";
 import { HomeComponent } from "../home/home.component";
