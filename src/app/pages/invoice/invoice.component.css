@@ -1,0 +1,25 @@
+/*.invoice-card{
+    width: 600px;
+} */
+
+.mat-dialog-container {
+  overflow: scroll;
+}
+
+.mat-icon {
+    display: block;
+    margin: auto;
+    width: 62px;
+    height: 62px;
+    font-size: 62px;
+  }
+
+  a {
+    text-transform: lowercase;
+    text-decoration: none;
+  }
+
+  mat-dialog-actions button {
+    width: 48%;
+  }
+

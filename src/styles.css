@@ -2,8 +2,12 @@
 @import './bobs-computer.scss';
 */
 
-mat-card-actions button {
+mat-card-actions button{
   width: 100%;
+}
+
+mat-card-actions {
+  width: 100%
 }
 
 .mat-card-actions {
@@ -17,6 +21,15 @@ mat-card {
   width: 80%;
   display: block;
 
+}
+
+
+.mat-form-field-infix {
+  width: 80% !important
+}
+
+input {
+  width: 80%;
 }
 
 a {

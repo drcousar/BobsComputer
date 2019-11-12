@@ -1,0 +1,12 @@
+<div fxFlex style="text-align: center;">
+  <h1 mat-dialog-title>User Roles</h1>
+  <div mat-dialog-content>
+    <h3>Are you sure you want to delete the following user role?</h3>
+    <p color="warn">This action can not be undone!</p>
+    <h4>{{role}}</h4>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="warn" (click)="delete(roleId)">Delete</button>
+  </div>
+</div>

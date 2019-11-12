@@ -2,7 +2,7 @@
 /*
 ============================================
 ; Title:  Bob's Computer
-; Author: Don Cousar
+; Author: Don Cousar and Jordan Hennessy
 ; Date:   23 October 2019
 ; Description: BobComputer Starter Code
 ;===========================================
@@ -12,32 +12,53 @@
   <main>
     <mat-toolbar class="menu" role="header" color="accent">
       <mat-toolbar-row>
+
         <button mat-button class="toolbar__icon-button mat-button">
           <a routerLink="/">
             <img src="../../../assets/BobLogoWhite.png" alt="Bob's Computer Repair Shop" id="logo">
           </a>
         </button>
+
+        <button mat-button class="mat-button">
+          <a routerLink="/">Service Repairs</a>
+        </button>
+
+        <button mat-button class="mat-button">
+          <a routerLink="/graph">Graph</a>
+        </button>
+
         <button mat-button class="mat-button">
           <a routerLink="/about">About Us</a>
         </button>
-        <button mat-button class="mat-button">
-          <a routerLink="">Service Repairs</a>
-        </button>
+
         <button mat-button class="mat-button">
           <a routerLink="/contact">Contact Us</a>
-        </button>
-        <button mat-button class="mat-button">
-          <a routerLink="/user">User Management</a>
-        </button>
-        <button mat-button class="mat-button">
-          <a routerLink="/questions">Security Questions Management</a>
         </button>
 
         <div fxFlex></div>
 
+        <button mat-button [matMenuTriggerFor]="settings">
+          <mat-icon style="color: #fff;">settings_applications</mat-icon>
+        </button>
+
+        <mat-menu #settings="matMenu">
+          <button mat-menu-item class="mat-button">
+            <a routerLink="/user">Users</a>
+          </button>
+
+          <button mat-menu-item class="mat-button">
+            <a routerLink="/questions">Security Questions</a>
+          </button>
+
+          <button mat-menu-item class="mat-button">
+            <a routerLink="/roles">User Roles</a>
+          </button>
+        </mat-menu>
+
         <button mat-button class="mat-button">
           <a (click)="logout()" class="nav-link">Logout</a>
         </button>
+
       </mat-toolbar-row>
     </mat-toolbar>
   </main>

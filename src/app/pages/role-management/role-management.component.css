@@ -1,0 +1,12 @@
+mat-card-actions {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+}
+
+mat-card-title {
+  text-align: center;
+}

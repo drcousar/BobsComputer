@@ -1,1 +1,60 @@
-<p>home works!</p>
+<div fxLayout="column">
+<h1 style="font-weight: lighter; text-align: center;">New Order Form</h1>
+<mat-card  style="width: 65%; margin: 0 auto;">
+  <mat-card-header>
+    <mat-card-title>
+      New Order Form
+    </mat-card-title>
+    <mat-card-subtitle>
+      Fill out the form below to create a new order
+    </mat-card-subtitle>
+  </mat-card-header>
+  <form #serviceRepairForm="ngForm" (ngSubmit)="submit(serviceRepairForm.value); serviceRepairForm.reset();">
+    <mat-card-content>
+        <!-- service repair-->
+        <div fxLayout="column">
+            <h4 fxFlex>Services</h4>
+
+            <div ngModelGroup="checkGroup" *ngFor="let service of services">
+                <mat-checkbox name="{{service._id}}" ngModel>
+                    {{service.serviceName}} ({{service.cost | currency}})
+                </mat-checkbox>
+                <br/>
+            </div>
+        </div>
+
+        <br/><br/>
+        <mat-divider></mat-divider>
+        <br/><br/>
+        <!-- parts & labor-->
+
+        <div fxLayout="column">
+                <h4 fxFlex>Standard Fees</h4>
+                <mat-form-field fxFlex style="widows: 300px !important;">
+                    <input matInput
+                            name="parts"
+                            ngModel="{{partsAmount}}"
+                            placeholder="Parts"/>
+                </mat-form-field>
+
+                <mat-form-field fxFlex style="widows: 300px !important;">
+                        <input matInput
+                                name="labor"
+                                ngModel="{{laborAmount}}"
+                                placeholder="Labor"/>
+                    </mat-form-field>
+            </div>
+
+
+
+    </mat-card-content>
+    <!-- form actions-->
+
+    <mat-card-actions>
+        <button mat-raised-button color="primary" >Submit</button>
+
+    </mat-card-actions>
+
+</form>
+</mat-card>
+</div>

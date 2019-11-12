@@ -1,0 +1,20 @@
+<div fxLayout="column">
+  <mat-card fxFlex style="text-align: center;">
+    <mat-card-header>
+      <mat-card-title>Edit User Role</mat-card-title>
+      <mat-card-subtitle>Change the name of {{name}} user role below</mat-card-subtitle>
+    </mat-card-header>
+
+    <form [formGroup]="form" (ngSubmit)="updateRole()" #roleUpdateForm>
+      <mat-card-content>
+        <mat-form-field>
+          <input type="text" matInput [(ngModel)]="name" [ngModelOptions]="{standalone: true}" value="{{name}}" placeholder="user role">
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="cancel()" color="accent">Cancel</button>
+        <button mat-raised-button color="primary">Submit</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
