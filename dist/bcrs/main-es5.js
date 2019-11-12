@@ -1652,6 +1652,11 @@
                         //What to do upon success
                         //nothing for now
                     });
+                    http.get('/api/invoices').subscribe(function (res) {
+                        _this.number = res;
+                        console.log("Returned Invoice Number: " + res);
+                    });
+                    console.log("Invoice #: " + this.number);
                 }
                 HomeComponent.prototype.ngOnInit = function () {
                     this.form = this.fb.group({
@@ -1672,10 +1677,6 @@
                             });
                         }
                     }
-                    this.number = this.http.get('/api/invoices').subscribe(function (res) {
-                        _this.number = res;
-                        console.log("Returned Invoice Number: " + res);
-                    });
                     var lineItems = [];
                     /**
                      * build the invoice object
@@ -3552,7 +3553,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("span {\n  margin: 1em 2em;\n}\n\na {\n  color: #fff;\n  text-transform: uppercase;\n  text-decoration: none;\n}\n\nmat-toolbar {\n  margin-top: 5em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gseUJBQXlCO0VBQ3pCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGVBQWU7QUFDakIiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsic3BhbiB7XG4gIG1hcmdpbjogMWVtIDJlbTtcbn1cblxuYSB7XG4gIGNvbG9yOiAjZmZmO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG5cbm1hdC10b29sYmFyIHtcbiAgbWFyZ2luLXRvcDogNWVtO1xufVxuIl19 */");
+            /* harmony default export */ __webpack_exports__["default"] = ("span {\n  margin: 1em 2em;\n}\n\na {\n  color: #fff;\n  text-transform: uppercase;\n  text-decoration: none;\n  font-size: 14px;\n}\n\nmat-toolbar {\n  margin-top: 5em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gseUJBQXlCO0VBQ3pCLHFCQUFxQjtFQUNyQixlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsZUFBZTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJzcGFuIHtcbiAgbWFyZ2luOiAxZW0gMmVtO1xufVxuXG5hIHtcbiAgY29sb3I6ICNmZmY7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuXG5tYXQtdG9vbGJhciB7XG4gIG1hcmdpbi10b3A6IDVlbTtcbn1cbiJdfQ== */");
             /***/ 
         }),
         /***/ "./src/app/shared/footer/footer.component.ts": 

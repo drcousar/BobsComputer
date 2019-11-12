@@ -66,6 +66,13 @@ export class HomeComponent implements OnInit {
       //What to do upon success
       //nothing for now
     });
+
+    http.get('/api/invoices').subscribe(res => {
+      this.number = res;
+      console.log("Returned Invoice Number: " + res );
+    })
+
+    console.log("Invoice #: " + this.number);
   }
 
   ngOnInit() {
@@ -87,10 +94,6 @@ export class HomeComponent implements OnInit {
       }
     }
 
-    this.number = this.http.get('/api/invoices').subscribe(res => {
-      this.number = res;
-      console.log("Returned Invoice Number: " + res );
-    })
 
     const lineItems = [];
 
