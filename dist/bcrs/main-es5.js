@@ -365,7 +365,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\r\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\r\n  <mat-card-header>\r\n    <mat-card-title>\r\n      New Order Form\r\n    </mat-card-title>\r\n    <mat-card-subtitle>\r\n      Fill out the form below to create a new order\r\n    </mat-card-subtitle>\r\n  </mat-card-header>\r\n  <form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\r\n    <mat-card-content>\r\n        <!-- service repair-->\r\n        <div fxLayout=\"column\">\r\n            <h4 fxFlex>Services</h4>\r\n\r\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\r\n                <mat-checkbox name=\"{{service._id}}\" ngModel>\r\n                    {{service.serviceName}} ({{service.cost | currency}})\r\n                </mat-checkbox>\r\n                <br/>\r\n            </div>\r\n        </div>\r\n\r\n        <br/><br/>\r\n        <mat-divider></mat-divider>\r\n        <br/><br/>\r\n        <!-- parts & labor-->\r\n\r\n        <div fxLayout=\"column\">\r\n                <h4 fxFlex>Standard Fees</h4>\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                    <input matInput\r\n                            name=\"parts\"\r\n                            ngModel=\"0\"\r\n                            placeholder=\"Parts\"/>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                        <input matInput\r\n                                name=\"labor\"\r\n                                ngModel=\"0\"\r\n                                placeholder=\"Labor\"/>\r\n                    </mat-form-field>\r\n            </div>\r\n\r\n\r\n\r\n    </mat-card-content>\r\n    <!-- form actions-->\r\n\r\n    <mat-card-actions>\r\n        <button mat-raised-button color=\"primary\" >Submit</button>\r\n\r\n    </mat-card-actions>\r\n\r\n</form>\r\n</mat-card>\r\n</div>\r\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\r\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\r\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\r\n  <mat-card-header>\r\n    <mat-card-title>\r\n      New Order Form\r\n    </mat-card-title>\r\n    <mat-card-subtitle>\r\n      Fill out the form below to create a new order\r\n    </mat-card-subtitle>\r\n  </mat-card-header>\r\n  <form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\r\n    <mat-card-content>\r\n        <!-- service repair-->\r\n        <div fxLayout=\"column\">\r\n            <h4 fxFlex>Services</h4>\r\n\r\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\r\n                <mat-checkbox name=\"{{service._id}}\" ngModel>\r\n                    {{service.serviceName}} ({{service.cost | currency}})\r\n                </mat-checkbox>\r\n                <br/>\r\n            </div>\r\n        </div>\r\n\r\n        <br/><br/>\r\n        <mat-divider></mat-divider>\r\n        <br/><br/>\r\n        <!-- parts & labor-->\r\n\r\n        <div fxLayout=\"column\">\r\n                <h4 fxFlex>Standard Fees</h4>\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                    <input matInput\r\n                            name=\"parts\"\r\n                            ngModel=\"{{partsAmount}}\"\r\n                            placeholder=\"Parts\"/>\r\n                </mat-form-field>\r\n\r\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\r\n                        <input matInput\r\n                                name=\"labor\"\r\n                                ngModel=\"{{laborAmount}}\"\r\n                                placeholder=\"Labor\"/>\r\n                    </mat-form-field>\r\n            </div>\r\n\r\n\r\n\r\n    </mat-card-content>\r\n    <!-- form actions-->\r\n\r\n    <mat-card-actions>\r\n        <button mat-raised-button color=\"primary\" >Submit</button>\r\n\r\n    </mat-card-actions>\r\n\r\n</form>\r\n</mat-card>\r\n</div>\r\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/invoice/invoice.component.html": 
@@ -398,7 +398,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<!--\n============================================\n; Title:  not-authorized\n; Author: Don Cousar\n; Date:   5 November 2019\n; Description: BobComputer Not Authorized Error Page\n;===========================================\n-->\n<div class=\"not-authorized-card\">\n    <div class=\"message\">\n        <h1 class=\"not-authorized-message\">\n        <b>401</b>\n        <h2 style=\"text-align:center\" class=\"subtext\">\n            <b\n            >Oh No! Looks like <br />\n            You are not Authorized!</b\n            >\n        </h2>\n        </h1>\n    \n        <div class=\"wrapper\">\n        <button\n            mat-button\n            class=\"mat-button\"\n            type=\"button\"\n            mat-raised-button\n            color=\"primary\"\n        >\n            <a routerLink=\"\">Go Back</a>\n        </button>\n        </div>\n    </div>\n</div>");
+            /* harmony default export */ __webpack_exports__["default"] = ("<!--\r\n============================================\r\n; Title:  not-authorized\r\n; Author: Don Cousar\r\n; Date:   5 November 2019\r\n; Description: BobComputer Not Authorized Error Page\r\n;===========================================\r\n-->\r\n<div class=\"not-authorized-card\">\r\n    <div class=\"message\">\r\n        <h1 class=\"not-authorized-message\">\r\n        <b>401</b>\r\n        <h2 style=\"text-align:center\" class=\"subtext\">\r\n            <b\r\n            >Oh No! Looks like <br />\r\n            You are not Authorized!</b\r\n            >\r\n        </h2>\r\n        </h1>\r\n    \r\n        <div class=\"wrapper\">\r\n        <button\r\n            mat-button\r\n            class=\"mat-button\"\r\n            type=\"button\"\r\n            mat-raised-button\r\n            color=\"primary\"\r\n        >\r\n            <a routerLink=\"\">Go Back</a>\r\n        </button>\r\n        </div>\r\n    </div>\r\n</div>");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/not-found/not-found.component.html": 
@@ -1625,6 +1625,8 @@
                     this.laborAmount = 0;
                     //get username
                     this.username = this.cookieservice.get("username");
+                    this.partsAmount = 0;
+                    this.laborAmount = 0;
                     http.get('/api/services').subscribe(function (res) {
                         //assign services from API
                         _this.services = res;
@@ -1646,6 +1648,7 @@
                     });
                 };
                 HomeComponent.prototype.submit = function (form) {
+                    var _this = this;
                     console.log(form);
                     var selectedServiceIds = [];
                     for (var _i = 0, _a = Object.entries(form.checkGroup); _i < _a.length; _i++) {
@@ -1700,6 +1703,8 @@
                     dialogRef.afterClosed().subscribe(function (result) {
                         if (result === "confirm") {
                             console.log("invoice saved");
+                            _this.laborAmount = 0;
+                            _this.partsAmount = 0;
                         }
                     });
                 };

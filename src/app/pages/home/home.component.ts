@@ -49,7 +49,8 @@ export class HomeComponent implements OnInit {
   ) {
     //get username
     this.username = this.cookieservice.get("username");
-
+    this.partsAmount = 0;
+    this.laborAmount = 0;
     http.get('/api/services').subscribe(res => {
       //assign services from API
       this.services = res;
@@ -138,6 +139,8 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result === "confirm") {
         console.log("invoice saved");
+        this.laborAmount = 0;
+        this.partsAmount = 0;
       }
     });
   }
