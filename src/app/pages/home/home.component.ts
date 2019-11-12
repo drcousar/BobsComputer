@@ -37,6 +37,8 @@ export class HomeComponent implements OnInit {
 */
 
   number: any;
+  partsAmount: number = 0;
+  laborAmount: number = 0;
 
   constructor(
     private http: HttpClient,
@@ -104,18 +106,19 @@ export class HomeComponent implements OnInit {
 
     this.number = lineItems.length;
 
+    
     console.log(lineItems);
-    const partsAmount = parseFloat(form.parts);
-    const laborAmount = form.labor * 50;
+    this.partsAmount = parseFloat(form.parts);
+    this.laborAmount = form.labor * 50;
     const lineItemTotal = lineItems.reduce((prev, cur) => prev + cur.serviceCost, 0);
-    const total = partsAmount + laborAmount + lineItemTotal;
+    const total = parseFloat((this.partsAmount + this.laborAmount + lineItemTotal).toFixed(2));
 
     console.log(lineItemTotal);
     
     const invoice = {
       lineItems: lineItems,
-      partsAmount: partsAmount,
-      laborAmount: laborAmount,
+      partsAmount: this.partsAmount,
+      laborAmount: this.laborAmount,
       lineItemTotal: lineItemTotal,
       total: total,
       username: this.username,
@@ -135,25 +138,6 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result === "confirm") {
         console.log("invoice saved");
-
-        /*this.http
-          .post("api/invoices/" + invoice.username, {
-            lineItems: invoice.lineItems,
-            partsAmount: invoice.partsAmount,
-            laborAmount: invoice.laborAmount,
-            lineItemTotal: invoice.lineItemTotal,
-            total: invoice.total,
-            orderDate: invoice.orderDate
-          })
-          .subscribe(
-            res => {
-              this.router.navigate(["/"]);
-            },
-            err => {
-              console.log(err);
-            }
-          );*/
-          
       }
     });
   }
