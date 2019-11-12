@@ -9,7 +9,7 @@
 
 
 import { Component, OnInit, Inject } from "@angular/core";
-import { MAT_DIALOG_DATA } from "@angular/material";
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 import { HomeComponent } from "../home/home.component";
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -32,36 +32,36 @@ export class InvoiceComponent implements OnInit {
   number:any;
   lineItems: any;
   length:any;
-  
-  
-  
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient, private router: Router) {
+
+
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient, private router: Router, private dialogRef: MatDialogRef<InvoiceComponent>) {
     console.log(data.invoice);
     this.invoice = data.invoice;
 
     console.log(data.invoice.number);
 
   }
-  
+
   confirm() {
     console.log('Calling API!');
       this.http
         .post("api/invoices/" + this.invoice.username, {
-          
+
           number: this.data.invoice.number,
           selectedServices: this.invoice.lineItems,
           partsCost: this.invoice.partsAmount,
           laborHours: this.invoice.laborAmount,
           selectedServicesTotal: this.invoice.lineItemTotal ,
-          
-          
+
+
           total: this.invoice.total,
           dateCreated: this.invoice.orderDate,
-           
-                     
+
+
           })
-          
+
           .subscribe(
             res => {
               this.router.navigate(["/"]);
@@ -70,13 +70,13 @@ export class InvoiceComponent implements OnInit {
               console.log(err);
             }
           );
-          
+
   }
-  cancel() {
-    this.router.navigate(['/']);
+  cancel(): void {
+      this.dialogRef.close()
   }
 
-  
+
   ngOnInit() {}
 }
 

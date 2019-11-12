@@ -376,7 +376,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Invoice #{{data.invoice.number}}</mat-card-title>\n      <mat-card-subtitle style=\"text-align: center;\">\n        {{ data.invoice.username }}, please confirm your order\n      </mat-card-subtitle>\n    </mat-card-header>\n    <form (ngSubmit)=\"confirm()\">\n      <br />\n      <p style=\"text-align: left;\">{{ data.invoice.orderDate }}</p>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <h3 style=\"text-align: left;\"><b>Services</b></h3>\n      <div *ngFor=\"let item of data.invoice.lineItems\">\n        <p style=\"text-align: left;\">\n          {{ item.serviceName }}: <span style=\"float:right\"> ${{ item.serviceCost }}</span>\n        </p>\n      </div>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <br /><br />\n\n      <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\n      <p style=\"text-align: justify; text-align-last: justify;\">\n        Parts: ${{ data.invoice.partsAmount }}\n      </p>\n      <p style=\"text-align: justify; text-align-last: justify;\">\n        Labor: ${{ data.invoice.laborAmount }}\n      </p>\n\n      <br /><br />\n      <mat-divider></mat-divider>\n      <br /><br />\n      <p style=\"text-align: end;\">Total charges: ${{ data.invoice.total }}</p>\n\n      <mat-card-actions>\n        <button mat-raised-button matDialogClose type=\"reset\" value=\"reset\" (click)=\"cancel()\" color=\"accent\">Cancel</button>\n        <button mat-raised-button matDialogClose color=\"primary\" type=\"confirm\" value=\"confirm\">Confirm</button>\n      </mat-card-actions>\n    </form>\n  </mat-card>\n</div>\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Invoice #{{data.invoice.number}}</mat-card-title>\n      <mat-card-subtitle style=\"text-align: center;\">\n        {{ data.invoice.username }}, please confirm your order\n      </mat-card-subtitle>\n    </mat-card-header>\n    <mat-card-content>\n      <form (ngSubmit)=\"confirm()\">\n        <br />\n        <p style=\"text-align: left;\">{{ data.invoice.orderDate }}</p>\n\n        <br /><br />\n        <mat-divider></mat-divider>\n        <h3 style=\"text-align: left;\"><b>Services</b></h3>\n        <div *ngFor=\"let item of data.invoice.lineItems\">\n          <p style=\"text-align: left;\">\n            {{ item.serviceName }}: <span style=\"float:right\"> ${{ item.serviceCost }}</span>\n          </p>\n        </div>\n\n        <br /><br />\n        <mat-divider></mat-divider>\n        <br /><br />\n\n        <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\n        <p style=\"text-align: justify; text-align-last: justify;\">\n          Parts: ${{ data.invoice.partsAmount }}\n        </p>\n        <p style=\"text-align: justify; text-align-last: justify;\">\n          Labor: ${{ data.invoice.laborAmount }}\n        </p>\n\n        <br /><br />\n        <mat-divider></mat-divider>\n        <br /><br />\n        <p style=\"text-align: end;\">Total charges: ${{ data.invoice.total }}</p>\n\n        <mat-card-actions>\n          <button mat-raised-button matDialogClose type=\"reset\" value=\"reset\" (click)=\"cancel()\" color=\"accent\">Cancel</button>\n          <button mat-raised-button matDialogClose color=\"primary\" type=\"confirm\" value=\"confirm\">Confirm</button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n\n  </mat-card>\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/login/login.component.html": 
@@ -1644,6 +1644,7 @@
                     });
                 };
                 HomeComponent.prototype.submit = function (form) {
+                    var _this = this;
                     console.log(form);
                     var selectedServiceIds = [];
                     for (var _i = 0, _a = Object.entries(form.checkGroup); _i < _a.length; _i++) {
@@ -1716,6 +1717,12 @@
                                 }
                               );*/
                         }
+                        _this.http.get('/api/services').subscribe(function (res) {
+                            //assign services from API
+                            _this.services = res;
+                        }, function (err) {
+                            console.log(err);
+                        });
                     });
                 };
                 return HomeComponent;
@@ -1744,7 +1751,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("/*.invoice-card{\n    width: 600px;\n} */\n\n.mat-dialog-container {\n  overflow: scroll;\n}\n\n.mat-icon {\n    display: block;\n    margin: auto;\n    width: 62px;\n    height: 62px;\n    font-size: 62px;\n  }\n\na {\n    text-transform: lowercase;\n    text-decoration: none;\n  }\n\nmat-dialog-actions button {\n    width: 48%;\n  }\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaW52b2ljZS9pbnZvaWNlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7O0FBRUg7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsWUFBWTtJQUNaLFdBQVc7SUFDWCxZQUFZO0lBQ1osZUFBZTtFQUNqQjs7QUFFQTtJQUNFLHlCQUF5QjtJQUN6QixxQkFBcUI7RUFDdkI7O0FBRUE7SUFDRSxVQUFVO0VBQ1oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9pbnZvaWNlL2ludm9pY2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qLmludm9pY2UtY2FyZHtcbiAgICB3aWR0aDogNjAwcHg7XG59ICovXG5cbi5tYXQtZGlhbG9nLWNvbnRhaW5lciB7XG4gIG92ZXJmbG93OiBzY3JvbGw7XG59XG5cbi5tYXQtaWNvbiB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgbWFyZ2luOiBhdXRvO1xuICAgIHdpZHRoOiA2MnB4O1xuICAgIGhlaWdodDogNjJweDtcbiAgICBmb250LXNpemU6IDYycHg7XG4gIH1cblxuICBhIHtcbiAgICB0ZXh0LXRyYW5zZm9ybTogbG93ZXJjYXNlO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgfVxuXG4gIG1hdC1kaWFsb2ctYWN0aW9ucyBidXR0b24ge1xuICAgIHdpZHRoOiA0OCU7XG4gIH1cblxuIl19 */");
+            /* harmony default export */ __webpack_exports__["default"] = ("/*.invoice-card{\n    width: 600px;\n} */\n\n.mat-dialog-container {\n  overflow: scroll;\n}\n\n.mat-icon {\n    display: block;\n    margin: auto;\n    width: 62px;\n    height: 62px;\n    font-size: 62px;\n  }\n\na {\n    text-transform: lowercase;\n    text-decoration: none;\n  }\n\nmat-dialog-actions button {\n    width: 48%;\n  }\n\nmat-card-content {\n    overflow: scroll;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaW52b2ljZS9pbnZvaWNlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7O0FBRUg7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsWUFBWTtJQUNaLFdBQVc7SUFDWCxZQUFZO0lBQ1osZUFBZTtFQUNqQjs7QUFFQTtJQUNFLHlCQUF5QjtJQUN6QixxQkFBcUI7RUFDdkI7O0FBRUE7SUFDRSxVQUFVO0VBQ1o7O0FBRUE7SUFDRSxnQkFBZ0I7RUFDbEIiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9pbnZvaWNlL2ludm9pY2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qLmludm9pY2UtY2FyZHtcbiAgICB3aWR0aDogNjAwcHg7XG59ICovXG5cbi5tYXQtZGlhbG9nLWNvbnRhaW5lciB7XG4gIG92ZXJmbG93OiBzY3JvbGw7XG59XG5cbi5tYXQtaWNvbiB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgbWFyZ2luOiBhdXRvO1xuICAgIHdpZHRoOiA2MnB4O1xuICAgIGhlaWdodDogNjJweDtcbiAgICBmb250LXNpemU6IDYycHg7XG4gIH1cblxuICBhIHtcbiAgICB0ZXh0LXRyYW5zZm9ybTogbG93ZXJjYXNlO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgfVxuXG4gIG1hdC1kaWFsb2ctYWN0aW9ucyBidXR0b24ge1xuICAgIHdpZHRoOiA0OCU7XG4gIH1cblxuICBtYXQtY2FyZC1jb250ZW50IHtcbiAgICBvdmVyZmxvdzogc2Nyb2xsO1xuICB9XG4iXX0= */");
             /***/ 
         }),
         /***/ "./src/app/pages/invoice/invoice.component.ts": 
@@ -1770,10 +1777,11 @@
             ;===========================================
             */
             var InvoiceComponent = /** @class */ (function () {
-                function InvoiceComponent(data, http, router) {
+                function InvoiceComponent(data, http, router, dialogRef) {
                     this.data = data;
                     this.http = http;
                     this.router = router;
+                    this.dialogRef = dialogRef;
                     console.log(data.invoice);
                     this.invoice = data.invoice;
                     console.log(data.invoice.number);
@@ -1798,7 +1806,7 @@
                     });
                 };
                 InvoiceComponent.prototype.cancel = function () {
-                    this.router.navigate(['/']);
+                    this.dialogRef.close();
                 };
                 InvoiceComponent.prototype.ngOnInit = function () { };
                 return InvoiceComponent;
@@ -1806,7 +1814,8 @@
             InvoiceComponent.ctorParameters = function () { return [
                 { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
                 { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
-                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+                { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+                { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] }
             ]; };
             InvoiceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

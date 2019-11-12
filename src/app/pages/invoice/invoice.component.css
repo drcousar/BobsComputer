@@ -23,3 +23,6 @@
     width: 48%;
   }
 
+  mat-card-content {
+    overflow: scroll;
+  }

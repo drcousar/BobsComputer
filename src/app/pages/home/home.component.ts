@@ -51,11 +51,11 @@ export class HomeComponent implements OnInit {
     http.get('/api/services').subscribe(res => {
       //assign services from API
       this.services = res;
-  
+
       //Prove that this.users is populated
       console.log('API GET SERVICES: ');
       console.table(this.services);
-  
+
     }, err => {
       console.log('API GET SERVICES ERROR: ' + err);
     },
@@ -96,7 +96,7 @@ export class HomeComponent implements OnInit {
           lineItems.push({
             serviceName: savedService.serviceName,
             serviceCost: savedService.cost,
-            
+
           });
         }
       }
@@ -111,7 +111,7 @@ export class HomeComponent implements OnInit {
     const total = partsAmount + laborAmount + lineItemTotal;
 
     console.log(lineItemTotal);
-    
+
     const invoice = {
       lineItems: lineItems,
       partsAmount: partsAmount,
@@ -153,8 +153,14 @@ export class HomeComponent implements OnInit {
               console.log(err);
             }
           );*/
-          
+
       }
+      this.http.get('/api/services').subscribe(res => {
+        //assign services from API
+        this.services = res;
+      }, err => {
+        console.log(err);
+      });
     });
   }
 }
