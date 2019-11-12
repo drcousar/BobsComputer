@@ -2,8 +2,6 @@ mat-card {
   width: 30%;
 }
 
-
-
 mat-card-actions {
-  width: 95%;
+  min-width: 100%;
 }

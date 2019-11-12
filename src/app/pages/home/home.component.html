@@ -1,7 +1,15 @@
 <div fxLayout="column">
 <h1 style="font-weight: lighter; text-align: center;">New Order Form</h1>
 <mat-card  style="width: 65%; margin: 0 auto;">
-<form #serviceRepairForm="ngForm" (ngSubmit)="submit(serviceRepairForm.value); serviceRepairForm.reset();">
+  <mat-card-header>
+    <mat-card-title>
+      New Order Form
+    </mat-card-title>
+    <mat-card-subtitle>
+      Fill out the form below to create a new order
+    </mat-card-subtitle>
+  </mat-card-header>
+  <form #serviceRepairForm="ngForm" (ngSubmit)="submit(serviceRepairForm.value); serviceRepairForm.reset();">
     <mat-card-content>
         <!-- service repair-->
         <div fxLayout="column">
@@ -36,16 +44,13 @@
                                 placeholder="Labor"/>
                     </mat-form-field>
             </div>
-        
+
 
 
     </mat-card-content>
     <!-- form actions-->
-    <br/><br/>
-    <mat-divider></mat-divider>
-    <br/><br/>
 
-    <mat-card-actions align='end'>
+    <mat-card-actions>
         <button mat-raised-button color="primary" >Submit</button>
 
     </mat-card-actions>

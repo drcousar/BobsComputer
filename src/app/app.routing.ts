@@ -71,12 +71,12 @@ export const AppRoutes: Routes = [
         canActivate: [AuthGuard]
       },
       {
-        path: 'signup',
-        component: SignupComponent
-      },
-      {
         path: 'about',
         component: AboutComponent
+      },
+      {
+        path: 'invoice',
+        component: InvoiceComponent
       },
       {
         path: 'contact',
@@ -113,8 +113,8 @@ export const AppRoutes: Routes = [
         component: LoginComponent
       },
       {
-        path: 'invoice',
-        component: InvoiceComponent
+        path: 'signup',
+        component: SignupComponent
       },
       {
         path: '404',
