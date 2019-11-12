@@ -15,5 +15,6 @@
     <p>This cannot be undone!</p>
 </div>
 <div mat-dialog-actions>
-    <button mat-button [mat-dialog-close]="" cdkFocusInitial color="warn">Ok</button>
+    <button mat-button color="primary" (click)="onCancel()">Cancel</button>
+    <button mat-button color="warn" (click)="delete()">Delete</button>
 </div>

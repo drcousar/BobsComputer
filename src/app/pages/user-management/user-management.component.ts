@@ -69,7 +69,11 @@ export class UserManagementComponent implements OnInit {
       })
 
       dialogRef.afterClosed().subscribe(result => {
-        this.users = this.users.filter(u => u._id !== userId);
+        console.log(result);
+        //A = cancelled dialog modal; B = Confirmed and deleted dialog modal
+        if(result === 'B') {
+          this.users = this.users.filter(u => u._id !== userId);
+        }
       })
   }  //close delete function
 
