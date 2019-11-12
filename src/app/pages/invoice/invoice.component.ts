@@ -9,7 +9,7 @@
 
 
 import { Component, OnInit, Inject } from "@angular/core";
-import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
+import { MAT_DIALOG_DATA } from "@angular/material";
 import { HomeComponent } from "../home/home.component";
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -36,7 +36,7 @@ export class InvoiceComponent implements OnInit {
 
 
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient, private router: Router, private dialogRef: MatDialogRef<InvoiceComponent>) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient, private router: Router) {
     console.log(data.invoice);
     this.invoice = data.invoice;
 
@@ -72,8 +72,8 @@ export class InvoiceComponent implements OnInit {
           );
 
   }
-  cancel(): void {
-      this.dialogRef.close()
+  cancel() {
+    this.router.navigate(['/']);
   }
 
 

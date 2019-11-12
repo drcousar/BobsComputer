@@ -70,6 +70,7 @@ import { AddRoleComponent } from './pages/add-role/add-role.component';
 import { ServiceGraphComponent } from './pages/service-graph/service-graph.component';
 import {ChartModule} from 'primeng/chart';
 import { InvoiceComponent } from './pages/invoice/invoice.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
@@ -101,7 +102,8 @@ import { InvoiceComponent } from './pages/invoice/invoice.component';
     RoleDeleteDialogComponent,
     AddRoleComponent,
     ServiceGraphComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

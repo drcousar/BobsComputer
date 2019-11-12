@@ -383,7 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n<h1 style=\"font-weight: lighter; text-align: center;\">New Order Form</h1>\n<mat-card  style=\"width: 65%; margin: 0 auto;\">\n  <mat-card-header>\n    <mat-card-title>\n      New Order Form\n    </mat-card-title>\n    <mat-card-subtitle>\n      Fill out the form below to create a new order\n    </mat-card-subtitle>\n  </mat-card-header>\n  <form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\n    <mat-card-content>\n        <!-- service repair-->\n        <div fxLayout=\"column\">\n            <h4 fxFlex>Services</h4>\n\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\n                <mat-checkbox name=\"{{service._id}}\" ngModel>\n                    {{service.serviceName}} ({{service.cost | currency}})\n                </mat-checkbox>\n                <br/>\n            </div>\n        </div>\n\n        <br/><br/>\n        <mat-divider></mat-divider>\n        <br/><br/>\n        <!-- parts & labor-->\n\n        <div fxLayout=\"column\">\n                <h4 fxFlex>Standard Fees</h4>\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                    <input matInput\n                            name=\"parts\"\n                            ngModel=\"0\"\n                            placeholder=\"Parts\"/>\n                </mat-form-field>\n\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                        <input matInput\n                                name=\"labor\"\n                                ngModel=\"0\"\n                                placeholder=\"Labor\"/>\n                    </mat-form-field>\n            </div>\n\n\n\n    </mat-card-content>\n    <!-- form actions-->\n\n    <mat-card-actions>\n        <button mat-raised-button color=\"primary\" >Submit</button>\n\n    </mat-card-actions>\n\n</form>\n</mat-card>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n<mat-card  fxFlex style=\"width: 80%;\">\n  <mat-card-header fxLayout=\"row\" fxLayoutAlign=\"center\">\n    <mat-card-title style=\"text-align: center;\">\n      New Order Form\n    </mat-card-title>\n    <mat-card-subtitle style=\"text-align: center;\">\n      Fill out the form below to create a new order\n    </mat-card-subtitle>\n  </mat-card-header>\n  <form #serviceRepairForm=\"ngForm\" (ngSubmit)=\"submit(serviceRepairForm.value); serviceRepairForm.reset();\">\n    <mat-card-content>\n        <!-- service repair-->\n        <div fxLayout=\"column\">\n            <h4 fxFlex>Services</h4>\n\n            <div ngModelGroup=\"checkGroup\" *ngFor=\"let service of services\">\n                <mat-checkbox name=\"{{service._id}}\" ngModel>\n                    {{service.serviceName}} ({{service.cost | currency}})\n                </mat-checkbox>\n                <br/>\n            </div>\n        </div>\n\n\n        <!-- parts & labor-->\n\n        <div fxLayout=\"column\">\n                <h4 fxFlex>Standard Fees</h4>\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                    <input matInput\n                            name=\"parts\"\n                            ngModel=\"{{partsAmount}}\"\n                            placeholder=\"Parts\"/>\n                </mat-form-field>\n\n                <mat-form-field fxFlex style=\"widows: 300px !important;\">\n                        <input matInput\n                                name=\"labor\"\n                                ngModel=\"{{laborAmount}}\"\n                                placeholder=\"Labor\"/>\n                    </mat-form-field>\n            </div>\n\n\n\n    </mat-card-content>\n    <!-- form actions-->\n\n    <mat-card-actions>\n        <button mat-raised-button color=\"primary\" >Submit</button>\n\n    </mat-card-actions>\n\n</form>\n</mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -396,7 +396,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n  <mat-card fxFlex style=\"text-align: center;\">\n    <mat-card-header>\n      <mat-card-title>Invoice #{{data.invoice.number}}</mat-card-title>\n      <mat-card-subtitle style=\"text-align: center;\">\n        {{ data.invoice.username }}, please confirm your order\n      </mat-card-subtitle>\n    </mat-card-header>\n    <mat-card-content>\n      <form (ngSubmit)=\"confirm()\">\n        <br />\n        <p style=\"text-align: left;\">{{ data.invoice.orderDate }}</p>\n\n        <br /><br />\n        <mat-divider></mat-divider>\n        <h3 style=\"text-align: left;\"><b>Services</b></h3>\n        <div *ngFor=\"let item of data.invoice.lineItems\">\n          <p style=\"text-align: left;\">\n            {{ item.serviceName }}: <span style=\"float:right\"> ${{ item.serviceCost }}</span>\n          </p>\n        </div>\n\n        <br /><br />\n        <mat-divider></mat-divider>\n        <br /><br />\n\n        <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\n        <p style=\"text-align: justify; text-align-last: justify;\">\n          Parts: ${{ data.invoice.partsAmount }}\n        </p>\n        <p style=\"text-align: justify; text-align-last: justify;\">\n          Labor: ${{ data.invoice.laborAmount }}\n        </p>\n\n        <br /><br />\n        <mat-divider></mat-divider>\n        <br /><br />\n        <p style=\"text-align: end;\">Total charges: ${{ data.invoice.total }}</p>\n\n        <mat-card-actions>\n          <button mat-raised-button matDialogClose type=\"reset\" value=\"reset\" (click)=\"cancel()\" color=\"accent\">Cancel</button>\n          <button mat-raised-button matDialogClose color=\"primary\" type=\"confirm\" value=\"confirm\">Confirm</button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n\n  </mat-card>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\">\n    <mat-card-header fxLayout=\"row\" fxLayoutAlign=\"center\">\n      <mat-card-title style=\"text-align: center;\">Invoice #{{data.invoice.number}}</mat-card-title>\n      <mat-card-subtitle style=\"text-align: center;\">\n        {{ data.invoice.username }}, please confirm your order\n      </mat-card-subtitle>\n    </mat-card-header>\n    <mat-card-content>\n\n      <form (ngSubmit)=\"confirm()\">\n        <br />\n        <div fxLayout=\"row\">\n          <p style=\"text-align: left;\">{{ data.invoice.orderDate }}</p>\n        </div>\n\n        <div fxLayout=\"row wrap\" fxLayoutGap=\"100px\" fxLayoutAlign=\"flex-start\">\n          <div >\n            <h3 style=\"text-align: left;\"><b>Services</b></h3>\n            <div *ngFor=\"let item of data.invoice.lineItems\">\n              <p style=\"text-align: left;\">\n                {{ item.serviceName }}: <span style=\"float:right\"> ${{ item.serviceCost }}</span>\n              </p>\n            </div>\n          </div>\n\n          <div  >\n            <h3 style=\"text-align: start;\"><b>Standard Fees</b></h3>\n            <p style=\"text-align: justify; text-align-last: justify;\">\n            Parts: ${{ data.invoice.partsAmount }}\n            </p>\n            <p style=\"text-align: justify; text-align-last: justify;\">\n            Labor: ${{ data.invoice.laborAmount }}\n            </p>\n\n            <br />\n\n            <p style=\"text-align: end;\">Total charges: ${{ data.invoice.total }}</p>\n          </div>\n        </div>\n\n\n\n        <mat-card-actions>\n          <button mat-raised-button matDialogClose type=\"reset\" value=\"reset\" (click)=\"cancel()\" color=\"accent\">Cancel</button>\n          <button mat-raised-button matDialogClose color=\"primary\" type=\"confirm\" value=\"confirm\">Confirm</button>\n        </mat-card-actions>\n      </form>\n    </mat-card-content>\n</div>\n");
 
 /***/ }),
 
@@ -500,7 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\n    /*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxFlex style=\"text-align: center;\">\n  <h1 mat-dialog-title>Bob's Computer Repair Shop</h1>\n  <div mat-dialog-content>\n    <h3>You have elected to delete the following Security Question: </h3>\n    <h4>{{myQuestion}}</h4>\n    <p>This cannot be undone!</p>\n  </div>\n  <div mat-dialog-actions>\n    <button mat-raised-button [mat-dialog-close]=\"\" cdkFocusInitial color=\"warn\">Ok</button>\n  </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n    /*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar\n; Date:   28 October 2019\n; Description: Bob's Computer\n;===========================================\n*/\n-->\n<div fxFlex style=\"text-align: center;\">\n  <h1 mat-dialog-title>Bob's Computer Repair Shop</h1>\n  <div mat-dialog-content>\n    <h3>You have elected to delete the following Security Question: </h3>\n    <h4>{{myQuestion}}</h4>\n    <p>This cannot be undone!</p>\n  </div>\n  <div mat-dialog-actions>\n    <button mat-raised-button [mat-dialog-close]=\"\" cdkFocusInitial color=\"warn\">Ok</button>\n  </div>\n</div>\n<<<<<<< HEAD\n<div mat-dialog-actions>\n    <button mat-button color=\"primary\" (click)=\"onCancel()\">Cancel</button>\n    <button mat-button color=\"warn\" (click)=\"delete()\">Delete</button>\n</div>\n=======\n\n>>>>>>> 5adf5b274fabd9bc206138ca48acf384690ad342\n");
 
 /***/ }),
 
@@ -643,7 +643,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar and Jordan Hennessy\n; Date:   23 October 2019\n; Description: BobComputer Starter Code\n;===========================================\n*/\n-->\n<div>\n  <main>\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"accent\">\n      <mat-toolbar-row>\n\n        <button mat-button class=\"toolbar__icon-button mat-button\">\n          <a routerLink=\"/\">\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\n          </a>\n        </button>\n\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/\">Service Repairs</a>\n        </button>\n\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/graph\">Graph</a>\n        </button>\n\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/about\">About Us</a>\n        </button>\n\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/contact\">Contact Us</a>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-button [matMenuTriggerFor]=\"settings\">\n          <mat-icon style=\"color: #fff;\">settings_applications</mat-icon>\n        </button>\n\n        <mat-menu #settings=\"matMenu\">\n          <button mat-menu-item class=\"mat-button\">\n            <a routerLink=\"/user\">Users</a>\n          </button>\n\n          <button mat-menu-item class=\"mat-button\">\n            <a routerLink=\"/questions\">Security Questions</a>\n          </button>\n\n          <button mat-menu-item class=\"mat-button\">\n            <a routerLink=\"/roles\">User Roles</a>\n          </button>\n        </mat-menu>\n\n        <button mat-button class=\"mat-button\">\n          <a (click)=\"logout()\" class=\"nav-link\">Logout</a>\n        </button>\n\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </main>\n</div>\n<router-outlet></router-outlet>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Don Cousar and Jordan Hennessy\n; Date:   23 October 2019\n; Description: BobComputer Starter Code\n;===========================================\n*/\n-->\n<div>\n  <main>\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"accent\">\n      <mat-toolbar-row>\n\n        <button mat-button class=\"toolbar__icon-button mat-button\">\n          <a routerLink=\"/\">\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\n          </a>\n        </button>\n\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/\">Service Repairs</a>\n        </button>\n\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/graph\">Graph</a>\n        </button>\n\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/about\">About Us</a>\n        </button>\n\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/contact\">Contact Us</a>\n        </button>\n\n        <div fxFlex></div>\n\n        <button mat-button [matMenuTriggerFor]=\"settings\">\n          <mat-icon style=\"color: #fff;\">settings_applications</mat-icon>\n        </button>\n\n        <mat-menu #settings=\"matMenu\">\n          <button mat-menu-item class=\"mat-button\">\n            <a routerLink=\"/user\">Users</a>\n          </button>\n\n          <button mat-menu-item class=\"mat-button\">\n            <a routerLink=\"/questions\">Security Questions</a>\n          </button>\n\n          <button mat-menu-item class=\"mat-button\">\n            <a routerLink=\"/roles\">User Roles</a>\n          </button>\n        </mat-menu>\n\n        <button mat-button class=\"mat-button\">\n          <a (click)=\"logout()\" class=\"nav-link\">Logout</a>\n        </button>\n\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </main>\n</div>\n<router-outlet></router-outlet>\n<app-footer></app-footer>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared/footer/footer.component.html":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/shared/footer/footer.component.html ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar color=\"accent\">\n  <span style=\"color: #fff\">Created By:</span>\n\n  <span>\n    <a href=\"https://jehennessy.github.io\" target=\"_blank\">Jordan Hennessy</a>\n  </span>\n\n  <span>\n    <a href=\"\" target=\"_blank\">Don Cousar</a>\n  </span>\n\n  <span>\n    <a href=\"\" target=\"_blank\">Alan Edwards</a>\n  </span>\n\n</mat-toolbar>\n");
 
 /***/ }),
 
@@ -656,7 +669,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Jordan Hennessy\n; Date:   28 October 2019\n; Description: BobComputer Starter Code\n;===========================================\n*/\n-->\n<div>\n  <main>\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"accent\">\n      <mat-toolbar-row>\n        <button mat-button class=\"toolbar__icon-button mat-button\">\n          <a routerLink=\"/\">\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\n          </a>\n        </button>\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/session/about\">About Us</a>\n        </button>\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/session/contact\">Contact Us</a>\n        </button>\n\n\n        <div fxFlex></div>\n\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/session/login\" class=\"nav-link\">Login</a>\n        </button>\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </main>\n</div>\n<router-outlet></router-outlet>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n/*\n============================================\n; Title:  Bob's Computer\n; Author: Jordan Hennessy\n; Date:   28 October 2019\n; Description: BobComputer Starter Code\n;===========================================\n*/\n-->\n<div>\n  <main>\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"accent\">\n      <mat-toolbar-row>\n        <button mat-button class=\"toolbar__icon-button mat-button\">\n          <a routerLink=\"/\">\n            <img src=\"../../../assets/BobLogoWhite.png\" alt=\"Bob's Computer Repair Shop\" id=\"logo\">\n          </a>\n        </button>\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/session/about\">About Us</a>\n        </button>\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/session/contact\">Contact Us</a>\n        </button>\n\n\n        <div fxFlex></div>\n\n        <button mat-button class=\"mat-button\">\n          <a routerLink=\"/session/login\" class=\"nav-link\">Login</a>\n        </button>\n      </mat-toolbar-row>\n    </mat-toolbar>\n  </main>\n</div>\n<router-outlet></router-outlet>\n<app-footer></app-footer>\n");
 
 /***/ }),
 
@@ -1012,6 +1025,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var primeng_chart__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! primeng/chart */ "./node_modules/primeng/chart.js");
 /* harmony import */ var primeng_chart__WEBPACK_IMPORTED_MODULE_53___default = /*#__PURE__*/__webpack_require__.n(primeng_chart__WEBPACK_IMPORTED_MODULE_53__);
 /* harmony import */ var _pages_invoice_invoice_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./pages/invoice/invoice.component */ "./src/app/pages/invoice/invoice.component.ts");
+/* harmony import */ var _shared_footer_footer_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./shared/footer/footer.component */ "./src/app/shared/footer/footer.component.ts");
 /*
 ; Title:  starter code
 ; Author: Professor Krasso
@@ -1036,6 +1050,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //material
+
 
 
 
@@ -1109,7 +1124,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _pages_role_delete_dialog_role_delete_dialog_component__WEBPACK_IMPORTED_MODULE_50__["RoleDeleteDialogComponent"],
             _pages_add_role_add_role_component__WEBPACK_IMPORTED_MODULE_51__["AddRoleComponent"],
             _pages_service_graph_service_graph_component__WEBPACK_IMPORTED_MODULE_52__["ServiceGraphComponent"],
-            _pages_invoice_invoice_component__WEBPACK_IMPORTED_MODULE_54__["InvoiceComponent"]
+            _pages_invoice_invoice_component__WEBPACK_IMPORTED_MODULE_54__["InvoiceComponent"],
+            _shared_footer_footer_component__WEBPACK_IMPORTED_MODULE_55__["FooterComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -1753,8 +1769,12 @@ let HomeComponent = class HomeComponent {
         this.fb = fb;
         this.dialog = dialog;
         this.router = router;
+        this.partsAmount = 0;
+        this.laborAmount = 0;
         //get username
         this.username = this.cookieservice.get("username");
+        this.partsAmount = 0;
+        this.laborAmount = 0;
         http.get('/api/services').subscribe(res => {
             //assign services from API
             this.services = res;
@@ -1785,6 +1805,10 @@ let HomeComponent = class HomeComponent {
                 });
             }
         }
+        this.number = this.http.get('/api/invoices').subscribe(res => {
+            this.number = res;
+            console.log("Returned Invoice Number: " + res);
+        });
         const lineItems = [];
         /**
          * build the invoice object
@@ -1799,17 +1823,16 @@ let HomeComponent = class HomeComponent {
                 }
             }
         }
-        this.number = lineItems.length;
         console.log(lineItems);
-        const partsAmount = parseFloat(form.parts);
-        const laborAmount = form.labor * 50;
+        this.partsAmount = parseFloat(form.parts);
+        this.laborAmount = form.labor * 50;
         const lineItemTotal = lineItems.reduce((prev, cur) => prev + cur.serviceCost, 0);
-        const total = partsAmount + laborAmount + lineItemTotal;
+        const total = parseFloat((this.partsAmount + this.laborAmount + lineItemTotal).toFixed(2));
         console.log(lineItemTotal);
         const invoice = {
             lineItems: lineItems,
-            partsAmount: partsAmount,
-            laborAmount: laborAmount,
+            partsAmount: this.partsAmount,
+            laborAmount: this.laborAmount,
             lineItemTotal: lineItemTotal,
             total: total,
             username: this.username,
@@ -1827,30 +1850,9 @@ let HomeComponent = class HomeComponent {
         dialogRef.afterClosed().subscribe(result => {
             if (result === "confirm") {
                 console.log("invoice saved");
-                /*this.http
-                  .post("api/invoices/" + invoice.username, {
-                    lineItems: invoice.lineItems,
-                    partsAmount: invoice.partsAmount,
-                    laborAmount: invoice.laborAmount,
-                    lineItemTotal: invoice.lineItemTotal,
-                    total: invoice.total,
-                    orderDate: invoice.orderDate
-                  })
-                  .subscribe(
-                    res => {
-                      this.router.navigate(["/"]);
-                    },
-                    err => {
-                      console.log(err);
-                    }
-                  );*/
+                this.laborAmount = 0;
+                this.partsAmount = 0;
             }
-            this.http.get('/api/services').subscribe(res => {
-                //assign services from API
-                this.services = res;
-            }, err => {
-                console.log(err);
-            });
         });
     }
 };
@@ -1882,7 +1884,7 @@ HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/*.invoice-card{\n    width: 600px;\n} */\n\n.mat-dialog-container {\n  overflow: scroll;\n}\n\n.mat-icon {\n    display: block;\n    margin: auto;\n    width: 62px;\n    height: 62px;\n    font-size: 62px;\n  }\n\na {\n    text-transform: lowercase;\n    text-decoration: none;\n  }\n\nmat-dialog-actions button {\n    width: 48%;\n  }\n\nmat-card-content {\n    overflow: scroll;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaW52b2ljZS9pbnZvaWNlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7O0FBRUg7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsWUFBWTtJQUNaLFdBQVc7SUFDWCxZQUFZO0lBQ1osZUFBZTtFQUNqQjs7QUFFQTtJQUNFLHlCQUF5QjtJQUN6QixxQkFBcUI7RUFDdkI7O0FBRUE7SUFDRSxVQUFVO0VBQ1o7O0FBRUE7SUFDRSxnQkFBZ0I7RUFDbEIiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9pbnZvaWNlL2ludm9pY2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qLmludm9pY2UtY2FyZHtcbiAgICB3aWR0aDogNjAwcHg7XG59ICovXG5cbi5tYXQtZGlhbG9nLWNvbnRhaW5lciB7XG4gIG92ZXJmbG93OiBzY3JvbGw7XG59XG5cbi5tYXQtaWNvbiB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgbWFyZ2luOiBhdXRvO1xuICAgIHdpZHRoOiA2MnB4O1xuICAgIGhlaWdodDogNjJweDtcbiAgICBmb250LXNpemU6IDYycHg7XG4gIH1cblxuICBhIHtcbiAgICB0ZXh0LXRyYW5zZm9ybTogbG93ZXJjYXNlO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgfVxuXG4gIG1hdC1kaWFsb2ctYWN0aW9ucyBidXR0b24ge1xuICAgIHdpZHRoOiA0OCU7XG4gIH1cblxuICBtYXQtY2FyZC1jb250ZW50IHtcbiAgICBvdmVyZmxvdzogc2Nyb2xsO1xuICB9XG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n.mat-icon {\n    display: block;\n    margin: auto;\n    width: 62px;\n    height: 62px;\n    font-size: 62px;\n  }\n\n  a {\n    text-transform: lowercase;\n    text-decoration: none;\n  }\n\n  mat-card-actions button {\n    width: 48%;\n  }\n\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaW52b2ljZS9pbnZvaWNlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFFQTtJQUNJLGNBQWM7SUFDZCxZQUFZO0lBQ1osV0FBVztJQUNYLFlBQVk7SUFDWixlQUFlO0VBQ2pCOztFQUVBO0lBQ0UseUJBQXlCO0lBQ3pCLHFCQUFxQjtFQUN2Qjs7RUFFQTtJQUNFLFVBQVU7RUFDWiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2ludm9pY2UvaW52b2ljZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG5cbi5tYXQtaWNvbiB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgbWFyZ2luOiBhdXRvO1xuICAgIHdpZHRoOiA2MnB4O1xuICAgIGhlaWdodDogNjJweDtcbiAgICBmb250LXNpemU6IDYycHg7XG4gIH1cblxuICBhIHtcbiAgICB0ZXh0LXRyYW5zZm9ybTogbG93ZXJjYXNlO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgfVxuXG4gIG1hdC1jYXJkLWFjdGlvbnMgYnV0dG9uIHtcbiAgICB3aWR0aDogNDglO1xuICB9XG5cblxuIl19 */");
 
 /***/ }),
 
@@ -1915,11 +1917,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let InvoiceComponent = class InvoiceComponent {
-    constructor(data, http, router, dialogRef) {
+    constructor(data, http, router) {
         this.data = data;
         this.http = http;
         this.router = router;
-        this.dialogRef = dialogRef;
         console.log(data.invoice);
         this.invoice = data.invoice;
         console.log(data.invoice.number);
@@ -1943,15 +1944,14 @@ let InvoiceComponent = class InvoiceComponent {
         });
     }
     cancel() {
-        this.dialogRef.close();
+        this.router.navigate(['/']);
     }
     ngOnInit() { }
 };
 InvoiceComponent.ctorParameters = () => [
     { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
     { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 InvoiceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2560,6 +2560,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 
 /*
 ============================================
@@ -2572,13 +2573,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 let SecurityQuestionsDeleteDialogComponent = class SecurityQuestionsDeleteDialogComponent {
-    constructor(dialogRef, data, router) {
+    constructor(dialogRef, data, http, router) {
         this.dialogRef = dialogRef;
+        this.http = http;
         this.router = router;
         //Define variables to call from HTML
         this.myQuestionId = data.questionId;
         this.myQuestion = data.question;
+        this.questions = data.questions;
         console.log('Dialog Question: ' + this.myQuestionId);
         /**
          * Prove that data made it over from Security Question Component
@@ -2586,12 +2590,30 @@ let SecurityQuestionsDeleteDialogComponent = class SecurityQuestionsDeleteDialog
         console.log('Delete Dialog: ');
         console.table(data);
     }
+    onCancel() {
+        this.dialogRef.close('A');
+    }
+    delete() {
+        /**
+          * BEGIN Working Delete Code
+          */
+        this.http.delete('api/questions/' + this.myQuestionId).subscribe(res => {
+            console.log('Deleted User..Redirecting to User List');
+            this.dialogRef.close('B');
+        }),
+            (err) => {
+                console.log(err);
+            },
+            () => {
+            };
+    }
     ngOnInit() {
     }
 };
 SecurityQuestionsDeleteDialogComponent.ctorParameters = () => [
     { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
     { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 SecurityQuestionsDeleteDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -2676,19 +2698,21 @@ let SecurityQuestionsComponent = class SecurityQuestionsComponent {
         const dialogRef = this.dialog.open(_pages_security_questions_delete_dialog_security_questions_delete_dialog_component__WEBPACK_IMPORTED_MODULE_3__["SecurityQuestionsDeleteDialogComponent"], {
             data: {
                 questionId: questionId,
-                question: question
+                question: question,
+                questions: this.questions
             },
             disableClose: true,
             width: '800px'
         });
         dialogRef.afterClosed().subscribe(result => {
-            /**
-             * BEGIN Working Delete Code
-             */
-            this.http.delete('api/questions/' + questionId).subscribe(res => {
-                console.log('Deleted User..Redirecting to User List');
+            //A = cancelled dialog modal; B = Confirmed and deleted dialog modal
+            if (result === 'B') {
                 this.questions = this.questions.filter(q => q._id !== questionId);
-            });
+            }
+            console.table(result);
+            if (confirm) {
+                console.log('confirmed');
+            }
         });
     } //close delete function
     ngOnInit() {
@@ -3378,14 +3402,14 @@ let UserManagementDeleteDialogComponent = class UserManagementDeleteDialogCompon
         console.table(data);
     }
     onCancel() {
-        this.dialogRef.close();
+        this.dialogRef.close('A');
     }
     delete() {
         this.http.delete('api/users/' + this.myUserId).subscribe(res => {
             console.log('Deleted User..Redirecting to User List');
         });
-        this.dialogRef.close();
-        this.users = this.users.filter(u => u._id !== this.myUserId);
+        this.dialogRef.close('B');
+        //this.users = this.users.filter(u => u._id !== this.myUserId);
     }
     ngOnInit() {
     }
@@ -3492,7 +3516,11 @@ let UserManagementComponent = class UserManagementComponent {
             width: '800px'
         });
         dialogRef.afterClosed().subscribe(result => {
-            this.users = this.users.filter(u => u._id !== userId);
+            console.log(result);
+            //A = cancelled dialog modal; B = Confirmed and deleted dialog modal
+            if (result === 'B') {
+                this.users = this.users.filter(u => u._id !== userId);
+            }
         });
     } //close delete function
     ngOnInit() {
@@ -3822,11 +3850,55 @@ BaseLayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/shared/footer/footer.component.css":
+/*!****************************************************!*\
+  !*** ./src/app/shared/footer/footer.component.css ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("span {\n  margin: 1em 2em;\n}\n\na {\n  color: #fff;\n  text-transform: uppercase;\n  text-decoration: none;\n}\n\nmat-toolbar {\n  margin-top: 5em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gseUJBQXlCO0VBQ3pCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLGVBQWU7QUFDakIiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsic3BhbiB7XG4gIG1hcmdpbjogMWVtIDJlbTtcbn1cblxuYSB7XG4gIGNvbG9yOiAjZmZmO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG5cbm1hdC10b29sYmFyIHtcbiAgbWFyZ2luLXRvcDogNWVtO1xufVxuIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/shared/footer/footer.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/shared/footer/footer.component.ts ***!
+  \***************************************************/
+/*! exports provided: FooterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FooterComponent", function() { return FooterComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let FooterComponent = class FooterComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-footer',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./footer.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared/footer/footer.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./footer.component.css */ "./src/app/shared/footer/footer.component.css")).default]
+    })
+], FooterComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/index.ts":
 /*!*********************************!*\
   !*** ./src/app/shared/index.ts ***!
   \*********************************/
-/*! exports provided: BaseLayoutComponent, AuthGuard, SessionLayoutComponent */
+/*! exports provided: BaseLayoutComponent, AuthGuard, FooterComponent, SessionLayoutComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3841,6 +3913,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _auth_guard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth.guard */ "./src/app/shared/auth.guard.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return _auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]; });
 
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/shared/footer/footer.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FooterComponent", function() { return _footer_footer_component__WEBPACK_IMPORTED_MODULE_4__["FooterComponent"]; });
+
 
 /*
 ; Title:  index.ts
@@ -3850,6 +3925,7 @@ __webpack_require__.r(__webpack_exports__);
 ; Description: BobComputer Starter Code
 ;===========================================
 */
+
 
 
 

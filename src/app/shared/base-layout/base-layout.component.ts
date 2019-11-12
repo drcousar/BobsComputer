@@ -9,6 +9,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import { FooterComponent } from '../footer/footer.component';
+
 
 @Component({
   selector: 'app-base-layout',

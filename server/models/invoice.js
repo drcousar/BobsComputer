@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 
 let selectedServices = mongoose.Schema({
   serviceName: {type: String},
-  serviceCost: {type: Number}
+  serviceCost: {type: String}
 });
 
 

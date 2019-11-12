@@ -43,7 +43,7 @@ export class UserManagementDeleteDialogComponent implements OnInit {
   }
 
   onCancel(): void {
-    this.dialogRef.close()
+    this.dialogRef.close('A')
   }
 
   delete() {
@@ -51,8 +51,8 @@ export class UserManagementDeleteDialogComponent implements OnInit {
           console.log('Deleted User..Redirecting to User List');
           
         })
-        this.dialogRef.close();
-        this.users = this.users.filter(u => u._id !== this.myUserId);
+        this.dialogRef.close('B');
+        //this.users = this.users.filter(u => u._id !== this.myUserId);
   }
 
   ngOnInit() {

@@ -573,6 +573,18 @@ app.post('/api/invoices/:username', function(req, res, next) {
   })
 });
 
+app.get('/api/invoices', function(req, res) {
+  Invoice.count({}, function(err, invoiceCount) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log("Invoice Count: " + invoiceCount);
+      res.json(invoiceCount + 1);
+    }
+  })
+});
+
 // Get Services for Graph
 app.get('/api/invoices/graph', function(req, res, next) {
   Invoice.aggregate([

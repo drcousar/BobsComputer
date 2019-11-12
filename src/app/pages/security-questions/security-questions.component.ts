@@ -52,7 +52,8 @@ export class SecurityQuestionsComponent implements OnInit {
     const dialogRef = this.dialog.open(SecurityQuestionsDeleteDialogComponent, {
       data: {
         questionId: questionId,
-        question: question
+        question: question,
+        questions: this.questions
       },
       disableClose: true,
       width: '800px'
@@ -60,17 +61,16 @@ export class SecurityQuestionsComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
 
-      /**
-       * BEGIN Working Delete Code
-       */
-       
-      this.http.delete('api/questions/' + questionId).subscribe(res => {
-        console.log('Deleted User..Redirecting to User List');
+      //A = cancelled dialog modal; B = Confirmed and deleted dialog modal
+      if(result === 'B') {
         this.questions = this.questions.filter(q => q._id !== questionId);
-      })
+      }
+      console.table(result);
+     if(confirm) {
+      console.log('confirmed');
+     }
     })
 }  //close delete function
-
 
   ngOnInit() {
   }
