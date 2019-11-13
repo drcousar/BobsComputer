@@ -10,7 +10,7 @@
       <small *ngIf="form.controls['username'].hasError('required') && form.controls['username'].touched" class="form-error">Username is required!</small>
       <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="form-error">Password is required!</small>
       <small *ngIf="errorMessage">{{errorMessage}}</small>
-
+      <br />
       <br />
 
       <form [formGroup]="form" (ngSubmit)="login()">
@@ -32,7 +32,7 @@
           <br />
           <br />
           <div >
-            <a routerLink="/signup" class="left">Sign Up</a>
+            <a routerLink="/session/signup" class="left">Sign Up</a>
             <a routerLink="/session/forgot-password" class="right">Forgot Password?</a>
           </div>
 

@@ -55,8 +55,16 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
         console.log(res);
       } else {
-        this.errorMessage = "The user credentials you entered were invalid!"
+        console.log('The user credentials you entered were invalid!');
+        this.errorMessage = "The user credentials you entered were invalid!";
       }
-    })
+    }, err => {
+      console.log('Authentication Error: ' + err);
+      this.errorMessage = "The user credentials you entered were invalid!";
+    },
+    () => {
+      //What to do upon success
+      //nothing for now
+    });
   }
 }
