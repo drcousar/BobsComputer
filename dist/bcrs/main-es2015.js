@@ -656,7 +656,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar color=\"accent\">\n  <span style=\"color: #fff\">Created By:</span>\n\n  <span>\n    <a href=\"https://jehennessy.github.io\" target=\"_blank\">Jordan Hennessy</a>\n  </span>\n\n  <span>\n    <a href=\"\" target=\"_blank\">Don Cousar</a>\n  </span>\n\n  <span>\n    <a href=\"\" target=\"_blank\">Alan Edwards</a>\n  </span>\n\n</mat-toolbar>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar color=\"accent\">\n  <span style=\"color: #fff\">Created By:</span>\n\n  <span>\n    <a href=\"https://jehennessy.github.io\" target=\"_blank\">Jordan Hennessy</a>\n  </span>\n\n  <span>\n    <a href=\"https://don-cousar-portfolio.herokuapp.com\" target=\"_blank\">Don Cousar</a>\n  </span>\n\n  <span>\n    <a href=\"\" target=\"_blank\">Alan Edwards</a>\n  </span>\n\n</mat-toolbar>\n");
 
 /***/ }),
 
