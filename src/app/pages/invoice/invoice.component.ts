@@ -32,9 +32,9 @@ export class InvoiceComponent implements OnInit {
   number:any;
   lineItems: any;
   length:any;
-  
-  
-  
+
+
+
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient, private router: Router) {
     console.log(data.invoice);
@@ -43,25 +43,25 @@ export class InvoiceComponent implements OnInit {
     console.log(data.invoice.number);
 
   }
-  
+
   confirm() {
     console.log('Calling API!');
       this.http
         .post("api/invoices/" + this.invoice.username, {
-          
+
           number: this.data.invoice.number,
           selectedServices: this.invoice.lineItems,
           partsCost: this.invoice.partsAmount,
           laborHours: this.invoice.laborAmount,
           selectedServicesTotal: this.invoice.lineItemTotal ,
-          
-          
+
+
           total: this.invoice.total,
           dateCreated: this.invoice.orderDate,
-           
-                     
+
+
           })
-          
+
           .subscribe(
             res => {
               this.router.navigate(["/"]);
@@ -70,13 +70,13 @@ export class InvoiceComponent implements OnInit {
               console.log(err);
             }
           );
-          
+
   }
   cancel() {
     this.router.navigate(['/']);
   }
 
-  
+
   ngOnInit() {}
 }
 

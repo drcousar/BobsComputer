@@ -1,45 +1,49 @@
 <div fxLayout="column">
-  <mat-card fxFlex style="text-align: center;">
-    <mat-card-header>
-      <mat-card-title>Invoice #{{data.invoice.number}}</mat-card-title>
+    <mat-card-header fxLayout="row" fxLayoutAlign="center">
+      <mat-card-title style="text-align: center;">Invoice #{{data.invoice.number}}</mat-card-title>
       <mat-card-subtitle style="text-align: center;">
         {{ data.invoice.username }}, please confirm your order
       </mat-card-subtitle>
     </mat-card-header>
-    <form (ngSubmit)="confirm()">
-      <br />
-      <p style="text-align: left;">{{ data.invoice.orderDate }}</p>
+    <mat-card-content>
 
-      <br /><br />
-      <mat-divider></mat-divider>
-      <h3 style="text-align: left;"><b>Services</b></h3>
-      <div *ngFor="let item of data.invoice.lineItems">
-        <p style="text-align: left;">
-          {{ item.serviceName }}: <span style="float:right"> ${{ item.serviceCost }}</span>
-        </p>
-      </div>
+      <form (ngSubmit)="confirm()">
+        <br />
+        <div fxLayout="row">
+          <p style="text-align: left;">{{ data.invoice.orderDate }}</p>
+        </div>
 
-      <br /><br />
-      <mat-divider></mat-divider>
-      <br /><br />
+        <div fxLayout="row wrap" fxLayoutGap="100px" fxLayoutAlign="flex-start">
+          <div >
+            <h3 style="text-align: left;"><b>Services</b></h3>
+            <div *ngFor="let item of data.invoice.lineItems">
+              <p style="text-align: left;">
+                {{ item.serviceName }}: <span style="float:right"> ${{ item.serviceCost }}</span>
+              </p>
+            </div>
+          </div>
 
-      <h3 style="text-align: start;"><b>Standard Fees</b></h3>
-      <p style="text-align: justify; text-align-last: justify;">
-        Parts: ${{ data.invoice.partsAmount }}
-      </p>
-      <p style="text-align: justify; text-align-last: justify;">
-        Labor: ${{ data.invoice.laborAmount }}
-      </p>
+          <div  >
+            <h3 style="text-align: start;"><b>Standard Fees</b></h3>
+            <p style="text-align: justify; text-align-last: justify;">
+            Parts: ${{ data.invoice.partsAmount }}
+            </p>
+            <p style="text-align: justify; text-align-last: justify;">
+            Labor: ${{ data.invoice.laborAmount }}
+            </p>
 
-      <br /><br />
-      <mat-divider></mat-divider>
-      <br /><br />
-      <p style="text-align: end;">Total charges: ${{ data.invoice.total }}</p>
+            <br />
 
-      <mat-card-actions>
-        <button mat-raised-button matDialogClose type="reset" value="reset" (click)="cancel()" color="accent">Cancel</button>
-        <button mat-raised-button matDialogClose color="primary" type="confirm" value="confirm">Confirm</button>
-      </mat-card-actions>
-    </form>
-  </mat-card>
+            <p style="text-align: end;">Total charges: ${{ data.invoice.total }}</p>
+          </div>
+        </div>
+
+
+
+        <mat-card-actions>
+          <button mat-raised-button matDialogClose type="reset" value="reset" (click)="cancel()" color="accent">Cancel</button>
+          <button mat-raised-button matDialogClose color="primary" type="confirm" value="confirm">Confirm</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
 </div>

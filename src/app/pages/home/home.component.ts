@@ -54,11 +54,11 @@ export class HomeComponent implements OnInit {
     http.get('/api/services').subscribe(res => {
       //assign services from API
       this.services = res;
-  
+
       //Prove that this.users is populated
       console.log('API GET SERVICES: ');
       console.table(this.services);
-  
+
     }, err => {
       console.log('API GET SERVICES ERROR: ' + err);
     },
@@ -66,6 +66,13 @@ export class HomeComponent implements OnInit {
       //What to do upon success
       //nothing for now
     });
+
+    http.get('/api/invoices').subscribe(res => {
+      this.number = res;
+      console.log("Returned Invoice Number: " + res );
+    })
+
+    console.log("Invoice #: " + this.number);
   }
 
   ngOnInit() {
@@ -87,6 +94,7 @@ export class HomeComponent implements OnInit {
       }
     }
 
+
     const lineItems = [];
 
     /**
@@ -99,15 +107,15 @@ export class HomeComponent implements OnInit {
           lineItems.push({
             serviceName: savedService.serviceName,
             serviceCost: savedService.cost,
-            
+
           });
         }
       }
     }
 
-    this.number = lineItems.length;
 
-    
+
+
     console.log(lineItems);
     this.partsAmount = parseFloat(form.parts);
     this.laborAmount = form.labor * 50;
@@ -115,7 +123,7 @@ export class HomeComponent implements OnInit {
     const total = parseFloat((this.partsAmount + this.laborAmount + lineItemTotal).toFixed(2));
 
     console.log(lineItemTotal);
-    
+
     const invoice = {
       lineItems: lineItems,
       partsAmount: this.partsAmount,

@@ -1,0 +1,14 @@
+span {
+  margin: 1em 2em;
+}
+
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+mat-toolbar {
+  margin-top: 5em;
+}
